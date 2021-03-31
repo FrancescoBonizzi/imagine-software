@@ -1,7 +1,6 @@
 ﻿#overlay-button {
     position: absolute;
     right: 2em;
-    top: 3em;
     padding: 26px 11px;
     z-index: 5;
     cursor: pointer;
@@ -69,6 +68,7 @@ input[type=checkbox] {
     z-index: 2;
     visibility: hidden;
     position: fixed;
+    top: 0;
 }
 
     #overlay.active {
