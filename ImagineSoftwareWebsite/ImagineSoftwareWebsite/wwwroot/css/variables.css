@@ -2,4 +2,11 @@
     --primary-color: #fdd007;
     --text-color-over-primary-light: #60605f;
     --text-color-over-primary: black;
+    --background-dark: #131419;
+    --text-over-background-dark: #c5c5c5;
+}
+
+html {
+    /* Per rem */
+    font-size: 17px;
 }

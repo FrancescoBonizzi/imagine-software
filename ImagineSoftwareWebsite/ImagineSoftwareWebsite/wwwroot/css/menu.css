@@ -1,6 +1,7 @@
 ﻿#overlay-menu-button {
     position: absolute;
     right: 2em;
+    top: 1em;
     padding: 26px 11px;
     z-index: 5;
     cursor: pointer;
@@ -47,6 +48,7 @@ input[type=checkbox] {
     input[type=checkbox]:checked ~ #overlay-menu {
         /* Fadein menu animation */
         opacity: 1;
+        visibility: visible;
     }
 
         input[type=checkbox]:checked ~ #overlay-menu ul {
@@ -73,9 +75,9 @@ input[type=checkbox] {
     background: var(--primary-color);
     z-index: 2;
     opacity: 0;
+    visibility: hidden;
     position: fixed;
     top: 0;
-
     /* Fadein menu animation */
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
@@ -107,9 +109,10 @@ input[type=checkbox] {
             #overlay-menu ul li a {
                 color: var(--text-color-over-primary-light);
                 text-decoration: none;
-                font-size: 1.5em;
+                font-size: 3rem;
             }
 
                 #overlay-menu ul li a:hover {
                     color: var(--text-color-over-primary);
+                    text-decoration: underline;
                 }

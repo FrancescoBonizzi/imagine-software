@@ -5,12 +5,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ImagineSoftwareWebsite</title>
+    <title>@ViewData["Title"] - Imagine Software</title>
 
     <link href="~/css/reset.css" asp-append-version="true" rel="stylesheet" />
     <link href="~/css/variables.css" asp-append-version="true" rel="stylesheet" />
     <link href="~/css/menu.css" asp-append-version="true" rel="stylesheet" />
-    <link href="~/css/site.css" asp-append-version="true" rel="stylesheet"  />
+    <link href="~/css/site.css" asp-append-version="true" rel="stylesheet" />
 
 </head>
 
@@ -18,26 +18,56 @@
 
     <header>
 
-        <nav>
-            <input type="checkbox" id="overlay-menu-input" />
-            <label for="overlay-menu-input" id="overlay-menu-button"><span></span></label>
-            <div id="overlay-menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+        <h2 class="header-title">Imagine Software</h2>
 
     </header>
+
+    <nav>
+        <input type="checkbox" id="overlay-menu-input" />
+        <label for="overlay-menu-input" id="overlay-menu-button"><span></span></label>
+        <div id="overlay-menu">
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Services">Servizi</a></li>
+                <li><a asp-controller="Home" asp-action="Customers">Clienti</a></li>
+                <li><a asp-controller="Home" asp-action="Francesco">Francesco</a></li>
+                <li><a asp-controller="Home" asp-action="Contacts">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+
 
     <main>
         @RenderBody()
     </main>
 
     <footer>
-        &copy; 2021 - ImagineSoftwareWebsite
+
+        <section class="bottom-menu-section">
+
+            <h2 class="bottom-menu-title">Imagine Software</h2>
+
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Services">Servizi</a></li>
+                <li><a asp-controller="Home" asp-action="Customers">Clienti</a></li>
+                <li><a asp-controller="Home" asp-action="Francesco">Francesco</a></li>
+                <li><a asp-controller="Home" asp-action="Contacts">Contatti</a></li>
+            </ul>
+
+            <ul>
+                <li><a asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                <li><a asp-controller="Home" asp-action="Sitemap">Sitemap</a></li>
+            </ul>
+
+        </section>
+
+        <hr />
+
+        <section>
+            <p>&copy; 2021, Imagine Software di Francesco Bonizzi. Partita IVA: TODO</p>
+        </section>
+
     </footer>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
