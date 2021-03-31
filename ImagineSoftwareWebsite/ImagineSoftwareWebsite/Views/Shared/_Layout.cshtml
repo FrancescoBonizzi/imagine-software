@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ImagineSoftwareWebsite</title>
 
-    <link href="~/css/reset.css" rel="stylesheet" />
-    <link href="~/css/variables.css" rel="stylesheet" />
-    <link href="~/css/menu.css" rel="stylesheet" />
-    <link href="~/css/site.css" rel="stylesheet"  />
+    <link href="~/css/reset.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/variables.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/menu.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/site.css" asp-append-version="true" rel="stylesheet"  />
+
 </head>
 
 <body>
@@ -18,9 +19,9 @@
     <header>
 
         <nav>
-            <input type="checkbox" id="overlay-input" />
-            <label for="overlay-input" id="overlay-button"><span></span></label>
-            <div id="overlay">
+            <input type="checkbox" id="overlay-menu-input" />
+            <label for="overlay-menu-input" id="overlay-menu-button"><span></span></label>
+            <div id="overlay-menu">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
