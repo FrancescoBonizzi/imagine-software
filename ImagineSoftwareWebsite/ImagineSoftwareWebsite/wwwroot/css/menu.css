@@ -1,211 +1,101 @@
-﻿@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 300;
-    src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhs.ttf) format('truetype');
-}
-
-.flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-a,
-a:visited,
-a:hover,
-a:active {
-    color: inherit;
-    text-decoration: none;
-}
-
-.outer-menu {
+﻿#overlay-button {
     position: absolute;
-    left: 0;
-    z-index: 1;
+    right: 2em;
+    top: 3em;
+    padding: 26px 11px;
+    z-index: 5;
+    cursor: pointer;
+    user-select: none;
 }
 
-    .outer-menu .checkbox-toggle {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        cursor: pointer;
-        width: 60px;
-        height: 60px;
-        opacity: 0;
+    #overlay-button span {
+        height: 4px;
+        width: 35px;
+        border-radius: 2px;
+        background-color: var(--text-color-over-primary-light);
+        position: relative;
+        display: block;
+        transition: transform 0.2s ease-in-out;
     }
 
-        .outer-menu .checkbox-toggle:checked + .hamburger > div {
-            transform: rotate(135deg);
-        }
-
-            .outer-menu .checkbox-toggle:checked + .hamburger > div:before,
-            .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
-                top: 0;
-                transform: rotate(90deg);
-            }
-
-            .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
-                opacity: 0;
-            }
-
-        .outer-menu .checkbox-toggle:checked ~ .menu {
-            pointer-events: auto;
+        #overlay-button span:before {
+            top: -10px;
             visibility: visible;
         }
 
-            .outer-menu .checkbox-toggle:checked ~ .menu > div {
-                transform: scale(1);
-                transition-duration: 0.75s;
-            }
-
-                .outer-menu .checkbox-toggle:checked ~ .menu > div > div {
-                    opacity: 1;
-                    transition: opacity 0.4s ease 0.4s;
-                }
-
-        .outer-menu .checkbox-toggle:hover + .hamburger {
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        #overlay-button span:after {
+            top: 10px;
         }
 
-        .outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
-            transform: rotate(225deg);
+        #overlay-button span:before, #overlay-button span:after {
+            height: 4px;
+            width: 35px;
+            border-radius: 2px;
+            background-color: var(--text-color-over-primary-light);
+            position: absolute;
+            content: "";
+            transition: transform 0.2s ease-in-out;
         }
 
-    .outer-menu .hamburger {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 60px;
-        height: 60px;
-        padding: 0.5em 1em;
-        background: rgba(33, 150, 243, 0.75);
-        border-radius: 0 0.12em 0.12em 0;
-        cursor: pointer;
-        transition: box-shadow 0.4s ease;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    #overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+        background: var(--text-color-over-primary);
     }
 
-        .outer-menu .hamburger > div {
-            position: relative;
-            flex: none;
-            width: 100%;
-            height: 2px;
-            background: #FEFEFE;
-            transition: all 0.4s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+input[type=checkbox] {
+    display: none;
+}
 
-            .outer-menu .hamburger > div:before,
-            .outer-menu .hamburger > div:after {
-                content: '';
-                position: absolute;
-                z-index: 1;
-                top: -10px;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background: inherit;
-                transition: all 0.4s ease;
-            }
-
-            .outer-menu .hamburger > div:after {
-                top: 10px;
-            }
-
-    .outer-menu .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        visibility: hidden;
-        overflow: hidden;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        outline: 1px solid transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    input[type=checkbox]:checked ~ #overlay {
+        visibility: visible;
     }
 
-        .outer-menu .menu > div {
-            width: 200vw;
-            height: 200vw;
-            color: #FEFEFE;
-            background: rgba(41, 98, 255, 0.97);
-            border-radius: 50%;
-            transition: all 0.4s ease;
-            flex: none;
-            transform: scale(0);
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
+        background: transparent;
+    }
+
+        input[type=checkbox]:checked ~ #overlay-button span:before {
+            transform: rotate(45deg) translate(7px, 7px);
+            opacity: 1;
         }
 
-            .outer-menu .menu > div > div {
-                text-align: center;
-                max-width: 90vw;
-                max-height: 100vh;
-                opacity: 0;
-                transition: opacity 0.4s ease;
-                overflow-y: auto;
-                flex: none;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+        input[type=checkbox]:checked ~ #overlay-button span:after {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+#overlay {
+    height: 100vh;
+    width: 100vw;
+    background: var(--primary-color);
+    z-index: 2;
+    visibility: hidden;
+    position: fixed;
+}
+
+    #overlay.active {
+        visibility: visible;
+    }
+
+    #overlay ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        height: 100vh;
+        padding-left: 0;
+        list-style-type: none;
+    }
+
+        #overlay ul li {
+            padding: 1em;
+        }
+
+            #overlay ul li a {
+                color: var(--text-color-over-primary-light);
+                text-decoration: none;
+                font-size: 1.5em;
             }
 
-                .outer-menu .menu > div > div > ul {
-                    list-style: none;
-                    padding: 0 1em;
-                    margin: 0;
-                    display: block;
-                    max-height: 100vh;
+                #overlay ul li a:hover {
+                    color: var(--text-color-over-primary);
                 }
-
-                    .outer-menu .menu > div > div > ul > li {
-                        padding: 0;
-                        margin: 1em;
-                        font-size: 24px;
-                        display: block;
-                    }
-
-                        .outer-menu .menu > div > div > ul > li > a {
-                            position: relative;
-                            display: inline;
-                            cursor: pointer;
-                            transition: color 0.4s ease;
-                        }
-
-                            .outer-menu .menu > div > div > ul > li > a:hover {
-                                color: #e5e5e5;
-                            }
-
-                                .outer-menu .menu > div > div > ul > li > a:hover:after {
-                                    width: 100%;
-                                }
-
-                            .outer-menu .menu > div > div > ul > li > a:after {
-                                content: '';
-                                position: absolute;
-                                z-index: 1;
-                                bottom: -0.15em;
-                                left: 0;
-                                width: 0;
-                                height: 2px;
-                                background: #e5e5e5;
-                                transition: width 0.4s ease;
-                            }

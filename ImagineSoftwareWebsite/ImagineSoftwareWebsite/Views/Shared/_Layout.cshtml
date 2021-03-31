@@ -8,8 +8,9 @@
     <title>@ViewData["Title"] - ImagineSoftwareWebsite</title>
 
     <link href="~/css/reset.css" rel="stylesheet" />
+    <link href="~/css/variables.css" rel="stylesheet" />
     <link href="~/css/menu.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/site.css" rel="stylesheet"  />
 </head>
 
 <body>
@@ -17,27 +18,14 @@
     <header>
 
         <nav>
-            <div class="outer-menu">
-
-                <input class="checkbox-toggle" type="checkbox" />
-
-                <div class="hamburger">
-                    <div></div>
-                </div>
-
-                <div class="menu">
-                    <div>
-                        <div>
-                            <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Products</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
+            <input type="checkbox" id="overlay-input" />
+            <label for="overlay-input" id="overlay-button"><span></span></label>
+            <div id="overlay">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
         </nav>
 
