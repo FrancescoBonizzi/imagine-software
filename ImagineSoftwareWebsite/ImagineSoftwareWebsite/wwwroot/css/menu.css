@@ -45,8 +45,14 @@ input[type=checkbox] {
 }
 
     input[type=checkbox]:checked ~ #overlay-menu {
-        visibility: visible;
+        /* Fadein menu animation */
+        opacity: 1;
     }
+
+        input[type=checkbox]:checked ~ #overlay-menu ul {
+            /* Bottom to top menu animation */
+            margin-top: 0;
+        }
 
     input[type=checkbox]:checked ~ #overlay-menu-button:hover span, input[type=checkbox]:checked ~ #overlay-menu-button span {
         background: transparent;
@@ -66,9 +72,13 @@ input[type=checkbox] {
     width: 100vw;
     background: var(--primary-color);
     z-index: 2;
-    visibility: hidden;
+    opacity: 0;
     position: fixed;
     top: 0;
+
+    /* Fadein menu animation */
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
     #overlay-menu.active {
@@ -84,6 +94,10 @@ input[type=checkbox] {
         height: 100vh;
         padding-left: 0;
         list-style-type: none;
+        /* Bottom to top menu animation */
+        margin-top: 50px;
+        -webkit-transition: margin 0.3s ease;
+        transition: margin 0.3s ease;
     }
 
         #overlay-menu ul li {
