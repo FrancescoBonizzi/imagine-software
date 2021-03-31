@@ -17,37 +17,38 @@
     <header>
 
         <nav>
-            <div class="container">
-                <input id="responsive-menu" type="checkbox">
-                <label for="responsive-menu">Menu <span id="menu-icon"></span></label>
-                <div id="overlay"></div>
-                <ul>
-                    <li><a href="http://art.yale.edu/">Yale University School of Art</a></li>
-                    <li><a href="http://www.suzannecollinsbooks.com/">Suzanne Collins</a></li>
-                    <li><a href="http://www.arrestling.com/index.htm">Gulla’s Arrestling</a></li>
-                    <li><a href="http://www.roverp6cars.com/">MGBD Parts &amp; Services</a></li>
-                    <li><a href="http://www.irishwrecksonline.net/">Irish Shipwrecks Online</a></li>
-                    <li><a href="http://www.arngren.net/">Arngren</a></li>
-                    <li><a href="https://www.lingscars.com/">Ling's Cars</a></li>
-                    <li><a href="http://www.007museum.com/">JAMES BOND 007 MUSEUM</a></li>
-                    <li><a href="http://www.dokimos.org/ajff/">ACCEPT JESUS, FOREVER FORGIVEN!</a></li>
-                    <li><a href="http://ronoslund.com/">Ron Oslund's Home Page</a></li>
-                </ul>
+            <div class="outer-menu">
+
+                <input class="checkbox-toggle" type="checkbox" />
+
+                <div class="hamburger">
+                    <div></div>
+                </div>
+
+                <div class="menu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </nav>
 
     </header>
 
-    <div class="container">
-        <main>
-            @RenderBody()
-        </main>
-    </div>
+    <main>
+        @RenderBody()
+    </main>
 
     <footer>
-        <div class="container">
-            &copy; 2021 - ImagineSoftwareWebsite
-        </div>
+        &copy; 2021 - ImagineSoftwareWebsite
     </footer>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
