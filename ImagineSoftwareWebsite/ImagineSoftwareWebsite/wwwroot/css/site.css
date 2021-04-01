@@ -119,3 +119,7 @@ h4 {
         background-color: var(--background-dark-color);
         color: var(--text-over-background-dark);
     }
+
+.link-matrix {
+    color: #00ff41;
+}
