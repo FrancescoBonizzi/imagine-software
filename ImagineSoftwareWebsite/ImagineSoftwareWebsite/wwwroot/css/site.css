@@ -1,7 +1,6 @@
 ﻿/** Footer */
-
 footer {
-    background: var(--background-dark);
+    background: var(--background-dark-color);
     font-size: 1.2rem;
     line-height: 2rem;
 }
@@ -13,23 +12,23 @@ footer {
 footer p {
     color: var(--text-over-background-dark);
     text-align: center;
-    padding: 20px 10px;
+    padding: 1.2rem 0.6rem;
 }
 
 .bottom-menu-section {
     display: flex;
     flex-wrap: wrap;
-    padding: 60px 100px;
+    padding: 3.5rem 5.8rem;
     margin: 0 auto;
 }
 
     .bottom-menu-section > * {
-        margin: 0px 40px;
+        margin: 0px 2.6rem;
     }
 
 footer hr {
     border: 0;
-    height: 1px;
+    height: 0.05rem;
     background-color: rgba(255, 255, 255, 0.1);
     width: 90%;
     margin: 0 auto;
@@ -47,7 +46,7 @@ footer a {
 
 /** Header */
 header {
-    height: 60px;
+    height: 3.5rem;
     display: flex;
 }
 
@@ -55,3 +54,68 @@ header {
     display: inline-block;
     align-self: center;
 }
+
+/** Articoli */
+article {
+    margin: 1rem 0;
+}
+
+article p {
+    padding: 0.6rem 0;
+    max-width: 50rem;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+/** Contenuto principale */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+h4 {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.grey-section {
+    background-color: #4b4b4c;
+    padding: 6em 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grey-section > * {
+    color: white;
+}
+
+.action-button {
+    background-color: white;
+    padding: 1.2rem 1.5rem;
+    color: var(--background-dark-color);
+    border-radius: 40px;
+    text-decoration: none;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+    .action-button:hover {
+        background-color: var(--background-dark-color);
+        color: var(--text-over-background-dark);
+    }
