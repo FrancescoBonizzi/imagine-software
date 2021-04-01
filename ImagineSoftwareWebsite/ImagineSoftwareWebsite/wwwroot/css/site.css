@@ -60,12 +60,22 @@ article {
     margin: 1rem 0;
 }
 
-article p {
-    padding: 0.6rem 0;
-    max-width: 50rem;
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-}
+    article p {
+        padding: 0.6rem 0;
+        max-width: 50rem;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+
+    article a {
+        text-decoration: none;
+        color: black;
+        border-bottom: 3px solid var(--primary-color);
+    }
+
+        article a:hover {
+            color: var(--primary-color);
+        }
 
 /** Contenuto principale */
 main {
@@ -101,9 +111,9 @@ h4 {
     align-items: center;
 }
 
-.grey-section > * {
-    color: white;
-}
+    .grey-section > * {
+        color: white;
+    }
 
 .action-button {
     background-color: white;
@@ -121,5 +131,9 @@ h4 {
     }
 
 .link-matrix {
+    border-bottom: 3px solid #00ff41;
+}
+
+.link-matrix:hover {
     color: #00ff41;
 }
