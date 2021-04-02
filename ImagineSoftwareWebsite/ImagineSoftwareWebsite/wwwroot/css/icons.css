@@ -22,7 +22,6 @@
 .icon-linkedin, .icon-github {
     font-family: "imagine-software-icons";
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    font-size: 1.8rem;
     margin: 0.5rem;
 }
