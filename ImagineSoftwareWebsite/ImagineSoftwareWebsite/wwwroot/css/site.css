@@ -56,15 +56,26 @@ header {
 }
 
 /** Articoli */
-article {
+section {
+    width: 100%;
+}
+
+article, .common-section {
     margin: 1rem 0;
+    max-width: 50rem;
+    line-height: 1.7rem;
+}
+
+.centered-section {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 
     article p {
         padding: 0.6rem 0;
-        max-width: 50rem;
         font-size: 1.2rem;
-        line-height: 1.7rem;
     }
 
     article a {
@@ -78,7 +89,7 @@ article {
         }
 
 .image-paragraph {
-    margin: 0 auto;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,6 +99,12 @@ article {
         display: inline-block;
     }
 
+    .image-paragraph img {
+        max-width: 500px;
+        max-height: 400px;
+        height: auto;
+    }
+
 /** Contenuto principale */
 main {
     display: flex;
@@ -95,22 +112,26 @@ main {
     align-items: center;
 }
 
+h1, h2, h3, h4 {
+    max-width: 50rem;
+}
+
 h1 {
-    text-align: center;
+    text-align: left;
     font-size: 3.5rem;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 h3 {
-    text-align: center;
+    text-align: left;
     font-size: 1.4rem;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 h4 {
-    text-align: center;
+    text-align: left;
     font-size: 1.2rem;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .grey-section {
@@ -141,6 +162,16 @@ h4 {
         color: var(--text-over-background-dark);
     }
 
+.action-button-inverted {
+    background-color: var(--background-dark-color);
+    color: white;
+}
+
+    .action-button-inverted:hover {
+        background-color: var(--text-over-background-dark);
+        color: var(--background-dark-color);
+    }
+
 .link-matrix {
     border-bottom: 3px solid #00ff41;
 }
@@ -162,4 +193,70 @@ h4 {
     font-size: 1.1rem;
     font-style: normal;
     font-weight: 500;
+}
+
+/** Contact form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+    .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea {
+        width: 100%;
+        padding: 0.8rem 0;
+        font-size: 1.1rem;
+    }
+
+    .contact-form textarea {
+        resize: none;
+    }
+
+    .contact-form input[type=text], input[type=email], textarea {
+        border: none;
+        border-bottom: 1px solid var(--text-color-over-primary-light);
+        margin-bottom: 2rem;
+    }
+
+    .contact-form label {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #btnContactSubmit {
+        align-self: flex-start;
+        margin-left: 0;
+    }
+
+.common-link {
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+    .common-link:hover {
+        color: var(--primary-color);
+    }
+
+.link-telegram {
+    border-bottom: 3px solid #2ea5e2;
+}
+
+    .link-telegram:hover {
+        color: #2ea5e2;
+    }
+
+.quick-contact-label {
+    width: 5rem;
+    display: inline-block;
+}
+
+.form-two-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-two-columns-column {
+    width: 45%;
 }
