@@ -259,3 +259,12 @@ h4 {
 .form-two-columns-column {
     width: 45%;
 }
+
+.francesco-bonizzi-photo {
+    max-width: 300px !important;
+    border-radius: 50%;
+}
+
+.microsoft-basic-photo {
+    max-width: 300px !important;
+}
