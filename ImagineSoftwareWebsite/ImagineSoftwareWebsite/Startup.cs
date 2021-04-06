@@ -54,6 +54,7 @@ namespace ImagineSoftwareWebsite
             {
                 OnPrepareResponse = context =>
                 {
+                    // Tutti i contenuti statici sono versionati, così scarica solo se sono realmente nuovi (immutable)
                     context.Context.Response.Headers.Append("Cache-Control", "public, max-age=31536000, immutable");
                 },
                 ContentTypeProvider = CustomMiddlewares.GenerateStaticFilesContentProvider()
