@@ -1,5 +1,7 @@
+using ImagineSoftwareWebsite.HttpLifecycle;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -17,7 +19,15 @@ namespace ImagineSoftwareWebsite
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddHttpsRedirection(options =>
+            {
+                options.HttpsPort = 443;
+            });
+
+
+            services
+                .AddControllersWithViews()
+                .AddNewtonsoftJson();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -29,16 +39,29 @@ namespace ImagineSoftwareWebsite
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // TODO The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
             }
 
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+                await next();
+            });
+
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseHsts();
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                OnPrepareResponse = context =>
+                {
+                    context.Context.Response.Headers.Append("Cache-Control", "public, max-age=31536000, immutable");
+                },
+                ContentTypeProvider = CustomMiddlewares.GenerateStaticFilesContentProvider()
+            });
 
             app.UseRouting();
-
             app.UseAuthorization();
+            app.UseDefaultFiles();
 
             app.UseEndpoints(endpoints =>
             {
