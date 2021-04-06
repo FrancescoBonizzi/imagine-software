@@ -12,6 +12,8 @@ namespace ImagineSoftwareWebsite.Email
     public class EmailClient
     {
         private readonly SmtpClient _client;
+
+#warning Email from da configurare
         private const string _from = "TODO";
         private const string _subject = "Imagine Software - Nuovo contatto";
         private readonly string _toAddress;

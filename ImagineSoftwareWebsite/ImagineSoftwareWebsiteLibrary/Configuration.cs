@@ -13,6 +13,7 @@
 
         public Configuration()
         {
+#warning Da configurare
             // TODO Valori
         }
     }
