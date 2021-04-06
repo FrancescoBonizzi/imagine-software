@@ -1,10 +1,11 @@
+using ImagineSoftwareWebsite.Email;
 using ImagineSoftwareWebsite.HttpLifecycle;
+using ImagineSoftwareWebsiteLibrary;
+using ImagineSoftwareWebsiteLibrary.Logs;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace ImagineSoftwareWebsite
 {
@@ -24,29 +25,25 @@ namespace ImagineSoftwareWebsite
                 options.HttpsPort = 443;
             });
 
-
             services
                 .AddControllersWithViews()
                 .AddNewtonsoftJson();
+
+            services.AddSingleton<IMyLogger, ConsoleLogger>();
+            services.AddSingleton<Configuration>();
+            services.AddSingleton<EmailClient>();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IMyLogger myLogger)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
-
             app.Use(async (context, next) =>
             {
                 context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
                 await next();
             });
 
+            app.ConfigureExceptionHandler(myLogger);
+            app.UseStatusCodePagesWithRedirects("/error/{0}");
             app.UseHttpsRedirection();
             app.UseHsts();
 

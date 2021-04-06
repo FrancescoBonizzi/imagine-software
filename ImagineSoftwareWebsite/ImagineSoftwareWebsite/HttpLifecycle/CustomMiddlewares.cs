@@ -1,4 +1,10 @@
-﻿using Microsoft.AspNetCore.StaticFiles;
+﻿using ImagineSoftwareWebsiteLibrary.Logs;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.StaticFiles;
+using System;
+using System.Net;
 
 namespace ImagineSoftwareWebsite.HttpLifecycle
 {
@@ -15,6 +21,41 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
             provider.Mappings[".ico"] = "image/x-icon";
 
             return provider;
+        }
+
+        public static void ConfigureExceptionHandler(this IApplicationBuilder app, IMyLogger logger)
+        {
+            app.UseExceptionHandler(appError =>
+            {
+                appError.Run(async context =>
+                {
+                    try
+                    {
+                        // Loggo sempre l'errore
+                        IExceptionHandlerFeature contextFeature = context.Features.Get<IExceptionHandlerFeature>();
+                        await logger.Log(contextFeature.Error);
+
+                        // Se è una chiamata alle API, ritorno un errore da API, non una pagina intera
+                        if (context.Request.Path.StartsWithSegments(
+                            new PathString($"/{Definitions.CONTROLLER_ROUTE_NAME}"),
+                            StringComparison.InvariantCultureIgnoreCase))
+                        {
+                            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                            // ...e solo il messaggio dell'eccezione, non tutta la stack trace
+                            await context.Response.WriteAsync(contextFeature.Error.Message);
+                        }
+                        else
+                        {
+                            // Altrimenti ritorno una pagina intera
+                            context.Response.Redirect("/Home/StatusCodeError?code=500");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        await logger.Log(ex);
+                    }
+                });
+            });
         }
     }
 }

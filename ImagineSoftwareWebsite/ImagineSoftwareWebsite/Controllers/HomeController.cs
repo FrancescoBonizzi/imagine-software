@@ -38,9 +38,8 @@ namespace ImagineSoftwareWebsite.Controllers
             => View();
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        [Route("/error/{code}")]
+        public IActionResult StatusCodeError(int code)
+            => View(new StatusCodeErrorViewModel(errorCode: code));
     }
 }
