@@ -101,8 +101,7 @@ article, .common-section {
 
     .image-paragraph img {
         max-width: 500px;
-        max-height: 400px;
-        height: auto;
+        width: 100%;
     }
 
 /** Contenuto principale */
