@@ -23,3 +23,7 @@ hr {
 ul, li {
     list-style: none;
 }
+
+*:focus {
+    outline: none;
+}
