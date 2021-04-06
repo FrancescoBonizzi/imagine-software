@@ -125,6 +125,7 @@ h3 {
     text-align: left;
     font-size: 1.4rem;
     padding: 1rem 0;
+    font-weight: normal;
 }
 
 h4 {
@@ -200,6 +201,7 @@ h4 {
     flex-direction: column;
     width: 100%;
     font-size: 1.1rem;
+    margin: 3rem 0;
 }
 
     .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea {
@@ -226,6 +228,7 @@ h4 {
     #btnContactSubmit {
         align-self: flex-start;
         margin-left: 0;
+        margin-top: 2rem;
     }
 
 .common-link {
@@ -266,5 +269,5 @@ h4 {
 }
 
 .microsoft-basic-photo {
-    max-width: 300px !important;
+    max-width: 400px !important;
 }
