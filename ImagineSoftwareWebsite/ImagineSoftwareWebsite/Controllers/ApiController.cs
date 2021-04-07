@@ -30,6 +30,9 @@ namespace ImagineSoftwareWebsite.Controllers
             if (string.IsNullOrWhiteSpace(sendContactMessageRequest.Name))
                 throw new Exception("Inserisci per favore il tuo nome");
 
+            if (!sendContactMessageRequest.PrivacyAccepted)
+                throw new Exception("Non posso inviare il messaggio se non accetti l'informativa sulla privacy. Grazie!");
+
             string today = DateTimeOffset.Now.ToItalianTimestampString();
             await _emailClient.Send(
                 message: $"Richiesta da {sendContactMessageRequest.Name} ({sendContactMessageRequest.Email}) " +

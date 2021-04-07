@@ -4,6 +4,8 @@
     --text-color-over-primary: black;
     --background-dark-color: #131419;
     --text-over-background-dark: #c5c5c5;
+    --success-color: #4BB543;
+    --error-color: #dc1414;
 }
 
 html {

@@ -205,7 +205,7 @@ h4 {
     flex-direction: column;
     width: 100%;
     font-size: 1.1rem;
-    margin: 3rem 0;
+    margin: 3rem 0 1rem 0;
 }
 
     .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea {
@@ -324,5 +324,29 @@ h4 {
 }
 
 .status-code-error-title {
+    color: white;
+}
+
+#error-content, #success-content {
+    text-align: center;
+    min-height: 16px;
+    display: block;
+    font-size: 1.1rem;
+    white-space: pre;
+}
+
+#error-content {
+    background-color: var(--error-color);
+    color: white;
+    border-radius: 30px;
+    padding: 1rem;
+}
+
+#success-content > span {
+    background-color: var(--success-color);
+    border-radius: 30px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: block;
     color: white;
 }

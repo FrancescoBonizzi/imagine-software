@@ -22,7 +22,12 @@
 
 <section class="common-section">
 
-    <form onsubmit="return false;" class="contact-form">
+    <div id="loader" style="display: none;">
+        <div class="loader"></div>
+        <span class="loader-message">Operazione in corso...</span>
+    </div>
+
+    <form onsubmit="return false;" class="contact-form" id="main-content">
 
         <div class="form-two-columns">
             <div class="form-two-columns-column">
@@ -45,6 +50,24 @@
         </div>
 
         <a href="#" id="btnContactSubmit" class="action-button action-button-inverted">Invia la tua richiesta</a>
+
     </form>
 
+    <div id="success-content" style="display: none;">
+        <span>Grazie! Ti risponderò il prima possibile.</span>
+        <a href="#" id="btnResetForm" class="action-button action-button-inverted">Invia un altro messaggio</a>
+    </div>
+
+    <span id="error-content" style="display: none;"></span>
+
 </section>
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        const app = new contactPage();
+        
+    </script>
+
+}
