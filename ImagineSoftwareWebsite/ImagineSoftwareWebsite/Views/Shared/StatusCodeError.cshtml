@@ -1,12 +1,23 @@
 ﻿@model StatusCodeErrorViewModel
 @{
     ViewData["Title"] = "Errore";
+    ViewData["Main-Custom-Class"] = "status-code-error";
 }
 
-<h1>@Model.ErrorDescription</h1>
-
-<a class="action-button action-button-inverted" href="/" alt="Un link per tornare alla homepage di Imagine Software" title="Ritorna all'homepage di Imagine Software">Torna alla pagina principale</a>
+<h1 class="status-code-error-title">@Model.ErrorDescription</h1>
 
 <article class="bottom-space">
-    <a href="/" alt="Un link per andare alla Sitemap di Imagine Software" title="Dai un'occhiata alla Sitemap per orientarti meglio">O dai un'occhiata alla sitemap</a>
+
+    <div class="image-paragraph">
+
+        <img src="~/images/Morpheus-Blue-Pill-Red-Pill.jpg" asp-append-version="true" alt="Un'immagine di Morpheus da Matrix che propone la pillola blu o la pillola rossa" />
+
+        <div class="morpheus-buttons">
+            <a class="morpheus-red-pill" asp-controller="Home" asp-action="Sitemap" alt="Un link per andare alla Sitemap di Imagine Software" title="Dai un'occhiata alla Sitemap per orientarti meglio">Dai un'occhiata alla sitemap</a>
+
+            <a class="morpheus-blue-pill" href="/" alt="Un link per tornare alla homepage di Imagine Software" title="Ritorna all'homepage di Imagine Software">O torna alla pagina principale</a>
+        </div>
+
+    </div>
+
 </article>

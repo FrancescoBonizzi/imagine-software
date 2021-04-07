@@ -73,24 +73,24 @@ article, .common-section {
     align-items: center;
 }
 
-    article p {
-        padding: 0.6rem 0;
-        font-size: 1.2rem;
+article p {
+    padding: 0.6rem 0;
+    font-size: 1.2rem;
+}
+
+article a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+    article a:hover {
+        color: var(--primary-color);
     }
 
-    article a {
-        text-decoration: none;
-        color: black;
-        border-bottom: 3px solid var(--primary-color);
-    }
-
-        article a:hover {
-            color: var(--primary-color);
-        }
-
-        .bottom-space {
-            margin-bottom: 5rem;
-        }
+.bottom-space {
+    margin-bottom: 5rem;
+}
 
 .image-paragraph {
     margin: 2rem auto;
@@ -229,11 +229,11 @@ h4 {
         font-size: 1rem;
     }
 
-    #btnContactSubmit {
-        align-self: flex-start;
-        margin-left: 0;
-        margin-top: 2rem;
-    }
+#btnContactSubmit {
+    align-self: flex-start;
+    margin-left: 0;
+    margin-top: 2rem;
+}
 
 .common-link {
     text-decoration: none;
@@ -274,4 +274,55 @@ h4 {
 
 .microsoft-basic-photo {
     max-width: 400px !important;
+}
+
+/** Morpheus */
+.morpheus-buttons {
+    /** Potrei usare lo zoom per il responsive qui */
+}
+
+.morpheus-blue-pill, .morpheus-red-pill {
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 18rem;
+    text-align: center;
+    margin-top: -132px;
+}
+
+.morpheus-blue-pill {
+    float: right;
+    background-color: #0469bb;
+    color: white;
+    border: none;
+    margin-left: 1rem;
+}
+
+    .morpheus-blue-pill:hover {
+        background-color: #2ea5e2;
+        color: white;
+        border: none;
+    }
+
+.morpheus-red-pill {
+    float: left;
+    background-color: #c3271c;
+    color: white;
+    border: none;
+    margin-right: 1rem;
+}
+
+    .morpheus-red-pill:hover {
+        background-color: #e72721;
+        color: white;
+        border: none;
+    }
+
+.status-code-error {
+    background-color: black;
+}
+
+.status-code-error-title {
+    color: white;
 }
