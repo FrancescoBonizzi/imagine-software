@@ -1,6 +1,8 @@
 ﻿using ImagineSoftwareWebsite.Email;
 using ImagineSoftwareWebsite.Models.API;
+using ImagineSoftwareWebsiteLibrary.Email;
 using ImagineSoftwareWebsiteLibrary.Extensions;
+using ImagineSoftwareWebsiteLibrary.Logs;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -11,10 +13,12 @@ namespace ImagineSoftwareWebsite.Controllers
     public class ApiController : ControllerBase
     {
         private readonly EmailClient _emailClient;
+        private readonly IMyLogger _logger;
 
-        public ApiController(EmailClient emailClient)
+        public ApiController(EmailClient emailClient, IMyLogger logger)
         {
             _emailClient = emailClient;
+            _logger = logger;
         }
 
         [HttpPost]
@@ -33,11 +37,24 @@ namespace ImagineSoftwareWebsite.Controllers
             if (!sendContactMessageRequest.PrivacyAccepted)
                 throw new Exception("Non posso inviare il messaggio se non accetti l'informativa sulla privacy. Grazie!");
 
+
             string today = DateTimeOffset.Now.ToItalianTimestampString();
-            await _emailClient.Send(
-                message: $"Richiesta da {sendContactMessageRequest.Name} ({sendContactMessageRequest.Email}) " +
-                $"in data {today} " +
-                $"<br /><br />");
+            string message = $"Richiesta da {sendContactMessageRequest.Name} ({sendContactMessageRequest.Email}) " +
+               $"in data {today} " +
+               $"<br /><br />";
+
+            try
+            {
+                if (EmailValidity.IsValidEmail(sendContactMessageRequest.Email))
+                    throw new Exception("C'è qualcosa che non quadra nell'indirizzo email che hai inserito!");
+
+                await _emailClient.Send(message);
+            }
+            catch (Exception ex)
+            {
+                // Non voglio perdermi potenziali email corrette per bug nella validazione, quindi loggo tutto
+                await _logger.Log($"Errore nell'invio email: {message}" + Environment.NewLine + Environment.NewLine + ex.ToString());
+            }
 
             return Ok();
         }
