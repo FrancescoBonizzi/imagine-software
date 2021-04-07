@@ -1,0 +1,86 @@
+﻿.loader {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: auto;
+}
+
+    .loader::before,
+    .loader::after {
+        content: "";
+        position: absolute;
+    }
+
+.loader {
+    border: 1px solid var(--loader-color);
+    height: 14px;
+    width: 32px;
+}
+
+    .loader::before {
+        width: 4px;
+        height: 10px;
+        background: var(--loader-color);
+        left: 1px;
+        top: calc(50% - 5px);
+        -webkit-animation: blockBar 2s infinite;
+        animation: blockBar 2s infinite;
+    }
+
+@-webkit-keyframes blockBar {
+
+    0%, 80% {
+        opacity: 1;
+    }
+
+    0%, 20% {
+        box-shadow: 8px 0 0 0 rgba(255, 255, 255, 0), 16px 0 0 0 rgba(255, 255, 255, 0), 24px 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+    21%, 40% {
+        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 rgba(255, 255, 255, 0), 24px 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+    41%, 60% {
+        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 var(--loader-color), 24px 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+    61%, 80% {
+        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 var(--loader-color), 24px 0 0 0 var(--loader-color);
+    }
+
+    81%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blockBar {
+
+    0%, 80% {
+        opacity: 1;
+    }
+
+    0%, 20% {
+        box-shadow: 8px 0 0 0 rgba(255, 255, 255, 0), 16px 0 0 0 rgba(255, 255, 255, 0), 24px 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+    21%, 40% {
+        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 rgba(255, 255, 255, 0), 24px 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+    41%, 60% {
+        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 var(--loader-color), 24px 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+    61%, 80% {
+        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 var(--loader-color), 24px 0 0 0 var(--loader-color);
+    }
+
+    81%, 100% {
+        opacity: 0;
+    }
+}
+
+.loader-message {
+    text-align: center;
+}
