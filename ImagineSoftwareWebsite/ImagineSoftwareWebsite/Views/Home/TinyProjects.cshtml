@@ -1,6 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Piccoli progetti";
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
+    ViewData["Title"] = routeName;
 }
 
 <h1>La creatività fuori dall'orario di lavoro</h1>
-<h3>I miei piccoli progetti</h3>
+<h3>@routeName</h3>

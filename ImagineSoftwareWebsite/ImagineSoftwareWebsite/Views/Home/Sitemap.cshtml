@@ -1,5 +1,13 @@
-﻿@{
+﻿@model SitemapViewModel
+@{
     ViewData["Title"] = "Mappa del sito";
 }
 
 <h1>Mappa del sito</h1>
+
+<ul>
+    @foreach (var s in Model.Routes)
+    {
+        <li><a href="@s.Url">@s.Name</a></li>
+    }
+</ul>

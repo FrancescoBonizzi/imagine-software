@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace ImagineSoftwareWebsite
 {
@@ -34,6 +35,7 @@ namespace ImagineSoftwareWebsite
             services.AddSingleton<IMyLogger, ConsoleLogger>();
             services.AddSingleton<Configuration>();
             services.AddSingleton<EmailClient>();
+            services.AddSingleton<RoutesInspector>();
         }
 
         public void Configure(IApplicationBuilder app, IMyLogger myLogger)
@@ -46,15 +48,17 @@ namespace ImagineSoftwareWebsite
 
             app.ConfigureExceptionHandler(myLogger);
 
-            app.UseStatusCodePages(async context =>
-            {
+            app.UseStatusCodePages(context => {
+
                 int statusCode = context.HttpContext.Response.StatusCode;
-                
+
                 // Non mi piace dover fare il redirect alla pagina degli errori per un not allowed
                 if (statusCode != (int)HttpStatusCode.MethodNotAllowed)
                 {
-                    await context.HttpContext.Response.WriteAsync($"/error/{statusCode}");
+                    context.HttpContext.Response.Redirect($"/error/{statusCode}");
                 }
+
+                return Task.CompletedTask;
             });
 
             //app.UseStatusCodePagesWithRedirects("/error/{0}");

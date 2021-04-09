@@ -1,8 +1,9 @@
 ﻿@{
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
     ViewData["Title"] = "Francesco Bonizzi";
 }
 
-<h1>Francesco Bonizzi</h1>
+<h1>@routeName</h1>
 <h3>Professionista dello sviluppo software</h3>
 
 <article>

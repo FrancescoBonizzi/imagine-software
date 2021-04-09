@@ -1,7 +1,8 @@
 ﻿@{
-    ViewData["Title"] = "Al servizio delle tue idee";
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
+    ViewData["Title"] = routeName;
 }
 
 <h1>Al servizio delle tue idee</h1>
-<h3>L'offerta di Imagine Software</h3>
+<h3>@routeName</h3>
 

@@ -1,5 +1,6 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
+    ViewData["Title"] = routeName;
 }
 
-<h1>Privacy Policy</h1>
+<h1>@routeName</h1>

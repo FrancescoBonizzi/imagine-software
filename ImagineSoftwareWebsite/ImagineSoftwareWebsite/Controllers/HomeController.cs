@@ -1,38 +1,51 @@
-﻿using ImagineSoftwareWebsite.Models;
+﻿using ImagineSoftwareWebsite.HttpLifecycle;
+using ImagineSoftwareWebsite.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ImagineSoftwareWebsite.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly RoutesInspector _routesInspector;
+
+        public HomeController(RoutesInspector routesInspector)
+        {
+            _routesInspector = routesInspector;
+        }
+
         public IActionResult Index()
             => View();
 
-        [Route("contatti")]
+        [Route(template: "contatti", Name = "Contatti")]
         public IActionResult Contacts()
             => View();
 
-        [Route("clienti-casestudy")]
+        [Route(template: "clienti-casestudy", Name = "Clienti e Case Study")]
         public IActionResult Customers()
             => View();
 
-        [Route("servizi-offerta")]
+        [Route(template: "servizi-offerta", Name = "L'offerta di Imagine Software")]
         public IActionResult Services()
             => View();
 
-        [Route("francesco-bonizzi")]
+        [Route(template: "francesco-bonizzi", Name = "Francesco Bonizzi")]
         public IActionResult Francesco()
             => View();
 
-        [Route("privacy")]
+        [Route(template: "privacy", Name = "Privacy Policy")]
         public IActionResult Privacy()
             => View();
 
-        [Route("sitemap")]
+        [Route(template: "sitemap", Name = "Mappa del sito")]
         public IActionResult Sitemap()
-            => View();
+        {
+            return View(new SitemapViewModel()
+            {
+                Routes = _routesInspector.GetAllRoutes()
+            });
+        }
 
-        [Route("projects")]
+        [Route(template: "projects", Name = "I miei piccoli progetti")]
         public IActionResult TinyProjects()
             => View();
 
