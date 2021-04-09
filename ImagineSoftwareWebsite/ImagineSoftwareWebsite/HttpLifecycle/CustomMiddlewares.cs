@@ -19,6 +19,10 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
             provider.Mappings[".js"] = "text/javascript; charset=utf-8";
             provider.Mappings[".ttf"] = "font/ttf";
             provider.Mappings[".ico"] = "image/x-icon";
+            provider.Mappings[".svg"] = "image/svg+xml";
+            provider.Mappings[".ttf"] = "application/x-font-ttf";
+            provider.Mappings[".woff"] = "application/x-font-woff";
+            provider.Mappings[".eot"] = "application/vnd.ms-fontobject";
 
             return provider;
         }
