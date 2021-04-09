@@ -1,6 +1,5 @@
 ﻿using ImagineSoftwareWebsite.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace ImagineSoftwareWebsite.Controllers
 {

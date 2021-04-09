@@ -4,8 +4,10 @@ using ImagineSoftwareWebsiteLibrary;
 using ImagineSoftwareWebsiteLibrary.Logs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Net;
 
 namespace ImagineSoftwareWebsite
 {
@@ -43,7 +45,19 @@ namespace ImagineSoftwareWebsite
             });
 
             app.ConfigureExceptionHandler(myLogger);
-            app.UseStatusCodePagesWithRedirects("/error/{0}");
+
+            app.UseStatusCodePages(async context =>
+            {
+                int statusCode = context.HttpContext.Response.StatusCode;
+                
+                // Non mi piace dover fare il redirect alla pagina degli errori per un not allowed
+                if (statusCode != (int)HttpStatusCode.MethodNotAllowed)
+                {
+                    await context.HttpContext.Response.WriteAsync($"/error/{statusCode}");
+                }
+            });
+
+            //app.UseStatusCodePagesWithRedirects("/error/{0}");
             app.UseHttpsRedirection();
             app.UseHsts();
 

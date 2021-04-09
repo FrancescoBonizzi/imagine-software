@@ -25,7 +25,7 @@ const isEmailValid = email => {
 
 const showElement = (element) => {
     element.style = 'display: block;';
-} 
+}
 
 const hideElement = (element) => {
     element.style = 'display: none;';
@@ -76,7 +76,8 @@ class contactPage {
         this.view.errorContent = document.getElementById('error-content');
         this.view.loader = document.getElementById('loader');
         this.view.mainContent = document.getElementById('main-content');
-        
+        this.view.contactForm = document.getElementById('contact-form');
+
         const me = this;
         this.view.btnContactSubmit.addEventListener('click', function (event) {
 
@@ -95,9 +96,9 @@ class contactPage {
         }, false);
     }
 
-    view = {};
+    view = {}
 
-    sendMessage() {
+    async sendMessage() {
 
         try {
 
@@ -108,25 +109,43 @@ class contactPage {
 
                 this.validateMessage(message);
                 showLoadingAndHideMainContent(this.view.loader, this.view.mainContent);
-                // TODO: Chiamata HTTP
-                console.info("CHIAMATA HTTP BELLISSIMA!");
+
+                const result = await fetch(
+                    'api/send-contact-message',
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(message)
+                    });
+
+                if (!result.ok) {
+                    console.error("🐝🐝🐝 ", result);
+                    const body = await result.text();
+                    throw body || 'Si è verificato un errore non previsto. Sto già indagando!';
+                }
 
                 hideLoader(this.view.loader, this.view.mainContent, true);
                 showSuccess(this.view.successContent);
+
             }
             catch (ex) {
+                hideLoader(this.view.loader, this.view.mainContent, false);
                 showError(this.view.errorContent, ex);
+                console.error("🔥🔥🔥 " + ex);
             }
 
         } catch (genericEx) {
+            hideLoader(this.view.loader, this.view.mainContent, false);
             showError(this.view.errorContent, 'Si è verificato un errore non previsto. Sto già indagando!');
-            console.error(genericEx);
+            console.error("🔥🔥🔥 " + genericEx);
         }
 
     }
 
     resetForm() {
-        this.view.mainContent.reset();
+        this.view.contactForm.reset();
         hideElement(this.view.successContent);
         this.view.mainContent.style = ""; // Lo resetto semplicemente a com'era prima, così usa il CSS
         this.view.mainContent.scrollIntoView();
@@ -149,7 +168,7 @@ class contactPage {
         if (isNullOrWhitespace(message.email))
             throw 'Inserisci per favore il tuo indirizzo email, così che possa risponderti!';
 
-        if (!isEmailValid(message.email)) 
+        if (!isEmailValid(message.email))
             throw 'C\'è qualcosa che non quadra nell\'indirizzo email che hai inserito!';
 
         if (isNullOrWhitespace(message.message))

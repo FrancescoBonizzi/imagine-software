@@ -59,6 +59,9 @@ namespace ImagineSoftwareWebsite.Controllers
             if (!EmailValidity.IsValidEmail(sendContactMessageRequest.Email))
                 return BadRequest("C'è qualcosa che non quadra nell'indirizzo email che hai inserito!");
 
+            // Per far vedere il loader
+            await Task.Delay(1000);
+
             try
             {
                 await _emailClient.Send(message);

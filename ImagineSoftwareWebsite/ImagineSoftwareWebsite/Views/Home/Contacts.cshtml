@@ -27,33 +27,35 @@
         <span class="loader-message">Operazione in corso...</span>
     </div>
 
-    <form onsubmit="return false;" class="contact-form" id="main-content">
+    <div id="main-content">
+        <form onsubmit="return false;" class="contact-form" id="contact-form">
 
-        <div class="form-two-columns">
-            <div class="form-two-columns-column">
-                <label for="txtName">Nome</label>
-                <input type="text" id="txtName" placeholder="Inserisci il tuo nome" autocomplete="on" />
+            <div class="form-two-columns">
+                <div class="form-two-columns-column">
+                    <label for="txtName">Nome</label>
+                    <input type="text" id="txtName" placeholder="Inserisci il tuo nome" autocomplete="on" />
+                </div>
+
+                <div class="form-two-columns-column">
+                    <label for="txtEmail">Email</label>
+                    <input type="email" id="txtEmail" placeholder="La tua email?" autocomplete="on" />
+                </div>
             </div>
 
-            <div class="form-two-columns-column">
-                <label for="txtEmail">Email</label>
-                <input type="email" id="txtEmail" placeholder="La tua email?" autocomplete="on" />
+            <label for="txtMessage">Messaggio</label>
+            <textarea placeholder="Dimmi tutto!" id="txtMessage" rows="3" cols="12"></textarea>
+
+            <div>
+                <label for="chkPrivacy">Ho preso atto dell'<a class="common-link" asp-controller="Home" asp-action="Privacy" alt="Un link all'informativa sulla Privacy per il trattamento dei tuoi dati" title="Leggi l'informativa sulla privacy di Imagine Software" target="_blank">informativa sulla privacy</a></label>
+                <input type="checkbox" id="chkPrivacy" checked />
             </div>
-        </div>
 
-        <label for="txtMessage">Messaggio</label>
-        <textarea placeholder="Dimmi tutto!" id="txtMessage" rows="3" cols="12"></textarea>
+            <input type="text" name="password" style="display: none !important" tabindex="-1" autocomplete="off" />
 
-        <div>
-            <label for="chkPrivacy">Ho preso atto dell'<a class="common-link" asp-controller="Home" asp-action="Privacy" alt="Un link all'informativa sulla Privacy per il trattamento dei tuoi dati" title="Leggi l'informativa sulla privacy di Imagine Software" target="_blank">informativa sulla privacy</a></label>
-            <input type="checkbox" id="chkPrivacy" checked />
-        </div>
+            <a href="#" id="btnContactSubmit" class="action-button action-button-inverted">Invia la tua richiesta</a>
 
-        <input type="text" name="password" style="display: none !important" tabindex="-1" autocomplete="off" />
-
-        <a href="#" id="btnContactSubmit" class="action-button action-button-inverted">Invia la tua richiesta</a>
-
-    </form>
+        </form>
+    </div>
 
     <div id="success-content" style="display: none;">
         <span>Grazie! Ti risponderò il prima possibile.</span>
@@ -67,9 +69,7 @@
 @section Scripts {
 
     <script type="text/javascript">
-
         const app = new contactPage();
-
     </script>
 
 }
