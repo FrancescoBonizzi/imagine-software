@@ -350,3 +350,8 @@ h4 {
     display: block;
     color: white;
 }
+
+#javascript-disabled-message {
+    display: none;
+    color: var(--error-color);
+}

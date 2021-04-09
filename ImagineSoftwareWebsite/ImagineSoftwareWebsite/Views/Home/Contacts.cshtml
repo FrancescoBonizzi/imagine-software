@@ -2,6 +2,20 @@
     ViewData["Title"] = "Vuoi discutere di un progetto o di una folle idea? Scrivimi!";
 }
 
+<noscript>
+    <style>
+        /* Se javascript è disabilitato non mostro la form */
+        #main-content {
+            display: none;
+        }
+
+        #javascript-disabled-message {
+            display: block;
+        }
+    </style>
+</noscript>
+
+
 <h1>Vuoi discutere di un progetto<br /> o di una folle idea?</h1>
 <h3>Scrivimi due righe.</h3>
 
@@ -26,6 +40,8 @@
         <div class="loader"></div>
         <span class="loader-message">Operazione in corso...</span>
     </div>
+
+    <h3 id="javascript-disabled-message">Attenzione, Javascript è disabilitato! Non posso mostrarti una pagina di invio messaggi.</h3>
 
     <div id="main-content">
         <form onsubmit="return false;" class="contact-form" id="contact-form">
