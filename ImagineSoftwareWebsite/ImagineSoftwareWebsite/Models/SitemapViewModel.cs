@@ -5,6 +5,6 @@ namespace ImagineSoftwareWebsite.Models
 {
     public class SitemapViewModel
     {
-        public List<RouteDefinition> Routes { get; set; }
+        public IDictionary<string, IEnumerable<RouteDefinition>> Routes { get; set; }
     }
 }

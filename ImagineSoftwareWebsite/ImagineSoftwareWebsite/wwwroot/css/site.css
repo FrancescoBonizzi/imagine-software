@@ -355,3 +355,17 @@ h4 {
     display: none;
     color: var(--error-color);
 }
+
+/** Sitemap */
+.sitemap-group {
+    margin: 2rem;
+}
+
+.sitemap-section {
+    display: flex;
+}
+
+.sitemap-group-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}

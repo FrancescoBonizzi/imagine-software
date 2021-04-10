@@ -5,9 +5,19 @@
 
 <h1>Mappa del sito</h1>
 
-<ul>
-    @foreach (var s in Model.Routes)
+<section class="common-section sitemap-section">
+    @foreach (var section in Model.Routes)
     {
-        <li><a href="@s.Url">@s.Name</a></li>
+        <ul class="sitemap-group">
+            @foreach (var page in section.Value)
+            {
+                <li>
+                    <a class="common-link @if (page.IsIndexPage) { <text>sitemap-group-title</text> }"
+                       title="Visita la pagina @(page.Name)"
+                       alt="Un link alla pagina @(page.Name)"
+                       href="@(page.Url)">@(page.Name)</a>
+                </li>
+            }
+        </ul>
     }
-</ul>
+</section>

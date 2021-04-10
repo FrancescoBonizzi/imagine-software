@@ -13,15 +13,12 @@ namespace ImagineSoftwareWebsite.Controllers
             _routesInspector = routesInspector;
         }
 
+        [Route(template: "/", Name = "Home")]
         public IActionResult Index()
             => View();
 
         [Route(template: "contatti", Name = "Contatti")]
         public IActionResult Contacts()
-            => View();
-
-        [Route(template: "clienti-casestudy", Name = "Clienti e Case Study")]
-        public IActionResult Customers()
             => View();
 
         [Route(template: "servizi-offerta", Name = "L'offerta di Imagine Software")]
@@ -32,7 +29,7 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult Francesco()
             => View();
 
-        [Route(template: "privacy", Name = "Privacy Policy")]
+        [Route(template: "privacy", Name = "Privacy policy")]
         public IActionResult Privacy()
             => View();
 
@@ -44,10 +41,6 @@ namespace ImagineSoftwareWebsite.Controllers
                 Routes = _routesInspector.GetAllRoutes()
             });
         }
-
-        [Route(template: "projects", Name = "I miei piccoli progetti")]
-        public IActionResult TinyProjects()
-            => View();
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         [Route("/error/{code}")]
