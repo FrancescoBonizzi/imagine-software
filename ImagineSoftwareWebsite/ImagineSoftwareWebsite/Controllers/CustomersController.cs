@@ -9,15 +9,15 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult Index()
             => View();
 
-        [Route(template: "invoice-maker-quick-easy", Name = "Invoice Maker - Quick & Easy")]
+        [Route(template: "clienti-casestudy/invoice-maker-quick-easy", Name = "Invoice Maker - Quick & Easy")]
         public IActionResult InvoiceMaker()
             => View();
 
-        [Route(template: "rellow-game", Name = "Rellow")]
+        [Route(template: "clienti-casestudy/rellow-game", Name = "Rellow")]
         public IActionResult Rellow()
             => View();
 
-        [Route(template: "aragest", Name = "ARAGest - Software di gestione agricola")]
+        [Route(template: "clienti-casestudy/aragest", Name = "ARAGest - Software di gestione agricola")]
         public IActionResult ARAGest()
             => View();
     }

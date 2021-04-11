@@ -1,0 +1,4 @@
+﻿User-agent: *
+allow: /
+Sitemap: https://www.imaginesoftware.it/sitemap.xml
+Sitemap: http://www.imaginesoftware.it/sitemap.xml

@@ -9,7 +9,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\robots.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.13" />
+    <PackageReference Include="SimpleMvcSitemap" Version="4.0.1" />
   </ItemGroup>
 
   <ItemGroup>

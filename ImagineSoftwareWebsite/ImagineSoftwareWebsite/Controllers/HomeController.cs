@@ -1,6 +1,8 @@
 ﻿using ImagineSoftwareWebsite.HttpLifecycle;
 using ImagineSoftwareWebsite.Models;
 using Microsoft.AspNetCore.Mvc;
+using SimpleMvcSitemap;
+using System.Collections.Generic;
 
 namespace ImagineSoftwareWebsite.Controllers
 {
@@ -33,12 +35,28 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult Privacy()
             => View();
 
-        [Route(template: "sitemap", Name = Definitions.SITEMAP_PAGE_CONTROLLER_NAME)]
+        [Route(template: "mappa-del-sito", Name = Definitions.SITEMAP_PAGE_CONTROLLER_NAME)]
         public IActionResult Sitemap()
             => View(new SitemapViewModel()
             {
                 Routes = _routesInspector.GetAllRoutes()
             });
+
+        [Route(template: "sitemap.xml")]
+        public IActionResult SitemapXml()
+        {
+            var routes = _routesInspector.GetAllRoutes();
+            var nodes = new List<SitemapNode>();
+            foreach (var section in routes)
+            {
+                foreach (var route in section.Value)
+                {
+                    nodes.Add(new SitemapNode(Url.Content(route.Url)));
+                }
+            }
+
+            return new SitemapProvider().CreateSitemap(new SitemapModel(nodes));
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         [Route("/error/{code}")]
