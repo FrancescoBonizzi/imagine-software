@@ -13,34 +13,32 @@ namespace ImagineSoftwareWebsite.Controllers
             _routesInspector = routesInspector;
         }
 
-        [Route(template: "/", Name = "Home")]
+        [Route(template: "/", Name = Definitions.HOME_PAGE_CONTROLLER_NAME)]
         public IActionResult Index()
             => View();
 
-        [Route(template: "contatti", Name = "Contatti")]
+        [Route(template: "contatti", Name = Definitions.CONTACT_PAGE_CONTROLLER_NAME)]
         public IActionResult Contacts()
             => View();
 
-        [Route(template: "servizi-offerta", Name = "L'offerta di Imagine Software")]
+        [Route(template: "servizi-offerta", Name = Definitions.SERVICES_PAGE_CONTROLLER_NAME)]
         public IActionResult Services()
             => View();
 
-        [Route(template: "francesco-bonizzi", Name = "Francesco Bonizzi")]
+        [Route(template: "francesco-bonizzi", Name = Definitions.FRANCESCO_PAGE_CONTROLLER_NAME)]
         public IActionResult Francesco()
             => View();
 
-        [Route(template: "privacy", Name = "Privacy policy")]
+        [Route(template: "privacy", Name = Definitions.PRIVACY_PAGE_CONTROLLER_NAME)]
         public IActionResult Privacy()
             => View();
 
-        [Route(template: "sitemap", Name = "Mappa del sito")]
+        [Route(template: "sitemap", Name = Definitions.SITEMAP_PAGE_CONTROLLER_NAME)]
         public IActionResult Sitemap()
-        {
-            return View(new SitemapViewModel()
+            => View(new SitemapViewModel()
             {
                 Routes = _routesInspector.GetAllRoutes()
             });
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         [Route("/error/{code}")]

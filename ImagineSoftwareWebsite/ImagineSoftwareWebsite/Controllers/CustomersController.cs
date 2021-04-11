@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ImagineSoftwareWebsite.HttpLifecycle;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ImagineSoftwareWebsite.Controllers
 {
     public class CustomersController : Controller
     {
-        [Route(template: "clienti-casestudy", Name = "Clienti e case study")]
+        [Route(template: "clienti-casestudy", Name = Definitions.CUSTOMERS_PAGE_CONTROLLER_NAME)]
         public IActionResult Index()
             => View();
 
