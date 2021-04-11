@@ -39,13 +39,13 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult Sitemap()
             => View(new SitemapViewModel()
             {
-                Routes = _routesInspector.GetAllRoutes()
+                Routes = _routesInspector.AllRoutes
             });
 
         [Route(template: "sitemap.xml")]
         public IActionResult SitemapXml()
         {
-            var routes = _routesInspector.GetAllRoutes();
+            var routes = _routesInspector.AllRoutes;
             var nodes = new List<SitemapNode>();
             foreach (var section in routes)
             {

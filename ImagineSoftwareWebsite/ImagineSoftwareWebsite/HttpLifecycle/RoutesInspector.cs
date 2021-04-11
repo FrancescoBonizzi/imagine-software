@@ -12,17 +12,19 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
     {
         private readonly IActionDescriptorCollectionProvider _routesProvider;
 
-        public RoutesInspector(IActionDescriptorCollectionProvider provider)
-        {
-            _routesProvider = provider;
-        }
-
-#warning Cachare singleton, basta metterlo nel costruttore e ciaone
         /// <summary>
         /// Ritorna tutte le route del sito escluse le API ed i file statici, 
         /// raggruppate per sezione (Controller)
         /// </summary>
-        public IDictionary<string, IEnumerable<RouteDefinition>> GetAllRoutes()
+        public IDictionary<string, IEnumerable<RouteDefinition>> AllRoutes { get; }
+
+        public RoutesInspector(IActionDescriptorCollectionProvider provider)
+        {
+            _routesProvider = provider;
+            AllRoutes = GenerateAllRoutes();
+        }
+
+        private IDictionary<string, IEnumerable<RouteDefinition>> GenerateAllRoutes()
         {
             var routes = new List<RouteDefinition>();
 
