@@ -7,6 +7,8 @@
     --success-color: #4BB543;
     --error-color: #dc1414;
     --loader-color: #fdd007;
+    --page-width: 50rem;
+    --header-height: 4rem;
 }
 
 html {

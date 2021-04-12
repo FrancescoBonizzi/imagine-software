@@ -41,31 +41,31 @@
         background: var(--text-color-over-primary);
     }
 
-nav input[type=checkbox] {
+#overlay-menu-input {
     display: none;
 }
 
-    nav input[type=checkbox]:checked ~ #overlay-menu {
-        /* Fadein menu animation */
-        opacity: 1;
-        visibility: visible;
-    }
+#overlay-menu-input:checked ~ #overlay-menu {
+    /* Fadein menu animation */
+    opacity: 1;
+    visibility: visible;
+}
 
-        nav input[type=checkbox]:checked ~ #overlay-menu ul {
+        #overlay-menu-input:checked ~ #overlay-menu ul {
             /* Bottom to top menu animation */
             margin-top: 0;
         }
 
-    nav input[type=checkbox]:checked ~ #overlay-menu-button:hover span, nav input[type=checkbox]:checked ~ #overlay-menu-button span {
+    #overlay-menu-input:checked ~ #overlay-menu-button:hover span, #overlay-menu-input:checked ~ #overlay-menu-button span {
         background: transparent;
     }
 
-        nav input[type=checkbox]:checked ~ #overlay-menu-button span:before {
+        #overlay-menu-input:checked ~ #overlay-menu-button span:before {
             transform: rotate(45deg) translate(7px, 7px);
             opacity: 1;
         }
 
-        nav input[type=checkbox]:checked ~ #overlay-menu-button span:after {
+        #overlay-menu-input:checked ~ #overlay-menu-button span:after {
             transform: rotate(-45deg) translate(7px, -7px);
         }
 

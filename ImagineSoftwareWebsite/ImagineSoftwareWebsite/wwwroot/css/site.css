@@ -46,12 +46,24 @@ footer a {
 
 /** Header */
 header {
-    height: 3.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--primary-color);
+    color: var(--text-color-over-primary-light);
+}
+
+.header-centered-content {
     display: flex;
+    max-width: var(--page-width);
+    align-self: center;
+    margin: 0 auto;
+    height: var(--header-height);
 }
 
 .header-title {
-    display: inline-block;
+    display: block;
     align-self: center;
 }
 
@@ -62,7 +74,7 @@ section {
 
 article, .common-section {
     margin: 1rem 0;
-    max-width: 50rem;
+    max-width: var(--page-width);
     line-height: 1.7rem;
 }
 
@@ -113,10 +125,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: calc(var(--header-height) + 2rem);
 }
 
 h1, h2, h3, h4 {
-    max-width: 50rem;
+    max-width: var(--page-width);
 }
 
 h1 {
