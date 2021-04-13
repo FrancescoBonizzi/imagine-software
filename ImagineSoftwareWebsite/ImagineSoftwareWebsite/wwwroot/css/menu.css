@@ -1,7 +1,7 @@
 ﻿#overlay-menu-button {
-    position: absolute;
-    right: 2em;
-    top: 1em;
+    position: fixed;
+    right: 2rem;
+    top: 0.4rem;
     padding: 26px 11px;
     z-index: 5;
     cursor: pointer;
