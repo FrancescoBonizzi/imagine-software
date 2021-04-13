@@ -12,7 +12,7 @@
             @foreach (var page in section.Value)
             {
                 <li>
-                    <a class="common-link @if (page.IsIndexPage) { <text>sitemap-group-title</text> }"
+                    <a class="sitemap-link @if (page.IsIndexPage) { <text>sitemap-group-title</text> }"
                        title="Visita la pagina @(page.Name)"
                        alt="Un link alla pagina @(page.Name)"
                        href="@(page.Url)">@(page.Name)</a>

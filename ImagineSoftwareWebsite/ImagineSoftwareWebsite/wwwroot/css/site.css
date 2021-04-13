@@ -82,17 +82,17 @@ article h2, article h3 {
     text-align: left;
 }
 
-    article h2 {
-        padding: 0;
-    }
+article h2 {
+    padding: 0;
+}
 
-    article h3 {
-        padding: 0 0 2rem 0;
-    }
+article h3 {
+    padding: 0 0 2rem 0;
+}
 
-    .bottom-space {
-        margin-bottom: 5rem;
-    }
+.bottom-space {
+    margin-bottom: 5rem;
+}
 
 .image-paragraph {
     margin: 2rem auto;
@@ -271,6 +271,17 @@ h4 {
 
     .common-link:hover {
         color: var(--primary-color);
+    }
+
+.sitemap-link {
+    text-decoration: none;
+    white-space: pre;
+    color: var(--background-dark-color);
+}
+
+    .sitemap-link:hover {
+        text-decoration: underline;
+        color: black;
     }
 
 .link-telegram {
