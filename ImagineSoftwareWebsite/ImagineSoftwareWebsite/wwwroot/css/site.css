@@ -275,7 +275,6 @@ h4 {
 
 .sitemap-link {
     text-decoration: none;
-    white-space: pre;
     color: var(--background-dark-color);
 }
 
@@ -407,6 +406,8 @@ h4 {
 
 .sitemap-section {
     display: flex;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .sitemap-group-title {

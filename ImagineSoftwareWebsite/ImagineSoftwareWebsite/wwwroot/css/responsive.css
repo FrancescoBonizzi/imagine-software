@@ -2,6 +2,7 @@
     
     .sitemap-section {
         flex-wrap: wrap;
+        justify-content: start;
     }
 
 }
