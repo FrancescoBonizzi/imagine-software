@@ -53,6 +53,7 @@ article, .common-section {
     margin: 1rem 0;
     max-width: var(--page-width);
     line-height: 1.7rem;
+    width: 100%;
 }
 
 .centered-section {
@@ -75,6 +76,10 @@ article a {
 
     article a:hover {
         color: var(--primary-color);
+    }
+
+    article h1, article h3 {
+        text-align: left;
     }
 
 .bottom-space {
@@ -113,6 +118,7 @@ h1 {
     text-align: center;
     font-size: 3.5rem;
     padding: 1rem 0;
+    line-height: 4rem;
 }
 
 h3 {
@@ -138,6 +144,17 @@ h4 {
 }
 
     .grey-section > * {
+        color: white;
+    }
+
+.grey-article {
+    background-color: #4b4b4c;
+    padding: 6em 0;
+    width: 100%;
+    max-width: none;
+}
+
+    .grey-article > * {
         color: white;
     }
 
