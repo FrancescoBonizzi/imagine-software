@@ -19,6 +19,7 @@ header {
     display: block;
     align-self: center;
     margin-left: 2rem;
+    font-size: 2rem;
 }
 
     .header-title a {
