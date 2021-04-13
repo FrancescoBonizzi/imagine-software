@@ -223,7 +223,7 @@ h4 {
     font-family: monospace;
     font-size: 1.1rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /** Contact form */
@@ -411,5 +411,5 @@ h4 {
 
 .sitemap-group-title {
     font-size: 1.3rem;
-    font-weight: bold;
+    font-weight: 600;
 }
