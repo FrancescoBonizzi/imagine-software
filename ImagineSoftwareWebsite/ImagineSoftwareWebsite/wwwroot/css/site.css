@@ -44,38 +44,6 @@ footer a {
         text-decoration: underline;
     }
 
-/** Header */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: var(--header-height);
-    background-color: var(--primary-color);
-    color: var(--text-color-over-primary-light);
-}
-
-.header-content {
-    display: flex;
-    align-self: center;
-    margin: 0 auto;
-    height: var(--header-height);
-}
-
-.header-title {
-    display: block;
-    align-self: center;
-    margin-left: 2rem;
-}
-
-    .header-title a {
-        text-decoration: none;
-        color: var(--text-color-over-primary-light);
-    }
-
-        .header-title a:hover {
-            color: black;
-        }
-
 /** Articoli */
 section {
     width: 100%;
