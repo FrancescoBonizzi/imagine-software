@@ -150,7 +150,6 @@ h4 {
 
 .grey-section {
     background-color: #4b4b4c;
-    padding: 6em 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -161,13 +160,16 @@ h4 {
         color: white;
     }
 
-.article-padding {
+.first-article-padding {
+    padding: 3rem 0;
+}
+
+.article-padding, .dark-grey-section, .grey-section {
     padding: 6em 0;
 }
 
 .dark-grey-section {
     background-color: var(--background-dark-color);
-    padding: 6em 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -416,7 +418,7 @@ h4 {
 }
 
 /** Inner header */
-.inner-header-services, .inner-header-francesco {
+.inner-header {
     display: flex;
     align-items: center;
     flex-direction: column;
