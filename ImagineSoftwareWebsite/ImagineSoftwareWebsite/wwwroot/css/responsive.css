@@ -5,5 +5,9 @@
         justify-content: start;
     }
 
+    #overlay-menu ul li a {
+        font-size: 1.5rem;
+    }
+
 }
 
