@@ -67,6 +67,15 @@ header {
     margin-left: 2rem;
 }
 
+    .header-title a {
+        text-decoration: none;
+        color: var(--text-color-over-primary-light);
+    }
+
+        .header-title a:hover {
+            color: black;
+        }
+
 /** Articoli */
 section {
     width: 100%;
