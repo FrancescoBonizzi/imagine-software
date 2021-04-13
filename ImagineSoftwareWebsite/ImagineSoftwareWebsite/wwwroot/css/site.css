@@ -342,9 +342,14 @@ h4 {
     color: white;
 }
 
-#javascript-disabled-message {
+.javascript-disabled-message {
+    margin-top: var(--header-height);
     display: none;
-    color: var(--error-color);
+    background-color: var(--error-color);
+    text-align: center;
+    width: 100%;
+    color: white;
+    max-width: none;
 }
 
 /** Sitemap */
