@@ -115,7 +115,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: calc(var(--header-height) + 2rem);
+    margin-top: var(--header-height);
 }
 
 h1, h2, h3, h4 {
@@ -413,4 +413,29 @@ h4 {
 .sitemap-group-title {
     font-size: 1.3rem;
     font-weight: 600;
+}
+
+/** Inner header */
+.inner-header-services, .inner-header-francesco {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+    padding: 2rem 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/** Photo by https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText NASA on Unsplash */
+.inner-header-services {
+    background-image: url(../images/nasa-Q1p7bh3SHj8-unsplash.jpg);
+    color: white;
+}
+
+/** Photo by https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText Markus Spiske on Unspash */
+.inner-header-francesco {
+    background-image: url(../images/markus-spiske-iar-afB0QQw-unsplash.jpg);
+    color: white;
 }
