@@ -222,11 +222,15 @@ h4 {
     text-decoration: none;
     margin: 1rem;
     font-size: 1.2rem;
+    transition: all 0.3s ease;
 }
 
     .action-button:hover {
         background-color: var(--background-dark-color);
-        color: var(--text-over-background-dark);
+        color: white;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        transition: all 0.3s ease;
     }
 
 .action-button-inverted {
@@ -487,12 +491,14 @@ h4 {
     margin-top: 0.5rem;
     border-bottom: none;
     border: 1px solid var(--background-dark-color);
+    transition: all 0.3s ease;
 }
 
     .little-contact-button:hover {
         background-color: var(--background-dark-color);
         color: white;
         border: 1px solid white;
+        transition: all 0.3s ease;
     }
 
         .little-contact-button > i {
