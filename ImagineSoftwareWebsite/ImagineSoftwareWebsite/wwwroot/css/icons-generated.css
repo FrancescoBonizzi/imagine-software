@@ -47,24 +47,19 @@
 .icon-email:before {
     content: '\e800';
 }
-/* '' */
+
 .icon-telegram:before {
     content: '\e801';
 }
-/* '' */
-.icon-pencil:before {
-    content: '\e802';
-}
-/* '' */
+
 .icon-github:before {
     content: '\f09b';
 }
-/* '' */
+
 .icon-right-circled:before {
     content: '\f0a9';
 }
-/* '' */
+
 .icon-linkedin:before {
     content: '\f30c';
 }
-/* '' */
