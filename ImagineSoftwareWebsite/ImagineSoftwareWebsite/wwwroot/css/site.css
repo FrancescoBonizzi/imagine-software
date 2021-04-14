@@ -114,9 +114,34 @@ article h3 {
 .intermediate-article-image {
     max-width: 500px;
     width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    height: auto;
+}
+
+.left-image {
     float: left;
     margin-right: 2rem;
-    margin-top: 1rem;
+}
+
+.right-image {
+    float: right;
+    margin-left: 2rem;
+}
+
+.vertical-image {
+    max-width: 300px;
+}
+
+.article-with-left-image {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.article-with-left-image img {
+    max-width: 300px;
+    width: 100%;
 }
 
 /** Contenuto principale */
@@ -450,3 +475,43 @@ h4 {
     background-image: url(../images/markus-spiske-iar-afB0QQw-unsplash.jpg);
     color: white;
 }
+
+.little-contact-button {
+    display: inline-block;
+    background-color: white;
+    padding: 0.3rem 0.9rem;
+    color: var(--background-dark-color);
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    border-bottom: none;
+    border: 1px solid var(--background-dark-color);
+}
+
+    .little-contact-button:hover {
+        background-color: var(--background-dark-color);
+        color: white;
+        border: 1px solid white;
+    }
+
+        .little-contact-button > i {
+            margin-left: 0;
+            transition: all 0.3s ease;
+        }
+
+    .little-contact-button:hover > i {
+        margin-left: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .little-contact-button-inverted {
+        background-color: var(--background-dark-color);
+        color: white;
+        border: 1px solid white;
+    }
+
+    .little-contact-button-inverted:hover {
+        background-color: white;
+        color: var(--background-dark-color);
+    }

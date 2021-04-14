@@ -9,5 +9,13 @@
         font-size: 1.5rem;
     }
 
+    .intermediate-article-image {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
 }
 
