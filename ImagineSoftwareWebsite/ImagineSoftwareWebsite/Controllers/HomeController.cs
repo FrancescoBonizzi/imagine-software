@@ -31,8 +31,12 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult Francesco()
             => View();
 
-        [Route(template: "privacy", Name = Definitions.PRIVACY_PAGE_CONTROLLER_NAME)]
-        public IActionResult Privacy()
+        [Route(template: "privacy-policy", Name = Definitions.PRIVACY_PAGE_CONTROLLER_NAME)]
+        public IActionResult PrivacyPolicy()
+            => View();
+
+        [Route(template: "cookie-policy", Name = Definitions.COOKIE_PAGE_CONTROLLER_NAME)]
+        public IActionResult CookiePolicy()
             => View();
 
         [Route(template: "mappa-del-sito", Name = Definitions.SITEMAP_PAGE_CONTROLLER_NAME)]
