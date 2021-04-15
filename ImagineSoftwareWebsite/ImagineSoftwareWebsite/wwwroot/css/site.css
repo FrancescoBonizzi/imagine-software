@@ -1,7 +1,7 @@
 ﻿/** Footer */
 footer {
-    background: var(--background-dark-color);
-    font-size: 1.2rem;
+    background: var(--background-dark-color-lighter);
+    font-size: 0.9rem;
     line-height: 2rem;
 }
 
@@ -10,10 +10,41 @@ footer {
     font-size: 2rem;
 }
 
+.footer-icon {
+    color: var(--text-over-background-dark);
+}
+
+.little-contact-button-footer {
+    text-decoration: none !important;
+    display: inline-block;
+    background-color: var(--background-dark-color-lighter);
+    padding: 0.2rem 0.6rem;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    border-bottom: none;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+}
+
+    .little-contact-button-footer:hover {
+        background-color: white;
+        color: var(--background-dark-color-lighter);
+        border: 1px solid white;
+        transition: all 0.3s ease;
+    }
+
 footer p {
     color: var(--text-over-background-dark);
     text-align: center;
-    padding: 1.2rem 0.6rem;
+    padding: 0.4rem 0.6rem;
+}
+
+.footer-section-title {
+    color: var(--text-over-background-dark);
+    font-weight: 300;
+    font-size: 1.3rem;
 }
 
 .bottom-menu-section {
@@ -26,6 +57,10 @@ footer p {
     .bottom-menu-section > * {
         margin: 0px 2.6rem;
     }
+
+.last-footer-section {
+    background-color: var(--background-dark-color);
+}
 
 footer hr {
     border: 0;
@@ -43,6 +78,10 @@ footer a {
     footer a:hover {
         color: var(--primary-color);
         text-decoration: underline;
+    }
+
+    .pipe {
+        margin: 0 0.4rem;
     }
 
 /** Articoli */

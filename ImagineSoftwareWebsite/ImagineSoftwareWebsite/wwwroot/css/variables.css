@@ -3,6 +3,7 @@
     --text-color-over-primary-light: #60605f;
     --text-color-over-primary: black;
     --background-dark-color: #131419;
+    --background-dark-color-lighter: #27282a;
     --text-over-background-dark: #c5c5c5;
     --success-color: #4BB543;
     --error-color: #dc1414;
@@ -20,6 +21,12 @@ html {
 -------------------------------------------------- */
 @font-face {
     font-family: 'Open Sans', sans-serif;
+    src: url('/css/fonts/OpenSans-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
     src: url('/css/fonts/OpenSans-Regular.ttf');
     font-weight: 400;
 }
@@ -29,6 +36,7 @@ html {
     src: url('/css/fonts/OpenSans-SemiBold.ttf');
     font-weight: 600;
 }
+
 
 /* Global styles
 -------------------------------------------------- */

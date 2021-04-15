@@ -70,26 +70,45 @@
 
             <h2 class="bottom-menu-title">Imagine Software</h2>
 
-            <ul>
-                <li><a asp-controller="Home" asp-action="Index">@Definitions.HOME_PAGE_CONTROLLER_NAME</a></li>
-                <li><a asp-controller="Home" asp-action="Services">@Definitions.SERVICES_PAGE_CONTROLLER_NAME</a></li>
-                <li><a asp-controller="Customers" asp-action="Index">@Definitions.CUSTOMERS_PAGE_CONTROLLER_NAME</a></li>
-                <li><a asp-controller="TinyProjects" asp-action="Index">@Definitions.TINY_PROJECTS_PAGE_CONTROLLER_NAME</a></li>
-            </ul>
+            <div>
+                <h4 class="footer-section-title">LINK</h4>
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">@Definitions.HOME_PAGE_CONTROLLER_NAME</a></li>
+                    <li><a asp-controller="Home" asp-action="Services">@Definitions.SERVICES_PAGE_CONTROLLER_NAME</a></li>
+                    <li><a asp-controller="Customers" asp-action="Index">@Definitions.CUSTOMERS_PAGE_CONTROLLER_NAME</a></li>
+                    <li><a asp-controller="TinyProjects" asp-action="Index">@Definitions.TINY_PROJECTS_PAGE_CONTROLLER_NAME</a></li>
+                    <li><a asp-controller="Home" asp-action="Francesco">@Definitions.FRANCESCO_PAGE_CONTROLLER_NAME</a></li>
+                </ul>
+            </div>
 
-            <ul>
-                <li><a asp-controller="Home" asp-action="Francesco">@Definitions.FRANCESCO_PAGE_CONTROLLER_NAME</a></li>
-                <li><a asp-controller="Home" asp-action="Contacts">@Definitions.CONTACT_PAGE_CONTROLLER_NAME</a></li>
-                <li><a asp-controller="Home" asp-action="PrivacyPolicy">@Definitions.PRIVACY_PAGE_CONTROLLER_NAME</a></li>
-                <li><a asp-controller="Home" asp-action="CookiePolicy">@Definitions.COOKIE_PAGE_CONTROLLER_NAME</a></li>
-                <li><a asp-controller="Home" asp-action="Sitemap">@Definitions.SITEMAP_PAGE_CONTROLLER_NAME</a></li>
-            </ul>
+            <div>
+                <h4 class="footer-section-title">CONTATTI</h4>
+                <ul>
+
+                    <li>
+                        <i class="icon-email footer-icon"></i>
+                        <a rel="nofollow" href="mailto:fbonizzi@imaginesoftware.it" alt="Indirizzo email per contattare Francesco Bonizzi di Imagine Software" title="Scrivimi due righe per email!">fbonizzi@imaginesoftware.it</a>
+                    </li>
+                    <li>
+                        <i class="icon-telegram footer-icon"></i>
+                        <a rel="nofollow" href="https://telegram.me/fbonizzi" alt="Link per inviare un messaggio su Telegram a Francesco Bonizzi di Imagine Software" title="Scrivimi due righe tramite Telegram">@@fbonizzi</a>
+                    </li>
+
+                    <li><a asp-controller="Home" asp-action="Contacts" class="little-contact-button-footer"><i class="icon-email"></i> Modulo di contatto</a></li>
+
+                </ul>
+            </div>
 
         </section>
 
-        <hr />
-
-        <section>
+        <section class="last-footer-section">
+            <p>
+                <a asp-controller="Home" asp-action="PrivacyPolicy">@Definitions.PRIVACY_PAGE_CONTROLLER_NAME</a>
+                <span class="pipe">|</span>
+                <a asp-controller="Home" asp-action="CookiePolicy">@Definitions.COOKIE_PAGE_CONTROLLER_NAME</a>
+                <span class="pipe">|</span>
+                <a asp-controller="Home" asp-action="Sitemap">@Definitions.SITEMAP_PAGE_CONTROLLER_NAME</a>
+            </p>
             <p>&copy; 2021, Imagine Software di Francesco Bonizzi. Partita IVA: TODO</p>
         </section>
 
