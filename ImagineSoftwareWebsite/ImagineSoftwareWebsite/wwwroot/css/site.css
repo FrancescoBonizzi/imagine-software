@@ -80,9 +80,9 @@ footer a {
         text-decoration: underline;
     }
 
-    .pipe {
-        margin: 0 0.4rem;
-    }
+.pipe {
+    margin: 0 0.4rem;
+}
 
 /** Articoli */
 section {
@@ -178,10 +178,10 @@ article h3 {
     margin-right: 2rem;
 }
 
-.article-with-left-image img {
-    max-width: 300px;
-    width: 100%;
-}
+    .article-with-left-image img {
+        max-width: 300px;
+        width: 100%;
+    }
 
 /** Contenuto principale */
 main {
@@ -268,13 +268,13 @@ h4 {
     border: 1px solid var(--background-dark-color);
 }
 
-    .action-button:hover {
-        background-color: var(--background-dark-color);
-        color: white;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        transition: all 0.3s ease;
-    }
+.action-button:hover {
+    background-color: var(--background-dark-color);
+    color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    transition: all 0.3s ease;
+}
 
 .action-button-inverted {
     background-color: var(--background-dark-color);
@@ -545,23 +545,43 @@ h4 {
         transition: all 0.3s ease;
     }
 
-        .little-contact-button > i {
-            margin-left: 0;
-            transition: all 0.3s ease;
-        }
+    .little-contact-button > i {
+        margin-left: 0;
+        transition: all 0.3s ease;
+    }
 
     .little-contact-button:hover > i {
         margin-left: 1rem;
         transition: all 0.3s ease;
     }
 
-    .little-contact-button-inverted {
-        background-color: var(--background-dark-color);
-        color: white;
-        border: 1px solid white;
-    }
+.little-contact-button-inverted {
+    background-color: var(--background-dark-color);
+    color: white;
+    border: 1px solid white;
+}
 
     .little-contact-button-inverted:hover {
         background-color: white;
         color: var(--background-dark-color);
     }
+
+.companies-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+    .companies-showcase img {
+        display: block;
+        margin: 0.5rem;
+        max-width: 180px;
+        max-height: 180px;
+        width: auto;
+        height: auto;
+        border-radius: 20px;
+    }
+
+.companies-title {
+    text-align: center;
+}
