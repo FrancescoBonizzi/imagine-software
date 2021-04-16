@@ -580,7 +580,13 @@ h4 {
         width: auto;
         height: auto;
         border-radius: 20px;
+        transition: all 0.3s ease;
     }
+
+        .companies-showcase img:hover {
+            border-radius: 0;
+            transition: all 0.3s ease;
+        }
 
 .companies-title {
     text-align: center;
