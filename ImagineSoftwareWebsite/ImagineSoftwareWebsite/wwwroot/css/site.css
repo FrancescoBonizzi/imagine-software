@@ -536,6 +536,7 @@ h4 {
     border-bottom: none;
     border: 1px solid var(--background-dark-color);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
     .little-contact-button:hover {
@@ -593,9 +594,31 @@ h4 {
 }
 
 .shortcuts-list {
-
 }
 
 .shortcut-box {
     margin: 1rem;
 }
+
+.back-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    background-color: var(--background-dark-color);
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+    .back-to-top-button:hover {
+        opacity: 1;
+        transition: all 0.3s ease;
+    }

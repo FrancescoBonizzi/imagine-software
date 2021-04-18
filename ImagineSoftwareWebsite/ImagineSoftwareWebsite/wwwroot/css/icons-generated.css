@@ -63,3 +63,7 @@
 .icon-linkedin:before {
     content: '\f30c';
 }
+
+.icon-up-circled:before {
+    content: '\f0aa';
+}

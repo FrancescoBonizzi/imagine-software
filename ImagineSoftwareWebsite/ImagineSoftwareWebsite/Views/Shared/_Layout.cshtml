@@ -60,6 +60,8 @@
         </div>
     </nav>
 
+    <button class="back-to-top-button" onclick="backToTop();" id="btnBackToTop" style="display: none;" title="Torna in alto"><i class="icon-up-circled"></i></button>
+
     <main class="@ViewData["Main-Custom-Class"]">
         @RenderBody()
     </main>
@@ -115,6 +117,9 @@
     </footer>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        initializeBackToTopButton();
+    </script>
     @RenderSection("Scripts", required: false)
 
 </body>
