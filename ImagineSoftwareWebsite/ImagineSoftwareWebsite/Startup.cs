@@ -4,7 +4,6 @@ using ImagineSoftwareWebsiteLibrary;
 using ImagineSoftwareWebsiteLibrary.Logs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net;
@@ -61,7 +60,6 @@ namespace ImagineSoftwareWebsite
                 return Task.CompletedTask;
             });
 
-            //app.UseStatusCodePagesWithRedirects("/error/{0}");
             app.UseHttpsRedirection();
             app.UseHsts();
 
