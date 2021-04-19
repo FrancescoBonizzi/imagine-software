@@ -15,6 +15,7 @@
 html {
     /* Per rem */
     font-size: 17px;
+    scroll-behavior: smooth;
 }
 
 /* Font
@@ -37,9 +38,6 @@ html {
     font-weight: 600;
 }
 
-
-/* Global styles
--------------------------------------------------- */
 * {
     font-family: 'Open Sans', sans-serif !important;
 }
