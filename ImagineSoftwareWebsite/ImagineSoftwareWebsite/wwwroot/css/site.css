@@ -444,10 +444,33 @@ h4 {
         transition: all 0.3s ease;
     }
 
-        .companies-showcase img:hover {
-            border-radius: 0;
-            transition: all 0.3s ease;
-        }
+
+.company-showcase-name {
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+.company-block {
+    position: relative;
+    text-align: center;
+}
+
+.company-block:hover > .company-showcase-name {
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+    .company-block:hover > img {
+        opacity: 0.3;
+        transition: all 0.3s ease;
+    }
 
 .companies-title {
     text-align: center;
