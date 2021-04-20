@@ -9,8 +9,8 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult Index()
             => View();
 
-        [Route(template: "projects/booli", Name = "Booli: interprete di espressioni booleane")]
-        public IActionResult Booli()
+        [Route(template: "projects/boolli", Name = "Boolli: interprete di espressioni booleane")]
+        public IActionResult Boolli()
             => View();
 
         [Route(template: "projects/infart-game", Name = "INFART")]
