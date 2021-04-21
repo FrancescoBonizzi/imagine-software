@@ -274,9 +274,9 @@ h4 {
         color: white;
     }
 
-    .small-article-section {
-        padding: 3rem 0;
-    }
+.small-article-section {
+    padding: 3rem 0;
+}
 
 .boolli-section > * {
     color: black;
@@ -525,9 +525,30 @@ h4 {
     text-align: center;
 }
 
+.shortcut-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .shortcut-box {
     margin: 1rem;
 }
+
+    .shortcut-box a {
+        color: white;
+        border: none;
+    }
+
+        .shortcut-box a > i {
+            transition: all 0.3s ease;
+        }
+
+        .shortcut-box a:hover > i {
+            color: white;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            color: var(--color-primary);
+        }
 
 .code-snippet {
     font-family: Consolas, Liberation Mono, Menlo, monospace !important;
