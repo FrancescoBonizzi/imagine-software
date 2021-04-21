@@ -139,6 +139,12 @@ article h3 {
     height: auto;
 }
 
+.header-with-image {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
 .left-image {
     float: left;
     margin-right: 2rem;
@@ -234,13 +240,27 @@ h4 {
         color: white;
     }
 
+.violet-section {
+    background-color: #9835b3;
+}
+
+.blue-section {
+    background-color: #4147b9;
+}
+
 .sub-section {
     background-color: var(--very-light-background);
 }
 
-    .sub-section > * {
-        color: black !important;
+    .sub-section > p, .sub-section h4, .sub-section h3, .sub-section h2, .sub-section h1 {
+        color: black;
     }
+
+.project-logo {
+    border-radius: 10px;
+    width: 128px;
+    height: 128px;
+}
 
 .article-section {
     padding: 6em 0;
@@ -253,6 +273,14 @@ h4 {
     .article-section > * {
         color: white;
     }
+
+    .small-article-section {
+        padding: 3rem 0;
+    }
+
+.boolli-section > * {
+    color: black;
+}
 
 .link-matrix {
     border-bottom: 3px solid #00ff41;
