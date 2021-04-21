@@ -4,8 +4,8 @@ header {
     top: 0;
     width: 100%;
     height: var(--header-height);
-    background-color: var(--primary-color);
-    color: var(--text-color-over-primary-light);
+    background-color: var(--background-dark-color);
+    color: var(--primary-color);
     z-index: 2;
 }
 
@@ -25,11 +25,11 @@ header {
 
     .header-title a {
         text-decoration: none;
-        color: var(--text-color-over-primary-light);
+        color: var(--primary-color);
     }
 
         .header-title a:hover {
-            color: black;
+            color: var(--primary-color-light);
         }
 
 /** Hamburger Menu */
@@ -47,7 +47,7 @@ header {
         height: 4px;
         width: 35px;
         border-radius: 2px;
-        background-color: var(--text-color-over-primary-light);
+        background-color: var(--primary-color);
         position: relative;
         display: block;
         transition: transform 0.2s ease-in-out;
@@ -66,14 +66,14 @@ header {
             height: 4px;
             width: 35px;
             border-radius: 2px;
-            background-color: var(--text-color-over-primary-light);
+            background-color: var(--primary-color);
             position: absolute;
             content: "";
             transition: transform 0.2s ease-in-out;
         }
 
     #overlay-menu-button:hover span, #overlay-menu-button:hover span:before, #overlay-menu-button:hover span:after {
-        background: var(--text-color-over-primary);
+        background: var(--primary-color-light);
     }
 
 #overlay-menu-input {
@@ -107,7 +107,7 @@ header {
 #overlay-menu {
     height: 100vh;
     width: 100vw;
-    background: var(--primary-color);
+    background: var(--background-dark-color);
     z-index: 2;
     opacity: 0;
     visibility: hidden;
@@ -142,12 +142,12 @@ header {
         }
 
             #overlay-menu ul li a {
-                color: var(--text-color-over-primary-light);
+                color: var(--primary-color);
                 text-decoration: none;
                 font-size: 3rem;
             }
 
                 #overlay-menu ul li a:hover {
-                    color: var(--text-color-over-primary);
+                    color: var(--primary-color-light);
                     text-decoration: underline;
                 }

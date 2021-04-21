@@ -203,10 +203,6 @@ h4 {
 
 .grey-section {
     background-color: #4b4b4c;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
     .grey-section > * {
@@ -217,19 +213,44 @@ h4 {
     padding: 3rem 0;
 }
 
-.article-padding, .dark-grey-section, .grey-section {
+.article-padding {
     padding: 6em 0;
+}
+
+.inner-article-title {
+    padding: 0;
+    font-size: 1.6rem;
 }
 
 .dark-grey-section {
     background-color: var(--background-dark-color);
+}
+
+.red-section {
+    background-color: #fa3455;
+}
+
+    .red-section > * {
+        color: white;
+    }
+
+.sub-section {
+    background-color: var(--very-light-background);
+}
+
+    .sub-section > * {
+        color: black !important;
+    }
+
+.article-section {
+    padding: 6em 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-    .dark-grey-section > * {
+    .article-section > * {
         color: white;
     }
 
@@ -249,12 +270,6 @@ h4 {
         color: #1c70c6;
     }
 
-.code-snippet {
-    font-family: monospace;
-    font-size: 1.1rem;
-    font-style: normal;
-    font-weight: 600;
-}
 
 /** Contact form */
 .contact-form {
@@ -427,6 +442,12 @@ h4 {
     color: white;
 }
 
+/** Photo by https://www.deviantart.com/javierocasio javierocasio on DeviantArt*/
+.inner-header-projects {
+    background-image: url('../images/articles/Waves Light 6016x6016.jpg');
+    color: white;
+}
+
 .companies-showcase {
     display: flex;
     flex-wrap: wrap;
@@ -462,10 +483,10 @@ h4 {
     text-align: center;
 }
 
-.company-block:hover > .company-showcase-name {
-    opacity: 1;
-    transition: all 0.3s ease;
-}
+    .company-block:hover > .company-showcase-name {
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
 
     .company-block:hover > img {
         opacity: 0.3;
@@ -478,4 +499,39 @@ h4 {
 
 .shortcut-box {
     margin: 1rem;
+}
+
+.code-snippet {
+    font-family: Consolas, Liberation Mono, Menlo, monospace !important;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 600;
+    white-space: pre-line;
+}
+
+/* Better styles for embedding GitHub Gists */
+.gist-data * {
+    font-family: Consolas, Liberation Mono, Menlo, monospace !important;
+}
+
+.gist, .gist-data, .gist-file {
+    border: none !important;
+}
+
+.gist-data {
+    padding: 1rem !important;
+    border-radius: 6px !important;
+}
+
+    .gist-data, .gist-data * {
+        background-color: var(--very-light-background) !important;
+    }
+
+.gist-meta {
+    display: none;
+}
+
+.js-file-line-container tr > * {
+    font-size: 0.9rem !important;
+    line-height: 1.5rem !important;
 }

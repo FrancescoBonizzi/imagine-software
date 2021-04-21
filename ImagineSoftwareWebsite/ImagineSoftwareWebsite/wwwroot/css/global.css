@@ -1,5 +1,6 @@
 ﻿:root {
     --primary-color: #fdd007;
+    --primary-color-light: #ffe676;
     --text-color-over-primary-light: #60605f;
     --text-color-over-primary: black;
     --background-dark-color: #131419;
@@ -10,6 +11,7 @@
     --loader-color: #fdd007;
     --page-width: 50rem;
     --header-height: 4rem;
+    --very-light-background: #f5f2f7;
 }
 
 html {
