@@ -236,20 +236,8 @@ h4 {
     background-color: var(--background-dark-color);
 }
 
-.red-section {
-    background-color: #fa3455;
-}
-
-    .red-section > * {
-        color: white;
-    }
-
-.violet-section {
-    background-color: #9835b3;
-}
-
-.blue-section {
-    background-color: #4147b9;
+.dark-grey-section > * {
+    color: white;
 }
 
 .sub-section {
@@ -273,10 +261,6 @@ h4 {
     flex-direction: column;
     align-items: center;
 }
-
-    .article-section > * {
-        color: white;
-    }
 
 .small-article-section {
     padding: 3rem 0;
