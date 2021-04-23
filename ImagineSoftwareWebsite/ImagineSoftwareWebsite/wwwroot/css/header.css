@@ -47,7 +47,7 @@ header {
         height: 4px;
         width: 35px;
         border-radius: 2px;
-        background-color: var(--primary-color);
+        background-color: var(--very-light-background);
         position: relative;
         display: block;
         transition: transform 0.2s ease-in-out;
@@ -66,14 +66,14 @@ header {
             height: 4px;
             width: 35px;
             border-radius: 2px;
-            background-color: var(--primary-color);
+            background-color: var(--very-light-background);
             position: absolute;
             content: "";
             transition: transform 0.2s ease-in-out;
         }
 
     #overlay-menu-button:hover span, #overlay-menu-button:hover span:before, #overlay-menu-button:hover span:after {
-        background: var(--primary-color-light);
+        background: var(--primary-color);
     }
 
 #overlay-menu-input {
