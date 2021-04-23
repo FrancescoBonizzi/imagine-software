@@ -142,12 +142,11 @@ header {
         }
 
             #overlay-menu ul li a {
-                color: var(--primary-color);
+                color: var(--very-light-background);
                 text-decoration: none;
                 font-size: 3rem;
             }
 
                 #overlay-menu ul li a:hover {
-                    color: var(--primary-color-light);
-                    text-decoration: underline;
+                    color: var(--primary-color);
                 }

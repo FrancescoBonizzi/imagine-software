@@ -57,7 +57,6 @@ footer a {
 
     footer a:hover {
         color: var(--primary-color);
-        text-decoration: underline;
     }
 
 .pipe {
@@ -86,6 +85,11 @@ article, .common-section {
 article p {
     padding: 0.6rem 0;
     font-size: 1.1rem;
+}
+
+article ul, article li {
+    list-style: disc;
+    margin-left: 1rem;
 }
 
 article a {
