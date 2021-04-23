@@ -35,8 +35,8 @@
 }
 
 .action-button:hover {
-    background-color: var(--background-dark-color);
-    color: white;
+    background-color: var(--primary-color);
+    color: black;
     padding-left: 3rem;
     padding-right: 3rem;
     transition: all 0.3s ease;
@@ -48,8 +48,8 @@
 }
 
     .action-button-inverted:hover {
-        border: 1px solid var(--background-dark-color);
-        background-color: white;
+        border: 1px solid var(--primary-color);
+        background-color: var(--primary-color);
         color: black;
     }
 
@@ -114,9 +114,9 @@
 }
 
     .little-contact-button:hover {
-        background-color: var(--background-dark-color);
-        color: white;
-        border: 1px solid white;
+        background-color: var(--primary-color);
+        color: var(--background-dark-color);
+        border: 1px solid var(--primary-color);
         transition: all 0.3s ease;
     }
 
@@ -137,7 +137,7 @@
 }
 
     .little-contact-button-inverted:hover {
-        background-color: white;
+        background-color: var(--primary-color);
         color: var(--background-dark-color);
     }
 
