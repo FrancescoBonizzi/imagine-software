@@ -219,7 +219,15 @@ h4 {
         color: white;
     }
 
-.first-article-padding {
+.sub-section-title-section {
+    background-color: #f24269;
+}
+
+.sub-section-title-section > * {
+    color: white;
+}
+
+    .first-article-padding {
     padding: 3rem 0;
 }
 

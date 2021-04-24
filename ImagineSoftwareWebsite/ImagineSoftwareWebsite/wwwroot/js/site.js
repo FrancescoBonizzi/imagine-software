@@ -187,9 +187,9 @@ const initializeBackToTopButton = () => {
 
     window.onscroll = () => {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            btnBackToTop.style.display = "block";
+            btnBackToTop.classList.add('back-to-top-button-visible');
         } else {
-            btnBackToTop.style.display = "none";
+            btnBackToTop.classList.remove('back-to-top-button-visible');
         }
     }
 
