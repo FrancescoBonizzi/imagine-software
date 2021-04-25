@@ -129,10 +129,18 @@ article h3 {
         display: inline-block;
     }
 
-    .image-paragraph img {
-        max-width: 500px;
-        width: 100%;
-    }
+.image-paragraph a {
+    border: none;
+}
+
+.image-paragraph img {
+    max-width: 500px;
+    width: 100%;
+}
+
+.image-paragraph-bigger img {
+    max-width: var(--page-width);
+}
 
 .intermediate-article-image {
     max-width: 500px;
@@ -223,11 +231,11 @@ h4 {
     background-color: #f24269;
 }
 
-.sub-section-title-section > * {
-    color: white;
-}
+    .sub-section-title-section > * {
+        color: white;
+    }
 
-    .first-article-padding {
+.first-article-padding {
     padding: 3rem 0;
 }
 
@@ -244,9 +252,9 @@ h4 {
     background-color: var(--background-dark-color);
 }
 
-.dark-grey-section > * {
-    color: white;
-}
+    .dark-grey-section > * {
+        color: white;
+    }
 
 .sub-section {
     background-color: var(--very-light-background);

@@ -1,1 +1,97 @@
-﻿<h1>RestartOnCrash</h1>
+﻿@{
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
+    ViewData["Title"] = routeName;
+}
+
+<div class="inner-header inner-header-projects">
+    <h1>@routeName</h1>
+    <h3>Sorveglia un particolare processo e lo riavvia se questo non è più in esecuzione</h3>
+</div>
+
+<div class="first-article-padding centered-section">
+    <img class="project-logo" src="~/images/logos/logo-restart-on-crash.png" alt="Il logo dell'applicazione RestartOnCrash" asp-append-version="true" />
+</div>
+
+<article>
+
+    <p>
+        <em class="code-snippet">RestartOnCrash</em> è una semplice applicazione <em class="code-snippet">.NET Core</em>, <a href="https://github.com/FrancescoBonizzi/RestartOnCrash" target="_blank" title="Vai alla pagina GitHub di RestartOnCrash">open source</a> e scritta in <em class="code-snippet">C#</em> che mira a risolvere il problema di un'<i>applicazione per Windows</i> che cessa di funzionare per problemi che non puoi gestire dall'interno. Semplicemente <b>riavvia l'applicazione crashata</b>.
+    </p>
+
+    <p>
+        In passato mi è capitato di aver dovuto utilizzare un software di terze parti con un bug relativo alla gestione della memoria, un <a href="https://it.wikipedia.org/wiki/Memory_leak" title="Vai alla pagina di Wikipedia per la definizione di memory leak" target="_blank">memory leak</a>: dopo due giorni di esecuzione la memoria riservata dall'applicazione arrivava al 100% e Windows uccideva il processo per preservare le risorse. Nel mio contesto <b>avevo la necessità di mantenere l'applicazione sempre attiva</b>, <i>nonostante tutto</i>.
+    </p>
+
+    <p>
+        Non avendo accesso al codice sorgente in questione, ho dovuto arrangiarmi con una soluzione esterna, ed ho sviluppato <em class="code-snippet">RestartOnCrash</em>.
+    </p>
+
+</article>
+
+<section class="article-section sub-section small-article-section">
+    <article>
+        <p>
+            <em class="code-snippet">RestartOnCrash</em> sorveglia un particolare processo e lo riavvia se questo non è più in esecuzione.
+        </p>
+
+        <p>
+            Ogni volta che esegue un'operazione, scrive un evento nell'<a href="https://en.wikipedia.org/wiki/Event_Viewer" title="Vai alla pagina di Wikipedia inglese per maggior informazioni sull'EventViewer" target="_blank">EventViewer</a> di Windows con i log del monitoraggio, per <i>tracciare</i> con precisione ogni crash e riavvio.
+        </p>
+
+        <div class="image-paragraph image-paragraph-bigger">
+            <img src="~/images/articles/restart-on-crash-event-viewer.png" alt="Uno screenshot dei log che RestartOnCrash scrive nell'EventViewer" asp-append-version="true" />
+            <p>Un log di riavvio che <em class="code-snippet">RestartOnCrash</em> scrive nell'<em class="code-snippet">EventViewer</em></p>
+        </div>
+
+        <p>
+            Nel mio caso - per gestire eventuali riavvii della macchina stessa dovuti ad aggiornamenti automatici, blackout, intervento umano - ho posto sia <em class="code-snippet">RestartOnCrash</em> che l'applicazione da monitorare allo <i>startup</i> di Windows, così da non pensarci più.
+        </p>
+    </article>
+</section>
+
+<section class="article-section sub-section-title-section">
+    <article>
+        <h2>
+            La soluzione, per quanto semplice, funziona benissimo ed ha risolto il problema.
+        </h2>
+        <h2>
+            Spesso ci si ultra ingegna per risolvere problemi la cui soluzione è banale.
+        </h2>
+    </article>
+</section>
+
+<article class="article-padding">
+    <h4 class="inner-article-title">Configurare RestartOnCrash</h4>
+    <p>Tutto quello che serve è configurare il file <em class="code-snippet">configuration.json</em></p>
+    <p>
+        <script src="https://gist.github.com/FrancescoBonizzi/007bda3d1c4fc1d424f4e7621bf6fbb5.js"></script>
+    </p>
+    <p>
+        <ul>
+            <li><em class="code-snippet">PathToApplicationToMonitor</em>: indica il percorso dell'applicazione da monitorare. Al momento gestisce una sola applicazione</li>
+            <li><em class="code-snippet">CheckInterval</em>: è un <em class="code-snippet">TimeSpan</em> serializzato. Rappresenta la frequenza con cui <em class="code-snippet">RestartOnCrash</em> controlla lo stato dell'applicazione</li>
+            <li><em class="code-snippet">StartApplicationOnlyAfterFirstExecution</em>: se <em class="code-snippet">false</em>, quando <em class="code-snippet">RestartOnCrash</em> si avvia per la prima volta, avvia anche l'applicazione monitorata; se <em class="code-snippet">true</em> attende che l'applicazione monitorata sia in esecuzione per agganciarsi al suo processo</li>
+        </ul>
+    </p>
+</article>
+
+<section class="article-section sub-section">
+    <h4 class="inner-article-title">RestartOnCrash in azione</h4>
+    <div class="image-paragraph image-paragraph-bigger">
+        <a href="~/images/articles/restart-on-crash-video.gif" target="_blank">
+            <img src="~/images/articles/restart-on-crash-video.gif" alt="Un video del funzionamento di RestartOnCrash con un'applicazione d'esempio" title="Guarda più in grande" asp-append-version="true" />
+        </a>
+    </div>
+</section>
+
+<article class="article-padding">
+    <h4 class="inner-article-title">Contribuire</h4>
+    
+    <p>
+        Il mondo dell'open-source è meraviglioso proprio perché ognuno può dare il proprio contributo ed aiutare chissà chi nel mondo!
+    </p>
+
+    <p>
+        Il codice di <em class="code-snippet">RestartOnCrash</em> è interamente <a href="https://github.com/FrancescoBonizzi/RestartOnCrash" target="_blank" title="Vai alla pagina GitHub di RestartOnCrash">open source su GitHub</a> ed è aperta alla collaborazione da parte di tutti. Poco tempo fa ho ricevuto una pull request molto gradita dove veniva impostata una notifica di sistema in seguito al riavvio delle applicazioni gestite.
+    </p>
+</article>
