@@ -25,6 +25,7 @@ footer p {
     color: var(--text-over-background-dark);
     font-weight: 300;
     font-size: 1.3rem;
+    padding: 0.5rem 0;
 }
 
 .bottom-menu-section {
@@ -159,6 +160,10 @@ article h3 {
     width: 100%;
 }
 
+.header-with-image h3 {
+    
+}
+
 .left-image {
     float: left;
     margin-right: 2rem;
@@ -200,25 +205,28 @@ h1 {
     font-size: 3.4rem;
     padding: 1rem 0;
     line-height: 4rem;
+    font-weight: 600;
 }
 
 h2 {
     text-align: left;
     font-size: 2.3rem;
     line-height: 2.6rem;
+    font-weight: 400;
 }
 
 h3 {
     text-align: left;
     font-size: 1.5rem;
     padding: 1rem 0;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 h4 {
     text-align: left;
     font-size: 1.2rem;
     padding: 1rem 0;
+    font-weight: 300;
 }
 
 .grey-section {
@@ -561,6 +569,7 @@ h4 {
     border-radius: 6px;
     padding: 0.1rem 0.4rem;
     background-color: var(--very-light-background);
+    color: black;
 }
 
 /* Better styles for embedding GitHub Gists */
@@ -599,30 +608,30 @@ h4 {
     background-color: var(--background-dark-color-lighter);
 }
 
-    .breadcrumbs-section ul {
+    .breadcrumbs-section ol {
         max-width: var(--page-width);
-        padding: 0.8rem 1rem;
+        padding: 0 1rem;
         list-style: none;
         width: 100%;
         color: var(--text-over-background-dark);
     }
 
-        .breadcrumbs-section ul > li {
+        .breadcrumbs-section ol > li {
             display: inline;
             font-size: 1rem;
         }
 
-            .breadcrumbs-section ul > li + li:before {
+            .breadcrumbs-section ol > li + li:before {
                 padding: 0.5rem;
                 content: ">";
                 color: var(--text-over-background-dark);
             }
 
-            .breadcrumbs-section ul > li > a {
+            .breadcrumbs-section ol > li > a {
                 color: var(--text-over-background-dark);
                 text-decoration: none;
             }
 
-                .breadcrumbs-section ul > li > a:hover {
+                .breadcrumbs-section ol > li > a:hover {
                     color: var(--primary-color);
                 }

@@ -9,11 +9,22 @@
 </div>
 
 <section class="breadcrumbs-section">
-    <ul>
-        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-        <li><a asp-controller="TinyProjects" asp-action="Index">Piccoli progetti</a></li>
-        <li>Boolli</li>
-    </ul>
+
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" asp-controller="Home" asp-action="Index"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" asp-controller="TinyProjects" asp-action="Index"><span itemprop="name">@Definitions.TINY_PROJECTS_PAGE_CONTROLLER_NAME</span></a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">@routeName</span>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+
 </section>
 
 
@@ -68,7 +79,7 @@
 </section>
 
 <article class="article-padding">
-    <h4 class="inner-article-title">Valutare un'espressione booleana</h4>
+    <h2 class="inner-article-title">Valutare un'espressione booleana</h2>
     <p>
         <script src="https://gist.github.com/FrancescoBonizzi/e6a5fa02b100cdf770fd61cc98fb8cfb.js"></script>
     </p>
@@ -76,7 +87,7 @@
 
 <section class="article-section sub-section">
     <article>
-        <h4 class="inner-article-title">...puoi anche usare <em class="code-snippet">0</em> al posto di <em class="code-snippet">false</em> e <em class="code-snippet">1</em> al posto di <em class="code-snippet">true</em></h4>
+        <h2 class="inner-article-title">...puoi anche usare <em class="code-snippet">0</em> al posto di <em class="code-snippet">false</em> e <em class="code-snippet">1</em> al posto di <em class="code-snippet">true</em></h2>
         <p>
             <script src="https://gist.github.com/FrancescoBonizzi/7ccfd0dd6d4d77d03f7be424f760764e.js"></script>
         </p>
@@ -84,7 +95,7 @@
 </section>
 
 <article class="article-padding">
-    <h4 class="inner-article-title">Valutare un'espressione di <em class="code-snippet">Func&lt;bool&gt;</em></h4>
+    <h2 class="inner-article-title">Valutare un'espressione di <em class="code-snippet">Func&lt;bool&gt;</em></h2>
     <p>
         <script src="https://gist.github.com/FrancescoBonizzi/0dcb93d6bdc1be00d055c3007eefbd48.js"></script>
     </p>
@@ -92,7 +103,7 @@
 
 <section class="article-section sub-section">
     <article>
-        <h4 class="inner-article-title">...anche in versione <em class="code-snippet">async</em>, con un'espressione di <em class="code-snippet">Func&lt;Task&lt;bool&gt;&gt;</em></h4>
+        <h2 class="inner-article-title">...anche in versione <em class="code-snippet">async</em>, con un'espressione di <em class="code-snippet">Func&lt;Task&lt;bool&gt;&gt;</em></h2>
         <p>
             <script src="https://gist.github.com/FrancescoBonizzi/4c5b7f1e8235bec054ec78ae9049e5d8.js"></script>
         </p>

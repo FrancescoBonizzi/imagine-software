@@ -17,7 +17,7 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult INFART()
             => View();
 
-        [Route(template: "projects/restart-on-crash", Name = "Restart on crash")]
+        [Route(template: "projects/restart-on-crash", Name = "RestartOnCrash")]
         public IActionResult RestartOnCrash()
             => View();
 

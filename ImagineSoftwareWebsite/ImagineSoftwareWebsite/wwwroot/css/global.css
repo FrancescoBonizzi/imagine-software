@@ -22,24 +22,6 @@ html {
 
 /* Font
 -------------------------------------------------- */
-@font-face {
-    font-family: 'Source Sans Pro', sans-serif;
-    src: url('/css/fonts/SourceSansPro-Light.ttf');
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'Source Sans Pro', sans-serif;
-    src: url('/css/fonts/SourceSansPro-Regular.ttf');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Source Sans Pro', sans-serif;
-    src: url('/css/fonts/SourceSansPro-SemiBold.ttf');
-    font-weight: 600;
-}
-
 * {
     font-family: 'Source Sans Pro', sans-serif !important;
 }

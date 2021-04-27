@@ -9,11 +9,22 @@
 </div>
 
 <section class="breadcrumbs-section">
-    <ul>
-        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-        <li><a asp-controller="TinyProjects" asp-action="Index">Piccoli progetti</a></li>
-        <li>RestartOnCrash</li>
-    </ul>
+
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" asp-controller="Home" asp-action="Index"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" asp-controller="TinyProjects" asp-action="Index"><span itemprop="name">@Definitions.TINY_PROJECTS_PAGE_CONTROLLER_NAME</span></a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">@routeName</span>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+
 </section>
 
 <div class="first-article-padding centered-section">
@@ -60,16 +71,13 @@
 <section class="article-section sub-section-title-section">
     <article>
         <h2>
-            La soluzione, per quanto semplice, funziona benissimo ed ha risolto il problema.
-        </h2>
-        <h2>
             Spesso ci si ultra ingegna per risolvere problemi la cui soluzione è banale.
         </h2>
     </article>
 </section>
 
 <article class="article-padding">
-    <h4 class="inner-article-title">Configurare RestartOnCrash</h4>
+    <h2 class="inner-article-title">Configurare RestartOnCrash</h2>
     <p>Tutto quello che serve è configurare il file <em class="code-snippet">configuration.json</em></p>
     <p>
         <script src="https://gist.github.com/FrancescoBonizzi/007bda3d1c4fc1d424f4e7621bf6fbb5.js"></script>
@@ -84,7 +92,7 @@
 </article>
 
 <section class="article-section sub-section">
-    <h4 class="inner-article-title">RestartOnCrash in azione</h4>
+    <h2 class="inner-article-title">RestartOnCrash in azione</h2>
     <div class="image-paragraph image-paragraph-bigger">
         <a href="~/images/articles/restart-on-crash-video.gif" target="_blank">
             <img src="~/images/articles/restart-on-crash-video.gif" alt="Un video del funzionamento di RestartOnCrash con un'applicazione d'esempio" title="Guarda più in grande" asp-append-version="true" />
@@ -93,7 +101,7 @@
 </section>
 
 <article class="article-padding">
-    <h4 class="inner-article-title">Contribuire</h4>
+    <h2 class="inner-article-title">Contribuire</h2>
     
     <p>
         Il mondo dell'open-source è meraviglioso proprio perché ognuno può dare il proprio contributo ed aiutare chissà chi nel mondo!

@@ -9,10 +9,16 @@
 </div>
 
 <section class="breadcrumbs-section">
-    <ul>
-        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-        <li>Piccoli progetti</li>
-    </ul>
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" asp-controller="Home" asp-action="Index"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">@routeName</span>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
 </section>
 
 <section class="article-section small-article-section">
