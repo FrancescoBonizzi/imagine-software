@@ -87,8 +87,7 @@ header {
     }
 
         #overlay-menu-input:checked ~ #overlay-menu ul {
-            /* Bottom to top menu animation */
-            margin-top: 0;
+            transform: scale(1.2);
         }
 
     #overlay-menu-input:checked ~ #overlay-menu-button:hover span, #overlay-menu-input:checked ~ #overlay-menu-button span {
@@ -113,9 +112,7 @@ header {
     visibility: hidden;
     position: fixed;
     top: 0;
-    /* Fadein menu animation */
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
     #overlay-menu.active {
@@ -123,6 +120,7 @@ header {
     }
 
     #overlay-menu ul {
+        transform: scale(1);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -131,10 +129,7 @@ header {
         height: 100vh;
         padding-left: 0;
         list-style-type: none;
-        /* Bottom to top menu animation */
-        margin-top: 50px;
-        -webkit-transition: margin 0.3s ease;
-        transition: margin 0.3s ease;
+        transition: all 0.2s ease;
     }
 
         #overlay-menu ul li {
@@ -144,7 +139,7 @@ header {
             #overlay-menu ul li a {
                 color: var(--very-light-background);
                 text-decoration: none;
-                font-size: 3rem;
+                font-size: 2rem;
             }
 
                 #overlay-menu ul li a:hover {
