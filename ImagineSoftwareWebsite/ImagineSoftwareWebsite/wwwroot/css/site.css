@@ -129,14 +129,14 @@ article h3 {
         display: inline-block;
     }
 
-.image-paragraph a {
-    border: none;
-}
+    .image-paragraph a {
+        border: none;
+    }
 
-.image-paragraph img {
-    max-width: 500px;
-    width: 100%;
-}
+    .image-paragraph img {
+        max-width: 500px;
+        width: 100%;
+    }
 
 .image-paragraph-bigger img {
     max-width: var(--page-width);
@@ -155,6 +155,8 @@ article h3 {
     display: flex;
     align-items: center;
     padding: 1rem 0;
+    max-width: var(--page-width);
+    width: 100%;
 }
 
 .left-image {
@@ -587,3 +589,40 @@ h4 {
     font-size: 0.9rem !important;
     line-height: 1.5rem !important;
 }
+
+/** BreadCrumbs */
+.breadcrumbs-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--background-dark-color-lighter);
+}
+
+    .breadcrumbs-section ul {
+        max-width: var(--page-width);
+        padding: 0.8rem 1rem;
+        list-style: none;
+        width: 100%;
+        color: var(--text-over-background-dark);
+    }
+
+        .breadcrumbs-section ul > li {
+            display: inline;
+            font-size: 1rem;
+        }
+
+            .breadcrumbs-section ul > li + li:before {
+                padding: 0.5rem;
+                content: ">";
+                color: var(--text-over-background-dark);
+            }
+
+            .breadcrumbs-section ul > li > a {
+                color: var(--text-over-background-dark);
+                text-decoration: none;
+            }
+
+                .breadcrumbs-section ul > li > a:hover {
+                    color: var(--primary-color);
+                }
