@@ -147,15 +147,12 @@
     position: fixed;
     right: 30px;
     z-index: -99;
-    background-color: var(--background-dark-color);
-    font-size: 0.4rem;
+    background-color: transparent;
+    font-size: 3rem;
     color: white;
-    padding: 0.5rem;
-    border-radius: 60%;
     cursor: pointer;
     text-decoration: none;
-    font-size: 1.5rem;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
     border: none;
 }
 
@@ -168,6 +165,5 @@
 .back-to-top-button-visible {
     z-index: 99;
     opacity: 0.5;
-    font-size: 2rem;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
 }
