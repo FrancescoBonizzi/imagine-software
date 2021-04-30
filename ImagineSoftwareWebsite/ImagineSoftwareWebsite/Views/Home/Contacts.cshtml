@@ -22,11 +22,11 @@
     <ul>
         <li>
             <span class="quick-contact-label"><i class="icon-email"></i>Email:</span>
-            <a class="common-link" href="mailto:fbonizzi@imaginesoftware.it" title="Scrivimi due righe per email!">fbonizzi@imaginesoftware.it</a>
+            <span title="Scrivimi due righe per email!">fbonizzi@imaginesoftware.it</span>
         </li>
         <li>
             <span class="quick-contact-label"><i class="icon-telegram"></i>Telegram:</span>
-            <a class="common-link link-telegram" href="https://telegram.me/fbonizzi" title="Scrivimi due righe tramite Telegram">@@fbonizzi</a>
+            <a class="outside-link link-telegram" href="https://telegram.me/fbonizzi" title="Scrivimi due righe tramite Telegram">@@fbonizzi</a>
         </li>
     </ul>
 </section>
@@ -57,20 +57,20 @@
             <textarea placeholder="Dimmi tutto!" id="txtMessage" rows="3" cols="12"></textarea>
 
             <div>
-                <label for="chkPrivacy">Ho preso atto dell'<a class="common-link" asp-controller="Home" asp-action="PrivacyPolicy" title="Leggi l'informativa sulla privacy di Imagine Software" target="_blank">informativa sulla privacy</a></label>
+                <label for="chkPrivacy">Ho preso atto dell'<a class="colored-link" asp-controller="Home" asp-action="PrivacyPolicy" title="Leggi l'informativa sulla privacy di Imagine Software" target="_blank">informativa sulla privacy</a></label>
                 <input type="checkbox" id="chkPrivacy" checked />
             </div>
 
             <input type="text" name="password" style="display: none !important" tabindex="-1" autocomplete="off" />
 
-            <a href="#" id="btnContactSubmit" class="action-button action-button-with-border">Invia la tua richiesta</a>
+            <a href="#" id="btnContactSubmit" class="action-button">Invia la tua richiesta</a>
 
         </form>
     </div>
 
     <div id="success-content" style="display: none;">
         <span>Grazie! Ti risponderò il prima possibile.</span>
-        <a href="#" id="btnResetForm" class="action-button action-button-with-border">Invia un altro messaggio</a>
+        <a href="#" id="btnResetForm" class="action-button">Invia un altro messaggio</a>
     </div>
 
     <span id="error-content" style="display: none;"></span>

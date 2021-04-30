@@ -75,15 +75,15 @@ article ul, article li {
     margin-left: 1rem;
 }
 
-article a {
-    text-decoration: none;
+.outside-link {
+    text-decoration: none !important;
     color: black;
     border-bottom: 3px solid var(--primary-color);
 }
 
-    article a:hover {
-        color: var(--primary-color);
-    }
+.outside-link:hover {
+    color: var(--primary-color);
+}
 
 article h2, article h3 {
     text-align: left;
@@ -201,6 +201,10 @@ h3 {
     font-size: 1.5rem;
     padding: 1rem 0;
     font-weight: 300;
+}
+
+.approfondisci {
+    font-size: 1.5rem;
 }
 
 h4 {
@@ -324,22 +328,30 @@ h4 {
         font-size: 1rem;
     }
 
+.shortcuts-list ul li {
+    list-style: none;
+}
+
+.shortcuts-list li {
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+.shortcuts-list {
+    max-width: var(--page-width);
+    width: 100%;
+}
+
+.shortcuts-list i {
+    margin-left: 0.2rem;
+    color: var(--primary-color);
+}
+
 #btnContactSubmit {
     align-self: flex-start;
     margin-left: 0;
     margin-top: 2rem;
 }
-
-.common-link {
-    text-decoration: none;
-    color: black;
-    border-bottom: 3px solid var(--primary-color);
-    white-space: pre;
-}
-
-    .common-link:hover {
-        color: var(--primary-color);
-    }
 
 .sitemap-link {
     text-decoration: none;
@@ -528,22 +540,6 @@ h4 {
     margin: 1rem;
 }
 
-    .shortcut-box a {
-        color: white;
-        border: none;
-    }
-
-        .shortcut-box a > i {
-            transition: all 0.3s ease;
-        }
-
-        .shortcut-box a:hover > i {
-            color: white;
-            margin-left: 10px;
-            transition: all 0.3s ease;
-            color: var(--color-primary);
-        }
-
 .code-snippet {
     font-family: Consolas, Liberation Mono, Menlo, monospace !important;
     font-style: normal;
@@ -603,8 +599,9 @@ h4 {
         }
 
             .breadcrumbs-section ol > li + li:before {
+                font-family: "imagine-software-icons";
                 padding: 0.5rem;
-                content: ">";
+                content: '\e802';
                 color: var(--text-over-background-dark);
             }
 
@@ -614,5 +611,5 @@ h4 {
             }
 
                 .breadcrumbs-section ol > li > a:hover {
-                    color: var(--primary-color);
+                    text-decoration: underline;
                 }

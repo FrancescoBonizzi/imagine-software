@@ -18,12 +18,12 @@
 
     <!-- STYLESHEETS -->
     <link href="~/css/global.css" asp-append-version="true" rel="stylesheet" />
-    <link href="~/css/header.css" asp-append-version="true" rel="stylesheet" />
-    <link href="~/css/site.css" asp-append-version="true" rel="stylesheet" />
-    <link href="~/css/buttons.css" asp-append-version="true" rel="stylesheet" />
     <link href="~/css/icons-generated.css" asp-append-version="true" rel="stylesheet" />
     <link href="~/css/icons.css" asp-append-version="true" rel="stylesheet" />
     <link href="~/css/loader.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/header.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/site.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/buttons.css" asp-append-version="true" rel="stylesheet" />
     <link href="~/css/responsive.css" asp-append-version="true" rel="stylesheet" />
 
     <noscript>
@@ -64,7 +64,7 @@
         </div>
     </nav>
 
-    <button class="back-to-top-button" onclick="backToTop();" id="btnBackToTop" title="Torna in alto"><i class="icon-up-circled"></i></button>
+    <button class="back-to-top-button" onclick="backToTop();" id="btnBackToTop" title="Torna in alto"><i class="icon-up"></i></button>
 
     <main class="@ViewData["Main-Custom-Class"]">
         @RenderBody()
@@ -100,6 +100,16 @@
                     <li>
                         <i class="icon-telegram" title="L'icona dell'App di messaggistica Telegram"></i>
                         <a href="https://telegram.me/fbonizzi" title="Scrivimi due righe tramite Telegram">@@fbonizzi</a>
+                    </li>
+
+                    <li>
+                        <i class="icon-linkedin icon-small-for-footer"></i>
+                        <a target="_blank" href="https://www.linkedin.com/in/fbonizzi/" title="Visita il mio profilo LinkedIn">LinkedIn</a>
+                    </li>
+
+                    <li>
+                        <i class="icon-github icon-small-for-footer"></i>
+                        <a target="_blank" href="https://github.com/FrancescoBonizzi" title="Visita il mio profilo GitHub">GitHub</a>
                     </li>
 
                     <li class="footer-link-contact">

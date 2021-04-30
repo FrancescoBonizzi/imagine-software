@@ -56,14 +56,14 @@
     content: '\f09b';
 }
 
-.icon-right-circled:before {
-    content: '\f0a9';
+.icon-right:before {
+    content: '\e802';
 }
 
 .icon-linkedin:before {
     content: '\f30c';
 }
 
-.icon-up-circled:before {
-    content: '\f0aa';
+.icon-up:before {
+    content: '\e803';
 }

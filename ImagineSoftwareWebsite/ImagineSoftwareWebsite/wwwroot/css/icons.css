@@ -18,6 +18,11 @@
     margin: 0.5rem;
 }
 
+.icon-small-for-footer {
+    font-size: 1rem;
+    margin: 0;
+}
+
 .icon-email, .icon-telegram {
     margin-right: 2px;
 }

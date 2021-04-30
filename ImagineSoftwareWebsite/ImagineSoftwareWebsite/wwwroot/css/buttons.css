@@ -1,4 +1,15 @@
-﻿/** Questa suddivisione (buttons è fallimentare, rivederle tutte */
+﻿/** TODO Questa suddivisione (buttons è fallimentare, rivederle tutte */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.colored-link {
+    color: var(--primary-color);
+}
 
 footer a, footer i {
     font-size: 0.9rem;
@@ -6,9 +17,9 @@ footer a, footer i {
     color: var(--text-over-background-dark);
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
+    footer a:hover {
+        text-decoration: underline;
+    }
 
 footer i {
     text-decoration: none;
@@ -23,40 +34,27 @@ footer span {
     color: var(--primary-color) !important;
 }
 
+/** I pulsanti azione saranno sempre come dei pulsanti, tondeggianti */
 .action-button {
-    background-color: white;
-    padding: 1.2rem 1.5rem;
-    color: var(--background-dark-color);
-    border-radius: 40px;
-    text-decoration: none;
-    margin: 1rem;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-}
-
-.action-button-with-border {
-    border: 1px solid var(--background-dark-color);
-}
-
-.action-button:hover {
+    display: inline-block;
     background-color: var(--primary-color);
-    color: black;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    transition: all 0.3s ease;
-}
-
-.action-button-inverted {
-    background-color: var(--background-dark-color);
     color: white;
+    padding: 0.8rem 1rem;
+    font-weight: 400;
+    border-radius: 100rem;
+    text-decoration: none;
+    margin: 1rem 0;
+    font-size: 1.2rem;
 }
 
-    .action-button-inverted:hover {
-        border: 1px solid var(--primary-color);
-        background-color: var(--primary-color);
-        color: black;
+    .action-button:hover {
+        background-color: var(--primary-color-light);
+        text-decoration: none;
     }
 
+    .link-icon {
+        color: var(--background-dark-color);
+    }
 
 /** Pagina 404 */
 .morpheus-buttons {
@@ -101,49 +99,6 @@ footer span {
         border: none;
     }
 
-.little-contact-button {
-    display: inline-block;
-    background-color: white;
-    padding: 0.3rem 0.9rem;
-    color: var(--background-dark-color);
-    border-radius: 40px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    border-bottom: none;
-    border: 1px solid var(--background-dark-color);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-    .little-contact-button:hover {
-        background-color: var(--primary-color);
-        color: var(--background-dark-color);
-        border: 1px solid var(--primary-color);
-        transition: all 0.3s ease;
-    }
-
-    .little-contact-button > i {
-        margin-left: 0;
-        transition: all 0.3s ease;
-    }
-
-    .little-contact-button:hover > i {
-        margin-left: 1rem;
-        transition: all 0.3s ease;
-    }
-
-.little-contact-button-inverted {
-    background-color: var(--background-dark-color);
-    color: white;
-    border: 1px solid white;
-}
-
-    .little-contact-button-inverted:hover {
-        background-color: var(--primary-color);
-        color: var(--background-dark-color);
-    }
-
 /** Back to top */
 .back-to-top-button {
     opacity: 0;
@@ -153,7 +108,7 @@ footer span {
     z-index: -99;
     background-color: transparent;
     font-size: 3rem;
-    color: white;
+    color: #808080;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.5s ease;
