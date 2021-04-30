@@ -1,6 +1,6 @@
 ﻿:root {
-    --primary-color: #0077ED;
-    --primary-color-light: #2188ef;
+    --primary-color: #ff8200;
+    --primary-color-light: #fb9326;
     --text-color-over-primary-light: #60605f;
     --text-color-over-primary: black;
     --background-dark-color: #131419;
@@ -8,7 +8,7 @@
     --text-over-background-dark: #c5c5c5;
     --success-color: #4BB543;
     --error-color: #dc1414;
-    --loader-color: #fdd007;
+    --loader-color: #ff8200;
     --page-width: 50rem;
     --header-height: 4rem;
     --very-light-background: #f5f2f7;
