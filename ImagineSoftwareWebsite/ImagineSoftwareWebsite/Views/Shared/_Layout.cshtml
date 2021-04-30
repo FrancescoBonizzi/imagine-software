@@ -77,8 +77,8 @@
             <h2 class="bottom-menu-title">Imagine Software</h2>
 
             <div>
-                <h4 class="footer-section-title">LINK</h4>
                 <ul>
+                    <li class="footer-section-title">Link</li>
                     <li><a asp-controller="Home" asp-action="Index">@Definitions.HOME_PAGE_CONTROLLER_NAME</a></li>
                     <li><a asp-controller="Home" asp-action="Services">@Definitions.SERVICES_PAGE_CONTROLLER_NAME</a></li>
                     <li><a asp-controller="Customers" asp-action="Index">@Definitions.CUSTOMERS_PAGE_CONTROLLER_NAME</a></li>
@@ -88,19 +88,24 @@
             </div>
 
             <div>
-                <h4 class="footer-section-title">CONTATTI</h4>
+                
                 <ul>
 
+                    <li class="footer-section-title">Contatti</li>
                     <li>
-                        <i class="icon-email footer-icon"></i>
-                        <a href="mailto:fbonizzi@imaginesoftware.it" title="Scrivimi due righe per email!">fbonizzi@imaginesoftware.it</a>
+                        <i class="icon-email"></i>
+                        <span title="Scrivimi due righe per email!">fbonizzi@imaginesoftware.it</span>
                     </li>
+
                     <li>
-                        <i class="icon-telegram footer-icon"></i>
+                        <i class="icon-telegram" title="L'icona dell'App di messaggistica Telegram"></i>
                         <a href="https://telegram.me/fbonizzi" title="Scrivimi due righe tramite Telegram">@@fbonizzi</a>
                     </li>
 
-                    <li><a asp-controller="Home" asp-action="Contacts" class="little-contact-button-footer" title="Scrivimi direttamente dal sito!"><i class="icon-email"></i> Modulo di contatto</a></li>
+                    <li class="footer-link-contact">
+                        <i class="icon-email"></i>
+                        <a asp-controller="Home" asp-action="Contacts" title="Scrivimi direttamente dal sito!">Modulo di contatto</a>
+                    </li>
 
                 </ul>
             </div>

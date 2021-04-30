@@ -10,22 +10,21 @@ footer {
     font-size: 2rem;
 }
 
-.footer-icon {
-    color: var(--text-over-background-dark);
-}
-
-
-footer p {
+footer p:first-child {
     color: var(--text-over-background-dark);
     text-align: center;
-    padding: 0.4rem 0.6rem;
+    padding: 0.4rem 0 0 0;
+}
+
+footer p:nth-child(2) {
+    color: var(--text-over-background-dark);
+    text-align: center;
+    padding: 0 0 0.4rem 0;
 }
 
 .footer-section-title {
-    color: var(--text-over-background-dark);
-    font-weight: 300;
-    font-size: 1.3rem;
-    padding: 0.5rem 0;
+    color: white;
+    font-weight: 600;
 }
 
 .bottom-menu-section {
@@ -42,23 +41,6 @@ footer p {
 .last-footer-section {
     background-color: var(--background-dark-color);
 }
-
-footer hr {
-    border: 0;
-    height: 0.05rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 90%;
-    margin: 0 auto;
-}
-
-footer a {
-    text-decoration: none;
-    color: var(--text-over-background-dark);
-}
-
-    footer a:hover {
-        color: var(--primary-color);
-    }
 
 .pipe {
     margin: 0 0.4rem;
@@ -160,9 +142,8 @@ article h3 {
     width: 100%;
 }
 
-.header-with-image h3 {
-    
-}
+    .header-with-image h3 {
+    }
 
 .left-image {
     float: left;

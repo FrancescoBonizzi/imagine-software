@@ -1,23 +1,27 @@
-﻿.little-contact-button-footer {
-    text-decoration: none !important;
-    display: inline-block;
-    background-color: var(--background-dark-color-lighter);
-    padding: 0.2rem 0.6rem;
-    color: white;
-    border-radius: 30px;
+﻿/** Questa suddivisione (buttons è fallimentare, rivederle tutte */
+
+footer a, footer i {
+    font-size: 0.9rem;
     text-decoration: none;
-    margin-top: 0.5rem;
-    border-bottom: none;
-    border: 1px solid white;
-    transition: all 0.3s ease;
+    color: var(--text-over-background-dark);
 }
 
-    .little-contact-button-footer:hover {
-        background-color: var(--primary-color);
-        color: var(--background-dark-color-lighter);
-        border: 1px solid var(--primary-color);
-        transition: all 0.3s ease;
-    }
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer i {
+    text-decoration: none;
+    color: var(--text-over-background-dark);
+}
+
+footer span {
+    color: var(--text-over-background-dark);
+}
+
+.footer-link-contact > a, .footer-link-contact > i {
+    color: var(--primary-color) !important;
+}
 
 .action-button {
     background-color: white;
@@ -54,7 +58,7 @@
     }
 
 
-/** Morpheus */
+/** Pagina 404 */
 .morpheus-buttons {
     /** Potrei usare lo zoom per il responsive qui */
 }
@@ -96,7 +100,6 @@
         color: white;
         border: none;
     }
-
 
 .little-contact-button {
     display: inline-block;
@@ -141,11 +144,12 @@
         color: var(--background-dark-color);
     }
 
+/** Back to top */
 .back-to-top-button {
     opacity: 0;
     bottom: 20px;
     position: fixed;
-    right: 30px;
+    right: 18px;
     z-index: -99;
     background-color: transparent;
     font-size: 3rem;
