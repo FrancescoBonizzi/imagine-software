@@ -41,7 +41,7 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
 
                         // Se è una chiamata alle API, ritorno un errore da API, non una pagina intera
                         if (context.Request.Path.StartsWithSegments(
-                            new PathString($"/{Definitions.CONTROLLER_ROUTE_NAME}"),
+                            new PathString($"/{Definitions.CONTROLLER_API_ROUTE_NAME}"),
                             StringComparison.InvariantCultureIgnoreCase))
                         {
                             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;

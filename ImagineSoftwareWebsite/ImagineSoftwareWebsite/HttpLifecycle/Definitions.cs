@@ -2,7 +2,7 @@
 {
     public static class Definitions
     {
-        public const string CONTROLLER_ROUTE_NAME = "api";
+        public const string CONTROLLER_API_ROUTE_NAME = "api";
 
         public const string HOME_PAGE_CONTROLLER_NAME = "Home";
         public const string CONTACT_PAGE_CONTROLLER_NAME = "Contatti";
