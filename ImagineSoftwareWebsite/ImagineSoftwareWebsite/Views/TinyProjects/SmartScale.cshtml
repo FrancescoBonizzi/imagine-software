@@ -1,1 +1,122 @@
-﻿<h1>Smart Scale 3000</h1>
+﻿@{
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
+    ViewData["Title"] = routeName;
+}
+
+<div class="inner-header inner-header-projects">
+    <h1>@routeName</h1>
+    <h3>La bilancia intelligente</h3>
+</div>
+
+<section class="breadcrumbs-section">
+
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" asp-controller="Home" asp-action="Index"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" asp-controller="TinyProjects" asp-action="Index"><span itemprop="name">@Definitions.TINY_PROJECTS_PAGE_CONTROLLER_NAME</span></a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">@routeName</span>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+
+</section>
+
+<div class="first-article-padding centered-section">
+    <img class="project-logo" src="~/images/logos/logo-smart-scale.png" alt="Il logo dell'applicazione SmartScale3000" asp-append-version="true" />
+</div>
+
+<article>
+
+    <p>
+        Nel 2020 abbiamo presentato <em class="code-snippet">SmartScale3000</em>, la bilancia intelligente <i>powered by AI</i>, all'hackaton Hackfork organizzato da <a class="outside-link" target="_blank" href="https://www.isolutions.it/news-hackathon012020_2.html" title="Visita la pagina che parla di Hackfork sul sito di iSolutions">iSolutions</a>.
+    </p>
+
+    <div class="image-paragraph">
+        <img src="~/images/articles/smartscale-hackaton-office.jpg" alt="Un'immagine dei team in gara, scattata il giorno dell'Hackaton Hackfork nel 2020" asp-append-version="true" />
+        <p>I team ai posti di partenza</p>
+    </div>
+
+    <p>
+        Tutti conoscono le bilance dell'ortofrutta, con le quali ogni settimana pesiamo e prezziamo i prodotti: noi <b>ne abbiamo implementata una intelligente</b> che riconosce automaticamente cosa stai pesando invece di doversi ricordare il numero o premere il pulsante corretto: <b>fa tutto da sola!</b>
+    </p>
+
+    <img class="intermediate-article-image left-image" src="~/images/articles/smartscale-hackaton-app-screenshot-1.jpg" alt="Uno screenshot dell'applicazione SmartScale3000 in esecuzione" asp-append-version="true" title="Uno screenshot del frontend di SmartScale3000 mentre pesa delle arance" />
+
+    <p>
+        Abbiamo realizzato la bilancia in 24 ore durante la gara, con un cella di carico e <a class="outside-link" href="https://www.arduino.cc/" target="_blank" title="Il sito ufficiale di Arduino">Arduino</a>. Arduino invia le pesate in centesimi di grammo ad un <i>broker</i> <em class="code-snippet">MQTT</em> appoggiato su un mini router che sta nel palmo della mano.
+    </p>
+
+    <p>
+        Un dispositivo - in questo caso un PC, ma poteva essere anche molto meno - riceve i dati e quando la pesata è <i>stabile</i> scatta una foto. La foto viene processata da un rete neurale trainata con <a class="outside-link" href="https://www.tensorflow.org/" target="_blank" title="Visita il sito ufficiale di TensorFlow">TensorFlow</a> ed eseguita da <a class="outside-link" href="https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet" title="Visita il sito ufficiale di ML. NET" target="_blank">ML .NET</a>, fino ad ottenere il nome del prodotto.
+    </p>
+
+    <p>
+        Da lì il front-end realizzato in <em class="code-snippet">WPF</em> calcola il prezzo, genera il codice a barre, mostra il risultato ed invia ad un broker il risultato in modo da salvarlo in uno storage per future analisi.
+    </p>
+
+</article>
+
+<section class="article-section sub-section-title-section">
+    <article>
+        <h2>
+            Il progetto vincitore dell'hackaton <i>Hackfork</i> organizzato da iSolutions a tema <i>food</i>
+        </h2>
+    </article>
+</section>
+
+<section class="article-section sub-section small-article-section">
+    <article>
+        <h2 class="inner-article-title">Il nostro kit hardware e software</h2>
+
+        <p>
+            <ul>
+                <li>Un computer portatile per eseguire il frontend</li>
+                <li>Arduino</li>
+                <li>Una cella di carico per Arduino</li>
+                <li>Un modulo Wifi per Arduino</li>
+                <li>Un mini router Wifi per creare una rete privata e mettere in comunicazione Arduino con il frontend</li>
+                <li>Una WebCam 1080p</li>
+                <li>Frontend: WPF</li>
+                <li>AI: TensorFlow ed ML.NET</li>
+            </ul>
+        </p>
+
+    </article>
+</section>
+
+<article>
+
+    <div class="image-paragraph">
+        <img src="~/images/articles/smartscale-hackaton-office-selfie-of-victory.jpg" alt="La foto dei vincitori dell'Hackaton Hackfork" asp-append-version="true" />
+        <p>La foto dei vincitori dell'Hackaton Hackfork</p>
+    </div>
+
+</article>
+
+<section class="article-section sub-section small-article-section">
+    <article>
+        <h2 class="inner-article-title">Il tema <i>food</i></h2>
+
+        <p>
+            Completare
+        </p>
+    </article>
+</section>
+
+<article class="article-padding">
+    <h2 class="inner-article-title">Contribuire</h2>
+
+    <p>
+        Il mondo dell'open source è meraviglioso proprio perché ognuno può dare il proprio contributo ed aiutare chissà chi nel mondo!
+    </p>
+
+    <p>
+        Il codice di <em class="code-snippet">SmartScale3000</em> è interamente <a class="outside-link" href="https://github.com/FrancescoBonizzi/SmartScale3000" target="_blank" title="Vai alla pagina GitHub di SmartScale3000">open source su GitHub</a> ed è aperta alla collaborazione da parte di tutti. Troverete il frontend al path <em class="code-snippet">source/SmartWeightDevice</em>, e la parte di Arduino in <em class="code-snippet">source/sensore</em>.
+    </p>
+</article>
