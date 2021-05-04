@@ -14,9 +14,10 @@ namespace ImagineSoftwareWebsite
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-#if DEBUG
-                    webBuilder.UseUrls("https://*:5000");
-#endif
+//#if DEBUG
+// Per farlo funzionare in LAN
+//                    webBuilder.UseUrls("https://*:5000");
+//#endif
                     webBuilder.UseStartup<Startup>();
                 });
     }
