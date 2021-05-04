@@ -8,24 +8,7 @@
     <h3>Riavvia le applicazioni che crashano</h3>
 </div>
 
-<section class="breadcrumbs-section">
-
-    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" asp-controller="Home" asp-action="Index"><span itemprop="name">Home</span></a>
-            <meta itemprop="position" content="1" />
-        </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" asp-controller="TinyProjects" asp-action="Index"><span itemprop="name">@Definitions.TINY_PROJECTS_PAGE_CONTROLLER_NAME</span></a>
-            <meta itemprop="position" content="2" />
-        </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <span itemprop="name">@routeName</span>
-            <meta itemprop="position" content="2" />
-        </li>
-    </ol>
-
-</section>
+<partial name="_TinyProjectsBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
 
 <div class="first-article-padding centered-section">
     <img class="project-logo" src="~/images/logos/logo-restart-on-crash.png" alt="Il logo dell'applicazione RestartOnCrash" asp-append-version="true" />

@@ -1,1 +1,12 @@
-﻿<h1>Starfall</h1>
+﻿@{
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
+    ViewData["Title"] = routeName;
+}
+
+<div class="inner-header inner-header-projects">
+    <h1>@routeName</h1>
+    <h3>Mi ritrovai per una selva oscura...</h3>
+</div>
+
+<partial name="_TinyProjectsBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
+
