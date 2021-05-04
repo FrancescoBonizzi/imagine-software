@@ -67,3 +67,11 @@
 .icon-up:before {
     content: '\e803';
 }
+
+.icon-windows:before {
+    content: '\f17a';
+}
+
+.icon-android:before {
+    content: '\f17b';
+}

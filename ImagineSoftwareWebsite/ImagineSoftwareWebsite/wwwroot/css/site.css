@@ -615,3 +615,67 @@ h4 {
                 .breadcrumbs-section ol > li > a:hover {
                     text-decoration: underline;
                 }
+
+                /** Videogames animations */
+.starfall-animation {
+    display: block;
+    width: 166px;
+    height: 193px;
+    background: url('../images/articles/starfall-animation.png') left center;
+    animation: starfall 0.8s steps(20) infinite;
+    animation-play-state: running;
+}
+
+@keyframes starfall {
+
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -3320px;
+    }
+}
+
+
+
+
+.infart-animation {
+    display: block;
+    width: 151px;
+    height: 193px;
+    background: url('../images/articles/infart-animation.png') left center;
+    animation: infart 0.8s steps(20) infinite;
+    animation-play-state: running;
+}
+
+@keyframes infart {
+
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -3025px;
+    }
+}
+
+.rellow-animation {
+    display: block;
+    width: 193px;
+    height: 193px;
+    background: url('../images/articles/rellow-animation.png') left center;
+    animation: rellow 0.8s steps(6) infinite;
+    animation-play-state: running;
+}
+
+@keyframes rellow {
+
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -1158px;
+    }
+}

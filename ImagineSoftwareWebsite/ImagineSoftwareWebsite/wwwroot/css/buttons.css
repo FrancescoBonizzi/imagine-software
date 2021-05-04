@@ -56,6 +56,10 @@ footer span {
         color: var(--background-dark-color);
     }
 
+.action-button i {
+    color: #1a294b;
+}
+
 /** Pagina 404 */
 .morpheus-buttons {
     /** Potrei usare lo zoom per il responsive qui */
