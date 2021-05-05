@@ -1,1 +1,115 @@
-﻿<h1>INFART</h1>
+﻿@{
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
+    ViewData["Title"] = routeName;
+}
+
+<div class="inner-header inner-header-projects">
+    <h1>@routeName</h1>
+    <h3>Esploderai dalle risate!</h3>
+</div>
+
+<partial name="_TinyProjectsBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
+
+<div class="first-article-padding centered-section">
+    <img class="project-logo" src="~/images/logos/logo-infart.png" alt="Il logo del videogioco INFART" asp-append-version="true" />
+</div>
+
+<div class="store-download-buttons-group">
+    <a class="action-button" target="_blank" href="https://play.google.com/store/apps/details?id=com.francescobonizzi.infart" title="Scarica INFART per Android"><i class="icon-android"></i> Scarica per Android</a>
+    <a class="action-button" target="_blank" href="https://www.microsoft.com/store/apps/9WZDNCRDHRJH" title="Scarica INFART per Windows"><i class="icon-windows"></i> Scarica per Windows</a>
+</div>
+
+<article>
+    <p>
+        L'uomo non ha trattato bene la Terra e l'atmosfera è al collasso!
+    </p>
+
+    <p>
+        Ambientato in una città astratta, in continuo cambiamento, <b>INFART</b> è un gioco <i>CORRI E SCOREGGIA</i> in cui dovrete mangiare il più possibile verdure, evitare gli hamburger ed i buchi nella strada che si sono creati in seguito ai cataclismi.
+    </p>
+
+    <div class="image-paragraph">
+        <img src="~/images/articles/infart-game-screenshot-1.png" alt="Uno screenshot del videogioco INFART durante una partita" asp-append-version="true" />
+        <p>Uno screenshot del videogioco</p>
+    </div>
+
+    <p>
+        Il gioco ironizza volutamente sulla <b>correlazione tra cibo, cambiamenti climatici e diritti dell'uomo</b>. Si vuole sensibilizzare in merito ad un mondo (il 2020) in cui una parte degli esseri umani soffre di patologie legate al sovrappeso mentre <i>l'altra parte</i> è malnutrita.
+    </p>
+
+    <p>
+        Non solo: la <i>supply chain</i> del cibo, in particolare della carne - qui rappresentata dagli <i>hamburger</i> - è correlata direttamente con <a class="outside-link" title="Un articolo del Guardian che parla della perdità di biodiversità in relazione all'alimentazione dell'uomo" href="https://www.theguardian.com/environment/2018/may/31/avoiding-meat-and-dairy-is-single-biggest-way-to-reduce-your-impact-on-earth" target="_blank">la perdita della biodiversità</a>, <a class="outside-link" href="https://www.nature.com/articles/s41893-020-00603-4" target="_blank" title="Nature: The carbon opportunity cost of animal-sourced food production on land">l'inquinamento dell'aria</a>, la scarsità di acqua in alcuni paesi e lo sviluppo di batteri resistenti agli antibiotici.
+    </p>
+
+    <p>
+        Molte associazioni internazionali di rilievo, tra cui OMS, FAO, Academy of Nutrition and Dietetics, suggeriscono di preferire <a class="outside-link link-matrix" target="_blank" href="https://medium.com/the-ascent/why-i-became-vegetarian-even-though-i-love-meat-c260eac3c3c4" title="Ho scritto un articolo in merito, in inglese">diete green</a>.
+    </p>
+
+    <div class="image-paragraph">
+        <img src="~/images/articles/infart-game-screenshot-2.png" alt="Uno screenshot del videogioco INFART durante una partita" asp-append-version="true" />
+        <p>Uno screenshot di Game Over del videogioco</p>
+    </div>
+
+    <p>
+        <b>INFART</b> è un videogioco a scorrimento orizzontale - un'<i>infinite scroll</i> - <b>il cui mondo evolve nel tempo</b>: salta i buchi, evita gli hamburger più che puoi, altrimenti <b>ESPLODI</b>!
+    </p>
+</article>
+
+<section class="article-section sub-section-title-section">
+    <article>
+
+        <h2>Un videogioco interamente gratis, open source</h2>
+        <h3>e senza pubblicità</h3>
+
+    </article>
+</section>
+
+<article class="article-padding">
+    <h2 class="inner-article-title">Le caratteristiche di INFART</h2>
+
+    <div class="infart-animation intermediate-article-image left-image"></div>
+
+    <p>
+        <ul>
+            <li>Un livello completo a difficoltà incrementale</li>
+            <li>Potenziamenti divertenti</li>
+            <li>Un sacco di scoregge</li>
+            <li>Colonna sonora originale, composta dallo sviluppatore</li>
+            <li>Il personaggio principale è disegnato a mano su acquerello</li>
+            <li>Un mondo in continuo sviluppo che viene generato casualmente</li>
+            <li>Ottimizzato per l'utilizzo della batteria dello smartphone</li>
+            <li>Esploderai dalle risate!</li>
+        </ul>
+    </p>
+</article>
+
+<section class="article-section sub-section">
+    <h2 class="inner-article-title">Uno screenshot del menu principale di <em class="code-snippet">INFART</em></h2>
+    <div class="image-paragraph">
+        <img src="~/images/articles/infart-game-screenshot-menu.png" Uno screenshot del menù principale di INFART asp-append-version="true" title="Uno screenshot del menù principale di INFART" />
+    </div>
+</section>
+
+<article class="article-padding">
+    <h2 class="inner-article-title">Il gioco è gratis ed open source</h2>
+
+    <p>
+        Questo gioco è <b>interamente gratis</b> ed <b>open source</b>: non utilizza alcuna libreria tracciante, nessun log per monitorare l'utilizzo da parte degli utenti, e <b>nessuna pubblicità</b>.
+    </p>
+
+    <p>
+        Ed <b>multipiattaforma</b>: potete provarlo sia su Android che su Windows, ma su Mac non ho mai provato! 😁
+    </p>
+
+    <p>
+        Ho sviluppato il gioco in <em class="code-snippet">C#</em>, utilizzando due librerie anch'esse open source:
+        <ul>
+            <li><a class="outside-link" href="https://github.com/MonoGame" target="_blank" title="Visita la pagina Github di MonoGame">MonoGame</a>, il nuovo <i>XNA framework</i></li>
+            <li><a class="outside-link" href="https://github.com/FrancescoBonizzi/FbonizziMonoGame" target="_blank" title="Visita la pagina Github di FbonizziMonoGame">FbonizziMonoGame</a>, una libreria che ho sviluppato io per semplificarmi gli sviluppi</li>
+        </ul>
+    </p>
+
+    <p>
+        Il codice di <em class="code-snippet">INFART</em> è interamente <a class="outside-link" href="https://github.com/FrancescoBonizzi/InfartGame" target="_blank" title="Vai alla pagina GitHub di INFART">accessibile su GitHub</a> ed è aperto alla collaborazione da parte di tutti!
+    </p>
+</article>

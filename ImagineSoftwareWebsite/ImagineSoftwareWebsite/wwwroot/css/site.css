@@ -81,9 +81,9 @@ article ul, article li {
     border-bottom: 3px solid var(--primary-color);
 }
 
-.outside-link:hover {
-    color: var(--primary-color);
-}
+    .outside-link:hover {
+        color: var(--primary-color);
+    }
 
 article h2, article h3 {
     text-align: left;
@@ -344,9 +344,9 @@ h4 {
     width: 100%;
 }
 
-.shortcuts-list i {
-    color: var(--primary-color);
-}
+    .shortcuts-list i {
+        color: var(--primary-color);
+    }
 
 #btnContactSubmit {
     align-self: flex-start;
@@ -392,7 +392,7 @@ h4 {
 
 .microsoft-basic-photo {
     max-width: 400px !important;
-    border-radius: 0!important;
+    border-radius: 0 !important;
 }
 
 .status-code-error {
@@ -616,7 +616,7 @@ h4 {
                     text-decoration: underline;
                 }
 
-                /** Videogames animations */
+/** Videogames animations */
 .starfall-animation {
     display: block;
     width: 166px;
@@ -636,9 +636,6 @@ h4 {
         background-position: -3320px;
     }
 }
-
-
-
 
 .infart-animation {
     display: block;
