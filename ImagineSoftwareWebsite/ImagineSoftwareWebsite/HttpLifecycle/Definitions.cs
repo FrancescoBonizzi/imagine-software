@@ -11,7 +11,7 @@
         public const string PRIVACY_PAGE_CONTROLLER_NAME = "Informativa sulla privacy";
         public const string COOKIE_PAGE_CONTROLLER_NAME = "Preferenze sull'utilizzo dei cookie";
         public const string SITEMAP_PAGE_CONTROLLER_NAME = "Mappa del sito";
-        public const string TINY_PROJECTS_PAGE_CONTROLLER_NAME = "Piccoli progetti";
+        public const string OPEN_SOURCE_PROJECTS_PAGE_CONTROLLER_NAME = "Open Source";
         public const string CUSTOMERS_PAGE_CONTROLLER_NAME = "Clienti e case study";
     }
 }
