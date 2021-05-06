@@ -28,5 +28,9 @@ namespace ImagineSoftwareWebsite.Controllers
         [Route(template: "open-source-projects/starfall-game", Name = "Starfall")]
         public IActionResult Starfall()
             => View();
+
+        [Route(template: "open-source-projects/rellow-game", Name = "Rellow")]
+        public IActionResult Rellow()
+            => View();
     }
 }

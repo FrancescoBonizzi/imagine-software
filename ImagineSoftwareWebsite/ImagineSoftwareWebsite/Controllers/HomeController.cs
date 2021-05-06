@@ -19,11 +19,11 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult Index()
             => View();
 
-        [Route(template: "contatti", Name = Definitions.CONTACT_PAGE_CONTROLLER_NAME)]
+        [Route(template: "contacts", Name = Definitions.CONTACT_PAGE_CONTROLLER_NAME)]
         public IActionResult Contacts()
             => View();
 
-        [Route(template: "servizi-offerta", Name = Definitions.SERVICES_PAGE_CONTROLLER_NAME)]
+        [Route(template: "services", Name = Definitions.SERVICES_PAGE_CONTROLLER_NAME)]
         public IActionResult Services()
             => View();
 
@@ -39,7 +39,7 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult CookiePolicy()
             => View();
 
-        [Route(template: "mappa-del-sito", Name = Definitions.SITEMAP_PAGE_CONTROLLER_NAME)]
+        [Route(template: "sitemap", Name = Definitions.SITEMAP_PAGE_CONTROLLER_NAME)]
         public IActionResult Sitemap()
             => View(new SitemapViewModel()
             {
