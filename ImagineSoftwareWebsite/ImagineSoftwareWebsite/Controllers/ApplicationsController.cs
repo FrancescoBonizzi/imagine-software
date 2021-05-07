@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ImagineSoftwareWebsite.Controllers
 {
-    public class PaidProjectsController : Controller
+    public class ApplicationsController : Controller
     {
-        [Route(template: "projects-apps", Name = Definitions.PAID_PROJECTS_PAGE_CONTROLLER_NAME)]
+        [Route(template: "projects-apps", Name = Definitions.APPLICATIONS_PAGE_CONTROLLER_NAME)]
         public IActionResult Index()
             => View();
 
