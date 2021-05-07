@@ -676,3 +676,19 @@ h4 {
         background-position: -1158px;
     }
 }
+
+.rellow-re {
+    color: #ff2359;
+}
+
+.rellow-llow {
+    color: #ffca1f;
+}
+
+.rellow-page {
+    font-family: Consolas, monospace;
+}
+
+.rellow-screenshot {
+    max-width: 250px !important;
+}
