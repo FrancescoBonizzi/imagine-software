@@ -484,6 +484,10 @@ h4 {
     color: white;
 }
 
+.inner-header-applications {
+    /* TODO */
+}
+
 .companies-showcase {
     display: flex;
     flex-wrap: wrap;
