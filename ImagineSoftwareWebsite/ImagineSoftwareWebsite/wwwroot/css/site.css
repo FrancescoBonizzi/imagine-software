@@ -291,6 +291,15 @@ h4 {
         color: #00ff41;
     }
 
+
+.link-dev-genius {
+    border-bottom: 3px solid #2a9d8f;
+}
+
+    .link-dev-genius:hover {
+        color: #2a9d8f;
+    }
+
 .link-basic {
     border-bottom: 3px solid #1c70c6;
 }
