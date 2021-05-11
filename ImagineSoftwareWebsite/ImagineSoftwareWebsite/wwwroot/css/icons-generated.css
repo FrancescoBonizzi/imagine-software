@@ -75,3 +75,11 @@
 .icon-android:before {
     content: '\f17b';
 }
+
+.icon-stackoverflow:before {
+    content: '\f16c';
+}
+
+.icon-search:before {
+    content: '\e804';
+}

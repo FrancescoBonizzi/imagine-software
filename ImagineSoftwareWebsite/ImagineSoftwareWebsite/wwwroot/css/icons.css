@@ -4,17 +4,26 @@
 }
 
 .link-icon-github:hover > i {
-    color: #e84e31;
+    color: #464646;
 }
 
 .link-icon-linkedin:hover > i {
     color: #0a66c2;
 }
 
+.link-icon-stackoverflow:hover > i {
+    color: #f48024;
+}
+
 .icon-linkedin, .icon-github {
-    font-family: "imagine-software-icons";
     display: inline-block;
     font-size: 1.8rem;
+    margin: 0.5rem;
+}
+
+.link-icon-stackoverflow {
+    display: inline-block;
+    font-size: 1.6rem;
     margin: 0.5rem;
 }
 
@@ -26,3 +35,4 @@
 .icon-email, .icon-telegram {
     margin-right: 2px;
 }
+
