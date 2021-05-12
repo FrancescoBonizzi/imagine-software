@@ -3,6 +3,7 @@ footer {
     background: var(--background-dark-color-lighter);
     font-size: 0.9rem;
     line-height: 2rem;
+    border-bottom: 4px solid var(--primary-color);
 }
 
 .bottom-menu-title {
@@ -75,13 +76,13 @@ article ul, article li {
     margin-left: 1rem;
 }
 
-.outside-link {
+.outside-link, .colored-link {
     text-decoration: none !important;
     color: black;
     border-bottom: 3px solid var(--primary-color);
 }
 
-    .outside-link:hover {
+    .outside-link:hover, .colored-link:hover {
         color: var(--primary-color);
     }
 
@@ -188,7 +189,7 @@ h1 {
     font-size: 3.4rem;
     padding: 1rem 0;
     line-height: 4rem;
-    font-weight: 600;
+    font-weight: 900;
 }
 
 h2 {
@@ -203,10 +204,6 @@ h3 {
     font-size: 1.5rem;
     padding: 1rem 0;
     font-weight: 400;
-}
-
-.approfondisci {
-    font-size: 1.5rem;
 }
 
 h4 {
@@ -246,19 +243,23 @@ h4 {
 }
 
 .dark-grey-section {
-    background-color: var(--background-dark-color);
+    background-color: var(--background-dark-color-lighter);
 }
 
     .dark-grey-section > * {
         color: white;
     }
 
-.sub-section {
-    background-color: var(--very-light-background);
-}
+    .dark-grey-section b {
+        color: var(--primary-color) !important;
+    }
 
-    .sub-section > p, .sub-section h4, .sub-section h3, .sub-section h2, .sub-section h1 {
-        color: black;
+    .dark-grey-section .outside-link {
+        color: white;
+    }
+
+    .dark-grey-section .outside-link:hover {
+        color: var(--primary-color);
     }
 
 .project-logo {
@@ -288,7 +289,7 @@ h4 {
 }
 
     .link-matrix:hover {
-        color: #00ff41;
+        color: #00ff41 !important;
     }
 
 
@@ -297,7 +298,7 @@ h4 {
 }
 
     .link-dev-genius:hover {
-        color: #2a9d8f;
+        color: #2a9d8f !important;
     }
 
 .link-basic {
@@ -305,7 +306,7 @@ h4 {
 }
 
     .link-basic:hover {
-        color: #1c70c6;
+        color: #1c70c6 !important;
     }
 
 
@@ -319,6 +320,7 @@ h4 {
 }
 
     .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea {
+        background-color: transparent;
         width: 100%;
         padding: 0.8rem 0;
         font-size: 1.1rem;
@@ -557,9 +559,7 @@ h4 {
     font-family: Consolas, Liberation Mono, Menlo, monospace !important;
     font-style: normal;
     border-radius: 6px;
-    padding: 0.1rem 0.4rem;
-    background-color: var(--very-light-background);
-    color: black;
+    font-weight: 600;
 }
 
 /* Better styles for embedding GitHub Gists */
@@ -577,7 +577,7 @@ h4 {
 }
 
     .gist-data, .gist-data * {
-        background-color: var(--very-light-background) !important;
+        background-color: white !important;
     }
 
 .gist-meta {
@@ -690,10 +690,12 @@ h4 {
 
 .rellow-re {
     color: #ff2359;
+    font-weight: 600;
 }
 
 .rellow-llow {
     color: #ffca1f;
+    font-weight: 600;
 }
 
 .rellow-page {
@@ -702,4 +704,11 @@ h4 {
 
 .rellow-screenshot {
     max-width: 250px !important;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 3.4rem;
+    padding: 1rem 0;
+    line-height: 4rem;
 }

@@ -20,6 +20,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: whitesmoke;
+}
+
 /* Font
 -------------------------------------------------- */
 * {
@@ -27,7 +31,7 @@ html {
 }
 
 b {
-    font-weight: 600;
+    font-weight: 900;
 }
 
 /** Reset */
