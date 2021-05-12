@@ -19,6 +19,7 @@ footer a, footer i {
 
     footer a:hover {
         text-decoration: underline;
+        color: var(--primary-color);
     }
 
 footer i {
@@ -39,12 +40,13 @@ footer span {
     display: inline-block;
     background-color: var(--primary-color);
     color: #1a294b;
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 1.5rem;
     font-weight: 600;
     border-radius: 100rem;
     text-decoration: none;
     margin: 1rem 0;
     font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
     .action-button:hover {
