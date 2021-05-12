@@ -1,9 +1,13 @@
 ﻿@model SitemapViewModel
 @{
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
     ViewData["Title"] = "Mappa del sito";
 }
 
-<h1>Mappa del sito</h1>
+<div class="inner-header">
+    <h1>@routeName</h1>
+    <h3>Guida galattica per autostoppisti</h3>
+</div>
 
 <section class="common-section sitemap-section">
     @foreach (var section in Model.Routes)
