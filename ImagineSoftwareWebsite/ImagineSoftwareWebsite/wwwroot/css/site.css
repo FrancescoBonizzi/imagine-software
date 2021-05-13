@@ -222,11 +222,11 @@ h4 {
     }
 
 .sub-section-title-section {
-    background-color: #f24269;
+    background-color: var(--primary-color);
 }
 
     .sub-section-title-section > * {
-        color: white;
+        color: black;
     }
 
 .first-article-padding {
@@ -240,6 +240,10 @@ h4 {
 .inner-article-title {
     padding: 0;
     font-size: 1.6rem;
+}
+
+.article-more-padding {
+    margin-bottom: 1rem;
 }
 
 .dark-grey-section {
@@ -712,3 +716,21 @@ h4 {
     padding: 1rem 0;
     line-height: 4rem;
 }
+
+.list-without-dots li {
+    list-style: none;
+}
+
+.article-image-gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+    .article-image-gallery img {
+        max-height: 450px;
+        border-radius: 20px;
+        margin: 0.1rem;
+    }

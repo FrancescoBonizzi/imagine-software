@@ -1,1 +1,128 @@
-﻿<h1>Invoice Maker</h1>
+﻿@{
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
+    ViewData["Title"] = routeName;
+}
+
+<div class="inner-header inner-header-projects">
+    <h1>@routeName</h1>
+    <h3>Fatture e ricevute belle e professionali</h3>
+</div>
+
+<partial name="_ApplicationsBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
+
+<div class="first-article-padding centered-section">
+    <img class="project-logo" src="~/images/logos/logo-invoice-maker-quick-easy.png" alt="Il logo dell'App Invoice Maker - Quick & Easy" asp-append-version="true" />
+</div>
+
+<div class="store-download-buttons-group">
+    <a class="action-button" target="_blank" href="https://play.google.com/store/apps/details?id=com.francescobonizzi.invoiceEstimateReceiptMaker" title="Scarica Invoice Maker - Quick & Easy per Android"><i class="icon-android"></i> Scarica per Android</a>
+
+    <a class="action-button" target="_blank" href="https://apps.apple.com/it/app/invoice-maker-quick-easy/id1534299120" title="Scarica Invoice Maker - Quick & Easy per iOS"><i class="icon-apple"></i> Scarica per iOS</a>
+</div>
+
+<article>
+    <p>
+        <b>Invoice Maker - Quick & Easy</b> è l'App più semplice che puoi trovare sullo Store per creare <b>fatture, ricevute e preventivi</b> belli e professionali. È stata pensata per i freelance o per chi deve generare ricevute al volo senza perdere tempo!
+    </p>
+
+    <p>
+        L'App è dedicata al mondo anglosassone, dove per generare una fattura non ci sono mille passaggi burocratici: basta <b>un PDF con le informazioni giuste.</b> Anche in Italia però si può usare: io la uso per generare le <i>fatture pro-forma</i> o preventivi per ricordare ai clienti di pagare.
+    </p>
+
+    <p>
+        L'App si scarica in un minuto dai principali Store per smartphone e dopo un breve <i>onboarding</i> sarete già pronti per condividere con i vostri clienti preventivi e fatture.
+    </p>
+</article>
+
+<section class="article-section dark-grey-section small-article-section">
+    <article>
+        <div class="article-image-gallery">
+            <img src="~/images/articles/invoice-maker-quick-easy-screenshot-1.png" alt="Uno screenshot dell'App Invoice Maker - Quick & Easy" asp-append-version="true" />
+            <img src="~/images/articles/invoice-maker-quick-easy-screenshot-2.png" alt="Uno screenshot dell'App Invoice Maker - Quick & Easy" asp-append-version="true" />
+            <img src="~/images/articles/invoice-maker-quick-easy-screenshot-3.png" alt="Uno screenshot dell'App Invoice Maker - Quick & Easy" asp-append-version="true" />
+        </div>
+    </article>
+</section>
+
+<article class="article-padding small-article-section">
+    <h2 class="inner-article-title">Le <b>funzionalità</b> principali</h2>
+    <p>
+        <ul class="list-without-dots">
+            <li>✓ Crea e condividi fatture e ricevute professionali</li>
+            <li>✓ Gestisci tutte le tue fatture, i clienti, e i tuoi prodotti in un'unica App perfettamente organizzata</li>
+            <li>✓ <b>Importa i clienti</b> direttamente dalla tua lista dei contatti del telefono</li>
+            <li>✓ Condividi la fattura o la ricevuta in PDF via email, WhatsApp, Telegram, e tutte le altre App di messaggistica e condivisione</li>
+            <li>✓ Salva le fatture generate sul <b>cloud</b> (Google Drive, DropBox...)</li>
+            <li>✓ <b>Personalizza</b> ogni aspetto della fattura!</li>
+        </ul>
+    </p>
+
+</article>
+
+<section class="article-section dark-grey-section small-article-section">
+    <article>
+        <p>
+            Con la versione <b>free</b> dell'App puoi provare tutte le funzionalità dell'App, hai tutti i layout, i colori e le personalizzazioni sbloccate, ma puoi creare e gestire 5 fatture in tutto! Non c'è pubblicità!
+        </p>
+
+        <p>
+            Con la versione <b>Pro</b> hai l'App completa senza limiti, per sempre. Inclusi tutti i futuri aggiornamenti!
+        </p>
+    </article>
+</section>
+
+<article class="article-padding small-article-section">
+    <h2 class="inner-article-title"><b>Personalizza</b> tutto!</h2>
+
+    <p>
+        <ul class="list-without-dots">
+            <li>✓ Personalizza il template di ogni fattura e ricevuta: dalle forme, alla disposizione degli elementi, al colore. L'App ti propone template professionali e colori adatti alla stampa</li>
+            <li>✓ Mostra o nascondi ogni dettaglio della fattura</li>
+            <li>✓ Aggiungi il tuo logo e/o la tua firma</li>
+            <li>✓ Imposta i termini di pagamento che accetti e stampali sulla fattura. Puoi anche ipmostare la data di scadenza dei pagamenti!</li>
+            <li>✓ Applica e calcola in automatico eventuali sconti</li>
+            <li>✓ Applica e calcola in automatico l'importo delle tasse</li>
+            <li>✓ Imposta il formato delle date e il simbolo della tua valuta come preferisci</li>
+            <li>✓ Definisci, se vuoi, il tuo codice incrementale per identificare la fattura, del resto ci occupiamo noi!</li>
+            <li>✓ Aggiungi note generiche al termine della fattura generata</li>
+        </ul>
+    </p>
+
+</article>
+
+<section class="article-section dark-grey-section small-article-section">
+    <article>
+        <div class="article-image-gallery">
+            <img src="~/images/articles/invoice-maker-quick-easy-screenshot-4.png" alt="Uno screenshot dell'App Invoice Maker - Quick & Easy" asp-append-version="true" />
+            <img src="~/images/articles/invoice-maker-quick-easy-screenshot-5.png" alt="Uno screenshot dell'App Invoice Maker - Quick & Easy" asp-append-version="true" />
+        </div>
+    </article>
+</section>
+
+<section class="article-section sub-section-title-section">
+    <article>
+
+        <h2>L'App di cui hai bisogno per creare fatture, ricevute e preventivi</h2>
+        <h3>senza perdere tempo</h3>
+
+    </article>
+</section>
+
+<article class="article-padding">
+    <h2 class="inner-article-title article-more-padding"><b>Invoice Maker - Quick & Easy</b> è già disponibile per il tuo smartphone!</h2>
+
+    <div class="left-image">
+        <img class="project-logo" src="~/images/logos/logo-invoice-maker-quick-easy.png" alt="Il logo dell'App Invoice Maker - Quick & Easy" asp-append-version="true" />
+    </div>
+
+    <p>
+        <b>Scarica</b> subito l'App per il tuo smartphone e fammi sapere cosa ne pensi!
+    </p>
+
+    <div class="store-download-buttons-group">
+        <a class="action-button" target="_blank" href="https://play.google.com/store/apps/details?id=com.francescobonizzi.invoiceEstimateReceiptMaker" title="Scarica Invoice Maker - Quick & Easy per Android"><i class="icon-android"></i> Scarica per Android</a>
+
+        <a class="action-button" target="_blank" href="https://apps.apple.com/it/app/invoice-maker-quick-easy/id1534299120" title="Scarica Invoice Maker - Quick & Easy per iOS"><i class="icon-apple"></i> Scarica per iOS</a>
+    </div>
+
+</article>

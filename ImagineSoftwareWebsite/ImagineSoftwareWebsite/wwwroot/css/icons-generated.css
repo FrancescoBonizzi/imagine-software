@@ -47,39 +47,52 @@
 .icon-email:before {
     content: '\e800';
 }
-
+/* '' */
 .icon-telegram:before {
     content: '\e801';
 }
-
-.icon-github:before {
-    content: '\f09b';
-}
-
-.icon-right:before {
+/* '' */
+.icon-right-open:before {
     content: '\e802';
 }
-
-.icon-linkedin:before {
-    content: '\f30c';
-}
-
-.icon-up:before {
+/* '' */
+.icon-up-open:before {
     content: '\e803';
 }
-
-.icon-windows:before {
-    content: '\f17a';
-}
-
-.icon-android:before {
-    content: '\f17b';
-}
-
-.icon-stackoverflow:before {
-    content: '\f16c';
-}
-
+/* '' */
 .icon-search:before {
     content: '\e804';
 }
+/* '' */
+.icon-github:before {
+    content: '\f09b';
+}
+/* '' */
+.icon-stackoverflow:before {
+    content: '\f16c';
+}
+/* '' */
+.icon-apple:before {
+    content: '\f179';
+}
+/* '' */
+.icon-windows:before {
+    content: '\f17a';
+}
+/* '' */
+.icon-android:before {
+    content: '\f17b';
+}
+/* '' */
+.icon-google:before {
+    content: '\f1a0';
+}
+/* '' */
+.icon-facebook-squared:before {
+    content: '\f308';
+}
+/* '' */
+.icon-linkedin:before {
+    content: '\f30c';
+}
+/* '' */
