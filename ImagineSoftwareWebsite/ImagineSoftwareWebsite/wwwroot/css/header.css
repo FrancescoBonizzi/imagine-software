@@ -134,6 +134,8 @@ header {
 
         #overlay-menu ul li {
             padding: 1em;
+            width: 450px;
+            text-align: left;
         }
 
             #overlay-menu ul li a {
