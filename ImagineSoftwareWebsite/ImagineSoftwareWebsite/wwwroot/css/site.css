@@ -3,7 +3,6 @@ footer {
     background: var(--background-dark-color-lighter);
     font-size: 0.9rem;
     line-height: 2rem;
-    border-bottom: 4px solid var(--primary-color);
 }
 
 .bottom-menu-title {
@@ -262,9 +261,9 @@ h4 {
         color: white;
     }
 
-    .dark-grey-section .outside-link:hover {
-        color: var(--primary-color);
-    }
+        .dark-grey-section .outside-link:hover {
+            color: var(--primary-color);
+        }
 
 .project-logo {
     border-radius: 10px;
@@ -484,9 +483,9 @@ h4 {
     color: var(--primary-color);
 }
 
-.inner-header > h3 {
-    color: white;
-}
+    .inner-header > h3 {
+        color: white;
+    }
 
 .inner-header-services {
 }
@@ -734,3 +733,22 @@ h4 {
         border-radius: 20px;
         margin: 0.1rem;
     }
+
+/** Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6e6e67;
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-color-light);
+    }
+
+::-webkit-scrollbar-track {
+    background: var(--background-dark-color);
+}
