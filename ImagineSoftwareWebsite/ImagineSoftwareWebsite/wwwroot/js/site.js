@@ -199,3 +199,44 @@ const backToTop = () => {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
+
+const isElementInViewport = (el) => {
+
+    const rect = el.getBoundingClientRect();
+    return (
+        (rect.top <= 0
+            && rect.bottom >= 0)
+        ||
+        (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+        ||
+        (rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+    );
+
+}
+
+const initializeImagesAnimations = () => {
+
+    const callback = function (entries) {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+            } else {
+                entry.target.classList.remove("is-visible");
+            }
+
+        });
+
+    };
+
+    const observer = new IntersectionObserver(callback);
+    const targets = document.querySelectorAll(".show-on-scroll");
+
+    targets.forEach(function (target) {
+        observer.observe(target);
+    });
+
+}

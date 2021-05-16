@@ -137,7 +137,10 @@
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script>
-        initializeBackToTopButton();
+        document.addEventListener("DOMContentLoaded", function () {
+            initializeBackToTopButton();
+            initializeImagesAnimations();
+        });
     </script>
     @RenderSection("Scripts", required: false)
 
