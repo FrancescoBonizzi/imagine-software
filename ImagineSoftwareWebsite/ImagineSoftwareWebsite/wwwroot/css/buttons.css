@@ -31,7 +31,7 @@ footer span {
     color: var(--primary-color) !important;
 }
 
-.action-button, .action-button-secondary {
+.action-button, .action-button-secondary, .action-button-secondary-on-dark {
     display: inline-block;
     padding: 0.8rem 1.5rem;
     font-weight: 900;
@@ -60,6 +60,17 @@ footer span {
 
     .action-button-secondary:hover {
         background-color: white;
+        text-decoration: none;
+    }
+
+.action-button-secondary-on-dark {
+    background-color: var(--background-dark-color-lighter);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+    .action-button-secondary-on-dark:hover {
+        background-color: #38383b;
         text-decoration: none;
     }
 
