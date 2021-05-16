@@ -202,14 +202,18 @@ h3 {
     text-align: left;
     font-size: 1.5rem;
     padding: 1rem 0;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h4 {
     text-align: left;
     font-size: 1.2rem;
     padding: 1rem 0;
-    font-weight: 400;
+    font-weight: 600;
+}
+
+label {
+    font-weight: 600;
 }
 
 .grey-section {
@@ -751,4 +755,84 @@ h4 {
 
 ::-webkit-scrollbar-track {
     background: var(--background-dark-color);
+}
+
+/** Checkbox custom */
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: 0;
+    opacity: 0.01;
+}
+
+    [type="checkbox"]:not(:checked) + label,
+    [type="checkbox"]:checked + label {
+        position: relative;
+        padding-left: 2.5rem;
+        font-size: 1.2rem;
+        line-height: 1.7;
+        cursor: pointer;
+    }
+
+        /* checkbox aspect */
+        [type="checkbox"]:not(:checked) + label:before,
+        [type="checkbox"]:checked + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.6rem;
+            height: 1.6rem;
+            border: 1px solid #aaa;
+            background: #FFF;
+            border-radius: 0.4rem;
+            -webkit-transition: all .275s;
+            transition: all .275s;
+        }
+
+        /* checked mark aspect */
+        [type="checkbox"]:not(:checked) + label:after,
+        [type="checkbox"]:checked + label:after {
+            content: '✕';
+            position: absolute;
+            top: 0.8rem;
+            left: 0.15rem;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            line-height: 0;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+        }
+
+        /* checked mark aspect changes */
+        [type="checkbox"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0) rotate(45deg);
+            transform: scale(0) rotate(45deg);
+        }
+
+        [type="checkbox"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1) rotate(0);
+            transform: scale(1) rotate(0);
+        }
+
+/* Disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+    border-color: #bbb;
+    background-color: #e9e9e9;
+}
+
+[type="checkbox"]:disabled:checked + label:after {
+    color: #777;
+}
+
+[type="checkbox"]:disabled + label {
+    color: #aaa;
+}
+
+#labelPrivacy {
+    font-weight: 400;
 }
