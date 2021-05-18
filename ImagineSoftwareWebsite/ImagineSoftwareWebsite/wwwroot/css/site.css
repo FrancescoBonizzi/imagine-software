@@ -563,10 +563,11 @@ label {
 }
 
 .code-snippet {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px 6px;
     font-family: Consolas, Liberation Mono, Menlo, monospace !important;
     font-style: normal;
-    border-radius: 6px;
-    font-weight: 600;
 }
 
 /* Better styles for embedding GitHub Gists */
