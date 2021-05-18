@@ -357,6 +357,15 @@ label {
     padding: 0.5rem 0;
 }
 
+.shortcuts-list li {
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+.shortcut-link {
+    color: var(--primary-color);
+}
+
 .shortcuts-list {
     max-width: var(--page-width);
     width: 100%;
