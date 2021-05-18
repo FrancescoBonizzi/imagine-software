@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace ImagineSoftwareWebsite.Controllers
 {
+    [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
     public class HomeController : Controller
     {
         private readonly RoutesInspector _routesInspector;
@@ -62,7 +63,6 @@ namespace ImagineSoftwareWebsite.Controllers
             return new SitemapProvider().CreateSitemap(new SitemapModel(nodes));
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         [Route("/error/{code}")]
         public IActionResult StatusCodeError(int code)
             => View(new StatusCodeErrorViewModel(errorCode: code));

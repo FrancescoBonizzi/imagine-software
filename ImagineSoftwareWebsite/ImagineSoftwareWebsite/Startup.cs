@@ -42,12 +42,14 @@ namespace ImagineSoftwareWebsite
             app.Use(async (context, next) =>
             {
                 context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+                context.Response.Headers.Append("X-Frame-Options", "deny");
                 await next();
             });
 
             app.ConfigureExceptionHandler(myLogger);
 
-            app.UseStatusCodePages(context => {
+            app.UseStatusCodePages(context =>
+            {
 
                 int statusCode = context.HttpContext.Response.StatusCode;
 
@@ -67,7 +69,7 @@ namespace ImagineSoftwareWebsite
             {
                 OnPrepareResponse = context =>
                 {
-                    // Tutti i contenuti statici sono versionati, così scarica solo se sono realmente nuovi (immutable)
+                    // Posso cachare per sempre tutti i contenuti statici perché sono versionati, così li scarica solo se sono realmente nuovi (immutable)
                     context.Context.Response.Headers.Append("Cache-Control", "public, max-age=31536000, immutable");
                 },
                 ContentTypeProvider = CustomMiddlewares.GenerateStaticFilesContentProvider()

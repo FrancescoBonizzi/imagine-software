@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ImagineSoftwareWebsite.Controllers
 {
+    [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
     public class ApplicationsController : Controller
     {
         [Route(template: "projects-apps", Name = Definitions.APPLICATIONS_PAGE_CONTROLLER_NAME)]
