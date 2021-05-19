@@ -50,7 +50,6 @@ namespace ImagineSoftwareWebsite
 
             app.UseStatusCodePages(context =>
             {
-
                 int statusCode = context.HttpContext.Response.StatusCode;
 
                 // Non mi piace dover fare il redirect alla pagina degli errori per un not allowed
