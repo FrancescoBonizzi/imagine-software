@@ -1,6 +1,4 @@
-﻿// TODO
-// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿/*jshint esversion: 8 */
 'use strict';
 
 const isNullOrWhitespace = value => {
@@ -12,7 +10,7 @@ const isNullOrWhitespace = value => {
         return true;
 
     return false;
-}
+};
 
 const isEmailValid = email => {
 
@@ -21,20 +19,20 @@ const isEmailValid = email => {
 
     const regex = /^\S+@\S+$/;
     return regex.test(String(email).toLowerCase());
-}
+};
 
 const showElement = (element) => {
     element.style = 'display: block;';
-}
+};
 
 const hideElement = (element) => {
     element.style = 'display: none;';
-}
+};
 
 const showSuccess = (successContent) => {
     showElement(successContent);
     window.scrollTo(0, 0);
-}
+};
 
 const showError = (errorContent, message) => {
     if (!isNullOrWhitespace(message)) {
@@ -42,17 +40,17 @@ const showError = (errorContent, message) => {
         showElement(errorContent);
         errorContent.scrollIntoView();
     }
-}
+};
 
 const hideError = (errorContent) => {
     errorContent.textContent = '';
     hideElement(errorContent);
-}
+};
 
 const showLoadingAndHideMainContent = (loader, mainContent) => {
     showElement(loader);
     hideElement(mainContent);
-}
+};
 
 const hideLoader = function (loader, mainContent, hideMainContent = false) {
     hideElement(loader);
@@ -60,12 +58,13 @@ const hideLoader = function (loader, mainContent, hideMainContent = false) {
     if (!hideMainContent) {
         showElement(mainContent);
     }
-}
+};
 
 class contactPage {
 
     constructor() {
 
+        this.view = {};
         this.view.btnContactSubmit = document.getElementById('btnContactSubmit');
         this.view.btnResetForm = document.getElementById('btnResetForm');
         this.view.txtName = document.getElementById('txtName');
@@ -96,8 +95,6 @@ class contactPage {
 
         }, false);
     }
-
-    view = {}
 
     async sendMessage() {
 
@@ -164,7 +161,7 @@ class contactPage {
             email: this.view.txtEmail.value,
             message: this.view.txtMessage.value,
             privacyAccepted: this.view.chkPrivacy.checked
-        }
+        };
     }
 
     validateMessage(message) {
@@ -186,7 +183,7 @@ class contactPage {
 
     }
 
-};
+}
 
 const initializeBackToTopButton = () => {
 
@@ -198,9 +195,9 @@ const initializeBackToTopButton = () => {
         } else {
             btnBackToTop.classList.remove('back-to-top-button-visible');
         }
-    }
+    };
 
-}
+};
 
 const backToTop = () => {
     document.body.scrollTop = 0; // For Safari
@@ -211,17 +208,12 @@ const isElementInViewport = (el) => {
 
     const rect = el.getBoundingClientRect();
     return (
-        (rect.top <= 0
-            && rect.bottom >= 0)
-        ||
-        (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-        ||
-        (rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+        (rect.top <= 0 && rect.bottom >= 0)
+        || (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) && rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+        || (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
     );
 
-}
+};
 
 const initializeImagesAnimations = () => {
 
@@ -246,4 +238,4 @@ const initializeImagesAnimations = () => {
         observer.observe(target);
     });
 
-}
+};
