@@ -83,4 +83,18 @@
 
 .loader-message {
     text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--loader-color);
+    margin-top: 0.7rem;
+    display: block;
+}
+
+#loader {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 1rem auto;
+    zoom: 2;
 }

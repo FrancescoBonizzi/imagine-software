@@ -2,6 +2,8 @@
     ViewData["Title"] = "Vuoi discutere di un progetto o di una folle idea? Scrivimi!";
 }
 
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
+
 <noscript>
     <style>
         /* Se javascript è disabilitato non mostro la form */
@@ -34,12 +36,16 @@
 <section class="common-section">
 
     <div id="loader" style="display: none;">
-        <div class="loader"></div>
-        <span class="loader-message">Operazione in corso...</span>
+        <div>
+            <div class="loader"></div>
+            <span class="loader-message">Operazione in corso...</span>
+        </div>
     </div>
 
     <div id="main-content">
         <form onsubmit="return false;" class="contact-form" id="contact-form">
+
+            <input type="hidden" id="hiddenAntiforgeryToken" name="RequestVerificationToken" value="@Xsrf.GetAndStoreTokens(Context).RequestToken">
 
             <div class="form-two-columns">
                 <div class="form-two-columns-column">

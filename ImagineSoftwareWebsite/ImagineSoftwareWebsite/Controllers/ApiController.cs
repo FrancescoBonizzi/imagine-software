@@ -24,6 +24,7 @@ namespace ImagineSoftwareWebsite.Controllers
 
         [HttpPost]
         [Route("api/send-contact-message")]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> SendContactMessage([FromBody] SendContactMessageRequest sendContactMessageRequest)
         {
             // HoneyPot: se viene compilato questo campo hidden significa che è un bot, 

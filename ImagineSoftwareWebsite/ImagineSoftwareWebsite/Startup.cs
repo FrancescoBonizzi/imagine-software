@@ -31,6 +31,7 @@ namespace ImagineSoftwareWebsite
                 .AddControllersWithViews()
                 .AddNewtonsoftJson();
 
+            services.AddAntiforgery(options => options.HeaderName = "X-CSRF-TOKEN");
             services.AddSingleton<IMyLogger, ConsoleLogger>();
             services.AddSingleton<Configuration>();
             services.AddSingleton<EmailClient>();

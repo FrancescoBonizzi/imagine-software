@@ -77,6 +77,7 @@ class contactPage {
         this.view.loader = document.getElementById('loader');
         this.view.mainContent = document.getElementById('main-content');
         this.view.contactForm = document.getElementById('contact-form');
+        this.view.hiddenToken = document.getElementById('hiddenAntiforgeryToken');
 
         const me = this;
         this.view.btnContactSubmit.addEventListener('click', function (event) {
@@ -115,7 +116,8 @@ class contactPage {
                     {
                         method: 'POST',
                         headers: {
-                            'Content-Type': 'application/json'
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': this.view.hiddenToken.value
                         },
                         body: JSON.stringify(message)
                     });
@@ -123,7 +125,12 @@ class contactPage {
                 if (!result.ok) {
                     console.error("🐝🐝🐝 ", result);
                     const body = await result.text();
-                    throw body || 'Si è verificato un errore non previsto. Sto già indagando!';
+
+                    if (!body || body.startsWith("{")) {
+                        throw 'Si è verificato un errore non previsto. Sto già indagando!';
+                    }
+
+                    throw body;
                 }
 
                 hideLoader(this.view.loader, this.view.mainContent, true);
