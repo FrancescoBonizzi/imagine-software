@@ -1,4 +1,222 @@
-﻿/** Footer */
+﻿:root {
+    --primary-color: #ffca1f;
+    --primary-color-light: #fbd14c;
+    --text-color-over-primary-light: #60605f;
+    --text-color-over-primary: black;
+    --background-dark-color: #202125;
+    --background-dark-color-lighter: #29292c;
+    --text-over-background-dark: #c5c5c5;
+    --success-color: #4BB543;
+    --error-color: #dc1414;
+    --loader-color: #202125;
+    --page-width: 50rem;
+    --header-height: 4rem;
+    --very-light-background: #f5f2f7;
+}
+
+html {
+    /* Per rem */
+    font-size: 17px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+/* Font
+-------------------------------------------------- */
+* {
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+b {
+    font-weight: 700;
+}
+
+/** Reset */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+/** Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--background-dark-color);
+    color: var(--primary-color);
+    z-index: 2;
+}
+
+.header-content {
+    display: flex;
+    align-self: center;
+    margin: 0 auto;
+    height: var(--header-height);
+}
+
+.header-title {
+    display: block;
+    align-self: center;
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+
+    .header-title a {
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+
+        .header-title a:hover {
+            color: var(--primary-color-light);
+        }
+
+/** Hamburger Menu */
+#overlay-menu-button {
+    position: fixed;
+    right: 2rem;
+    top: 0.4rem;
+    padding: 26px 11px;
+    z-index: 5;
+    cursor: pointer;
+    user-select: none;
+}
+
+    #overlay-menu-button span {
+        height: 4px;
+        width: 35px;
+        border-radius: 2px;
+        background-color: var(--very-light-background);
+        position: relative;
+        display: block;
+        transition: transform 0.2s ease-in-out;
+    }
+
+        #overlay-menu-button span:before {
+            top: -10px;
+            visibility: visible;
+        }
+
+        #overlay-menu-button span:after {
+            top: 10px;
+        }
+
+        #overlay-menu-button span:before, #overlay-menu-button span:after {
+            height: 4px;
+            width: 35px;
+            border-radius: 2px;
+            background-color: var(--very-light-background);
+            position: absolute;
+            content: "";
+            transition: transform 0.2s ease-in-out;
+        }
+
+    #overlay-menu-button:hover span, #overlay-menu-button:hover span:before, #overlay-menu-button:hover span:after {
+        background: var(--primary-color);
+    }
+
+#overlay-menu-input {
+    display: none;
+}
+
+    #overlay-menu-input:checked ~ #overlay-menu {
+        /* Fadein menu animation */
+        opacity: 1;
+        visibility: visible;
+    }
+
+        #overlay-menu-input:checked ~ #overlay-menu ul {
+            transform: scale(1.2);
+        }
+
+    #overlay-menu-input:checked ~ #overlay-menu-button:hover span, #overlay-menu-input:checked ~ #overlay-menu-button span {
+        background: transparent;
+    }
+
+        #overlay-menu-input:checked ~ #overlay-menu-button span:before {
+            transform: rotate(45deg) translate(7px, 7px);
+            opacity: 1;
+        }
+
+        #overlay-menu-input:checked ~ #overlay-menu-button span:after {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+#overlay-menu {
+    height: 100vh;
+    width: 100vw;
+    background: var(--background-dark-color);
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.2s ease;
+}
+
+    #overlay-menu.active {
+        visibility: visible;
+    }
+
+    #overlay-menu ul {
+        transform: scale(1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        height: 100vh;
+        padding-left: 0;
+        list-style-type: none;
+        transition: all 0.2s ease;
+    }
+
+        #overlay-menu ul li {
+            padding: 1em;
+            width: 450px;
+            text-align: left;
+        }
+
+            #overlay-menu ul li a {
+                color: var(--very-light-background);
+                text-decoration: none;
+                font-size: 2rem;
+            }
+
+                #overlay-menu ul li a:hover {
+                    color: var(--primary-color);
+                }
+
+
+/** Footer */
 footer {
     background: var(--background-dark-color-lighter);
     font-size: 0.9rem;
@@ -860,3 +1078,196 @@ label {
     opacity: 1;
     transform: translateX(0rem);
 }
+
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+footer a, footer i {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--text-over-background-dark);
+}
+
+    footer a:hover {
+        text-decoration: underline;
+        color: var(--primary-color);
+    }
+
+footer i {
+    text-decoration: none;
+    color: var(--text-over-background-dark);
+}
+
+footer span {
+    color: var(--text-over-background-dark);
+}
+
+.footer-link-contact > a, .footer-link-contact > i {
+    color: var(--primary-color) !important;
+}
+
+.action-button, .action-button-secondary, .action-button-secondary-on-dark {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-weight: 900;
+    border-radius: 100rem;
+    text-decoration: none;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.action-button {
+    background-color: var(--primary-color);
+    color: var(--background-dark-color);
+}
+
+    .action-button:hover {
+        background-color: var(--primary-color-light);
+        text-decoration: none;
+    }
+
+.action-button-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+    .action-button-secondary:hover {
+        background-color: white;
+        text-decoration: none;
+    }
+
+.action-button-secondary-on-dark {
+    background-color: var(--background-dark-color-lighter);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+    .action-button-secondary-on-dark:hover {
+        background-color: #38383b;
+        text-decoration: none;
+    }
+
+.link-icon {
+    color: var(--background-dark-color);
+}
+
+.action-button i {
+    color: #1a294b;
+}
+
+/** Pagina 404 */
+.morpheus-buttons {
+    /** Potrei usare lo zoom per il responsive qui */
+}
+
+.morpheus-blue-pill, .morpheus-red-pill {
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 18rem;
+    text-align: center;
+    margin-top: -132px;
+}
+
+.morpheus-blue-pill {
+    float: right;
+    background-color: #0469bb;
+    color: white;
+    border: none;
+    margin-left: 1rem;
+}
+
+    .morpheus-blue-pill:hover {
+        background-color: #2ea5e2;
+        color: white;
+        border: none;
+    }
+
+.morpheus-red-pill {
+    float: left;
+    background-color: #c3271c;
+    color: white;
+    border: none;
+    margin-right: 1rem;
+}
+
+    .morpheus-red-pill:hover {
+        background-color: #e72721;
+        color: white;
+        border: none;
+    }
+
+/** Back to top */
+.back-to-top-button {
+    opacity: 0;
+    bottom: 20px;
+    position: fixed;
+    right: 18px;
+    z-index: -99;
+    background-color: transparent;
+    font-size: 3rem;
+    color: #808080;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    border: none;
+}
+
+    .back-to-top-button:hover {
+        opacity: 1;
+        transition: all 0.2s ease;
+        color: var(--primary-color);
+    }
+
+.back-to-top-button-visible {
+    z-index: 99;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.link-icon {
+    border: none;
+    display: inline-block;
+}
+
+.link-icon-github:hover > i {
+    color: #464646;
+}
+
+.link-icon-linkedin:hover > i {
+    color: #0a66c2;
+}
+
+.link-icon-stackoverflow:hover > i {
+    color: #f48024;
+}
+
+.icon-linkedin, .icon-github {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 0.5rem;
+}
+
+.link-icon-stackoverflow {
+    display: inline-block;
+    font-size: 1.6rem;
+    margin: 0.5rem;
+}
+
+.icon-small-for-footer {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.icon-email, .icon-telegram {
+    margin-right: 2px;
+}
+
