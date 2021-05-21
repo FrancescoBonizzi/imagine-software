@@ -36,10 +36,6 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult PrivacyPolicy()
             => View();
 
-        [Route(template: "cookie-policy", Name = Definitions.COOKIE_PAGE_CONTROLLER_NAME)]
-        public IActionResult CookiePolicy()
-            => View();
-
         [Route(template: "sitemap", Name = Definitions.SITEMAP_PAGE_CONTROLLER_NAME)]
         public IActionResult Sitemap()
             => View(new SitemapViewModel()
