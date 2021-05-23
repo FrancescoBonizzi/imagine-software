@@ -1,4 +1,5 @@
-﻿:root {
+﻿/*#region Global*/
+:root {
     --primary-color: #ffca1f;
     --primary-color-light: #fbd14c;
     --text-color-over-primary-light: #60605f;
@@ -64,8 +65,9 @@ ul, li {
 *:focus {
     outline: none;
 }
+/*#endregion*/
 
-/** Header */
+/*#region Header */
 header {
     position: fixed;
     top: 0;
@@ -98,8 +100,9 @@ header {
         .header-title a:hover {
             color: var(--primary-color-light);
         }
+/*#endregion*/
 
-/** Hamburger Menu */
+/*#region Hamburger Menu */
 #overlay-menu-button {
     position: fixed;
     right: 2rem;
@@ -214,9 +217,9 @@ header {
                 #overlay-menu ul li a:hover {
                     color: var(--primary-color);
                 }
+/*#endregion*/
 
-
-/** Footer */
+/*#region Footer */
 footer {
     background: var(--background-dark-color-lighter);
     font-size: 0.9rem;
@@ -264,6 +267,8 @@ footer p:nth-child(2) {
 .pipe {
     margin: 0 0.4rem;
 }
+
+/*#endregion*/
 
 /** Articoli */
 section {
@@ -494,6 +499,13 @@ label {
     height: 128px;
 }
 
+.section-content {
+    margin: 1rem 0;
+    max-width: var(--page-width);
+    line-height: 1.7rem;
+    width: 100%;
+}
+
 .article-section {
     padding: 6em 0;
     width: 100%;
@@ -518,7 +530,6 @@ label {
         color: #00ff41 !important;
     }
 
-
 .link-dev-genius {
     border-bottom: 3px solid #2a9d8f;
 }
@@ -536,7 +547,7 @@ label {
     }
 
 
-/** Contact form */
+/*#region Contact form */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -566,6 +577,7 @@ label {
         width: 100%;
         font-size: 1rem;
     }
+/*#endregion*/
 
 .shortcuts-list ul li {
     list-style: none;
@@ -684,7 +696,8 @@ label {
     max-width: none;
 }
 
-/** Sitemap */
+
+/*#region Sitemap */
 .sitemap-group {
     margin: 2rem;
 }
@@ -699,8 +712,8 @@ label {
     font-size: 1.3rem;
     font-weight: 700;
 }
+/*#endregion*/
 
-/** Inner header */
 .inner-header {
     display: flex;
     align-items: center;
@@ -719,19 +732,7 @@ label {
         color: white;
     }
 
-.inner-header-services {
-}
-
-.inner-header-francesco {
-}
-
-.inner-header-projects {
-}
-
-.inner-header-applications {
-    /* TODO */
-}
-
+/*#region Companies showcase*/
 .companies-showcase {
     display: flex;
     flex-wrap: wrap;
@@ -780,6 +781,7 @@ label {
 .companies-title {
     text-align: center;
 }
+/*#endregion*/
 
 .shortcut-list {
     display: flex;
@@ -798,7 +800,7 @@ label {
     font-style: normal;
 }
 
-/* Better styles for embedding GitHub Gists */
+/*#region Better styles for embedding GitHub Gists */
 .gist-data * {
     font-family: Consolas, Liberation Mono, Menlo, monospace !important;
 }
@@ -824,8 +826,9 @@ label {
     font-size: 0.9rem !important;
     line-height: 1.5rem !important;
 }
+/*#endregion*/
 
-/** BreadCrumbs */
+/*#region BreadCrumbs */
 .breadcrumbs-section {
     display: flex;
     align-items: center;
@@ -862,8 +865,9 @@ label {
                 .breadcrumbs-section ol > li > a:hover {
                     text-decoration: underline;
                 }
+/*#endregion*/
 
-/** Videogames animations */
+/*#region Videogames */
 .starfall-animation {
     display: block;
     width: 166px;
@@ -941,6 +945,7 @@ label {
 .rellow-screenshot {
     max-width: 250px !important;
 }
+/*#endregion*/
 
 .contact-title {
     text-align: center;
@@ -967,7 +972,7 @@ label {
         margin: 0.1rem;
     }
 
-/** Scrollbar */
+/*#region Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -985,9 +990,9 @@ label {
 ::-webkit-scrollbar-track {
     background: var(--background-dark-color);
 }
+/*#endregion*/
 
-/** Checkbox custom */
-/* Base for label styling */
+/*#region Checkbox custom */
 .form-checkbox:not(:checked),
 .form-checkbox:checked {
     position: absolute;
@@ -1065,6 +1070,7 @@ label {
 #labelPrivacy {
     font-weight: 400;
 }
+/*#endregion*/
 
 /** Animazione immagini */
 .show-on-scroll {
@@ -1162,7 +1168,7 @@ footer span {
     color: #1a294b;
 }
 
-/** Pagina 404 */
+/*#region Pagina 404 */
 .morpheus-buttons {
     /** Potrei usare lo zoom per il responsive qui */
 }
@@ -1204,8 +1210,9 @@ footer span {
         color: white;
         border: none;
     }
+/*#endregion*/
 
-/** Back to top */
+/*#region Back to top */
 .back-to-top-button {
     opacity: 0;
     bottom: 20px;
@@ -1232,6 +1239,7 @@ footer span {
     opacity: 0.5;
     transition: all 0.5s ease;
 }
+/*#endregion*/
 
 .link-icon {
     border: none;
@@ -1270,4 +1278,3 @@ footer span {
 .icon-email, .icon-telegram {
     margin-right: 2px;
 }
-
