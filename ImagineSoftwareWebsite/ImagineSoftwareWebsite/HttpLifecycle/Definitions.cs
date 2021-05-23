@@ -2,9 +2,11 @@
 {
     public static class Definitions
     {
+#warning Impostare partita IVA
         public const string PartitaIva = "TODO";
 
-        // Forse è troppo lungo?
+        // Forse è troppo lungo? -> Usare un nome corto tipo info@imaginesoftware.it o fb@imaginesoftware.it
+#warning Impostare email
         public const string Email = "francesco.bonizzi@imaginesoftware.it";
 
         public const string CONTROLLER_API_ROUTE_NAME = "api";
