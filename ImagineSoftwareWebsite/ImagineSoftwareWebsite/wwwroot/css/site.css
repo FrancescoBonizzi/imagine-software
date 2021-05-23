@@ -462,8 +462,12 @@ label {
         color: black;
     }
 
-.first-article-padding {
+.first-section-padding {
     padding: 3rem 0;
+}
+
+.after-logo-section-content {
+    padding: 0 0 3rem 0 !important;
 }
 
 .article-padding {

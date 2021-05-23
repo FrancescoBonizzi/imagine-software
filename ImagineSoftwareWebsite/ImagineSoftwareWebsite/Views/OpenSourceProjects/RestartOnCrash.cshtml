@@ -10,11 +10,11 @@
 
 <partial name="_OpenSourceProjectsBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
 
-<div class="first-article-padding centered-section-content">
+<div class="first-section-padding centered-section-content">
     <img class="project-logo" src="~/images/logos/logo-restart-on-crash.png" alt="Il logo dell'applicazione RestartOnCrash" asp-append-version="true" />
 </div>
 
-<article>
+<div class="section-content">
 
     <p>
         <b>RestartOnCrash</b> è una semplice applicazione <em class="code-snippet">.NET Core</em>, <a class="outside-link" href="https://github.com/FrancescoBonizzi/RestartOnCrash" target="_blank" title="Vai alla pagina GitHub di RestartOnCrash">open source</a> e scritta in <em class="code-snippet">C#</em> che mira a risolvere il problema di un'<i>applicazione per Windows</i> che cessa di funzionare per problemi che non puoi gestire dall'interno. Semplicemente <b>riavvia l'applicazione crashata</b>.
@@ -28,10 +28,10 @@
         Non avendo accesso al codice sorgente in questione, ho dovuto arrangiarmi con una soluzione esterna, ed ho sviluppato <b>RestartOnCrash</b>.
     </p>
 
-</article>
+</section>
 
-<section class="article-section dark-grey-section small-section-content">
-    <article>
+<section class="dark-grey-section small-section-content">
+    <div class="section-content">
         <p>
             <b>RestartOnCrash</b> sorveglia un particolare processo e lo riavvia se questo non è più in esecuzione.
         </p>
@@ -48,18 +48,18 @@
         <p>
             Nel mio caso - per gestire eventuali riavvii della macchina stessa dovuti ad aggiornamenti automatici, blackout, intervento umano - ho posto sia <b>RestartOnCrash</b> che l'applicazione da monitorare allo <i>startup</i> di Windows, così da non pensarci più.
         </p>
-    </article>
+    </section>
 </section>
 
-<section class="article-section sub-section-title-section">
-    <article>
+<section class="sub-section-title-section">
+    <div class="section-content">
         <h2>
             Spesso ci si ultra ingegna per risolvere problemi la cui soluzione è banale.
         </h2>
-    </article>
+    </section>
 </section>
 
-<article class="article-padding">
+<section>
     <h2 class="inner-article-title">Configurare <b>RestartOnCrash</b></h2>
     <p>Tutto quello che serve è configurare il file <em class="code-snippet">configuration.json</em></p>
     <p>
@@ -72,9 +72,9 @@
             <li><em class="code-snippet">StartApplicationOnlyAfterFirstExecution</em>: se <em class="code-snippet">false</em>, quando <b>RestartOnCrash</b> si avvia per la prima volta, avvia anche l'applicazione monitorata; se <em class="code-snippet">true</em> attende che l'applicazione monitorata sia in esecuzione per agganciarsi al suo processo</li>
         </ul>
     </p>
-</article>
+</section>
 
-<section class="article-section dark-grey-section">
+<section class="dark-grey-section">
     <h2 class="inner-article-title"><b>RestartOnCrash</b> in azione</h2>
     <div class="image-paragraph image-paragraph-bigger show-on-scroll">
         <a href="~/images/articles/restart-on-crash-video.gif" target="_blank">
@@ -83,7 +83,7 @@
     </div>
 </section>
 
-<article class="article-padding">
+<section>
     <h2 class="inner-article-title">Contribuire</h2>
     
     <p>
@@ -93,4 +93,4 @@
     <p>
         Il codice di <b>RestartOnCrash</b> è interamente <a class="outside-link" href="https://github.com/FrancescoBonizzi/RestartOnCrash" target="_blank" title="Vai alla pagina GitHub di RestartOnCrash">open source su GitHub</a> ed è aperta alla collaborazione da parte di tutti. Poco tempo fa ho ricevuto una pull request molto gradita dove veniva impostata una notifica di sistema in seguito al riavvio delle applicazioni gestite.
     </p>
-</article>
+</section>

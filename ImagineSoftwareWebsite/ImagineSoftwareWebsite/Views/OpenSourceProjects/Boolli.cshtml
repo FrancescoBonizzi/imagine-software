@@ -10,96 +10,116 @@
 
 <partial name="_OpenSourceProjectsBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
 
-<div class="first-article-padding centered-section-content">
+<section class="first-section-padding centered-section-content">
     <img class="project-logo" src="~/images/logos/logo-boolli.png" alt="Il logo dell'applicazione Boolli" asp-append-version="true" />
-</div>
+</section>
 
-<article>
+<section>
+    <div class="section-content after-logo-section-content">
 
-    <p>
-        <b>Boolli</b> è un <b>interprete di espressioni booleane</b> <a class="outside-link" href="https://github.com/FrancescoBonizzi/Boolli" target="_blank" title="Vai alla pagina GitHub di Boolli">open-source</a> scritto in <em class="code-snippet">C#</em> e disponibile come <a class="outside-link" href="https://www.nuget.org/packages/Boolli/" target="_blank" title="Vai alla pagina specifica su NuGet">libreria su NuGet</a>.
-    </p>
+        <p>
+            <b>Boolli</b> è un <b>interprete di espressioni booleane</b> <a class="outside-link" href="https://github.com/FrancescoBonizzi/Boolli" target="_blank" title="Vai alla pagina GitHub di Boolli">open-source</a> scritto in <em class="code-snippet">C#</em> e disponibile come <a class="outside-link" href="https://www.nuget.org/packages/Boolli/" target="_blank" title="Vai alla pagina specifica su NuGet">libreria su NuGet</a>.
+        </p>
 
-    <p>
-        Cosa può fare <b>Boolli</b>? Rispondere <code>true</code> o <code>false</code> data un'espressione booleana!
-</p>
+        <p>
+            Cosa può fare <b>Boolli</b>? Rispondere <em class="code-snippet">true</em> o <em class="code-snippet">false</em> data un'espressione booleana!
+        </p>
 
-    <p>
-        Per <b>Boolli</b>, un'espressione booleana è una stringa generata secondo questa grammatica <em class="code-snippet">EBNF</em>:
-        <script src="https://gist.github.com/FrancescoBonizzi/a29060d0780da60f7636e533a7809918.js"></script>
-    </p>
+    </div>
+</section>
 
-    <p>
-        Come software <b>Boolli</b> è composto da tre moduli:
-        <ul>
-            <li>Un lexer</li>
-            <li>Un parser</li>
-            <li>Un interprete</li>
-        </ul>
+<section class="dark-grey-section">
+    <div class="section-content">
 
-        ...e la struttura dati alla base del suo funzionamento è l'<a class="outside-link" href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" title="Più informazioni su Wikipedia inglese">Abstract Syntax Tree</a>.
-    </p>
+        <p>
+            Per <b>Boolli</b>, un'espressione booleana è una stringa generata secondo questa grammatica <em class="code-snippet">EBNF</em>:
+            <script src="https://gist.github.com/FrancescoBonizzi/a29060d0780da60f7636e533a7809918.js"></script>
+        </p>
 
-    <p>
-        Perché <b>Boolli</b> può esserti utile?
+        <p>
+            Come software <b>Boolli</b> è composto da tre moduli:
+            <ul>
+                <li>Un lexer</li>
+                <li>Un parser</li>
+                <li>Un interprete</li>
+            </ul>
 
-        <ul>
-            <li><b>A scopo didattico</b>: per capire come funziona un semplice interprete. Noi informatici li diamo per scontati, ma sono molto interessanti!</li>
-            <li>Se sostituisci, via codice, i token booleani con delle <em class="code-snippet">Func&lt;bool&gt;</em> (o anche delle <em class="code-snippet">Func&lt;Task&lt;bool&gt;&gt;</em>). Uno use case è quello di definire un semplice <b>sistema di regole</b>.</li>
-        </ul>
-    </p>
+            ...e la struttura dati alla base del suo funzionamento è l'<a class="outside-link" href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" title="Più informazioni su Wikipedia inglese">Abstract Syntax Tree</a>.
+        </p>
 
-</article>
+    </div>
+</section>
 
-<section class="article-section sub-section-title-section">
-    <article>
+<section>
+    <div class="section-content">
+
+        <p>
+            Perché <b>Boolli</b> può esserti utile?
+
+            <ul>
+                <li><b>A scopo didattico</b>: per capire come funziona un semplice interprete. Noi informatici li diamo per scontati, ma sono molto interessanti!</li>
+                <li>Se sostituisci, via codice, i token booleani con delle <em class="code-snippet">Func&lt;bool&gt;</em> (o anche delle <em class="code-snippet">Func&lt;Task&lt;bool&gt;&gt;</em>). Uno use case è quello di definire un semplice <b>sistema di regole</b>.</li>
+            </ul>
+        </p>
+
+    </div>
+</section>
+
+<section class="sub-section-title-section">
+    <div class="section-content">
 
         <h2>Esempi pratici</h2>
         <h3>Proviamolo insieme!</h3>
 
-    </article>
+    </div>
 </section>
 
-<article class="article-padding">
-    <h2 class="inner-article-title">Valutare un'espressione booleana</h2>
-    <p>
-        <script src="https://gist.github.com/FrancescoBonizzi/e6a5fa02b100cdf770fd61cc98fb8cfb.js"></script>
-    </p>
-</article>
+<section>
+    <div class="section-content">
+        <h2 class="inner-article-title">Valutare un'espressione booleana</h2>
+        <p>
+            <script src="https://gist.github.com/FrancescoBonizzi/e6a5fa02b100cdf770fd61cc98fb8cfb.js"></script>
+        </p>
+    </div>
+</section>
 
-<section class="article-section dark-grey-section">
-    <article>
+<section class="dark-grey-section">
+    <div class="section-content">
         <h2 class="inner-article-title">...puoi anche usare <em class="code-snippet">0</em> al posto di <code>false</code> e <em class="code-snippet">1</em> al posto di <em class="code-snippet">true</em></h2>
         <p>
             <script src="https://gist.github.com/FrancescoBonizzi/7ccfd0dd6d4d77d03f7be424f760764e.js"></script>
         </p>
-    </article>
+    </div>
 </section>
 
-<article class="article-padding">
-    <h2 class="inner-article-title">Valutare un'espressione di <em class="code-snippet">Func&lt;bool&gt;</em></h2>
-    <p>
-        <script src="https://gist.github.com/FrancescoBonizzi/0dcb93d6bdc1be00d055c3007eefbd48.js"></script>
-    </p>
-</article>
+<section>
+    <div class="section-content">
+        <h2 class="inner-article-title">Valutare un'espressione di <em class="code-snippet">Func&lt;bool&gt;</em></h2>
+        <p>
+            <script src="https://gist.github.com/FrancescoBonizzi/0dcb93d6bdc1be00d055c3007eefbd48.js"></script>
+        </p>
+    </div>
+</section>
 
-<section class="article-section dark-grey-section">
-    <article>
+<section class="dark-grey-section">
+    <div class="section-content">
         <h2 class="inner-article-title">...anche in versione <em class="code-snippet">async</em>, con un'espressione di <em class="code-snippet">Func&lt;Task&lt;bool&gt;&gt;</em></h2>
         <p>
             <script src="https://gist.github.com/FrancescoBonizzi/4c5b7f1e8235bec054ec78ae9049e5d8.js"></script>
         </p>
-    </article>
+    </div>
 </section>
 
-<article class="article-padding">
-    <h2 class="inner-article-title">Contribuire</h2>
+<section>
+    <div class="section-content">
+        <h2 class="inner-article-title">Contribuire</h2>
 
-    <p>
-        Il mondo dell'open source è meraviglioso proprio perché ognuno può dare il proprio contributo ed aiutare chissà chi nel mondo!
-    </p>
+        <p>
+            Il mondo dell'open source è meraviglioso proprio perché ognuno può dare il proprio contributo ed aiutare chissà chi nel mondo!
+        </p>
 
-    <p>
-        Il codice di <b>Boolli</b> è interamente <a class="outside-link" href="https://github.com/FrancescoBonizzi/Boolli" target="_blank" title="Vai alla pagina GitHub di Boolli">open source su GitHub</a> ed è aperta alla collaborazione da parte di tutti!
-    </p>
-</article>
+        <p>
+            Il codice di <b>Boolli</b> è interamente <a class="outside-link" href="https://github.com/FrancescoBonizzi/Boolli" target="_blank" title="Vai alla pagina GitHub di Boolli">open source su GitHub</a> ed è aperta alla collaborazione da parte di tutti!
+        </p>
+    </div>
+</section>
