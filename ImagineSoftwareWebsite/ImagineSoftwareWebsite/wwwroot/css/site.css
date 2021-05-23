@@ -273,30 +273,36 @@ footer p:nth-child(2) {
 /** Articoli */
 section {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-article, .common-section {
+.common-section {
     margin: 1rem 0;
     max-width: var(--page-width);
     line-height: 1.7rem;
     width: 100%;
 }
 
-.centered-section {
+.centered-section-content {
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
 }
 
-article p {
+.section-content p {
     padding: 0.6rem 0;
     font-size: 1.1rem;
 }
 
-article ul, article li {
-    list-style: disc;
+.section-content ul {
     margin-left: 1rem;
+}
+
+.section-content li {
+    list-style: disc;
 }
 
 .outside-link, .colored-link {
@@ -309,15 +315,15 @@ article ul, article li {
         color: var(--primary-color);
     }
 
-article h2, article h3 {
+.section-content h2, .section-content h3 {
     text-align: left;
 }
 
-article h2 {
+.section-content h2 {
     padding: 0;
 }
 
-article h3 {
+.section-content h3 {
     padding: 0.5rem 0 2rem 0;
 }
 
@@ -500,21 +506,13 @@ label {
 }
 
 .section-content {
-    margin: 1rem 0;
     max-width: var(--page-width);
     line-height: 1.7rem;
     width: 100%;
-}
-
-.article-section {
     padding: 6em 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.small-article-section {
+.small-section-content {
     padding: 3rem 0;
 }
 
@@ -579,32 +577,22 @@ label {
     }
 /*#endregion*/
 
-.shortcuts-list ul li {
-    list-style: none;
+.shortcuts-list ul {
+    margin-left: 0;
 }
 
 .shortcuts-list li {
+    padding: 0.2rem 0;
     list-style: none;
-    padding: 0.5rem 0;
-}
-
-.shortcuts-list li {
-    list-style: none;
-    padding: 0.5rem 0;
 }
 
 .shortcut-link {
     color: var(--primary-color);
 }
 
-.shortcuts-list {
-    max-width: var(--page-width);
-    width: 100%;
+.shortcuts-list i {
+    color: var(--primary-color);
 }
-
-    .shortcuts-list i {
-        color: var(--primary-color);
-    }
 
 #btnContactSubmit {
     align-self: flex-start;
@@ -668,6 +656,8 @@ label {
     display: block;
     font-size: 1.1rem;
     white-space: pre;
+    font-weight: 700;
+    width: 100%;
 }
 
 #error-content {
@@ -839,7 +829,7 @@ label {
 
     .breadcrumbs-section ol {
         max-width: var(--page-width);
-        padding: 0 1rem;
+        padding: 0;
         list-style: none;
         width: 100%;
         color: var(--text-over-background-dark);
@@ -948,7 +938,7 @@ label {
 /*#endregion*/
 
 .contact-title {
-    text-align: center;
+    text-align: center !important;
     font-size: 3.4rem;
     padding: 1rem 0;
     line-height: 4rem;
@@ -1123,9 +1113,13 @@ footer span {
     font-weight: 900;
     border-radius: 100rem;
     text-decoration: none;
-    margin: 1rem 0;
+    margin: 0;
     font-size: 1.2rem;
     text-transform: uppercase;
+}
+
+.button-top-margin {
+    margin-top: 2rem;
 }
 
 .action-button {
