@@ -491,6 +491,10 @@ label {
         color: var(--primary-color) !important;
     }
 
+    .dark-grey-section i {
+        color: white;
+    }
+
     .dark-grey-section .outside-link {
         color: white;
     }
@@ -1241,7 +1245,7 @@ footer span {
 }
 
 .link-icon-github:hover > i {
-    color: #464646;
+    color: #b1b1b1;
 }
 
 .link-icon-linkedin:hover > i {
