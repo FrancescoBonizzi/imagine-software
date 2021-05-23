@@ -454,11 +454,11 @@ label {
         color: white;
     }
 
-.sub-section-title-section {
+.highlight-section {
     background-color: var(--primary-color);
 }
 
-    .sub-section-title-section > * {
+    .highlight-section > * {
         color: black;
     }
 
