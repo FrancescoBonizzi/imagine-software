@@ -51,7 +51,7 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
                         else
                         {
                             // Altrimenti ritorno una pagina intera
-                            context.Response.Redirect("/Home/StatusCodeError?code=500");
+                            context.Response.Redirect("/error/500");
                         }
                     }
                     catch (Exception ex)
