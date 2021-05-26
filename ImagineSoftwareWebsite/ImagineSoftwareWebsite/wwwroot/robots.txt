@@ -2,3 +2,4 @@
 Sitemap: http://www.imaginesoftware.it/sitemap.xml
 User-agent: *
 Allow: /
+Disallow: /error/
