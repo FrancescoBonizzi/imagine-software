@@ -4,6 +4,7 @@
     {
 #warning Impostare partita IVA
         public const string PartitaIva = "TODO";
+        public const string JobTitle = "Full stack .NET developer and Android developer";
 
         // Forse è troppo lungo? -> Usare un nome corto tipo info@imaginesoftware.it o fb@imaginesoftware.it
 #warning Impostare email

@@ -4,6 +4,37 @@
     ViewData["MetaDescription"] = "Francesco Bonizzi, proprietario di Imagine Software, professionista dello sviluppo software dello stack Microsoft e Android.";
 }
 
+@section StructuredData {
+
+<script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "Person",
+        "email": "@Definitions.Email",
+        "image": "https://www.imaginesoftware.it/images/articles/Francesco-Bonizzi.jpg",
+        "jobTitle": "@Definitions.JobTitle",
+        "name": "Francesco Bonizzi",
+        "gender": "Male",
+        "nationality": "Italian",
+        "birthDate": "1990-08-05",
+        "sameAs": [
+            "https://github.com/FrancescoBonizzi",
+            "https://www.linkedin.com/in/fbonizzi/",
+            "https://stackoverflow.com/users/1090403/francesco-bonizzi"
+        ],
+        "worksFor": [
+        {
+            "@@type": "Organization",
+            "name": "Imagine Software",
+            "sameAs": [
+                "https://www.imaginesoftware.it"
+            ]
+        }]
+    }
+</script>
+
+}
+
 <div class="inner-header inner-header-francesco">
     <h1>@routeName</h1>
     <h3>Professionista dello sviluppo software</h3>
@@ -32,7 +63,7 @@
 
         <div class="image-paragraph show-on-scroll">
             <img src="~/images/articles/Francesco-Bonizzi.jpg" alt="Una foto di Francesco Bonizzi, sviluppatore software" asp-append-version="true" class="francesco-bonizzi-photo" />
-            <p><b>Full stack .NET developer and Android developer</b></p>
+            <p><b>@Definitions.JobTitle</b></p>
             <div>
                 <a class="link-icon link-icon-github" target="_blank" href="https://github.com/FrancescoBonizzi" title="Visita il mio profilo GitHub"><i class="icon-github"></i></a>
                 <a class="link-icon link-icon-linkedin" target="_blank" href="https://www.linkedin.com/in/fbonizzi/" title="Visita il mio profilo LinkedIn"><i class="icon-linkedin"></i></a>
