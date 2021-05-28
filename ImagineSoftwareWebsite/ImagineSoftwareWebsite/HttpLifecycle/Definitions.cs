@@ -21,8 +21,7 @@
         public const string OPEN_SOURCE_PROJECTS_PAGE_CONTROLLER_NAME = "Progetti open source";
         public const string APPLICATIONS_PAGE_CONTROLLER_NAME = "Applicazioni";
 
-        public static string JSON_LD_ORGANIZATION = "{ " +
-            "\"@type\": \"Organization\", " +
+        public static string JSON_LD_ORGANIZATION_DETAILS = 
             "\"name\": \"Imagine Software\", " +
             "\"legalName\": \"Imagine Software di Francesco Bonizzi\", " +
             "\"url\": \"https://www.imaginesoftware.it\", " +
@@ -33,24 +32,30 @@
             "]," +
             "\"foundingDate\": \"2021\"," +
             "\"founders\": [ " +
-                "{"+
-                "\"@type\": \"Person\","+
-                "\"name\": \"Francesco Bonizzi\""+
-                "}"+
-            "],"+
-            "\"contactPoint\": {"+
-                "\"@type\": \"ContactPoint\","+
-                "\"contactType\": \"customer support\","+
-                $"\"email\": \"{Email}\""+
-           " }" +
-        "}";
+                "{" +
+                "\"@type\": \"Person\"," +
+                "\"name\": \"Francesco Bonizzi\"" +
+                "}" +
+            "]," +
+            "\"contactPoint\": {" +
+                "\"@type\": \"ContactPoint\"," +
+                "\"contactType\": \"customer support\"," +
+                $"\"email\": \"{Email}\"" +
+           " }";
 
-        public const string JSON_LD_FREE_APP = "\"offers\":[" +
-            "{" +
-            "\"@type\":\"Offer\"," +
-            "\"price\":\"0\"," +
-            "\"priceCurrency\":\"XXX\"," +
-            "\"availability\":\"https://schema.org/InStock\"" +
+        public static string JSON_LD_ORGANIZATION = 
+            "{ " +
+                "\"@type\": \"Organization\", " +
+                JSON_LD_ORGANIZATION_DETAILS +
+            "}";
+
+        public const string JSON_LD_FREE_APP = 
+            "\"offers\":[" +
+                "{" +
+                    "\"@type\":\"Offer\"," +
+                    "\"price\":\"0\"," +
+                    "\"priceCurrency\":\"XXX\"," +
+                    "\"availability\":\"https://schema.org/InStock\"" +
             "}]";
 
         public static string JSON_LD_AUTHOR = $"\"author\": {JSON_LD_ORGANIZATION}";
