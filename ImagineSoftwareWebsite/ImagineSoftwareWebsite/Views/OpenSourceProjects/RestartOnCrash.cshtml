@@ -4,6 +4,26 @@
     ViewData["MetaDescription"] = "RestartOnCrash è una semplice applicazione .NET Core scritta in C#, open source, che riavvia in automatico le applicazioni che crashano. È disponibile gratuitamente per Windows!";
 }
 
+@section StructuredData {
+
+    <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "SoftwareApplication",
+            "name": "RestartOnCrash",
+            "description": "@ViewData["MetaDescription"]",
+            "operatingSystem": "Windows",
+            "applicationCategory": "Software",
+            "url": "https://github.com/FrancescoBonizzi/RestartOnCrash",
+            "image": "https://www.imaginesoftware.it/images/logos/logo-restart-on-crash.png",
+            "contentRating": "Everyone",
+            @Html.Raw(Definitions.JSON_LD_AUTHOR),
+            @Html.Raw(Definitions.JSON_LD_FREE_APP)
+        }
+    </script>
+
+}
+
 <div class="inner-header inner-header-projects">
     <h1>@routeName</h1>
     <h3>Riavvia le applicazioni che crashano</h3>

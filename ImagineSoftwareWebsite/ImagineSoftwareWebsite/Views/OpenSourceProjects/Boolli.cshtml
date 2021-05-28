@@ -4,6 +4,26 @@
     ViewData["MetaDescription"] = "Boolli è un interprete di espressioni booleane disponibile come libreria su Nuget, creato per implementare sistemi di regole avanzati.";
 }
 
+@section StructuredData {
+
+    <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "SoftwareApplication",
+            "name": "Boolli",
+            "description": "@ViewData["MetaDescription"]",
+            "operatingSystem": "Windows",
+            "applicationCategory": "Software",
+            "image": "https://www.imaginesoftware.it/images/logos/logo-boolli.png",
+            "url": "https://github.com/FrancescoBonizzi/Boolli",
+            "contentRating": "Everyone",
+            @Html.Raw(Definitions.JSON_LD_AUTHOR),
+            @Html.Raw(Definitions.JSON_LD_FREE_APP)
+        }
+    </script>
+
+}
+
 <div class="inner-header inner-header-projects">
     <h1>@routeName</h1>
     <h3>Implementare sistemi di regole</h3>

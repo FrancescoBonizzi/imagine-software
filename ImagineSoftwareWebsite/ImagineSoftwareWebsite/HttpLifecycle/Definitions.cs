@@ -3,8 +3,8 @@
     public static class Definitions
     {
 #warning Impostare partita IVA
-        public const string PartitaIva = "TODO";
-        public const string JobTitle = "Full stack .NET developer and Android developer";
+        public const string PARTITA_IVA = "TODO";
+        public const string JOB_TITLE = "Full stack .NET developer and Android developer";
 
         // Forse è troppo lungo? -> Usare un nome corto tipo info@imaginesoftware.it o fb@imaginesoftware.it
 #warning Impostare email
@@ -20,5 +20,39 @@
         public const string SITEMAP_PAGE_CONTROLLER_NAME = "Mappa del sito";
         public const string OPEN_SOURCE_PROJECTS_PAGE_CONTROLLER_NAME = "Progetti open source";
         public const string APPLICATIONS_PAGE_CONTROLLER_NAME = "Applicazioni";
+
+        public static string JSON_LD_ORGANIZATION = "{ " +
+            "\"@type\": \"Organization\", " +
+            "\"name\": \"Imagine Software\", " +
+            "\"legalName\": \"Imagine Software di Francesco Bonizzi\", " +
+            "\"url\": \"https://www.imaginesoftware.it\", " +
+            $"\"vatID\": \"{PARTITA_IVA}\"," +
+            "\"location\": \"Italy\"," +
+            "\"sameAs\": [" +
+                "\"https://www.imaginesoftware.it\"" +
+            "]," +
+            "\"foundingDate\": \"2021\"," +
+            "\"founders\": [ " +
+                "{"+
+                "\"@type\": \"Person\","+
+                "\"name\": \"Francesco Bonizzi\""+
+                "}"+
+            "],"+
+            "\"contactPoint\": {"+
+                "\"@type\": \"ContactPoint\","+
+                "\"contactType\": \"customer support\","+
+                $"\"email\": \"{Email}\""+
+           " }" +
+        "}";
+
+        public const string JSON_LD_FREE_APP = "\"offers\":[" +
+            "{" +
+            "\"@type\":\"Offer\"," +
+            "\"price\":\"0\"," +
+            "\"priceCurrency\":\"XXX\"," +
+            "\"availability\":\"https://schema.org/InStock\"" +
+            "}]";
+
+        public static string JSON_LD_AUTHOR = $"\"author\": {JSON_LD_ORGANIZATION}";
     }
 }

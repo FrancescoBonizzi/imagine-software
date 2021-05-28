@@ -4,6 +4,26 @@
     ViewData["MetaDescription"] = "Ambientato in una città astratta, in continuo cambiamento, INFART è un gioco CORRI E SCOREGGIA in cui dovrete mangiare il più possibile verdure, evitare gli hamburger ed i buchi nella strada!";
 }
 
+@section StructuredData {
+
+    <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "GameApplication",
+            "name": "INFART",
+            "url": "https://play.google.com/store/apps/details?id=com.francescobonizzi.infart",
+            "description": "@ViewData["MetaDescription"]",
+            "operatingSystem": "ANDROID",
+            "applicationCategory": "GAME_ACTION",
+            "image": "https://www.imaginesoftware.it/images/logos/logo-infart.png",
+            "contentRating": "Everyone",
+            @Html.Raw(Definitions.JSON_LD_AUTHOR),
+            @Html.Raw(Definitions.JSON_LD_FREE_APP)
+        }
+    </script>
+
+}
+
 <div class="inner-header inner-header-projects">
     <h1>@routeName</h1>
     <h3>Esploderai dalle risate!</h3>

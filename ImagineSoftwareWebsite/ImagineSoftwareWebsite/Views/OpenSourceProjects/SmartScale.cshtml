@@ -4,6 +4,26 @@
     ViewData["MetaDescription"] = "SmartScale3000 è la bilancia intelligente che manca nei supermercati di tutto il mondo! È il progetto vincitore dell'Hackaton Hackfork 2020 organizzato da iSolutions!";
 }
 
+@section StructuredData {
+
+    <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "SoftwareApplication",
+            "name": "SmartScale3000",
+            "description": "@ViewData["MetaDescription"]",
+            "operatingSystem": "Windows",
+            "applicationCategory": "Software",
+            "url": "https://github.com/FrancescoBonizzi/SmartScale3000",
+            "image": "https://www.imaginesoftware.it/images/logos/logo-smart-scale.png",
+            "contentRating": "Everyone",
+            @Html.Raw(Definitions.JSON_LD_AUTHOR),
+            @Html.Raw(Definitions.JSON_LD_FREE_APP)
+        }
+    </script>
+
+}
+
 <div class="inner-header inner-header-projects">
     <h1>@routeName</h1>
     <h3>La bilancia intelligente</h3>

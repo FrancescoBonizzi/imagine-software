@@ -4,6 +4,25 @@
     ViewData["MetaDescription"] = "Invoice Maker - Quick & Easy è l'App più semplice che puoi trovare sullo Store per creare fatture, ricevute e preventivi belli e professionali. È stata pensata per i freelance o per chi deve generare ricevute al volo senza perdere tempo!";
 }
 
+@section StructuredData {
+
+    <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "SoftwareApplication",
+            "name": "Invoice Maker - Quick & Easy",
+            "url": "https://play.google.com/store/apps/details?id=com.francescobonizzi.invoiceEstimateReceiptMaker",
+            "description": "Invoice Maker is the fastest and easiest invoice and bill generator tailored for freelancers, contractors and business owners, to create invoices on the go!",
+            "operatingSystem": "ANDROID",
+            "applicationCategory": "BUSINESS",
+            "image": "https://www.imaginesoftware.it/images/logos/logo-invoice-maker-quick-easy.png",
+            @Html.Raw(Definitions.JSON_LD_AUTHOR),
+            @Html.Raw(Definitions.JSON_LD_FREE_APP)
+        }
+    </script>
+
+}
+
 <div class="inner-header inner-header-projects">
     <h1>@routeName</h1>
     <h3>Fatture e ricevute belle e professionali</h3>
