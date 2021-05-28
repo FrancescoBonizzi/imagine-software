@@ -516,6 +516,10 @@ label {
     margin-bottom: 1rem;
 }
 
+.white-section {
+    background-color: white;
+}
+
 .dark-grey-section {
     background-color: var(--background-dark-color-lighter);
 }
@@ -587,6 +591,16 @@ label {
 
 
 /*#region Contact form */
+
+.quick-contacts {
+    margin: 1rem 0;
+}
+
+    .quick-contacts > h4 {
+        text-align: center;
+        padding: 0;
+        margin: 0 0 1rem 0;
+    }
 
 .contact-form {
     display: flex;
