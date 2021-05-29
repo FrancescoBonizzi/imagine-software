@@ -791,13 +791,13 @@ label {
 
 /*#region Companies showcase*/
 
-.companies-showcase {
+.logo-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-    .companies-showcase img {
+    .logo-gallery img {
         display: block;
         margin: 0.5rem;
         max-width: 180px;
@@ -808,7 +808,13 @@ label {
         transition: all 0.3s ease;
     }
 
-.company-showcase-name {
+.opensource-logos img {
+    border-radius: 50%;
+    max-width: 90px;
+    max-height: 90px;
+}
+
+.logo-gallery-name {
     opacity: 0;
     transition: all 0.3s ease;
     color: white;
@@ -820,17 +826,17 @@ label {
     width: 100%;
 }
 
-.company-block {
+.logo-gallery-block {
     position: relative;
     text-align: center;
 }
 
-    .company-block:hover > .company-showcase-name {
+    .logo-gallery-block:hover > .logo-gallery-name {
         opacity: 1;
         transition: all 0.3s ease;
     }
 
-    .company-block:hover > img {
+    .logo-gallery-block:hover > img {
         opacity: 0.3;
         transition: all 0.3s ease;
     }
