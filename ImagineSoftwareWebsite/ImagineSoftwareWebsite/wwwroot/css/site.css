@@ -134,7 +134,7 @@ header {
         background-color: var(--very-light-background);
         position: relative;
         display: block;
-        transition: transform 0.2s ease-in-out;
+        transition: transform 0.2s ease-in;
     }
 
         #overlay-menu-button span:before {
@@ -154,7 +154,7 @@ header {
             background-color: var(--very-light-background);
             position: absolute;
             content: "";
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.2s ease-in;
         }
 
     #overlay-menu-button:hover span,
@@ -641,12 +641,54 @@ label {
 
 .shortcuts-list ul {
     margin-left: 0;
+    display: grid;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
 }
 
+.shortcuts-list-title-container {
+    display: flex;
+    align-items: center;
+}
+
+    .shortcuts-list-title-container img {
+        width: 40px;
+        height: 40px;
+        margin-right: 1rem;
+    }
+
+.shortcuts-list-home, .shortcuts-list-services {
+    grid-template-columns: 1fr 1fr;
+}
+
+.shortcuts-list-services {
+    grid-row-gap: 1rem !important;
+    grid-column-gap: 0rem !important;
+}
+
+.shortcuts-list-services a {
+    text-decoration: none;
+    color: white;
+}
+
+
 .shortcuts-list li {
-    padding: 0.2rem 0;
     list-style: none;
 }
+
+    .shortcuts-list li:hover > a {
+        transition: all 0.3s ease-in;
+        opacity: 1;
+    }
+
+    .shortcuts-list li span {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    .shortcuts-list li p {
+        font-size: 1rem;
+    }
 
 .shortcut-link {
     color: var(--primary-color);
@@ -843,9 +885,9 @@ label {
         text-decoration: none !important;
     }
 
-    .companies-title {
-        text-align: center;
-    }
+.companies-title {
+    text-align: center;
+}
 
 /*#endregion*/
 
@@ -1222,7 +1264,40 @@ footer span {
     margin: 0;
     font-size: 1.2rem;
     text-transform: uppercase;
-    transition: all .2s ease-in-out;
+    transition: all .2s ease-in;
+}
+
+.action-button-for-services {
+    transition: all .2s ease-in;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+    .action-button-for-services:hover {
+        background-color: var(--primary-color);
+        color: var(--background-dark-color);
+        border: 2px solid var(--primary-color);
+        font-weight: 900;
+        border-radius: 100rem;
+        text-decoration: none;
+        margin: 0;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        transition: all .2s ease-in;
+    }
+
+        .action-button-for-services:hover i {
+            display: none;
+        }
+
+        .action-button-for-services:hover img {
+            display: none;
+        }
+
+.action-button-behind {
+    opacity: 0;
+    transition: all 0.3s ease-out;
 }
 
 .button-top-margin {

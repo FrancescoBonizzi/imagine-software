@@ -21,4 +21,8 @@
     <ProjectReference Include="..\ImagineSoftwareWebsiteLibrary\ImagineSoftwareWebsiteLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\vectors\" />
+  </ItemGroup>
+
 </Project>

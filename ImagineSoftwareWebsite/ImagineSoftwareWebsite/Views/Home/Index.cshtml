@@ -20,6 +20,58 @@
     <h3>Ideas are cheap, execution is everything</h3>
 </div>
 
+<section class="dark-grey-section">
+    <div class="section-content small-section-content">
+        <div class="shortcuts-list">
+            <ul class="shortcuts-list-home">
+
+                <li>
+                    <div class="shortcuts-list-title-container">
+                        <img src="~/vectors/rocket.svg" asp-append-version="true" alt="L'immagine di un razzo per rappresentare le startup" />
+                        <span>Hai un'idea rivoluzionaria?</span>
+                    </div>
+                    <p> Se sei una <b>Start-up</b> o una piccola azienda ed hai bisogno di un <b>MVP</b> da presentare, sono pronto a collaborare con te a tutto tondo per darti gli <b>strumenti per crescere</b>.</p>
+                    <a asp-controller="Home" asp-action="Services" class="action-button action-button-behind" asp-fragment="section-startup">Approfondisci</a>
+                </li>
+
+                <li>
+                    <div class="shortcuts-list-title-container">
+                        <img src="~/vectors/world-wide-web.svg" asp-append-version="true" alt="L'immagine della Terra per rappresentare il mondo di internet" />
+                        <span>Vuoi farti notare online?</span>
+                    </div>
+                    <p>
+                        Nel panorama attuale non basta una pagina Facebook per <b>esistere online</b>: il sito web è un punto di riferimento per dimostrare le peculiarità del tuo business.
+                    </p>
+                    <a asp-controller="Home" asp-action="Services" class="action-button action-button-behind" asp-fragment="section-your-website">Approfondisci</a>
+                </li>
+
+                <li>
+                    <div class="shortcuts-list-title-container">
+                        <img src="~/vectors/target.svg" asp-append-version="true" alt="L'immagine di un bersaglio, per rappresnetare gli obiettivi di un'azienda" />
+                        <span>Hai un obiettivo specifico?</span>
+                    </div>
+                    <p>
+                        Hai un processo che richiede molto tempo e risorse, un <i>know-how</i> solo tuo che se fosse automatizzato ti farebbe <b>guadagnare di più</b>? Posso aiutarti a formalizzarlo, automatizzarlo e renderlo digitalmente utilizzabile per migliorare il tuo flusso di lavoro.
+                    </p>
+                    <a asp-controller="Home" asp-action="Services" class="action-button action-button-behind" asp-fragment="section-i-already-know">Approfondisci</a>
+                </li>
+
+                <li>
+                    <div class="shortcuts-list-title-container">
+                        <img src="~/vectors/team.svg" asp-append-version="true" alt="L'immagine di mani che si stringono, ad indicare il lavoro di squadra" />
+                        <span>Vuoi ampliare il tuo team?</span>
+                    </div>
+                    <p>
+                        Come svilupatore software <b>Full Stack</b>, mi occupo sia di <i>front-end</i> che di <i>back-end</i>. Prediligo lo stack <b>Microsoft</b>: <em class="code-snippet">.NET Core</em>, <em class="code-snippet">ASP .NET Core</em>, ma anche <em class="code-snippet">WPF</em> per le applicazioni desktop, ed ho una particolare predilezione per il mondo <em class="code-snippet">SQL Server</em> ed <em class="code-snippet">Azure</em>.
+                    </p>
+                    <a asp-controller="Home" asp-action="Services" class="action-button action-button-behind" asp-fragment="section-full-stack">Approfondisci</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
 <section>
     <div class="section-content">
 
@@ -36,7 +88,7 @@
             Quest'App è stata sviluppata seguendo uno studio preciso della <i>User Experience</i> e della <i>User Interface</i> al fine di renderla il più possibile <b>intuitiva e gradevole</b>.
         </p>
 
-        <a asp-controller="Applications" asp-action="InvoiceMaker" class="action-button-secondary button-top-margin">Dai un'occhiata</a>
+        <a asp-controller="Applications" asp-action="InvoiceMaker" class="action-button-secondary button-top-margin">Dai un'occhiata a Invoice Maker</a>
 
     </div>
 </section>
@@ -95,10 +147,12 @@
         </div>
 
         <p>
-            Il mondo dell'open source è meraviglioso proprio perché ognuno può dare il proprio contributo ed aiutare chissà chi nel mondo! Inoltre, ognuno può leggere apertamente il codice delle applicazioni open source che si utilizzano quotidianamente, come <a class="outside-link" href="https://github.com/DrKLO/Telegram" title="Visualizza il codice sorgente del client Android di Telegram" target="_blank">il client di Telegram</a> - e verificarne l'implementazione della crittografia end-to-end -, ma anche tutto lo stack <a class="outside-link" href="https://github.com/dotnet/aspnetcore" target="_blank" title="Visita la pagina GitHub di ASP .NET Core">ASP .NET Core</a>, <a class="outside-link" target="_blank" title="Guarda il codice sorgente del kernel di Linux" href="https://github.com/torvalds/linux">il kernel di Linux</a>, e tanto altro.
+            Il mondo dell'open source è meraviglioso proprio perché <b>ognuno può dare il proprio contributo</b> ed aiutare chissà chi nel mondo! Inoltre, ognuno può leggere apertamente il codice delle applicazioni open source che si utilizzano quotidianamente, come <a class="outside-link" href="https://github.com/DrKLO/Telegram" title="Visualizza il codice sorgente del client Android di Telegram" target="_blank">il client di Telegram</a> - e verificarne l'implementazione della crittografia <i>end-to-end</i> -, ma anche tutto lo stack <a class="outside-link" href="https://github.com/dotnet/aspnetcore" target="_blank" title="Visita la pagina GitHub di ASP .NET Core">ASP .NET Core</a>, <a class="outside-link" target="_blank" title="Guarda il codice sorgente del kernel di Linux" href="https://github.com/torvalds/linux">il kernel di Linux</a>, e tanto altro.
         </p>
 
-        <a asp-controller="OpenSourceProjects" asp-action="Index" class="action-button button-top-margin">Guarda i miei progetti open source</a>
+        <div class="centered-section-content">
+            <a asp-controller="OpenSourceProjects" asp-action="Index" class="action-button button-top-margin">Guarda i miei progetti open source</a>
+        </div>
 
     </div>
 </section>
