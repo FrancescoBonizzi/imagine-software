@@ -1284,8 +1284,9 @@ footer span {
 
     .action-button-for-services:hover {
         border-radius: 200rem;
-        border: 2px solid white;
+        border: 2px solid var(--primary-color);
         transition: all 0.2s ease-in;
+        color: var(--primary-color);
     }
 
         .action-button-for-services:hover i {
