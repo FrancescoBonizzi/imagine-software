@@ -22,8 +22,8 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult RestartOnCrash()
             => View();
 
-        [Route(template: "open-source-projects/smart-scale", Name = "Smart Scale 3000: la bilancia intelligente")]
-        public IActionResult SmartScale()
+        [Route(template: "open-source-projects/smart-scale-3000", Name = "Smart Scale 3000: la bilancia intelligente")]
+        public IActionResult SmartScale3000()
             => View();
 
         [Route(template: "open-source-projects/starfall-game", Name = "Starfall")]

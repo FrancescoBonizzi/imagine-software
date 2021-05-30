@@ -839,9 +839,13 @@ label {
         transition: all 0.2s ease-in;
     }
 
-.companies-title {
-    text-align: center;
-}
+    .logo-gallery-block a {
+        text-decoration: none !important;
+    }
+
+    .companies-title {
+        text-align: center;
+    }
 
 /*#endregion*/
 
