@@ -789,7 +789,7 @@ label {
     }
 
 
-/*#region Companies showcase*/
+/*#region Logo gallery*/
 
 .logo-gallery {
     display: flex;
@@ -805,7 +805,7 @@ label {
         width: auto;
         height: auto;
         border-radius: 20px;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-in;
     }
 
 .opensource-logos img {
@@ -815,36 +815,33 @@ label {
 }
 
 .logo-gallery-name {
-    opacity: 0;
-    transition: all 0.3s ease;
     color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 0.8rem;
-    width: 100%;
+    display: block;
+    font-weight: 700;
 }
 
 .logo-gallery-block {
     position: relative;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.8);
+    transition: all 0.2s ease-out;
+    opacity: 0.5;
 }
 
-    .logo-gallery-block:hover > .logo-gallery-name {
+    .logo-gallery-block:hover {
+        height: 100%;
         opacity: 1;
-        transition: all 0.3s ease;
-    }
-
-    .logo-gallery-block:hover > img {
-        opacity: 0.3;
-        transition: all 0.3s ease;
+        transform: scale(1);
+        transition: all 0.2s ease-in;
     }
 
 .companies-title {
     text-align: center;
 }
-
 
 /*#endregion*/
 
