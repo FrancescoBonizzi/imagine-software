@@ -419,6 +419,14 @@ section {
     max-width: 300px;
 }
 
+.vertical-image-small {
+    max-width: 150px;
+}
+
+.vertical-image-medium {
+    max-width: 200px;
+}
+
 .article-with-left-image {
     display: flex;
     margin-right: 2rem;
@@ -737,6 +745,11 @@ label {
 
 .francesco-bonizzi-photo {
     max-width: 300px !important;
+    border-radius: 50% !important;
+    border: 4px solid #2c2c2c;
+}
+
+.francesco-bonizzi-photo-for-homepage {
     border-radius: 50% !important;
     border: 4px solid #2c2c2c;
 }

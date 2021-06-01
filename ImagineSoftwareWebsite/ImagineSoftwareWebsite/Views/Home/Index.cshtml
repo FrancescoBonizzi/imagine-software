@@ -62,7 +62,7 @@
                         <span>Vuoi ampliare il tuo team?</span>
                     </div>
                     <p>
-                        Come svilupatore software <b>Full Stack</b>, mi occupo sia di <i>front-end</i> che di <i>back-end</i>. Prediligo lo stack <b>Microsoft</b>: <em class="code-snippet">.NET Core</em>, <em class="code-snippet">ASP .NET Core</em>, ma anche <em class="code-snippet">WPF</em> per le applicazioni desktop, ed ho una particolare predilezione per il mondo <em class="code-snippet">SQL Server</em> ed <em class="code-snippet">Azure</em>.
+                        Come svilupatore software <b>Full stack</b>, mi occupo sia di <i>front-end</i> che di <i>back-end</i>. Prediligo lo stack <b>Microsoft</b>: <em class="code-snippet">.NET Core</em>, <em class="code-snippet">ASP .NET Core</em>, ma anche <em class="code-snippet">WPF</em> per le applicazioni desktop, ed ho una particolare predilezione per il mondo <em class="code-snippet">SQL Server</em> ed <em class="code-snippet">Azure</em>.
                     </p>
                     <a asp-controller="Home" asp-action="Services" class="action-button action-button-behind" asp-fragment="section-full-stack">Approfondisci</a>
                 </li>
@@ -73,19 +73,74 @@
 </section>
 
 <section>
+    <div class="section-content centered-section-content">
+        <h2 class="contact-title">Vuoi discutere <br /> di un progetto con me?</h2>
+        <a asp-controller="Home" asp-action="Contacts" class="action-button button-top-margin">Parliamone!</a>
+    </div>
+</section>
+
+<section class="dark-grey-section">
+    <div class="section-content">
+
+        <h2>Le principali tecnologie</h2>
+        <h3>con cui lavoro</h3>
+
+        <div class="logo-gallery opensource-logos">
+
+            <div class="logo-gallery-block">
+                <a title="Il sito ufficiale di Microsoft .NET" href="https://dotnet.microsoft.com/" target="_blank">
+                    <img src="~/images/logos/logo-dot-net.png" asp-append-version="true" alt="Il logo di Microsoft .NET" />
+                    <span class="logo-gallery-name">.NET</span>
+                </a>
+            </div>
+
+            <div class="logo-gallery-block">
+                <a title="Il sito ufficiale di Microsoft SQL Server" href="https://www.microsoft.com/it-it/sql-server/sql-server-downloads" target="_blank">
+                    <img src="~/images/logos/logo-sql-server.png" asp-append-version="true" alt="Il logo di Microsoft SQL Server" />
+                    <span class="logo-gallery-name">SQL Server</span>
+                </a>
+            </div>
+
+            <div class="logo-gallery-block">
+                <a title="Il sito ufficiale di Microsoft Azure (servizio cloud)" href="https://azure.microsoft.com/it-it/" target="_blank">
+                    <img src="~/images/logos/logo-azure.png" asp-append-version="true" alt="Il logo di Microsoft Azure (servizio cloud)" />
+                    <span class="logo-gallery-name">Azure</span>
+                </a>
+            </div>
+
+            <div class="logo-gallery-block">
+                <a title="Javascript presso la Mozilla foundation" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript?retiredLocale=it" target="_blank">
+                    <img src="~/images/logos/logo-javascript.png" asp-append-version="true" alt="Il logo non ufficiale di Javascript" />
+                    <span class="logo-gallery-name">Javascript</span>
+                </a>
+            </div>
+
+            <div class="logo-gallery-block">
+                <a title="Il sito ufficiale di android" href="https://www.android.com/intl/it_it/" target="_blank">
+                    <img src="~/images/logos/logo-android.png" asp-append-version="true" alt="Il logo di Android" />
+                    <span class="logo-gallery-name">Android</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
     <div class="section-content">
 
         <h2>Sviluppo App Android</h2>
         <h3>come Invoice Maker - Quick & Easy</h3>
 
-        <img class="intermediate-article-image vertical-image left-image show-on-scroll" src="~/images/logos/logo-invoice-maker-quick-easy.png" alt="Il logo di Invoice Maker - Quick & Easy" title="Invoice Maker - Quick & Easy logo" asp-append-version="true" />
+        <img class="intermediate-article-image vertical-image-small left-image show-on-scroll" src="~/images/logos/logo-invoice-maker-quick-easy.png" alt="Il logo di Invoice Maker - Quick & Easy" title="Invoice Maker - Quick & Easy logo" asp-append-version="true" />
 
         <p>
             <b>Invoice Maker - Quick & Easy</b> è un'App Android sviluppata per creare <b>fatture, ricevute e preventivi</b> belli e professionali. È stata pensata per i freelance, in particolare per quelli del mondo anglosassone.
         </p>
 
         <p>
-            Nel progettarla e realizzarla, ho seguito uno studio preciso della <i>User Experience</i> e della <i>User Interface</i> al fine di renderla il più possibile <b>intuitiva e gradevole</b>.
+            Nel progettarla e realizzarla ho seguito uno studio preciso della <i>User Experience</i> e della <i>User Interface</i> al fine di renderla il più possibile <b>intuitiva e gradevole</b>.
         </p>
 
         <a asp-controller="Applications" asp-action="InvoiceMaker" class="action-button-secondary button-top-margin">Dai un'occhiata a Invoice Maker</a>
@@ -100,7 +155,6 @@
         <h3>su GitHub</h3>
 
         <div class="logo-gallery opensource-logos">
-
 
             <div class="logo-gallery-block">
                 <a asp-controller="OpenSourceProjects" asp-action="Boolli" title="Boolli: interprete di espressioni booleane">
@@ -160,16 +214,16 @@
 <section>
     <div class="section-content">
 
-        <h2>Scrivo articoli d'informatica</h2>
-        <h3>su Medium</h3>
+        <h2>Sono uno sviluppatore Full stack</h2>
+        <h3>.NET e Android</h3>
 
-        <img class="intermediate-article-image vertical-image left-image show-on-scroll" src="~/images/logos/logo-medium.png" alt="Il logo di Medium" title="Medium logo" asp-append-version="true" />
+        <img class="intermediate-article-image francesco-bonizzi-photo-for-homepage vertical-image-medium left-image show-on-scroll" src="~/images/articles/Francesco-Bonizzi.jpg" alt="Una foto di Francesco Bonizzi, sviluppatore software" asp-append-version="true" />
 
         <p>
-            <a href="https://medium.com/" target="_blank" class="outside-link" title="Visita Medium">Medium</a> è un'ottima piattaforma per pubblicare articoli rivolti ad una vasta platea. Scrivo al 99% di informatica e tecnologie e sono stato ammesso come <i>writer</i> sulle due pubblicazioni più quotate in ambito <i>tech</i>: <a class="outside-link" href="https://betterprogramming.pub/" target="_blank" title="Visita la pubblicazione di Medium 'Better Programming'">Better Programming</a> e <a class="outside-link link-dev-genius" href="https://devgenius.io/" target="_blank" title="Visita la pubblicazione di Medium 'DevGenius'">DevGenius</a>.
+            Mi chiamo <a class="outside-link" asp-controller="Home" asp-action="Francesco" title="Leggi la mia esperienza">Francesco Bonizzi</a> ed ho fondato <b>Imagine Software</b>. Sono un coltellino svizzero dello sviluppo software: ho iniziato la mia formazione all'Università degli studi di Parma, ho concretizzato i miei primi passi nel mondo on-prem <i>business critical</i> del betting ed ho chiuso la mia carriera da dipendente verticalizzandomi sui clienti e sui servizi <i>cloud first</i>.
         </p>
 
-        <a href="https://medium.com/@@fbonizzi.90" class="action-button-secondary button-top-margin" target="_blank">Leggi i miei articoli</a>
+        <a asp-controller="Home" asp-action="Francesco" class="action-button-secondary button-top-margin">Leggi la mia esperienza</a>
 
     </div>
 </section>
@@ -238,5 +292,23 @@
 
     </div>
 </section>
+
+<section>
+    <div class="section-content">
+
+        <h2>Scrivo articoli d'informatica</h2>
+        <h3>su Medium</h3>
+
+        <img class="intermediate-article-image vertical-image left-image show-on-scroll" src="~/images/logos/logo-medium.png" alt="Il logo di Medium" title="Medium logo" asp-append-version="true" />
+
+        <p>
+            <a href="https://medium.com/" target="_blank" class="outside-link" title="Visita Medium">Medium</a> è un'ottima piattaforma per pubblicare articoli rivolti ad una vasta platea. Scrivo al 99% di informatica e tecnologie e sono stato ammesso come <i>writer</i> sulle due pubblicazioni più quotate in ambito <i>tech</i>: <a class="outside-link" href="https://betterprogramming.pub/" target="_blank" title="Visita la pubblicazione di Medium 'Better Programming'">Better Programming</a> e <a class="outside-link link-dev-genius" href="https://devgenius.io/" target="_blank" title="Visita la pubblicazione di Medium 'DevGenius'">DevGenius</a>.
+        </p>
+
+        <a href="https://medium.com/@@fbonizzi.90" class="action-button-secondary button-top-margin" target="_blank">Leggi i miei articoli</a>
+
+    </div>
+</section>
+
 
 <partial name="_ContactSection" />
