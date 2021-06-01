@@ -1489,3 +1489,7 @@ footer span {
 .icon-telegram {
     margin-right: 2px;
 }
+
+.store-download-buttons-group :first-child {
+    margin-right: 1rem;
+}
