@@ -10,6 +10,8 @@
     <h3>Guida galattica per websurfisti</h3>
 </div>
 
+<partial name="_OnePageFromHomeBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
+
 <section class="common-section sitemap-section">
     @foreach (var section in Model.Routes)
     {
