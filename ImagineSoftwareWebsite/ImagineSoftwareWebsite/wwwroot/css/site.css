@@ -1355,6 +1355,13 @@ footer span {
 
 .link-icon {
     color: var(--background-dark-color);
+    transform: scale(1.0);
+    transition: all 0.2s ease-out;
+}
+
+.link-icon:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in;
 }
 
 .action-button i {
