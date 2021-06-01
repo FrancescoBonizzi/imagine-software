@@ -1,5 +1,10 @@
 ﻿@media only screen and (max-width: 768px) {
-    
+
+    html {
+        /* Per rem */
+        font-size: 15px;
+    }
+
     .sitemap-section {
         flex-wrap: wrap;
         justify-content: start;
@@ -12,11 +17,127 @@
     .intermediate-article-image {
         float: none;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
     }
 
-    /* Nascondere il premenù in la mia offerta in versione mobile */
+    .inner-header, .section-content {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .shortcuts-list ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shortcuts-list li {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .action-button-behind {
+        opacity: 1;
+        align-self: center;
+    }
+
+    .section-content h2, .section-content h3 {
+        text-align: center;
+    }
+
+    .section-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-content > a {
+        align-self: center;
+    }
+
+    .footer-section-title {
+        margin-top: 2rem;
+    }
+
+    .shortcuts-list-title-container {
+        align-self: center;
+    }
+
+    #overlay-menu ul li {
+        text-align: center;
+    }
+
+    .breadcrumbs-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .header-with-image {
+        flex-direction: column;
+    }
+
+    .left-image {
+        margin-right: 0;
+        align-self: center;
+    }
+
+    .right-image {
+        margin-left: 0;
+        align-self: center;
+    }
+
+    .project-logo {
+        margin-top: 1rem;
+    }
+
+    .section-content {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .sitemap-group {
+        width: 80%;
+        margin: 1rem 0rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        align-self: center;
+    }
+
+    .bottom-menu-section {
+        padding: 3.5rem 0rem;
+    }
+
+    .store-download-buttons-group {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .store-download-buttons-group > a {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    .image-paragraph img {
+        max-width: 450px;
+    }
+
+    .section-content h3 {
+        padding-bottom: 0;
+    }
+
+    .article-image-gallery img {
+        margin-top: 1rem;
+    }
+
+    #services-shortcuts-lists {
+        display: none;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+
+    #error-content, #success-content {
+        width: 95%;
+    }
 }
 
