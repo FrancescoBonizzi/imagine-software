@@ -1331,8 +1331,8 @@ footer span {
 
 .action-button-secondary {
     background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--background-dark-color);
+    border: 2px solid var(--background-dark-color);
 }
 
     .action-button-secondary:hover {
