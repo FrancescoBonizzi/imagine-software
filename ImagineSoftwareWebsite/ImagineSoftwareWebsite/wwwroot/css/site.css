@@ -125,43 +125,59 @@ header {
     z-index: 5;
     cursor: pointer;
     user-select: none;
+    display: flex;
+    align-items: center;
 }
 
-    #overlay-menu-button span {
+#overlay-menu-text {
+    color: white;
+    font-style: normal;
+    margin-right: 0.5rem;
+}
+
+    #overlay-menu-text:after {
+        content: 'Menu';
+    }
+
+#overlay-menu-button span {
+    height: 4px;
+    width: 35px;
+    border-radius: 2px;
+    background-color: var(--very-light-background);
+    position: relative;
+    display: block;
+    transition: transform 0.2s ease-in;
+}
+
+    #overlay-menu-button span:before {
+        top: -10px;
+        visibility: visible;
+    }
+
+    #overlay-menu-button span:after {
+        top: 10px;
+    }
+
+    #overlay-menu-button span:before,
+    #overlay-menu-button span:after {
         height: 4px;
         width: 35px;
         border-radius: 2px;
         background-color: var(--very-light-background);
-        position: relative;
-        display: block;
+        position: absolute;
+        content: "";
         transition: transform 0.2s ease-in;
     }
 
-        #overlay-menu-button span:before {
-            top: -10px;
-            visibility: visible;
-        }
+#overlay-menu-button:hover span,
+#overlay-menu-button:hover span:before,
+#overlay-menu-button:hover span:after {
+    background: var(--primary-color);
+}
 
-        #overlay-menu-button span:after {
-            top: 10px;
-        }
-
-        #overlay-menu-button span:before,
-        #overlay-menu-button span:after {
-            height: 4px;
-            width: 35px;
-            border-radius: 2px;
-            background-color: var(--very-light-background);
-            position: absolute;
-            content: "";
-            transition: transform 0.2s ease-in;
-        }
-
-    #overlay-menu-button:hover span,
-    #overlay-menu-button:hover span:before,
-    #overlay-menu-button:hover span:after {
-        background: var(--primary-color);
-    }
+#overlay-menu-button:hover em {
+    color: var(--primary-color);
+}
 
 #overlay-menu-input {
     display: none;
@@ -171,6 +187,10 @@ header {
         height: 100vh;
         visibility: visible;
         transition: all 0.2s cubic-bezier(.18,.4,.56,.83);
+    }
+
+    #overlay-menu-input:checked ~ #overlay-menu-button em:after {
+        content: 'Chiudi';
     }
 
         #overlay-menu-input:checked ~ #overlay-menu ul li {
