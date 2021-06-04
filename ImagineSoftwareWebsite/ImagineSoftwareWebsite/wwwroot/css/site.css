@@ -243,7 +243,7 @@ header {
 
         #overlay-menu ul li {
             padding: 1em;
-            width: 450px;
+            width: 550px;
             text-align: left;
             transform: translateY(25px);
             opacity: 0;
@@ -254,7 +254,7 @@ header {
                 color: var(--very-light-background);
                 text-decoration: none;
                 font-size: 2rem;
-                transition: all 0.1s ease-out;
+                transition: all 0.2s ease-out;
             }
 
                 #overlay-menu ul li a:hover {
@@ -262,6 +262,10 @@ header {
                     padding-left: 0.5rem;
                     transition: all 0.1s ease-in;
                 }
+
+                    #overlay-menu ul li a:hover:before {
+                        content: ' ● ';
+                    }
 
 /*#endregion*/
 /*#region Footer */
