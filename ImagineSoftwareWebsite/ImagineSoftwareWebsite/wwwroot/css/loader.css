@@ -1,85 +1,43 @@
 ﻿.loader {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    margin: auto;
+    width: 40px;
+    height: 40px;
+    background-color: var(--loader-color);
+    margin: 0 auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
 
-    .loader::before,
-    .loader::after {
-        content: "";
-        position: absolute;
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
     }
 
-.loader {
-    border: 1px solid var(--loader-color);
-    height: 14px;
-    width: 32px;
-}
-
-    .loader::before {
-        width: 4px;
-        height: 10px;
-        background: var(--loader-color);
-        left: 1px;
-        top: calc(50% - 5px);
-        -webkit-animation: blockBar 2s infinite;
-        animation: blockBar 2s infinite;
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
     }
 
-@-webkit-keyframes blockBar {
-
-    0%, 80% {
-        opacity: 1;
-    }
-
-    0%, 20% {
-        box-shadow: 8px 0 0 0 rgba(255, 255, 255, 0), 16px 0 0 0 rgba(255, 255, 255, 0), 24px 0 0 0 rgba(255, 255, 255, 0);
-    }
-
-    21%, 40% {
-        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 rgba(255, 255, 255, 0), 24px 0 0 0 rgba(255, 255, 255, 0);
-    }
-
-    41%, 60% {
-        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 var(--loader-color), 24px 0 0 0 rgba(255, 255, 255, 0);
-    }
-
-    61%, 80% {
-        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 var(--loader-color), 24px 0 0 0 var(--loader-color);
-    }
-
-    81%, 100% {
-        opacity: 0;
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
     }
 }
 
-@keyframes blockBar {
-
-    0%, 80% {
-        opacity: 1;
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
     }
 
-    0%, 20% {
-        box-shadow: 8px 0 0 0 rgba(255, 255, 255, 0), 16px 0 0 0 rgba(255, 255, 255, 0), 24px 0 0 0 rgba(255, 255, 255, 0);
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
     }
 
-    21%, 40% {
-        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 rgba(255, 255, 255, 0), 24px 0 0 0 rgba(255, 255, 255, 0);
-    }
-
-    41%, 60% {
-        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 var(--loader-color), 24px 0 0 0 rgba(255, 255, 255, 0);
-    }
-
-    61%, 80% {
-        box-shadow: 8px 0 0 0 var(--loader-color), 16px 0 0 0 var(--loader-color), 24px 0 0 0 var(--loader-color);
-    }
-
-    81%, 100% {
-        opacity: 0;
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     }
 }
+
 
 .loader-message {
     text-align: center;
