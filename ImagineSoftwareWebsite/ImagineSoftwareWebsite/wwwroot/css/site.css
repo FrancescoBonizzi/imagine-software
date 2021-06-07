@@ -278,14 +278,15 @@ header {
             }
 
                 #overlay-menu ul li a:hover {
-                    color: var(--primary-color);
-                    padding-left: 0.5rem;
+                    color: var(--background-dark-color);
+                    background-color: var(--primary-color);
                     transition: all 0.1s ease-in;
+                    padding: 0.8rem 1.5rem;
+                    font-weight: 900;
+                    border-radius: 100rem;
+                    text-decoration: none;
+                    margin: 0;
                 }
-
-                    #overlay-menu ul li a:hover:before {
-                        content: ' ● ';
-                    }
 
 /*#endregion*/
 /*#region Footer */
