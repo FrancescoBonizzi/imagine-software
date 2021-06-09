@@ -14,8 +14,8 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult InvoiceMaker()
             => View();
 
-        [Route(template: "projects-apps/aragest", Name = "ARAGest - Software di gestione agricola")]
-        public IActionResult ARAGest()
+        [Route(template: "projects-apps/spandigest", Name = "SpandiGest - Software di gestione spandimenti agricoli")]
+        public IActionResult SpandiGest()
             => View();
     }
 }
