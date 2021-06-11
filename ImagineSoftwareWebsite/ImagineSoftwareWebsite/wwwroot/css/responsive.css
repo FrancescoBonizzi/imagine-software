@@ -139,5 +139,20 @@
     #error-content, #success-content {
         width: 95%;
     }
+
+    .form-two-columns {
+        flex-direction: column;
+    }
+
+    .form-two-columns-column {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #btnContactSubmit {
+        width: 80%;
+        align-self: center;
+        text-align: center;
+    }
 }
 

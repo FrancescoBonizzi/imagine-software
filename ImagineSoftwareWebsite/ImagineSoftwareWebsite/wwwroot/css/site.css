@@ -121,7 +121,7 @@ header {
     position: fixed;
     right: 2rem;
     top: 0.4rem;
-    padding: 26px 11px;
+    padding: 16px 11px;
     z-index: 5;
     cursor: pointer;
     user-select: none;
@@ -781,12 +781,13 @@ label {
 .quick-contact-label {
     width: 8rem;
     display: inline-block;
+    font-weight: 700;
 }
 
-.form-two-columns {
-    display: flex;
-    justify-content: space-between;
-}
+    .form-two-columns {
+        display: flex;
+        justify-content: space-between;
+    }
 
 .form-two-columns-column {
     width: 45%;
