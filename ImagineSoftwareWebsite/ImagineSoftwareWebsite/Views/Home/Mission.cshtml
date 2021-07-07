@@ -1,0 +1,50 @@
+﻿@{
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
+    ViewData["Title"] = "Valori";
+    ViewData["MetaDescription"] = "I valori di Imagine Software, riflessi sul lavoro e sulle scelte dei clienti: come sviluppatore software ed essere umano non posso esimermi dall'avere una direzione morale.";
+}
+
+<div class="inner-header">
+    <h1>@routeName</h1>
+    <h3>Sviluppo sostenibile, inclusione, uguaglianza</h3>
+</div>
+
+<partial name="_OnePageFromHomeBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
+
+<section>
+    <div class="section-content small-section-content">
+
+        <p>
+            Come sviluppatore software ed essere umano <b>non posso esimermi dall'avere una direzione morale</b>.
+        </p>
+
+    </div>
+</section>
+
+<section class="dark-grey-section">
+    <div class="section-content ">
+
+        <p>
+            Amo la terra, l'aria che respiro, l'idea che sta alla base della società e nutro un rispetto innato per <b>tutti gli animali</b>, esseri umani compresi. Cerco costantemente di migliorare la mia esistenza come uomo e quella della mia famiglia in relazione al circostante.
+        </p>
+
+        <p>
+            In tal senso, <b>rifiuto senza indugio</b> ogni tipo di lavoro che comporti una qualche forma di discriminazione verso l'ambiente, gli animali, gli esseri umani, le religioni, le etnie, le identità sessuali, ed in generale ogni lavoro in cui ho il sentore di elementi discriminanti.
+        </p>
+
+        <p>
+            Non solo: ritengo la <b>scienza</b> il metodo attualmente più attendibile per produrre affermazioni il più possibile vere in merito alla natura dei fenomeni, pertanto rifiuto in toto affermazioni od organizzazioni o discipline che diffondano affermazioni senza prove, capziose, false, in grado di indurre volutamente in errore le persone; le rifiuto sia nel loro valore di verità, sia se correlate a possibili clienti.
+        </p>
+
+    </div>
+</section>
+
+<section>
+    <div class="section-content small-section-content">
+
+        <p>
+            D'altra parte <b>adoro</b> lavorare con aziende o privati che abbiano a cuore lo sviluppo sostenibile, l'inclusione, l'uguaglianza, il progresso sanitario, tecnologico, della qualità della vita fisica e mentale. E porrò tutto il mio impegno per lavorare con tali realtà.
+        </p>
+
+    </div>
+</section>
