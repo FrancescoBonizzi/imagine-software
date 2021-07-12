@@ -734,7 +734,7 @@ label {
 }
 
     .shortcuts-list li:hover > a {
-        transition: all 0.3s ease-in;
+        transition: all 0.2s ease-in;
         opacity: 1;
     }
 
@@ -912,7 +912,7 @@ label {
         width: auto;
         height: auto;
         border-radius: 20px;
-        transition: all 0.3s ease-in;
+        transition: all 0.2s ease-in;
     }
 
 .opensource-logos img {
@@ -1361,7 +1361,7 @@ footer span {
 
 .action-button-behind {
     opacity: 0;
-    transition: all 0.3s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 .button-top-margin {
