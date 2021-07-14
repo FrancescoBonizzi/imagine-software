@@ -2,8 +2,7 @@
 {
     public static class Definitions
     {
-#warning Impostare partita IVA
-        public const string PARTITA_IVA = "TODO";
+        public const string PARTITA_IVA = "02982280345";
         public const string JOB_TITLE = "Full stack .NET developer and Android developer";
 
         // Forse è troppo lungo? -> Usare un nome corto tipo info@imaginesoftware.it o fb@imaginesoftware.it
@@ -23,7 +22,7 @@
 
         public static string JSON_LD_ORGANIZATION_DETAILS = 
             "\"name\": \"Imagine Software\", " +
-            "\"legalName\": \"Imagine Software di Francesco Bonizzi\", " +
+            "\"legalName\": \"Imagine Software di Bonizzi Francesco\", " +
             "\"url\": \"https://www.imaginesoftware.it\", " +
             $"\"vatID\": \"{PARTITA_IVA}\"," +
             "\"location\": \"Italy\"," +
