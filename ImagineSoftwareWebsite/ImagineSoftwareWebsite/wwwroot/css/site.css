@@ -31,7 +31,11 @@ body {
 -------------------------------------------------- */
 
 * {
-    font-family: 'Source Sans Pro', sans-serif !important;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+
+p {
+    line-height: 1.8rem !important;
 }
 
 b {
@@ -273,7 +277,7 @@ header {
             #overlay-menu ul li a {
                 color: var(--very-light-background);
                 text-decoration: none;
-                font-size: 2rem;
+                font-size: 1.8rem;
                 transition: all 0.2s ease-out;
             }
 
@@ -505,7 +509,7 @@ h4 {
 
 h1 {
     text-align: center;
-    font-size: 3.4rem;
+    font-size: 3.2rem;
     padding: 1rem 0;
     line-height: 4rem;
     font-weight: 900;
@@ -734,12 +738,12 @@ label {
 }
 
     .shortcuts-list li:hover > a {
-        transition: all 0.3s ease-in;
+        transition: all 0.2s ease-in;
         opacity: 1;
     }
 
     .shortcuts-list li span {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 700;
     }
 
@@ -912,7 +916,7 @@ label {
         width: auto;
         height: auto;
         border-radius: 20px;
-        transition: all 0.3s ease-in;
+        transition: all 0.2s ease-in;
     }
 
 .opensource-logos img {
@@ -1361,7 +1365,7 @@ footer span {
 
 .action-button-behind {
     opacity: 0;
-    transition: all 0.3s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 .button-top-margin {
