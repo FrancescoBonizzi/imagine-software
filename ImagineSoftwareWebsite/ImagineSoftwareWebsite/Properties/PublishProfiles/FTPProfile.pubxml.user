@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARnEOSGejI0COVDbJ3cb+2AAAAAACAAAAAAADZgAAwAAAABAAAABh+gx+pmqq3/DLAPtyHk+nAAAAAASAAACgAAAAEAAAALO94vevZ2k2rxUZjbrMT2IoAAAAoOCad/sbdJ3omqN5E/u/RKxyOSndHkLHQPxvIz42Wlsb+41Loh5bOhQAAADRknIogmnZxOMLk/ALggKzntWqjg==</EncryptedPassword>
+    <_PublishTargetUrl>ftp://access878216408.webspace-data.io</_PublishTargetUrl>
+    <History>False|2021-07-20T10:39:05.6193165Z;False|2021-07-20T12:30:17.2312821+02:00;False|2021-07-20T12:24:46.5726889+02:00;False|2021-07-20T12:19:56.9420745+02:00;True|2021-07-20T11:55:29.3309037+02:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>03/31/2021 07:56:50</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>03/31/2021 07:56:50</publishTime>
+    </File>
+    <File Include="Dapper.dll">
+      <publishTime>11/17/2020 09:58:48</publishTime>
+    </File>
+    <File Include="ImagineSoftwareWebsite.deps.json">
+      <publishTime>07/20/2021 12:33:49</publishTime>
+    </File>
+    <File Include="ImagineSoftwareWebsite.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ImagineSoftwareWebsite.exe">
+      <publishTime>07/20/2021 12:33:45</publishTime>
+    </File>
+    <File Include="ImagineSoftwareWebsite.pdb">
+      <publishTime>07/20/2021 12:33:45</publishTime>
+    </File>
+    <File Include="ImagineSoftwareWebsite.runtimeconfig.json">
+      <publishTime>07/20/2021 11:51:32</publishTime>
+    </File>
+    <File Include="ImagineSoftwareWebsite.Views.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ImagineSoftwareWebsite.Views.pdb">
+      <publishTime>07/20/2021 12:33:46</publishTime>
+    </File>
+    <File Include="ImagineSoftwareWebsiteLibrary.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="ImagineSoftwareWebsiteLibrary.pdb">
+      <publishTime>07/20/2021 12:16:53</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.JsonPatch.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.Razor.Host.dll">
+      <publishTime>02/17/2017 13:40:02</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/13/2016 05:31:10</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.dll">
+      <publishTime>06/13/2016 05:31:08</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.dll">
+      <publishTime>03/03/2021 21:50:10</publishTime>
+    </File>
+    <File Include="Microsoft.DotNet.InternalAbstractions.dll">
+      <publishTime>06/21/2016 21:04:54</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyModel.dll">
+      <publishTime>06/21/2016 21:04:56</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Globalization.CultureInfoCache.dll">
+      <publishTime>02/17/2017 13:40:02</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.PlatformAbstractions.dll">
+      <publishTime>06/22/2016 09:14:56</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.dll">
+      <publishTime>10/19/2020 21:51:12</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>10/13/2020 00:21:34</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Logging.dll">
+      <publishTime>10/13/2020 00:23:12</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.dll">
+      <publishTime>10/13/2020 00:25:30</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <publishTime>10/13/2020 00:31:32</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>10/13/2020 00:27:48</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.Bson.dll">
+      <publishTime>11/27/2018 23:10:18</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>03/03/2021 21:50:10</publishTime>
+    </File>
+    <File Include="runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/20/2020 18:13:26</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/20/2020 18:13:26</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/20/2020 18:13:38</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/20/2020 18:13:26</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>03/03/2021 21:50:10</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll">
+      <publishTime>11/15/2019 08:53:44</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>11/15/2019 08:53:46</publishTime>
+    </File>
+    <File Include="SimpleMvcSitemap.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>11/15/2019 08:37:04</publishTime>
+    </File>
+    <File Include="System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>10/13/2020 00:20:12</publishTime>
+    </File>
+    <File Include="System.Runtime.Caching.dll">
+      <publishTime>11/15/2019 08:37:36</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>11/15/2019 08:37:42</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>07/20/2021 12:33:49</publishTime>
+    </File>
+    <File Include="wwwroot/css/icons-generated.css">
+      <publishTime>06/02/2021 13:09:23</publishTime>
+    </File>
+    <File Include="wwwroot/css/loader.css">
+      <publishTime>06/07/2021 10:18:19</publishTime>
+    </File>
+    <File Include="wwwroot/css/responsive.css">
+      <publishTime>06/11/2021 13:42:44</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.css">
+      <publishTime>07/20/2021 10:55:08</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>03/31/2021 07:56:50</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/imagine-software-icons.eot">
+      <publishTime>05/13/2021 06:42:20</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/imagine-software-icons.svg">
+      <publishTime>05/13/2021 06:42:20</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/imagine-software-icons.ttf">
+      <publishTime>05/13/2021 06:42:20</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/imagine-software-icons.woff">
+      <publishTime>05/13/2021 06:42:20</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/imagine-software-icons.woff2">
+      <publishTime>05/13/2021 06:42:20</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/david-rotimi-yellow-pepper-unsplash.jpg">
+      <publishTime>04/14/2021 17:00:09</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/Francesco-Bonizzi.jpg">
+      <publishTime>04/06/2021 12:40:57</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/infart-animation.png">
+      <publishTime>05/04/2021 08:12:50</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/infart-game-screenshot-1.png">
+      <publishTime>05/05/2021 07:31:32</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/infart-game-screenshot-2.png">
+      <publishTime>05/05/2021 07:51:59</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/infart-game-screenshot-menu.png">
+      <publishTime>05/05/2021 07:30:28</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/invoice-maker-quick-easy-screenshot-1.png">
+      <publishTime>05/27/2021 14:58:53</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/invoice-maker-quick-easy-screenshot-2.png">
+      <publishTime>05/27/2021 14:59:28</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/invoice-maker-quick-easy-screenshot-3.png">
+      <publishTime>05/27/2021 14:59:06</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/invoice-maker-quick-easy-screenshot-4.png">
+      <publishTime>05/27/2021 14:59:16</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/invoice-maker-quick-easy-screenshot-5.png">
+      <publishTime>05/27/2021 14:59:41</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/Microsoft-BASIC.jpg">
+      <publishTime>04/06/2021 12:37:09</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/rellow-animation.png">
+      <publishTime>05/04/2021 08:13:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/rellow-game-screenshot-1.png">
+      <publishTime>05/07/2021 14:33:07</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/rellow-game-screenshot-2.png">
+      <publishTime>05/07/2021 14:33:17</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/rellow-game-screenshot-gameover.png">
+      <publishTime>05/07/2021 14:40:39</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/restart-on-crash-event-viewer.png">
+      <publishTime>04/25/2021 08:36:22</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/restart-on-crash-video.gif">
+      <publishTime>04/25/2021 09:13:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/shane-rounce-team-work-photo-unsplash.jpg">
+      <publishTime>04/14/2021 17:00:43</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/sincerely-media-hands-photo-unsplash.jpg">
+      <publishTime>05/27/2021 14:57:05</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/smartscale-hackaton-app-screenshot-1.jpg">
+      <publishTime>05/03/2021 07:00:56</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/smartscale-hackaton-office-selfie-of-victory.jpg">
+      <publishTime>05/03/2021 06:59:11</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/smartscale-hackaton-office.jpg">
+      <publishTime>05/03/2021 07:00:43</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/starfall-animation.png">
+      <publishTime>05/04/2021 08:12:34</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/starfall-game-screenshot-1.png">
+      <publishTime>06/01/2021 12:56:12</publishTime>
+    </File>
+    <File Include="wwwroot/images/articles/starfall-game-screenshot-menu.png">
+      <publishTime>06/01/2021 12:56:02</publishTime>
+    </File>
+    <File Include="wwwroot/images/favicons/android-chrome-192x192.png">
+      <publishTime>07/20/2021 11:37:49</publishTime>
+    </File>
+    <File Include="wwwroot/images/favicons/android-chrome-256x256.png">
+      <publishTime>07/20/2021 11:37:49</publishTime>
+    </File>
+    <File Include="wwwroot/images/favicons/apple-touch-icon.png">
+      <publishTime>07/20/2021 11:37:49</publishTime>
+    </File>
+    <File Include="wwwroot/images/favicons/browserconfig.xml">
+      <publishTime>07/20/2021 11:37:49</publishTime>
+    </File>
+    <File Include="wwwroot/images/favicons/favicon-16x16.png">
+      <publishTime>07/20/2021 11:37:50</publishTime>
+    </File>
+    <File Include="wwwroot/images/favicons/favicon-32x32.png">
+      <publishTime>07/20/2021 11:37:50</publishTime>
+    </File>
+    <File Include="wwwroot/images/favicons/favicon.ico">
+      <publishTime>07/20/2021 11:37:50</publishTime>
+    </File>
+    <File Include="wwwroot/images/favicons/mstile-150x150.png">
+      <publishTime>07/20/2021 11:37:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/favicons/safari-pinned-tab.svg">
+      <publishTime>07/20/2021 11:37:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/favicons/site.webmanifest">
+      <publishTime>07/20/2021 11:37:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-android.png">
+      <publishTime>06/01/2021 12:54:25</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-azure.png">
+      <publishTime>06/01/2021 12:54:16</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-boolli.png">
+      <publishTime>04/21/2021 14:17:22</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-consorzio-idraulico-tombone.jpg">
+      <publishTime>04/16/2021 08:35:43</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-dot-net.png">
+      <publishTime>06/01/2021 12:54:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-esaedro.jpg">
+      <publishTime>04/16/2021 08:35:33</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-fst.jpg">
+      <publishTime>04/16/2021 08:35:25</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-imagine-software.jpg">
+      <publishTime>07/20/2021 10:46:04</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-infart.png">
+      <publishTime>04/21/2021 14:16:40</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-infor.jpg">
+      <publishTime>04/16/2021 08:35:16</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-invoice-maker-quick-easy.png">
+      <publishTime>05/13/2021 07:36:46</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-isolutions.jpg">
+      <publishTime>04/16/2021 08:35:04</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-javascript.png">
+      <publishTime>06/01/2021 12:54:38</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-medium.png">
+      <publishTime>06/01/2021 12:54:58</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-rellow.png">
+      <publishTime>05/07/2021 14:21:26</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-restart-on-crash.png">
+      <publishTime>06/01/2021 12:55:14</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-serravalle-energia.jpg">
+      <publishTime>04/16/2021 08:34:54</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-smart-scale.png">
+      <publishTime>06/01/2021 12:53:20</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-sql-server.png">
+      <publishTime>06/01/2021 12:55:23</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-starfall.png">
+      <publishTime>04/21/2021 14:16:35</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-tncr-editorial-engineering.jpg">
+      <publishTime>04/16/2021 08:34:26</publishTime>
+    </File>
+    <File Include="wwwroot/images/logos/logo-upwork.jpg">
+      <publishTime>04/16/2021 08:34:17</publishTime>
+    </File>
+    <File Include="wwwroot/images/other/Morpheus-Blue-Pill-Red-Pill.jpg">
+      <publishTime>04/07/2021 10:06:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.js">
+      <publishTime>05/19/2021 10:05:26</publishTime>
+    </File>
+    <File Include="wwwroot/robots.txt">
+      <publishTime>05/26/2021 13:51:09</publishTime>
+    </File>
+    <File Include="wwwroot/vectors/rocket.svg">
+      <publishTime>05/30/2021 10:37:41</publishTime>
+    </File>
+    <File Include="wwwroot/vectors/target.svg">
+      <publishTime>05/30/2021 10:37:36</publishTime>
+    </File>
+    <File Include="wwwroot/vectors/team.svg">
+      <publishTime>05/30/2021 10:37:52</publishTime>
+    </File>
+    <File Include="wwwroot/vectors/world-wide-web.svg">
+      <publishTime>05/30/2021 10:37:47</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
