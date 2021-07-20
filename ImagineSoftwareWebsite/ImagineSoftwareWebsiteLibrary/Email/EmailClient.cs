@@ -13,22 +13,24 @@ namespace ImagineSoftwareWebsite.Email
     {
         private readonly SmtpClient _client;
 
-#warning Email from da configurare
-        private const string _from = "TODO";
         private const string _subject = "Imagine Software - Nuovo contatto";
         private readonly string _toAddress;
+        private readonly string _fromAddress;
 
         public EmailClient(Configuration configuration)
         {
-            _toAddress = configuration.EmailToAddress;
-
             if (string.IsNullOrWhiteSpace(configuration.EmailHost)
                 || string.IsNullOrWhiteSpace(configuration.EmailPassword)
                 || string.IsNullOrWhiteSpace(configuration.EmailToAddress)
-                || string.IsNullOrWhiteSpace(configuration.EmailUsername))
+                || string.IsNullOrWhiteSpace(configuration.EmailUsername)
+                || string.IsNullOrWhiteSpace(configuration.EmailToAddress)
+                || string.IsNullOrWhiteSpace(configuration.EmailFromAddress))
             {
                 throw new Exception("Misconfigured email client");
             }
+
+            _toAddress = configuration.EmailToAddress;
+            _fromAddress = configuration.EmailFromAddress;
 
             _client = new SmtpClient
             {
@@ -47,7 +49,7 @@ namespace ImagineSoftwareWebsite.Email
         {
             var mailMessage = new MailMessage
             {
-                From = new MailAddress(_from),
+                From = new MailAddress(_fromAddress),
                 Subject = _subject,
                 Body = message
             };
