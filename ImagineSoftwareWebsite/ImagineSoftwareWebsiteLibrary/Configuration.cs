@@ -6,7 +6,7 @@
     public class Configuration
     {
         public string EmailHost { get; } = "smtp.ionos.it";
-        public int EmailHostPort { get; } = 465;
+        public int EmailHostPort { get; } = 587;
         public string EmailUsername { get; } = "noreply@imaginesoftware.it";
         public string EmailPassword { get; } = "t@3iMziNDzyJReZ2t&ty";
         public string EmailToAddress { get; } = "f.bonizzi@imaginesoftware.it";
