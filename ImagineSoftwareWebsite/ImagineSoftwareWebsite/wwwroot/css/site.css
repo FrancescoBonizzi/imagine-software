@@ -1,12 +1,12 @@
 ﻿/*#region Global*/
 
 :root {
-    --primary-color: #ffca1f;
-    --primary-color-light: #fbd14c;
+    --primary-color: #f6e204;
+    --primary-color-light: #21cad7;
     --text-color-over-primary-light: #60605f;
     --text-color-over-primary: black;
-    --background-dark-color: #202125;
-    --background-dark-color-lighter: #29292c;
+    --background-dark-color: #313d55;
+    --background-dark-color-lighter: #535f77;
     --text-over-background-dark: #c5c5c5;
     --success-color: #4BB543;
     --error-color: #dc1414;
@@ -99,12 +99,16 @@ header {
     height: var(--header-height);
 }
 
-.header-title {
-    display: block;
-    align-self: center;
-    margin-left: 2rem;
-    font-size: 2rem;
-}
+    .header-content img {
+        margin-left: 2rem;
+    }
+
+    .header-title {
+        display: block;
+        align-self: center;
+        margin-left: 2rem;
+        font-size: 2rem;
+    }
 
     .header-title a {
         text-decoration: none;
@@ -541,7 +545,7 @@ label {
 }
 
 .grey-section {
-    background-color: #4b4b4c;
+    background-color: var(--background-dark-color);
 }
 
     .grey-section > * {
@@ -1548,4 +1552,10 @@ footer span {
 
 .store-download-buttons-group :first-child {
     margin-right: 1rem;
+}
+
+.imaginesoftware-logo {
+    max-height: var(--header-height);
+    height: 100%;
+    width: auto;
 }
