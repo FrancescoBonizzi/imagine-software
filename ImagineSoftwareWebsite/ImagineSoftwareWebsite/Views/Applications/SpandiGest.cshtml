@@ -1,1 +1,18 @@
-﻿<h1>SpandiGest</h1>
+﻿@{
+    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
+    ViewData["Title"] = routeName;
+    ViewData["MetaDescription"] = "Coming soon";
+}
+
+<div class="inner-header inner-header-projects">
+    <h1>SpandiGest</h1>
+    <h3>Il gestionale agricolo per il <b>controllo centralizzato</b> degli spandimenti</h3>
+</div>
+
+<partial name="_ApplicationsBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
+
+<p>Coming soon</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
