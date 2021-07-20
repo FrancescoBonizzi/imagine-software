@@ -23,6 +23,7 @@
             "\"name\": \"Imagine Software\", " +
             "\"legalName\": \"Imagine Software di Bonizzi Francesco\", " +
             "\"url\": \"https://www.imaginesoftware.it\", " +
+            "\"logo\": \"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg\", " +
             $"\"vatID\": \"{PARTITA_IVA}\"," +
             "\"location\": \"Italy\"," +
             "\"sameAs\": [" +
