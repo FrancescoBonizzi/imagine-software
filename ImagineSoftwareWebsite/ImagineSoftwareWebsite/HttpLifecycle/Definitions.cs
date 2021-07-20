@@ -5,9 +5,7 @@
         public const string PARTITA_IVA = "02982280345";
         public const string JOB_TITLE = "Full stack .NET developer and Android developer";
 
-        // Forse è troppo lungo? -> Usare un nome corto tipo info@imaginesoftware.it o fb@imaginesoftware.it
-#warning Impostare email
-        public const string Email = "francesco.bonizzi@imaginesoftware.it";
+        public const string Email = "f.bonizzi@imaginesoftware.it";
 
         public const string CONTROLLER_API_ROUTE_NAME = "api";
 
