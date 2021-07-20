@@ -8,7 +8,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARnEOSGejI0COVDbJ3cb+2AAAAAACAAAAAAADZgAAwAAAABAAAABh+gx+pmqq3/DLAPtyHk+nAAAAAASAAACgAAAAEAAAALO94vevZ2k2rxUZjbrMT2IoAAAAoOCad/sbdJ3omqN5E/u/RKxyOSndHkLHQPxvIz42Wlsb+41Loh5bOhQAAADRknIogmnZxOMLk/ALggKzntWqjg==</EncryptedPassword>
     <_PublishTargetUrl>ftp://access878216408.webspace-data.io</_PublishTargetUrl>
-    <History>False|2021-07-20T12:05:10.9167901Z;False|2021-07-20T14:00:19.2997425+02:00;False|2021-07-20T13:03:32.3254197+02:00;False|2021-07-20T12:57:38.1349746+02:00;False|2021-07-20T12:49:11.4643633+02:00;False|2021-07-20T12:39:05.6193165+02:00;False|2021-07-20T12:30:17.2312821+02:00;False|2021-07-20T12:24:46.5726889+02:00;False|2021-07-20T12:19:56.9420745+02:00;True|2021-07-20T11:55:29.3309037+02:00;</History>
+    <History>False|2021-07-20T12:29:27.4836632Z;False|2021-07-20T14:29:00.4273542+02:00;False|2021-07-20T14:19:39.5676236+02:00;False|2021-07-20T14:09:24.9512660+02:00;False|2021-07-20T14:06:40.5894652+02:00;False|2021-07-20T14:06:15.9791115+02:00;False|2021-07-20T14:05:10.9167901+02:00;False|2021-07-20T14:00:19.2997425+02:00;False|2021-07-20T13:03:32.3254197+02:00;False|2021-07-20T12:57:38.1349746+02:00;False|2021-07-20T12:49:11.4643633+02:00;False|2021-07-20T12:39:05.6193165+02:00;False|2021-07-20T12:30:17.2312821+02:00;False|2021-07-20T12:24:46.5726889+02:00;False|2021-07-20T12:19:56.9420745+02:00;True|2021-07-20T11:55:29.3309037+02:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
@@ -21,31 +21,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/17/2020 09:58:48</publishTime>
     </File>
     <File Include="ImagineSoftwareWebsite.deps.json">
-      <publishTime>07/20/2021 14:05:01</publishTime>
+      <publishTime>07/20/2021 14:29:17</publishTime>
     </File>
     <File Include="ImagineSoftwareWebsite.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="ImagineSoftwareWebsite.exe">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/20/2021 14:29:14</publishTime>
     </File>
     <File Include="ImagineSoftwareWebsite.pdb">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/20/2021 14:29:14</publishTime>
     </File>
     <File Include="ImagineSoftwareWebsite.runtimeconfig.json">
-      <publishTime>07/20/2021 11:51:32</publishTime>
+      <publishTime>07/20/2021 14:29:15</publishTime>
     </File>
     <File Include="ImagineSoftwareWebsite.Views.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="ImagineSoftwareWebsite.Views.pdb">
-      <publishTime>07/20/2021 14:05:01</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="ImagineSoftwareWebsiteLibrary.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="ImagineSoftwareWebsiteLibrary.pdb">
-      <publishTime>07/20/2021 12:16:53</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.JsonPatch.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
