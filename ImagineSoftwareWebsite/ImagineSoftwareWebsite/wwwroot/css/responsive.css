@@ -49,9 +49,9 @@
         flex-direction: column;
     }
 
-    .section-content > a {
-        align-self: center;
-    }
+        .section-content > a {
+            align-self: center;
+        }
 
     .footer-section-title {
         margin-top: 2rem;
@@ -111,10 +111,10 @@
         align-self: center;
     }
 
-    .store-download-buttons-group > a {
-        margin: 0.5rem 0;
-        width: 100%;
-    }
+        .store-download-buttons-group > a {
+            margin: 0.5rem 0;
+            width: 100%;
+        }
 
     .image-paragraph img {
         max-width: 450px;
@@ -154,5 +154,77 @@
         align-self: center;
         text-align: center;
     }
-}
 
+    h1 {
+        font-size: 2.3rem;
+        line-height: 3rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+        text-align: left;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    h4 {
+        font-size: 0.8rem;
+    }
+
+    .contact-title {
+        font-size: 2.3rem;
+        line-height: 3rem;
+    }
+
+    .inner-header > h3 {
+        text-align: center;
+    }
+
+    .action-button,
+    .action-button-secondary,
+    .action-button-secondary-on-dark {
+        text-align: center;
+    }
+
+    .last-footer-section {
+        padding: 3rem 0.8rem;
+    }
+
+    footer p:nth-child(2) {
+        font-size: 0.8rem;
+    }
+
+    .section-content h3 {
+        margin-bottom: 2rem;
+    }
+
+    .header-content img {
+        margin-left: 0;
+        max-height: 50px;
+    }
+
+    #overlay-menu-button {
+        right: 0;
+        top: 0rem;
+        padding: 16px 11px;
+    }
+
+    #overlay-menu-text {
+        font-size: 0.8rem;
+    }
+
+    #overlay-menu-button span, #overlay-menu-button span:before,
+    #overlay-menu-button span:after {
+        height: 3px;
+    }
+
+        #overlay-menu-button span:before {
+            top: -8px;
+        }
+
+        #overlay-menu-button span:after {
+            top: 8px;
+        }
+}
