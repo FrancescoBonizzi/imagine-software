@@ -11,5 +11,6 @@
         public string EmailPassword { get; } = "t@3iMziNDzyJReZ2t&ty";
         public string EmailToAddress { get; } = "f.bonizzi@imaginesoftware.it";
         public string EmailFromAddress { get; } = "noreply@imaginesoftware.it";
+        public string EmailSupport { get; } = "f.bonizzi@imaginesoftware.it";
     }
 }

@@ -55,7 +55,8 @@ namespace ImagineSoftwareWebsite.Controllers
             string today = DateTimeOffset.Now.ToItalianTimestampString();
             string message = $"Richiesta da {sendContactMessageRequest.Name} ({sendContactMessageRequest.Email}) " +
                $"in data {today} " +
-               $"<br /><br />";
+               $"<br /><br />" +
+               sendContactMessageRequest.Message;
 
             if (!EmailValidity.IsValidEmail(sendContactMessageRequest.Email))
                 return BadRequest("C'è qualcosa che non quadra nell'indirizzo email che hai inserito!");
@@ -65,7 +66,7 @@ namespace ImagineSoftwareWebsite.Controllers
 
             try
             {
-                await _emailClient.Send(message);
+                await _emailClient.SendToNoreplyAddress(message);
             }
             catch (Exception ex)
             {
