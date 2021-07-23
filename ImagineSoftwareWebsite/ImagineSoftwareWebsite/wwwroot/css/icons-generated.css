@@ -56,14 +56,6 @@
 .icon-right-open:before {
     content: '\e802';
 }
-/* '' */
-.icon-up-open:before {
-    content: '\e803';
-}
-/* '' */
-.icon-search:before {
-    content: '\e804';
-}
 /* '' */
 .icon-github:before {
     content: '\f09b';
@@ -84,19 +76,7 @@
 .icon-android:before {
     content: '\f17b';
 }
-/* '' */
-.icon-google:before {
-    content: '\f1a0';
-}
-/* '' */
-.icon-facebook-squared:before {
-    content: '\f308';
-}
 /* '' */
 .icon-linkedin:before {
     content: '\f30c';
-}
-/* '' */
-.icon-up:before {
-    content: '\e803';
 }

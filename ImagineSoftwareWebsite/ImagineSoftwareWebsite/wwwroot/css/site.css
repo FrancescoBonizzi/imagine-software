@@ -103,23 +103,6 @@ header {
         margin-left: 2rem;
     }
 
-    .header-title {
-        display: block;
-        align-self: center;
-        margin-left: 2rem;
-        font-size: 2rem;
-    }
-
-    .header-title a {
-        text-decoration: none;
-        color: var(--primary-color);
-    }
-
-        .header-title a:hover {
-            color: var(--primary-color-light);
-        }
-
-
 /*#endregion*/
 
 
@@ -306,11 +289,6 @@ footer {
     border-top: 4px solid var(--primary-color);
 }
 
-.bottom-menu-title {
-    color: var(--primary-color);
-    font-size: 2rem;
-}
-
 footer p:first-child {
     color: var(--text-over-background-dark);
     text-align: center;
@@ -412,10 +390,6 @@ section {
     padding: 0.5rem 0 2rem 0;
 }
 
-.bottom-space {
-    margin-bottom: 5rem;
-}
-
 .image-paragraph {
     margin: 2rem auto;
     display: flex;
@@ -483,17 +457,6 @@ section {
 .vertical-image-medium {
     max-width: 200px;
 }
-
-.article-with-left-image {
-    display: flex;
-    margin-right: 2rem;
-}
-
-    .article-with-left-image img {
-        max-width: 300px;
-        width: 100%;
-    }
-
 
 /** Contenuto principale */
 
@@ -566,10 +529,6 @@ label {
 
 .after-logo-section-content {
     padding: 0 0 3rem 0 !important;
-}
-
-.article-padding {
-    padding: 6em 0;
 }
 
 .inner-article-title {
