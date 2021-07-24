@@ -47,7 +47,7 @@ namespace ImagineSoftwareWebsite.Email
         {
             message = message.Replace("\n", "<br />");
             message += $"<br /><br />" +
-                $"Eventuali risposte a questa email non verranno gestite. " +
+                $"Eventuali risposte a questa email non saranno gestite. " +
                 $"Per assistenza o per informazioni scrivi a {_configuration.EmailSupport}";
 
             var mailMessage = new MailMessage

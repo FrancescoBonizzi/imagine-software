@@ -6,13 +6,14 @@
 
 <div class="inner-header inner-header-services">
     <h1>Al servizio delle tue idee</h1>
+    <hr class="menu-separator" />
     <h3>@routeName</h3>
 </div>
 
 <partial name="_OnePageFromHomeBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
 
 <section class="dark-grey-section" id="services-shortcuts-lists">
-    <div class="section-content small-section-content">
+    <div class="section-content">
         <div class="shortcuts-list">
             <ul class="shortcuts-list-services">
 
@@ -73,6 +74,7 @@
     <div class="section-content">
         <h2>Hai un'idea rivoluzionaria?</h2>
         <h3>Sei nel posto giusto!</h3>
+        <div class="header-separator"></div>
 
         <p>
             Se sei una <b>Start-up</b> o una piccola azienda ed hai bisogno di un <b>MVP</b> da presentare, sono pronto a collaborare con te a tutto tondo per darti gli <b>strumenti per crescere</b>.
@@ -88,11 +90,12 @@
     </div>
 </section>
 
-<section class="dark-grey-section" id="section-your-website">
+<section class="alt-section" id="section-your-website">
     <div class="section-content">
 
         <h2>Vuoi dare visibilità alla tua attività?</h2>
         <h3>Realizzo il tuo sito su misura.</h3>
+        <div class="header-separator"></div>
 
         <p>
             Nel panorama attuale non basta una pagina Facebook per <b>esistere online</b>: il sito web è un punto di riferimento per dimostrare la tua professionalità e le peculiarità del tuo business.
@@ -118,6 +121,7 @@
 
         <h2>Hai un obiettivo specifico?</h2>
         <h3>Ti aiuto a raggiungerlo.</h3>
+        <div class="header-separator"></div>
 
         <p>
             Hai già le idee chiarissime? Hai un processo che richiede molto tempo e risorse, un <i>know-how</i> solo tuo che se fosse automatizzato ti farebbe <b>guadagnare di più</b>? Posso aiutarti a formalizzarlo, automatizzarlo e renderlo digitalmente utilizzabile per migliorare il tuo flusso di lavoro.
@@ -127,16 +131,17 @@
             In fondo l'informatica nasce per questo!
         </p>
 
-        <a asp-controller="Home" asp-action="Contacts" class="action-button-secondary button-top-margin">Contattami</a>
+        <a asp-controller="Home" asp-action="Contacts" class="action-button button-top-margin">Contattami</a>
 
     </div>
 </section>
 
-<section class="dark-grey-section" id="section-full-stack">
+<section class="alt-section" id="section-full-stack">
     <div class="section-content">
 
         <h2>Cerchi un Full stack Developer per ampliare il tuo team?</h2>
         <h3>Hai trovato il tuo acceleratore di progetti.</h3>
+        <div class="header-separator"></div>
 
         <img class="intermediate-article-image vertical-image right-image show-on-scroll" src="~/images/articles/shane-rounce-team-work-photo-unsplash.jpg" alt="Foto di Shane Rounce su Unsplash" title="Foto di Shane Rounce su Unsplash" asp-append-version="true" />
 
@@ -166,6 +171,7 @@
 
         <h2>Come lavoro</h2>
         <h3>I miei standard.</h3>
+        <div class="header-separator"></div>
 
         <p>
             Sviluppo il software tenendo ben presenti gli standard di leggibilità, espressività, e sicurezza. Seguo alla lettera le linee guida sulla <i>security</i> del codice di <a class="outside-link" target="_blank" rel="noopener" href="https://owasp.org/" title="Fondazione OWASP per la security del codice">OWASP</a>: prima di rilasciare in produzione un sito web analizzo il codice sorgente con strumenti di <i>analisi statica</i> e lancio dei <i>penetration tests.</i>
