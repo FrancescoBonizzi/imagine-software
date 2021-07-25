@@ -295,7 +295,7 @@ header {
 /*#region Footer */
 
 footer {
-    background: var(--background-dark-color-lighter);
+    background: var(--background-dark-color);
     font-size: 0.9rem;
     line-height: 2rem;
 }
@@ -312,11 +312,18 @@ footer {
         padding: 0 0 0.4rem 0;
     }
 
+.footer-section-title {
+    color: white;
+    font-weight: 700;
+}
+
 .bottom-menu-section {
     display: flex;
     flex-wrap: wrap;
     padding: 3.5rem 5.8rem;
     margin: 0 auto;
+    justify-content: center;
+    font-weight: 300;
 }
 
     .bottom-menu-section > * {
@@ -325,6 +332,7 @@ footer {
 
 .last-footer-section {
     background-color: #242e3f;
+    font-weight: 300;
 }
 
 .pipe {
@@ -915,7 +923,7 @@ label {
     justify-content: space-between;
 }
 
-    .logo-gallery img, .image-with-outline {
+    .logo-gallery img, .image-with-outline-alt, .image-with-outline-white {
         display: block;
         max-width: 180px;
         max-height: 180px;
@@ -923,8 +931,12 @@ label {
         height: auto;
         border-radius: 50%;
         transition: all 0.2s ease-in;
-        border: 8px solid var(--alt-color);
+        border: 9px solid var(--alt-color);
     }
+
+.image-with-outline-white {
+    border-color: white;
+}
 
 .logo-outline {
     background-image: linear-gradient(to right, var(--gradient-first-color) 0%, var(--gradient-second-color) 51%, var(--gradient-third-color) 100%);
@@ -1547,6 +1559,11 @@ footer span {
     max-height: var(--header-height);
     height: 100%;
     width: auto;
+}
+
+.imaginesoftware-logo-footer {
+    width: 208px;
+    height: 120px;
 }
 
 .menu-separator {

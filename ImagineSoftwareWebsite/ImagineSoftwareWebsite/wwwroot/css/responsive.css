@@ -1,4 +1,24 @@
-﻿@media only screen and (max-width: 768px) {
+﻿@media only screen and (max-width: 1200px) {
+    .bottom-menu-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .bottom-menu-section > * {
+            margin: 0;
+        }
+
+    .footer-section-title {
+        margin-top: 2rem;
+    }
+
+    .bottom-menu-section div {
+        width: 210px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
 
     html {
         /* Per rem */
@@ -54,10 +74,6 @@
             align-self: center;
         }
 
-    .footer-section-title {
-        margin-top: 2rem;
-    }
-
     .shortcuts-list-title-container {
         align-self: center;
     }
@@ -100,10 +116,6 @@
         padding-left: 1rem;
         padding-right: 1rem;
         align-self: center;
-    }
-
-    .bottom-menu-section {
-        padding: 3.5rem 0rem;
     }
 
     .store-download-buttons-group {
