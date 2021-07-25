@@ -41,7 +41,8 @@ body {
 }
 
 p {
-    line-height: 1.8rem !important;
+    line-height: 1.6rem !important;
+    font-weight: 300;
 }
 
 b {
@@ -1422,7 +1423,7 @@ footer span {
     }
 
 .action-button i {
-    color: #1a294b;
+    color: white;
 }
 
 
