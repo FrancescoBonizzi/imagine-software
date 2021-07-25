@@ -397,7 +397,6 @@ section {
 }
 
 .section-content p {
-    
 }
 
 .section-content h2 {
@@ -545,7 +544,7 @@ label {
         color: white;
     }
 
-    
+
 .first-section-padding {
     padding: 3rem 0;
 }
@@ -734,24 +733,24 @@ label {
     opacity: 1;
 }
 
-    .shortcuts-list-home li span {
-        font-size: 1.2rem;
-        font-weight: 900;
-        padding-top: 1rem;
-        display: block;
-    }
+.shortcuts-list-home li span {
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding-top: 1rem;
+    display: block;
+}
 
 .shortcuts-list-services li span {
     font-size: 1.2rem;
     font-weight: 700;
 }
 
-    .shortcuts-list li p {
-        font-size: 1rem;
-        font-weight: 300;
-        line-height: 1.2rem !important;
-        margin-bottom: 2rem;
-    }
+.shortcuts-list li p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.2rem !important;
+    margin-bottom: 2rem;
+}
 
 .shortcut-link {
     color: var(--primary-color);
@@ -916,23 +915,27 @@ label {
     justify-content: space-between;
 }
 
-    .logo-gallery img {
+    .logo-gallery img, .image-with-outline {
         display: block;
-        margin: 0.5rem;
         max-width: 180px;
         max-height: 180px;
         width: auto;
         height: auto;
-        border-radius: 20px;
+        border-radius: 50%;
         transition: all 0.2s ease-in;
-        padding: 2px;
-        background-image: linear-gradient(to right, var(--gradient-first-color) 0%, var(--gradient-second-color) 51%, var(--gradient-third-color) 100%);
+        border: 8px solid var(--alt-color);
     }
+
+.logo-outline {
+    background-image: linear-gradient(to right, var(--gradient-first-color) 0%, var(--gradient-second-color) 51%, var(--gradient-third-color) 100%);
+    padding: 2px;
+    border-radius: 100%;
+}
 
 .opensource-logos img {
     border-radius: 50%;
-    max-width: 90px;
-    max-height: 90px;
+    max-width: 120px;
+    max-height: 120px;
 }
 
 .logo-gallery-name {
