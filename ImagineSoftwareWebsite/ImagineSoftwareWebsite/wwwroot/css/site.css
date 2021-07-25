@@ -717,23 +717,40 @@ label {
         color: white;
     }
 
-
 .shortcuts-list li {
     list-style: none;
 }
 
-    .shortcuts-list li:hover > a {
-        transition: all 0.2s ease-in;
-        opacity: 1;
+.shortcuts-list-home li {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    color: var(--background-dark-color);
+    box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.46);
+}
+
+.shortcuts-list li:hover > a {
+    transition: all 0.2s ease-in;
+    opacity: 1;
+}
+
+    .shortcuts-list-home li span {
+        font-size: 1.2rem;
+        font-weight: 900;
+        padding-top: 1rem;
+        display: block;
     }
 
-    .shortcuts-list li span {
-        font-size: 1.2rem;
-        font-weight: 700;
-    }
+.shortcuts-list-services li span {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
 
     .shortcuts-list li p {
         font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.2rem !important;
+        margin-bottom: 2rem;
     }
 
 .shortcut-link {
@@ -1348,11 +1365,6 @@ footer span {
             transition: all 0.2s ease-in;
         }
 
-.action-button-behind {
-    opacity: 0;
-    transition: all 0.2s ease-out;
-}
-
 .button-top-margin {
     margin-top: 2rem;
 }
@@ -1378,7 +1390,9 @@ footer span {
         background-image: linear-gradient(to right, var(--gradient-first-color) 0%, var(--gradient-second-color) 51%, var(--gradient-third-color) 100%);
         text-decoration: none;
         transform: scale(1.1);
+        border: none;
         transition: all .2s ease-out;
+        color: white;
     }
 
 .link-icon {
