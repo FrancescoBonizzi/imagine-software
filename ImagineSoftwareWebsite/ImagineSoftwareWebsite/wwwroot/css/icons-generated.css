@@ -80,3 +80,6 @@
 .icon-linkedin:before {
     content: '\f30c';
 }
+.icon-up:before {
+    content: '\e803';
+}
