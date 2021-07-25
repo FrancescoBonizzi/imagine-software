@@ -362,6 +362,10 @@ section {
         text-align: center !important;
     }
 
+.open-source-home-section h2 {
+    text-align: center;
+}
+
 .section-content p {
     padding: 0.6rem 0;
     font-size: 1.1rem;
@@ -375,14 +379,10 @@ section {
     list-style: disc;
 }
 
-.alt-section h2 {
-    color: var(--background-dark-color);
-}
-
 .outside-link,
 .colored-link {
     text-decoration: none !important;
-    color: black;
+    color: var(--background-dark-color);
     border-bottom: 3px solid var(--primary-color);
 }
 
@@ -394,6 +394,10 @@ section {
 .section-content h2,
 .section-content h3 {
     text-align: left;
+}
+
+.section-content p {
+    
 }
 
 .section-content h2 {
@@ -431,7 +435,7 @@ section {
 }
 
 .intermediate-article-image {
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -529,7 +533,7 @@ label {
     background-color: var(--background-dark-color);
 }
 
-    .grey-section > * {
+    .grey-section * {
         color: white;
     }
 
@@ -537,21 +541,17 @@ label {
     background-color: var(--primary-color);
 }
 
-    .highlight-section > * {
-        color: black;
+    .highlight-section * {
+        color: white;
     }
 
+    
 .first-section-padding {
     padding: 3rem 0;
 }
 
 .after-logo-section-content {
     padding: 0 0 3rem 0 !important;
-}
-
-.inner-article-title {
-    padding: 0;
-    font-size: 1.6rem;
 }
 
 .article-more-padding {
@@ -565,6 +565,10 @@ label {
 .alt-section {
     background-color: var(--alt-color);
 }
+
+    .alt-section *, .white-section * {
+        color: var(--background-dark-color);
+    }
 
 .dark-grey-section {
     background-color: var(--background-dark-color-lighter);
@@ -604,7 +608,7 @@ label {
 }
 
 .boolli-section > * {
-    color: black;
+    color: var(--background-dark-color);
 }
 
 .link-matrix {
@@ -915,10 +919,10 @@ label {
 }
 
 .logo-gallery-name {
-    color: black;
     font-size: 0.8rem;
     display: block;
     font-weight: 300;
+    color: var(--background-dark-color);
 }
 
 .logo-gallery-block {
@@ -1037,7 +1041,6 @@ label {
             }
 
                 .breadcrumbs-section ol > li > a:hover {
-                    text-decoration: underline;
                     color: var(--primary-color);
                 }
 
@@ -1280,10 +1283,6 @@ a {
     text-decoration: none;
 }
 
-    a:hover {
-        text-decoration: underline;
-    }
-
 footer a,
 footer i {
     font-size: 0.9rem;
@@ -1292,7 +1291,6 @@ footer i {
 }
 
     footer a:hover {
-        text-decoration: underline;
         color: var(--primary-color);
     }
 
@@ -1522,6 +1520,10 @@ footer span {
 
 .store-download-buttons-group :first-child {
     margin-right: 1rem;
+}
+
+.store-download-buttons-group {
+    margin-bottom: 3rem;
 }
 
 .imaginesoftware-logo {
