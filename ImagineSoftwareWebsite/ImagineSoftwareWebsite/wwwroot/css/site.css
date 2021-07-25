@@ -18,6 +18,8 @@
     --gradient-second-color: #7aeb64;
     --gradient-third-color: #26dbc1;
     --another-logo-color: #42f2b2;
+    --deactivated-color: #596476;
+    --alt-color: #f3f4f7;
 }
 
 html {
@@ -263,7 +265,7 @@ header {
 
         #overlay-menu ul li {
             padding: 1em;
-            width: 550px;
+            width: 560px;
             text-align: center;
             transform: translateY(25px);
             opacity: 0;
@@ -271,22 +273,22 @@ header {
         }
 
             #overlay-menu ul li a {
-                color: var(--very-light-background);
+                color: var(--deactivated-color);
                 text-decoration: none;
                 text-transform: uppercase;
+                font-weight: 900;
                 font-size: 1.8rem;
-                transition: all 0.2s ease-out;
+                transition: all 0.1s ease-out;
             }
 
                 #overlay-menu ul li a:hover {
-                    color: var(--background-dark-color);
-                    background-color: var(--primary-color);
-                    transition: all 0.1s ease-in;
-                    padding: 0.8rem 1.5rem;
-                    font-weight: 900;
-                    border-radius: 100rem;
-                    text-decoration: none;
-                    margin: 0;
+                    color: white;
+                    transition: color 0.1s ease-in;
+                    padding-bottom: 4px;
+                    background: linear-gradient(to right, var(--gradient-first-color) 0%, var(--gradient-second-color) 51%, var(--gradient-third-color) 100%);
+                    background-size: 100% 4px;
+                    background-position: bottom 0 left 0, bottom 4px left 0;
+                    background-repeat: no-repeat;
                 }
 
 /*#endregion*/
@@ -561,7 +563,7 @@ label {
 }
 
 .alt-section {
-    background-color: #f3f4f7;
+    background-color: var(--alt-color);
 }
 
 .dark-grey-section {
