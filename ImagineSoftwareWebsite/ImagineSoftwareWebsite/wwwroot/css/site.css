@@ -460,6 +460,7 @@ section {
 }
 
     .header-with-image h3 {
+        margin-left: 2rem;
     }
 
 .left-image {
@@ -603,9 +604,9 @@ label {
         }
 
 .project-logo {
-    border-radius: 10px;
-    width: 128px;
-    height: 128px;
+    border-radius: 50%;
+    max-width: 128px !important;
+    max-height: 128px !important;
 }
 
 .section-content {
