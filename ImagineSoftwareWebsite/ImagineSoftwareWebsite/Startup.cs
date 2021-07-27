@@ -38,7 +38,12 @@ namespace ImagineSoftwareWebsite
                 .AddControllersWithViews()
                 .AddNewtonsoftJson();
 
-            services.AddAntiforgery(options => options.HeaderName = "X-CSRF-TOKEN");
+            services.AddAntiforgery(options =>
+            {
+                options.HeaderName = "X-CSRF-TOKEN";
+                options.SuppressXFrameOptionsHeader = true;
+            });
+
             services.AddSingleton<IMyLogger, ConsoleLogger>();
             services.AddSingleton<Configuration>();
             services.AddSingleton<EmailClient>();
@@ -49,13 +54,18 @@ namespace ImagineSoftwareWebsite
         {
             app.Use(async (context, next) =>
             {
+                context.Response.Headers.Remove("Server");
+
                 context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
                 context.Response.Headers.Add("X-Frame-Options", "deny");
-                context.Response.Headers.Remove("Server");
                 context.Response.Headers.Add("Referrer-Policy", "no-referrer");
+                context.Response.Headers.Add("X-Xss-Protection", "1; mode=block");
+                context.Response.Headers.Add("X-Permitted-Cross-Domain-Policies", "none");
+                context.Response.Headers.Add("Permissions-Policy", "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()");
 
-                // TODO Questo potrebbe rompere i font
-                context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'");
+                context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
+                context.Response.Headers.Add("X-Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
+                context.Response.Headers.Add("X-WebKit-CSP", "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
                 await next();
             });
 
