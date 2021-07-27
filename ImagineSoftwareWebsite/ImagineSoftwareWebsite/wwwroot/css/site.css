@@ -417,7 +417,7 @@ section {
 }
 
 .image-paragraph {
-    margin: 2rem auto;
+    margin: 1rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -426,6 +426,7 @@ section {
 
     .image-paragraph p {
         display: inline-block;
+        padding-bottom: 0;
     }
 
     .image-paragraph a {
