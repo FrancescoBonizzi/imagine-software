@@ -26,6 +26,11 @@
         font-size: 15px;
     }
 
+
+    .morpheus-buttons {
+        transform: scale(0.8);
+    }
+
     .sitemap-section {
         flex-wrap: wrap;
         justify-content: start;

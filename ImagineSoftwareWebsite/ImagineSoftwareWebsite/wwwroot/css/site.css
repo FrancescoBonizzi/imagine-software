@@ -1438,17 +1438,13 @@ footer span {
 
 /*#region Pagina 404 */
 
-.morpheus-buttons {
-    /** Potrei usare lo zoom per il responsive qui */
-}
-
 .morpheus-blue-pill,
 .morpheus-red-pill {
     padding: 0.5rem 1rem;
     border-radius: 40px;
     text-decoration: none;
     font-size: 1.2rem;
-    width: 18rem;
+    width: 12rem;
     text-align: center;
     margin-top: -132px;
 }
