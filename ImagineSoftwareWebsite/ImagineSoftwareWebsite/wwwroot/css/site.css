@@ -446,9 +446,9 @@ section {
     max-width: 400px;
     width: 100%;
     margin-top: 1rem;
-    margin-bottom: 1rem;
     border-radius: 20px;
     height: auto;
+    margin-bottom: 1rem;
 }
 
 .header-with-image {
@@ -970,14 +970,21 @@ label {
     opacity: 1;
 }
 
-    .logo-gallery-block:hover {
-        height: 100%;
-        transform: scale(1);
-        transition: all 0.2s ease-in;
-    }
+.logo-gallery-collaborations > div {
+    width: 210px;
+}
+
+.logo-gallery-block:hover {
+    height: 100%;
+    transform: scale(1);
+    transition: all 0.2s ease-in;
+}
 
     .logo-gallery-block a {
         text-decoration: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 .companies-title {
@@ -1582,3 +1589,4 @@ footer span {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
+

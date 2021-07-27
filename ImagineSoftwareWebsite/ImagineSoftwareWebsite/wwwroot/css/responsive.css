@@ -15,6 +15,7 @@
     .bottom-menu-section div {
         width: 210px;
     }
+
 }
 
 
@@ -28,6 +29,10 @@
     .sitemap-section {
         flex-wrap: wrap;
         justify-content: start;
+    }
+
+    .space-for-article-without-subtitle {
+        height: 1.2rem;
     }
 
     #overlay-menu ul li a {
@@ -89,7 +94,16 @@
 
     .header-with-image {
         flex-direction: column;
+        padding-bottom: 0;
     }
+
+        .header-with-image h3 {
+            margin-top: 2rem;
+            margin-bottom: 0 !important;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+
 
     .left-image {
         margin-right: 0;
@@ -102,7 +116,7 @@
     }
 
     .project-logo {
-        margin-top: 1rem;
+        
     }
 
     .section-content {
@@ -242,7 +256,19 @@
         }
 
     .header-separator {
-        width: 100%;
+        align-self: center;
         margin-top: 0;
+    }
+
+    .logo-gallery-collaborations > div {
+        width: auto;
+    }
+
+    .section-content .action-button, .section-content .action-button-behind, .section-content .action-button-secondary {
+        margin-top: 2rem;
+    }
+
+    .shortcuts-list li p {
+        margin-bottom: 0;
     }
 }
