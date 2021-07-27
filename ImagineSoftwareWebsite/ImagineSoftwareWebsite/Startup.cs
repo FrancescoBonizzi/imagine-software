@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -27,6 +28,12 @@ namespace ImagineSoftwareWebsite
                 options.HttpsPort = 443;
             });
 
+            services.AddHsts(options =>
+            {
+                options.IncludeSubDomains = true;
+                options.MaxAge = TimeSpan.FromDays(365);
+            });
+
             services
                 .AddControllersWithViews()
                 .AddNewtonsoftJson();
@@ -43,7 +50,12 @@ namespace ImagineSoftwareWebsite
             app.Use(async (context, next) =>
             {
                 context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
-                context.Response.Headers.Append("X-Frame-Options", "deny");
+                context.Response.Headers.Add("X-Frame-Options", "deny");
+                context.Response.Headers.Remove("Server");
+                context.Response.Headers.Add("Referrer-Policy", "no-referrer");
+
+                // TODO Questo potrebbe rompere i font
+                context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'");
                 await next();
             });
 
