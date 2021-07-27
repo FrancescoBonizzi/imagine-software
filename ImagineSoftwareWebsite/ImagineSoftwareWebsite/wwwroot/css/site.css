@@ -11,8 +11,8 @@
     --page-width: 50rem;
     --header-height: 4rem;
     --gradient-first-color: #ffe30a;
-    --gradient-second-color: #7aeb64;
-    --gradient-third-color: #26dbc1;
+    --gradient-second-color: #28f09b;
+    --gradient-third-color: #25cae0;
     --another-logo-color: #42f2b2;
     --deactivated-color: #596476;
     --alt-color: #f3f4f7;
@@ -807,13 +807,10 @@ label {
 
 .francesco-bonizzi-photo {
     max-width: 300px !important;
-    border-radius: 50% !important;
-    border: 4px solid #2c2c2c;
 }
 
 .francesco-bonizzi-photo-for-homepage {
     border-radius: 50% !important;
-    border: 4px solid #2c2c2c;
     max-width: 130px;
 }
 
