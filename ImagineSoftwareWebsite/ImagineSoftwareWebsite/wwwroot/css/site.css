@@ -2,18 +2,14 @@
 
 :root {
     --primary-color: #25cae0;
-    --primary-color-light: #21cad7;
-    --text-color-over-primary-light: #60605f;
-    --text-color-over-primary: black;
     --background-dark-color: #303d54;
     --background-dark-color-lighter: #535f77;
     --text-over-background-dark: #c5c5c5;
-    --success-color: #4BB543;
+    --success-color: #26dbc1;
     --error-color: #dc1414;
-    --loader-color: #202125;
+    --loader-color: #25cae0;
     --page-width: 50rem;
     --header-height: 4rem;
-    --very-light-background: #f5f2f7;
     --gradient-first-color: #ffe30a;
     --gradient-second-color: #7aeb64;
     --gradient-third-color: #26dbc1;
@@ -683,7 +679,7 @@ label {
     input[type=email],
     textarea {
         border: none;
-        border-bottom: 1px solid var(--text-color-over-primary-light);
+        border-bottom: 1px solid #60605f;
         margin-bottom: 2rem;
     }
 
@@ -1204,7 +1200,7 @@ label {
 }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: var(--primary-color-light);
+        background: #808080;
     }
 
 ::-webkit-scrollbar-track {
