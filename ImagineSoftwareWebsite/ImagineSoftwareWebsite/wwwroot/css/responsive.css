@@ -120,10 +120,6 @@
         align-self: center;
     }
 
-    .project-logo {
-        
-    }
-
     .section-content {
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -233,13 +229,13 @@
     }
 
     .header-content img {
-        margin-left: 0;
+        margin-left: 0.5rem;
         max-height: 50px;
     }
 
     #overlay-menu-button {
         right: 0;
-        top: 0rem;
+        top: 1.2rem;
         padding: 16px 11px;
     }
 

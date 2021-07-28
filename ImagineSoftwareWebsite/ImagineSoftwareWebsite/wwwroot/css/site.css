@@ -9,13 +9,14 @@
     --error-color: #dc1414;
     --loader-color: #25cae0;
     --page-width: 50rem;
-    --header-height: 4rem;
+    --header-height: 6rem;
     --gradient-first-color: #ffe30a;
     --gradient-second-color: #28f09b;
     --gradient-third-color: #25cae0;
     --another-logo-color: #42f2b2;
     --deactivated-color: #596476;
     --alt-color: #f3f4f7;
+    --logo-and-hamburger-horizontal-margin: 3rem;
 }
 
 html {
@@ -100,10 +101,11 @@ header {
     align-self: center;
     margin: 0 auto;
     height: var(--header-height);
+    align-items: center;
 }
 
     .header-content img {
-        margin-left: 2rem;
+        margin-left: var(--logo-and-hamburger-horizontal-margin);
     }
 
 /*#endregion*/
@@ -113,8 +115,8 @@ header {
 
 #overlay-menu-button {
     position: fixed;
-    right: 2rem;
-    top: 0.4rem;
+    right: var(--logo-and-hamburger-horizontal-margin);
+    top: 1.4rem;
     padding: 16px 11px;
     z-index: 5;
     cursor: pointer;
@@ -1552,17 +1554,6 @@ footer span {
 
 .store-download-buttons-group {
     margin-bottom: 3rem;
-}
-
-.imaginesoftware-logo {
-    max-height: var(--header-height);
-    height: 100%;
-    width: auto;
-}
-
-.imaginesoftware-logo-footer {
-    width: 208px;
-    height: 120px;
 }
 
 .menu-separator {
