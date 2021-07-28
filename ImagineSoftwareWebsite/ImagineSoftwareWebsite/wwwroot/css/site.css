@@ -546,7 +546,7 @@ label {
     }
 
 .highlight-section {
-    background-color: var(--primary-color);
+    background: url(../images/other/pattern-1.jpg) no-repeat center center fixed;
 }
 
     .highlight-section * {
@@ -577,6 +577,18 @@ label {
     .alt-section *, .white-section * {
         color: var(--background-dark-color);
     }
+
+.homepage-section {
+    background: url(../images/other/pattern-1.jpg) no-repeat center center fixed;
+}
+
+.homepage-header {
+    background-color: transparent !important;
+}
+
+.homepage-header * {
+    color: white;
+}
 
 .dark-grey-section {
     background-color: var(--background-dark-color-lighter);
@@ -711,19 +723,9 @@ label {
         margin-right: 1rem;
     }
 
-.shortcuts-list-home, .shortcuts-list-services {
+.shortcuts-list-home {
     grid-template-columns: 1fr 1fr;
 }
-
-.shortcuts-list-services {
-    grid-row-gap: 1rem !important;
-    grid-column-gap: 0rem !important;
-}
-
-    .shortcuts-list-services a {
-        text-decoration: none !important;
-        color: white;
-    }
 
 .shortcuts-list li {
     list-style: none;
@@ -747,11 +749,6 @@ label {
     font-weight: 900;
     padding-top: 1rem;
     display: block;
-}
-
-.shortcuts-list-services li span {
-    font-size: 1.2rem;
-    font-weight: 700;
 }
 
 .shortcuts-list li p {
@@ -896,11 +893,10 @@ label {
     width: 100%;
     margin-top: 0;
     padding: 2rem 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: var(--background-dark-color);
-    color: var(--primary-color);
+    background: url(../images/other/pattern-1.jpg) no-repeat center center fixed;
+    color: white;
+    min-height: 320px;
+    justify-content: center;
 }
 
     .inner-header h1 {
@@ -910,7 +906,6 @@ label {
     .inner-header > h3 {
         color: white;
     }
-
 
 /*#region Logo gallery*/
 
@@ -976,12 +971,12 @@ label {
     transition: all 0.2s ease-in;
 }
 
-    .logo-gallery-block a {
-        text-decoration: none !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.logo-gallery-block a {
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .companies-title {
     text-align: center;
@@ -1049,7 +1044,8 @@ label {
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    background-color: var(--background-dark-color-lighter);
+    background-color: white;
+    font-weight: 300;
 }
 
     .breadcrumbs-section ol {
@@ -1057,7 +1053,7 @@ label {
         padding: 0;
         list-style: none;
         width: 100%;
-        color: var(--text-over-background-dark);
+        color: var(--background-dark-color);
     }
 
         .breadcrumbs-section ol > li {
@@ -1069,11 +1065,11 @@ label {
                 font-family: "imagine-software-icons";
                 padding: 0.5rem;
                 content: '\e802';
-                color: var(--text-over-background-dark);
+                color: var(--background-dark-color);
             }
 
             .breadcrumbs-section ol > li > a {
-                color: var(--text-over-background-dark);
+                color: var(--background-dark-color);
                 text-decoration: none;
             }
 
@@ -1570,4 +1566,3 @@ footer span {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
-
