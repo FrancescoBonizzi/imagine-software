@@ -261,9 +261,18 @@
         width: auto;
     }
 
-    .section-content .action-button, .section-content .action-button-behind, .section-content .action-button-secondary {
-        margin-top: 2rem;
+    .logo-gallery {
+        justify-content: space-around;
     }
+
+        .logo-gallery img {
+            max-width: 150px;
+            max-height: 150px;
+        }
+
+        .section-content .action-button, .section-content .action-button-behind, .section-content .action-button-secondary {
+            margin-top: 2rem;
+        }
 
     .shortcuts-list li p {
         margin-bottom: 0;

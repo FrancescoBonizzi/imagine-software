@@ -545,8 +545,11 @@ label {
         color: white;
     }
 
-.highlight-section {
-    background: url(../images/other/pattern-1.jpg) no-repeat center center fixed;
+.highlight-section, .homepage-section, .inner-header {
+    background-image: url(../images/other/pattern-1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
     .highlight-section * {
@@ -577,10 +580,6 @@ label {
     .alt-section *, .white-section * {
         color: var(--background-dark-color);
     }
-
-.homepage-section {
-    background: url(../images/other/pattern-1.jpg) no-repeat center center fixed;
-}
 
 .homepage-header {
     background-color: transparent !important;
@@ -893,7 +892,6 @@ label {
     width: 100%;
     margin-top: 0;
     padding: 2rem 0;
-    background: url(../images/other/pattern-1.jpg) no-repeat center center fixed;
     color: white;
     min-height: 320px;
     justify-content: center;
