@@ -548,13 +548,12 @@ label {
 .highlight-section, .homepage-section, .inner-header {
     background-image: url(../images/other/pattern-1.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+    background-position: bottom;
 }
 
-    .highlight-section * {
-        color: white;
-    }
+.highlight-section * {
+    color: white;
+}
 
 
 .first-section-padding {
@@ -581,13 +580,9 @@ label {
         color: var(--background-dark-color);
     }
 
-.homepage-header {
-    background-color: transparent !important;
-}
-
-.homepage-header * {
-    color: white;
-}
+    .homepage-header * {
+        color: white;
+    }
 
 .dark-grey-section {
     background-color: var(--background-dark-color-lighter);
@@ -885,7 +880,7 @@ label {
 
 /*#endregion*/
 
-.inner-header {
+.inner-header, .homepage-header {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -897,11 +892,11 @@ label {
     justify-content: center;
 }
 
-    .inner-header h1 {
+    .inner-header h1, .homepage-header h1 {
         text-transform: uppercase;
     }
 
-    .inner-header > h3 {
+    .inner-header > h3, .homepage-header > h3 {
         color: white;
     }
 
