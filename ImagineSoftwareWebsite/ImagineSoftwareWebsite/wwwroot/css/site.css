@@ -373,7 +373,7 @@ section {
     text-align: center;
 }
 
-.section-content p {
+.section-content p, .section-content-landing p {
     padding: 0.6rem 0;
     font-size: 1.1rem;
 }
@@ -621,6 +621,13 @@ label {
     padding: 3rem 0;
 }
 
+.section-content-landing {
+    max-width: 75rem;
+    line-height: 1.7rem;
+    width: 100%;
+    padding: 1rem 0 2rem 0;
+}
+
 .boolli-section > * {
     color: var(--background-dark-color);
 }
@@ -703,7 +710,10 @@ label {
     margin-left: 0;
     display: grid;
     grid-column-gap: 1.5rem;
-    grid-row-gap: 2rem;
+}
+
+.shortcut-list ul li {
+    height: 455px;
 }
 
 .shortcuts-list-title-container {
@@ -718,7 +728,7 @@ label {
     }
 
 .shortcuts-list-home {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .shortcuts-list li {

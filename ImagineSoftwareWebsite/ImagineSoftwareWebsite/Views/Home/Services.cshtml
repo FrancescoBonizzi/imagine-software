@@ -5,94 +5,24 @@
 }
 
 <div class="inner-header inner-header-services">
-    <h1>Al servizio delle tue idee</h1>
+    <h1>@routeName</h1>
     <hr class="menu-separator" />
-    <h3>@routeName</h3>
+    <h3>L'offerta di Imagine Software</h3>
 </div>
 
 <partial name="_OnePageFromHomeBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
 
-<section id="section-startup" class="white-section">
-    <div class="section-content">
-        <h2>Hai un'idea rivoluzionaria?</h2>
-        <h3>Sei nel posto giusto!</h3>
-        <div class="header-separator"></div>
-
-        <p>
-            Se sei una <b>Start-up</b> o una piccola azienda ed hai bisogno di un <b>MVP</b> da presentare, sono pronto a collaborare con te a tutto tondo per darti gli <b>strumenti per crescere</b>.
-        </p>
-
-        <p>
-            Sono un professionista dello sviluppo software in grado di far decollare il tuo progetto: posso sviluppare un'<b>App</b>, un <b>sito web</b>, un'<b>applicazione desktop</b> e aiutarti nella definizione dei requisiti e delle funzionalità di cui hai bisogno perché la tua idea diventi tangibile.
-        </p>
-
-        <p>
-            Insieme possiamo formare il <b>laboratorio digitale</b> di cui hai bisogno!
-        </p>
-    </div>
-</section>
-
-<section class="alt-section" id="section-your-website">
+<section class="white-section" id="section-full-stack">
     <div class="section-content">
 
-        <h2>Vuoi dare visibilità alla tua attività?</h2>
-        <h3>Realizzo il tuo sito su misura.</h3>
-        <div class="header-separator"></div>
-
-        <p>
-            Nel panorama attuale non basta una pagina Facebook per <b>esistere online</b>: il sito web è un punto di riferimento per dimostrare la tua professionalità e le peculiarità del tuo business.
-        </p>
-
-        <img class="intermediate-article-image left-image show-on-scroll" src="~/images/articles/david-rotimi-yellow-pepper-unsplash.jpg" alt="Foto di David Rotimi su Unsplash" title="Foto di David Rotimi su Unsplash" asp-append-version="true" />
-
-        <p>
-            Che ti serva un <b>sito vetrina</b>, un <b>e-commerce</b>, un sito interno per gestire la tua attività, la presenza online è la condizione minima per partire.
-        </p>
-
-        <p>
-            Sono il partner efficiente, rapido, in grado di portare i costi al minimo possibile e darti l'attenzione che meriti.
-        </p>
-
-        <br /> 
-
-        <a asp-controller="Home" asp-action="Contacts" class="action-button">Contattami</a>
-
-    </div>
-</section>
-
-<section id="section-i-already-know" class="white-section">
-    <div class="section-content">
-
-        <h2>Hai un obiettivo specifico?</h2>
-        <h3>Ti aiuto a raggiungerlo.</h3>
-        <div class="header-separator"></div>
-
-        <p>
-            Hai già le idee chiarissime? Hai un processo che richiede molto tempo e risorse, un <i>know-how</i> solo tuo che se fosse automatizzato ti farebbe <b>guadagnare di più</b>? Posso aiutarti a formalizzarlo, automatizzarlo e renderlo digitalmente utilizzabile per migliorare il tuo flusso di lavoro.
-        </p>
-
-        <p>
-            In fondo l'informatica nasce per questo!
-        </p>
-
-        <br /> 
-
-        <a asp-controller="Home" asp-action="Contacts" class="action-button">Contattami</a>
-
-    </div>
-</section>
-
-<section class="alt-section" id="section-full-stack">
-    <div class="section-content">
-
-        <h2>Cerchi un Full stack Developer per ampliare il tuo team?</h2>
+        <h2>Cerchi un full stack Developer per ampliare il tuo team?</h2>
         <h3>Hai trovato il tuo acceleratore di progetti.</h3>
         <div class="header-separator"></div>
 
         <img class="intermediate-article-image vertical-image right-image show-on-scroll" src="~/images/articles/shane-rounce-team-work-photo-unsplash.jpg" alt="Foto di Shane Rounce su Unsplash" title="Foto di Shane Rounce su Unsplash" asp-append-version="true" />
 
         <p>
-            Come sviluppatore software <b>Full stack</b>, mi occupo sia di <i>front-end</i> che di <i>back-end</i>. Prediligo lo stack <b>Microsoft</b>: <em class="code-snippet">.NET Core</em>, <em class="code-snippet">ASP .NET Core</em>, ma anche <em class="code-snippet">WPF</em> per le applicazioni desktop, ed ho una particolare predilezione per il mondo <em class="code-snippet">SQL Server</em> ed <em class="code-snippet">Azure</em>.
+            Come sviluppatore software <b>full stack</b> mi occupo sia di <i>front-end</i> che di <i>back-end</i>. Prediligo lo stack <b>Microsoft</b>: <em class="code-snippet">.NET Core</em>, <em class="code-snippet">ASP .NET Core</em>, ma anche <em class="code-snippet">WPF</em> per le applicazioni desktop, ed ho una particolare predilezione per il mondo <em class="code-snippet">SQL Server</em> ed <em class="code-snippet">Azure</em>.
         </p>
 
         <p>
@@ -107,14 +37,56 @@
             Infine mi occupo di <em class="code-snippet">App Android</em> native in <em class="code-snippet">Kotlin</em> o <em class="code-snippet">Java</em> in ottica di collaborazione di un progetto esistente o per iniziarne uno nuovo.
         </p>
 
-        <br /> 
+        <br />
 
         <a asp-controller="Home" asp-action="Contacts" class="action-button">Contattami</a>
 
     </div>
 </section>
 
-<section id="section-how-i-work" class="white-section">
+<section id="section-startup" class="alt-section">
+    <div class="section-content">
+        <h2>Hai un'idea rivoluzionaria?</h2>
+        <h3>Sei nel posto giusto!</h3>
+        <div class="header-separator"></div>
+
+        <p>
+            Sei una <b>start-up</b> o una piccola azienda? Hai bisogno di un <b>minimum viable product</b> da presentare agli investitori? Posso aiutarti a trasformare la tua idea in un <b>prototipo</b> funzionante, ma anche seguirti nelle fasi successive del progetto.
+        </p>
+
+        <p>
+            Sono un professionista dello sviluppo software in grado di far decollare il tuo progetto: posso sviluppare un'<b>App</b>, un <b>sito web</b>, un'<b>applicazione desktop</b> e aiutarti nella definizione dei requisiti e delle funzionalità di cui hai bisogno perché la tua idea diventi tangibile.
+        </p>
+
+        <p>
+            Insieme possiamo formare il <b>laboratorio digitale</b> di cui hai bisogno!
+        </p>
+    </div>
+</section>
+
+<section id="section-i-already-know" class="white-section">
+    <div class="section-content">
+
+        <h2>Hai un obiettivo specifico?</h2>
+        <h3>Ti aiuto a raggiungerlo.</h3>
+        <div class="header-separator"></div>
+
+        <p>
+            Hai un processo aziendale che richiede tanto tempo e risorse? Posso aiutarti a <b>digitalizzarlo</b> e automatizzarlo, garantendoti così una <b>soluzione</b> efficace per migliorare le tue performance nel lungo termine.
+        </p>
+
+        <p>
+            In fondo l'informatica nasce per questo!
+        </p>
+
+        <br />
+
+        <a asp-controller="Home" asp-action="Contacts" class="action-button">Contattami</a>
+
+    </div>
+</section>
+
+<section id="section-how-i-work" class="alt-section">
     <div class="section-content">
 
         <h2>Come lavoro</h2>

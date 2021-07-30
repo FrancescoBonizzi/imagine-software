@@ -3,7 +3,7 @@
     public static class Definitions
     {
         public const string PARTITA_IVA = "02982280345";
-        public const string JOB_TITLE = "Full stack .NET developer and Android developer";
+        public const string JOB_TITLE = "full stack .NET developer and Android developer";
 
         public const string Email = "f.bonizzi@imaginesoftware.it";
 

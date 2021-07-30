@@ -50,7 +50,7 @@
         display: block;
     }
 
-    .inner-header, .section-content {
+    .inner-header, .section-content, .section-content-landing {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
@@ -71,11 +71,12 @@
         align-self: center;
     }
 
-    .section-content h2, .section-content h3 {
+    
+    .section-content h2, .section-content h3, .section-content-landing h2, .section-content h3 {
         text-align: center;
     }
 
-    .section-content {
+    .section-content, .section-content-landing {
         display: flex;
         flex-direction: column;
     }
@@ -120,7 +121,7 @@
         align-self: center;
     }
 
-    .section-content {
+    .section-content, .section-content-landing {
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
@@ -148,7 +149,7 @@
         max-width: 450px;
     }
 
-    .section-content h3 {
+    .section-content h3, .section-content-landing h3 {
         padding-bottom: 0;
     }
 
@@ -220,7 +221,7 @@
         font-size: 0.8rem;
     }
 
-    .section-content h3 {
+    .section-content h3, .section-content-landing h3 {
         margin-bottom: 2rem;
     }
 
@@ -270,9 +271,10 @@
             max-height: 150px;
         }
 
-        .section-content .action-button, .section-content .action-button-behind, .section-content .action-button-secondary {
-            margin-top: 2rem;
-        }
+    .section-content .action-button, .section-content .action-button-behind, .section-content .action-button-secondary,
+    .section-content-landing .action-button, .section-content-landing .action-button-behind, .section-content-landing .action-button-secondary {
+        margin-top: 2rem;
+    }
 
     .shortcuts-list li p {
         margin-bottom: 0;
