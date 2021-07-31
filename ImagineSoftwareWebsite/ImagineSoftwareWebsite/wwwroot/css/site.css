@@ -836,7 +836,6 @@ label {
     min-height: 16px;
     display: block;
     font-size: 1.1rem;
-    white-space: pre;
     font-weight: 700;
     width: 100%;
 }

@@ -31,14 +31,13 @@ const hideElement = (element) => {
 
 const showSuccess = (successContent) => {
     showElement(successContent);
-    window.scrollTo(0, 0);
 };
 
 const showError = (errorContent, message) => {
     if (!isNullOrWhitespace(message)) {
         errorContent.textContent = message;
         showElement(errorContent);
-        errorContent.scrollIntoView();
+        window.scrollBy(0, 100);
     }
 };
 
@@ -50,6 +49,7 @@ const hideError = (errorContent) => {
 const showLoadingAndHideMainContent = (loader, mainContent) => {
     showElement(loader);
     hideElement(mainContent);
+    window.scrollTo(0, 100);
 };
 
 const hideLoader = function (loader, mainContent, hideMainContent = false) {
@@ -77,6 +77,7 @@ class contactPage {
         this.view.mainContent = document.getElementById('main-content');
         this.view.contactForm = document.getElementById('contact-form');
         this.view.hiddenToken = document.getElementById('hiddenAntiforgeryToken');
+        this.view.contactsContainer = document.getElementById('contacts-container');
 
         const me = this;
         this.view.btnContactSubmit.addEventListener('click', function (event) {
@@ -132,7 +133,6 @@ class contactPage {
 
                 hideLoader(this.view.loader, this.view.mainContent, true);
                 showSuccess(this.view.successContent);
-
             }
             catch (ex) {
                 hideLoader(this.view.loader, this.view.mainContent, false);
@@ -152,7 +152,8 @@ class contactPage {
         this.view.contactForm.reset();
         hideElement(this.view.successContent);
         this.view.mainContent.style = ""; // Lo resetto semplicemente a com'era prima, così usa il CSS
-        this.view.mainContent.scrollIntoView();
+        this.view.txtName.scrollIntoView();
+        window.scrollBy(0, 150);
     }
 
     getMessage() {
