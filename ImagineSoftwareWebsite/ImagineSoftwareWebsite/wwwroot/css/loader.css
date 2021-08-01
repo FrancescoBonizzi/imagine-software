@@ -49,10 +49,6 @@
 }
 
 #loader {
-    width: 250px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+    width: 200px;
     margin: 1rem auto;
-    zoom: 2;
 }
