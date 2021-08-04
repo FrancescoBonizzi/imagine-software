@@ -37,11 +37,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    <!-- STYLESHEETS -->
-    <link href="~/css/icons-generated.css" asp-append-version="true" rel="stylesheet" />
-    <link href="~/css/loader.css" asp-append-version="true" rel="stylesheet" />
-    <link href="~/css/site.css" asp-append-version="true" rel="stylesheet" />
-    <link href="~/css/responsive.css" asp-append-version="true" rel="stylesheet" />
+    <!-- STYLESHEETS with async loading -->
+    <link href="~/css/icons-generated.css" asp-append-version="true" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="~/css/loader.css" asp-append-version="true" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="~/css/site.css" asp-append-version="true" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="~/css/responsive.css" asp-append-version="true" rel="stylesheet" media="print" onload="this.media='all'" />
 
     <noscript>
         <style>
