@@ -26,6 +26,9 @@
         font-size: 15px;
     }
 
+    #overlay-menu-input:checked ~ #overlay-menu-button span:after {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
 
     .morpheus-buttons {
         transform: scale(0.8);
