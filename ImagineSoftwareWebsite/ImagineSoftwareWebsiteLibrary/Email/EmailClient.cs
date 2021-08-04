@@ -1,4 +1,5 @@
 ﻿using ImagineSoftwareWebsiteLibrary;
+using ImagineSoftwareWebsiteLibrary.Logs;
 using System;
 using System.Net;
 using System.Net.Mail;
@@ -12,10 +13,11 @@ namespace ImagineSoftwareWebsite.Email
     public class EmailClient
     {
         private readonly SmtpClient _client;
+        private readonly IMyLogger _logger;
         private readonly Configuration _configuration;
         private const string _subject = "Imagine Software - Nuovo contatto";
 
-        public EmailClient(Configuration configuration)
+        public EmailClient(Configuration configuration, IMyLogger logger)
         {
             if (string.IsNullOrWhiteSpace(configuration.EmailHost)
                 || string.IsNullOrWhiteSpace(configuration.EmailPassword)
@@ -28,6 +30,7 @@ namespace ImagineSoftwareWebsite.Email
                 throw new Exception("Misconfigured email client");
             }
 
+            _logger = logger;
             _configuration = configuration;
 
             _client = new SmtpClient
@@ -59,6 +62,7 @@ namespace ImagineSoftwareWebsite.Email
             };
 
             mailMessage.To.Add(_configuration.EmailToAddress);
+            await _logger.Log($"Going to send an email: {message}");
             await _client.SendMailAsync(mailMessage);
         }
     }

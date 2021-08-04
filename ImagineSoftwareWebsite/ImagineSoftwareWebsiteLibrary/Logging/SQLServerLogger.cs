@@ -30,9 +30,7 @@ namespace ImagineSoftwareWebsiteLibrary.Logs
                 await connection.ExecuteAsync(
                     "INSERT INTO Logs.Logs " +
                     "VALUES " +
-                    "(@logDate, @message, @callerMethod); " +
-                    " " +
-                    "DELETE FROM Logs.Logs WHERE LogDate <= DATEADD(MONTH, -3, SYSDATETIMEOFFSET());",
+                    "(@logDate, @message, @callerMethod); ",
                     new { logDate = DateTimeOffset.Now, message, callerMethod = callerMethod ?? string.Empty });
             }
             // Un logger non deve rompere, MAI

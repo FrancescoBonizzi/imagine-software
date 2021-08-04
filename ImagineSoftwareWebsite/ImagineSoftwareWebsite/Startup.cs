@@ -4,6 +4,7 @@ using ImagineSoftwareWebsiteLibrary;
 using ImagineSoftwareWebsiteLibrary.Logs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
