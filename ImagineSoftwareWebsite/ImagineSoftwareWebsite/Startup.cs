@@ -63,9 +63,9 @@ namespace ImagineSoftwareWebsite
                 context.Response.Headers.Add("X-Permitted-Cross-Domain-Policies", "none");
                 context.Response.Headers.Add("Permissions-Policy", "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()");
 
-                context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
-                context.Response.Headers.Add("X-Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
-                context.Response.Headers.Add("X-WebKit-CSP", "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
+                context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
+                context.Response.Headers.Add("X-Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
+                context.Response.Headers.Add("X-WebKit-CSP", "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
                 await next();
             });
 
