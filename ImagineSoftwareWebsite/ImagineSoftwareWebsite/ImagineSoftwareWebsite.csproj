@@ -8,15 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="bundleconfig.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\css\bundle.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="bundleconfig.json" />
     <None Include="wwwroot\robots.txt" />
   </ItemGroup>
 
