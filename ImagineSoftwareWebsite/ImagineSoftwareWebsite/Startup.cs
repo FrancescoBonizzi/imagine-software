@@ -43,6 +43,7 @@ namespace ImagineSoftwareWebsite
             {
                 options.HeaderName = "X-CSRF-TOKEN";
                 options.SuppressXFrameOptionsHeader = true;
+                options.Cookie.Name = "SpamDetectorAntiForgeryToken";
             });
 
             services.AddSingleton<IMyLogger, ConsoleLogger>();
