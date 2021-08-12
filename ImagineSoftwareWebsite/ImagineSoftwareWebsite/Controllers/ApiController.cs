@@ -37,7 +37,7 @@ namespace ImagineSoftwareWebsite.Controllers
                 if (!string.IsNullOrEmpty(sendContactMessageRequest.Password))
                 {
                     // Loggo comunque tutto, nel caso in cui ci sia stato un errore
-                    await _logger.Log("Spambot detected!"
+                    await _logger.LogError("Spambot detected!"
                         + Environment.NewLine
                         + Environment.NewLine
                         + JsonConvert.SerializeObject(sendContactMessageRequest));
@@ -76,7 +76,7 @@ namespace ImagineSoftwareWebsite.Controllers
                 catch (Exception ex)
                 {
                     // Non voglio perdermi potenziali email corrette per bug nella validazione, quindi loggo tutto
-                    await _logger.Log(
+                    await _logger.LogError(
                         $"Errore nell'invio email: {JsonConvert.SerializeObject(sendContactMessageRequest)}"
                         + Environment.NewLine
                         + Environment.NewLine
@@ -87,7 +87,7 @@ namespace ImagineSoftwareWebsite.Controllers
             }
             catch (Exception ex)
             {
-                await _logger.Log(ex);
+                await _logger.LogError(ex);
             }
 
             return Ok();

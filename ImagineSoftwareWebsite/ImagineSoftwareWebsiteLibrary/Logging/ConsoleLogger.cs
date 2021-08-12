@@ -6,7 +6,7 @@ namespace ImagineSoftwareWebsiteLibrary.Logs
 {
     public class ConsoleLogger : IMyLogger
     {
-        public Task Log(string message, [CallerMemberName] string callerMethod = null)
+        public Task LogError(string message, [CallerMemberName] string callerMethod = null)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Error! {message}");
@@ -14,10 +14,18 @@ namespace ImagineSoftwareWebsiteLibrary.Logs
             return Task.FromResult(true);
         }
 
-        public Task Log(Exception ex, [CallerMemberName] string callerMethod = null)
+        public Task LogError(Exception ex, [CallerMemberName] string callerMethod = null)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Error! {ex.Message}");
+            Console.ForegroundColor = ConsoleColor.White;
+            return Task.FromResult(true);
+        }
+
+        public Task LogInformation(string message, [CallerMemberName] string callerMethod = null)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Info: {message}");
             Console.ForegroundColor = ConsoleColor.White;
             return Task.FromResult(true);
         }

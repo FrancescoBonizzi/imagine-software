@@ -37,7 +37,7 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
                     {
                         // Loggo sempre l'errore
                         IExceptionHandlerFeature contextFeature = context.Features.Get<IExceptionHandlerFeature>();
-                        await logger.Log(contextFeature.Error);
+                        await logger.LogError(contextFeature.Error);
 
                         // Se è una chiamata alle API, ritorno un errore da API, non una pagina intera
                         if (context.Request.Path.StartsWithSegments(
@@ -56,7 +56,7 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
                     }
                     catch (Exception ex)
                     {
-                        await logger.Log(ex);
+                        await logger.LogError(ex);
                     }
                 });
             });

@@ -62,7 +62,7 @@ namespace ImagineSoftwareWebsite.Email
             };
 
             mailMessage.To.Add(_configuration.EmailToAddress);
-            await _logger.Log($"Going to send an email: {message}");
+            await _logger.LogError($"Going to send an email: {message}");
             await _client.SendMailAsync(mailMessage);
         }
     }
