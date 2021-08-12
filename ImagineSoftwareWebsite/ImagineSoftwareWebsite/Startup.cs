@@ -3,8 +3,8 @@ using ImagineSoftwareWebsite.HttpLifecycle;
 using ImagineSoftwareWebsiteLibrary;
 using ImagineSoftwareWebsiteLibrary.Logs;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -45,7 +45,9 @@ namespace ImagineSoftwareWebsite
             services.AddSingleton<RoutesInspector>();
         }
 
-        public void Configure(IApplicationBuilder app, IMyLogger myLogger)
+        private const string _contentSecurityPolicyHeaderValue = "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com";
+
+        public void Configure(IApplicationBuilder app, IMyLogger myLogger, IWebHostEnvironment webHostEnvironment)
         {
             app.Use(async (context, next) =>
             {
@@ -58,9 +60,9 @@ namespace ImagineSoftwareWebsite
                 context.Response.Headers.Add("X-Permitted-Cross-Domain-Policies", "none");
                 context.Response.Headers.Add("Permissions-Policy", "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()");
 
-                context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
-                context.Response.Headers.Add("X-Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
-                context.Response.Headers.Add("X-WebKit-CSP", "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com");
+                context.Response.Headers.Add("Content-Security-Policy", _contentSecurityPolicyHeaderValue);
+                context.Response.Headers.Add("X-Content-Security-Policy", _contentSecurityPolicyHeaderValue);
+                context.Response.Headers.Add("X-WebKit-CSP", _contentSecurityPolicyHeaderValue);
                 await next();
             });
 
@@ -79,8 +81,11 @@ namespace ImagineSoftwareWebsite
                 return Task.CompletedTask;
             });
 
-            app.UseHttpsRedirection();
-            app.UseHsts();
+            if (webHostEnvironment.EnvironmentName != "Development")
+            {
+                app.UseHttpsRedirection();
+                app.UseHsts();
+            }
 
             app.UseStaticFiles(new StaticFileOptions
             {
