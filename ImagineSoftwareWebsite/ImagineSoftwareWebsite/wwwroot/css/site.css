@@ -669,6 +669,11 @@ label {
         margin: 0 0 1rem 0;
     }
 
+    .quick-contacts ul li {
+        list-style: none;
+        margin: 0.5rem;
+    }
+
 .contact-form {
     display: flex;
     flex-direction: column;
