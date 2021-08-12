@@ -47,7 +47,7 @@ namespace ImagineSoftwareWebsite
 
         private const string _contentSecurityPolicyHeaderValue = "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com";
 
-        public void Configure(IApplicationBuilder app, IMyLogger myLogger, IWebHostEnvironment webHostEnvironment)
+        public void Configure(IApplicationBuilder app, IMyLogger myLogger)
         {
             app.Use(async (context, next) =>
             {
@@ -81,11 +81,8 @@ namespace ImagineSoftwareWebsite
                 return Task.CompletedTask;
             });
 
-            if (webHostEnvironment.EnvironmentName != "Development")
-            {
-                app.UseHttpsRedirection();
-                app.UseHsts();
-            }
+            app.UseHttpsRedirection();
+            app.UseHsts();
 
             app.UseStaticFiles(new StaticFileOptions
             {
