@@ -39,13 +39,6 @@ namespace ImagineSoftwareWebsite
                 .AddControllersWithViews()
                 .AddNewtonsoftJson();
 
-            services.AddAntiforgery(options =>
-            {
-                options.HeaderName = "X-CSRF-TOKEN";
-                options.SuppressXFrameOptionsHeader = true;
-                options.Cookie.Name = "SpamDetectorAntiForgeryToken";
-            });
-
             services.AddSingleton<IMyLogger, ConsoleLogger>();
             services.AddSingleton<Configuration>();
             services.AddSingleton<EmailClient>();

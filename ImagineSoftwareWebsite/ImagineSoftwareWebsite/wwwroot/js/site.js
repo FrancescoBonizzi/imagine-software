@@ -76,7 +76,6 @@ class contactPage {
         this.view.loader = document.getElementById('loader');
         this.view.mainContent = document.getElementById('main-content');
         this.view.contactForm = document.getElementById('contact-form');
-        this.view.hiddenToken = document.getElementById('hiddenAntiforgeryToken');
         this.view.contactsContainer = document.getElementById('contacts-container');
 
         const me = this;
@@ -114,8 +113,7 @@ class contactPage {
                     {
                         method: 'POST',
                         headers: {
-                            'Content-Type': 'application/json',
-                            'X-CSRF-TOKEN': this.view.hiddenToken.value
+                            'Content-Type': 'application/json'
                         },
                         body: JSON.stringify(message)
                     });
