@@ -4,8 +4,6 @@
     ViewData["MetaDescription"] = "Vuoi conoscere i miei servizi, parlarmi di un progetto o di una collaborazione? Scrivimi due righe senza impegno! Sono disponibile anche su Telegram!";
 }
 
-@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
-
 <noscript>
     <style>
         /* Se javascript è disabilitato non mostro la form */
@@ -23,10 +21,17 @@
 
 <partial name="_OnePageFromHomeBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
 
+@* TODO MEGA SIMBOLO INVIO EMAIL? Oppure scrivi due righe *@
+
 <section class="white-section">
     <div class="common-section centered-section-content">
+
+        <p>
+            Se vuoi discutere di un progetto, di un'idea, se vuoi capire quali sono le mie conoscenze ed esperienza per inserirmi nel tuo team di sviluppo, puoi scrivermi quando vuoi.<br /><br />
+            Sarò molto felice di conoscerti e di parlare con te!
+        </p>
+
         <div class="quick-contacts">
-            <h4>Contatti rapidi</h4>
 
             <ul>
                 <li>
@@ -37,57 +42,13 @@
                     <span class="quick-contact-label"><i class="icon-telegram"></i>Telegram:</span>
                     <a class="outside-link link-telegram" href="https://telegram.me/fbonizzi" title="Scrivimi due righe tramite Telegram">@@fbonizzi</a>
                 </li>
+                <li>
+                    <span class="quick-contact-label"><i class="icon-linkedin"></i>LinkedIn:</span>
+                    <a class="outside-link" href="https://www.linkedin.com/in/fbonizzi/" title="Scrivimi due righe tramite LinkedIn">/fbonizzi</a>
+                </li>
             </ul>
         </div>
     </div>
-</section>
-
-<section id="contacts-container" class="common-section white-section">
-
-    <div id="loader" style="display: none;">
-        <div>
-            <div class="loader"></div>
-            <span class="loader-message">Operazione in corso...</span>
-        </div>
-    </div>
-
-    <div id="main-content">
-        <form onsubmit="return false;" class="contact-form" id="contact-form">
-
-            <div class="form-two-columns">
-                <div class="form-two-columns-column">
-                    <label for="txtName">Nome (richiesto)</label>
-                    <input type="text" id="txtName" placeholder="Inserisci il tuo nome" autocomplete="on" />
-                </div>
-
-                <div class="form-two-columns-column">
-                    <label for="txtEmail">Email (richiesta)</label>
-                    <input type="email" id="txtEmail" placeholder="La tua email?" autocomplete="on" />
-                </div>
-            </div>
-
-            <label for="txtMessage">Messaggio (richiesto)</label>
-            <textarea placeholder="Dimmi tutto!" id="txtMessage" rows="3" cols="12"></textarea>
-
-            <div>
-                <input class="form-checkbox" type="checkbox" id="chkPrivacy" checked />
-                <label for="chkPrivacy" id="labelPrivacy">Ho preso atto dell'<a class="colored-link" asp-controller="Home" asp-action="PrivacyPolicy" title="Leggi l'informativa sulla privacy di Imagine Software" target="_blank" rel="noopener">informativa sulla privacy</a> (in breve: utilizzo il tuo indirizzo email <b>solo ed esclusivamente</b> per risponderti)</label>
-            </div>
-
-            <input type="text" name="password" style="display: none !important" tabindex="-1" autocomplete="off" />
-
-            <a href="#" id="btnContactSubmit" class="action-button">Invia la tua richiesta</a>
-
-        </form>
-    </div>
-
-    <div id="success-content" style="display: none;">
-        <span>Grazie! Ti risponderò il prima possibile.</span>
-        <a href="#" id="btnResetForm" class="action-button">Invia un altro messaggio</a>
-    </div>
-
-    <span id="error-content" style="display: none;"></span>
-
 </section>
 
 @section Scripts {

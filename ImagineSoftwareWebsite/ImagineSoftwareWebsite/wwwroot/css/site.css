@@ -551,9 +551,9 @@ label {
     background-position: bottom;
 }
 
-.highlight-section * {
-    color: white;
-}
+    .highlight-section * {
+        color: white;
+    }
 
 
 .first-section-padding {
@@ -580,9 +580,9 @@ label {
         color: var(--background-dark-color);
     }
 
-    .homepage-header * {
-        color: white;
-    }
+.homepage-header * {
+    color: white;
+}
 
 .dark-grey-section {
     background-color: var(--background-dark-color-lighter);
@@ -660,7 +660,7 @@ label {
 /*#region Contact form */
 
 .quick-contacts {
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
     .quick-contacts > h4 {
@@ -1544,6 +1544,11 @@ footer span {
 .icon-email,
 .icon-telegram {
     margin-right: 2px;
+}
+
+.quick-contact-label .icon-linkedin {
+    font-size: 1rem;
+    margin: 0 2px 0 0;
 }
 
 .store-download-buttons-group :first-child {
