@@ -2,9 +2,11 @@ using ImagineSoftwareWebsite.HttpLifecycle;
 using ImagineSoftwareWebsiteLibrary.Logs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -21,7 +23,11 @@ namespace ImagineSoftwareWebsite
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddResponseCompression();
+            services.AddResponseCompression(options =>
+            {
+                options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
+                new[] { "text/javascript" });
+            });
 
             services.AddHttpsRedirection(options =>
             {
