@@ -48,7 +48,8 @@ namespace ImagineSoftwareWebsite
             services.AddSingleton<RoutesInspector>();
         }
 
-        private const string _contentSecurityPolicyHeaderValue = "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://github.githubassets.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com";
+        private const string _contentSecurityPolicyHeaderValue = 
+            "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://github.githubassets.com/; font-src 'self'";
 
         public void Configure(IApplicationBuilder app, IMyLogger myLogger)
         {
