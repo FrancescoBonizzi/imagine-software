@@ -21,6 +21,8 @@ namespace ImagineSoftwareWebsite
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddResponseCompression();
+
             services.AddHttpsRedirection(options =>
             {
                 options.HttpsPort = 443;
@@ -44,6 +46,8 @@ namespace ImagineSoftwareWebsite
 
         public void Configure(IApplicationBuilder app, IMyLogger myLogger)
         {
+            app.UseResponseCompression();
+
             app.Use(async (context, next) =>
             {
                 context.Response.Headers.Remove("Server");
