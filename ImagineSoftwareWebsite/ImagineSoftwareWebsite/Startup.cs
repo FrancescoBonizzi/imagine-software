@@ -25,8 +25,8 @@ namespace ImagineSoftwareWebsite
         {
             services.AddResponseCompression(options =>
             {
-                options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
-                new[] { "text/javascript" });
+                options.EnableForHttps = true;
+                options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(new[] { "text/javascript" });
             });
 
             services.AddHttpsRedirection(options =>
@@ -52,8 +52,6 @@ namespace ImagineSoftwareWebsite
 
         public void Configure(IApplicationBuilder app, IMyLogger myLogger)
         {
-            app.UseResponseCompression();
-
             app.Use(async (context, next) =>
             {
                 context.Response.Headers.Remove("Server");
@@ -89,6 +87,7 @@ namespace ImagineSoftwareWebsite
             app.UseHttpsRedirection();
             app.UseHsts();
 
+            app.UseResponseCompression();
             app.UseStaticFiles(new StaticFileOptions
             {
                 OnPrepareResponse = context =>
