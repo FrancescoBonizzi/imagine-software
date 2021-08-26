@@ -1,7 +1,24 @@
 ﻿@{
     var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
     ViewData["Title"] = routeName;
-    ViewData["MetaDescription"] = "Coming soon";
+    ViewData["MetaDescription"] = "SpandiGest è il gestionale che permette alle aziende agricole di tenere traccia dei viaggi dei propri operatori per lo spandimenti di liquami";
+}
+
+@section StructuredData {
+
+    <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "SoftwareApplication",
+            "name": "SpandiGest",
+            "url": "https://www.imaginesoftware.it/projects-apps/spandigest",
+            "description": "SpandiGest è il gestionale che permette alle aziende agricole di tenere traccia dei viaggi dei propri operatori per lo spandimenti di liquami",
+            "applicationCategory": "BUSINESS",
+            "image": "https://www.imaginesoftware.it/images/logos/logo-spandigest.png",
+            @Html.Raw(Definitions.JSON_LD_AUTHOR)
+        }
+    </script>
+
 }
 
 <div class="inner-header inner-header-projects">
@@ -12,8 +29,167 @@
 
 <partial name="_ApplicationsBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
 
-<h1>Coming soon</h1>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+<section class="first-section-padding centered-section-content">
+    <div class="logo-outline">
+        <img class="project-logo image-with-outline-white" src="~/images/logos/logo-spandigest.png" alt="Il logo dell'applicazione SpandiGest'" asp-append-version="true" />
+    </div>
+</section>
+
+<section class="alt-section">
+    <div class="section-content">
+
+        <p>
+            <b>SpandiGest</b> nasce dalla necessità di un'azienda agricola di tenere traccia dei viaggi dei propri operatori per lo spandimenti di liquami.
+        </p>
+
+        <p>
+            Lo spandimento di liquami è una necessità del mondo agricolo, ma è rigidamente regolamentata perché le quantità influiscono sull'equilibrio dell'ecosistema. Esistono due limiti di legge ben precisi.
+        </p>
+
+        <p>
+            È quindi essenziale tenere sotto controllo la propria attività di spandimento: è nato così SpandiGest, <b>gestionale agricolo</b>.
+        </p>
+
+    </div>
+</section>
+
+<section class="white-section">
+    <div class="section-content">
+
+        <h2>La dashboard di amministrazione</h2>
+        <div class="image-paragraph image-paragraph-bigger show-on-scroll">
+            <a href="~/images/articles/spandigest-screenshot-3.png" rel="noopener" target="_blank">
+                <img src="~/images/articles/spandigest-screenshot-3.png" class="screenshot-with-border" alt="La schermata dei report di SpandiGest" asp-append-version="true" title="Guarda più in grande" />
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="alt-section">
+    <div class="section-content">
+
+        <h2>Le <b>funzionalità</b> principali</h2>
+        <div class="space-for-article-without-subtitle"></div>
+        <div class="header-separator"></div>
+
+        <p>
+            <ul class="list-without-dots">
+                <li>✓ Registra i viaggi per lo spandimento di liquami in un <b>database sicuro</b></li>
+                <li>✓ Genera le <b>ricevute</b> per ogni viaggio con data, ora, quantità trasportata, mezzo, operatore</li>
+                <li>✓ Crea delle <b>credenziali</b> per ogni operatore a cui vuoi dare l'accesso al portale</li>
+                <li>✓ Configura le aziende riceventi, le aziende cedenti, i fondi, i mezzi</li>
+                <li>✓ Fai <b>ricerche approfondite</b> nei tuoi dati</li>
+                <li>✓ Visualizza <b>report in tempo reale</b> dei viaggi e delle quantità spanse</li>
+                <li>✓ <b>Personalizzazioni</b> grafiche: logo, colori, schermata di login</li>
+            </ul>
+        </p>
+
+    </div>
+</section>
+
+<section class="white-section">
+    <div class="section-content">
+
+        <div class="image-paragraph show-on-scroll">
+            <a href="~/images/articles/spandigest-screenshot-1.jpg" rel="noopener" target="_blank">
+                <img src="~/images/articles/spandigest-screenshot-1.jpg" alt="La schermata di login di SpandiGest" asp-append-version="true" title="Guarda più in grande" />
+            </a>
+            <p>La schermata di login</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="alt-section">
+    <div class="section-content">
+
+        <h2><b>Operatori</b> agricoli</h2>
+        <div class="space-for-article-without-subtitle"></div>
+        <div class="header-separator"></div>
+
+        <div class="image-paragraph left-image show-on-scroll">
+            <a href="~/images/articles/spandigest-screenshot-5.png" rel="noopener" target="_blank">
+                <img src="~/images/articles/spandigest-screenshot-5.png" alt="Uno screenshot della pagina dedicata agli operatori di SpandiGest" asp-append-version="true" class="vertical-image" />
+            </a>
+        </div>
+
+        <p>
+            In SpandiGest il motore trainante è l'<b>operatore</b>, ovvero chi fa materialmente il viaggio ed esegue lo spandimento.
+        </p>
+
+        <p>
+            L'operatore ha con sé uno smartphone, delle credenziali per il portale SpandiGest ed un percorso da seguire. Quando effettua lo spandimento, indica alcuni elementi chiave: la <i>provenienza</i> dei prodotti, la <i>destinazione</i>, la <i>quantità</i> di prodotto spanso e la <i>targa</i> del veicolo trasportatore.
+        </p>
+
+        <p>
+            Infine preme <i>invia</i> ed il viaggio è registrato con data, ora, nome operatore: <b>è a tutti gli effetti una ricevuta</b>.
+        </p>
+
+        <p>
+            In SpandiGest si possono creare più tipi di operatore, dagli operatori semplici ai trasportatori. In generale tipi di operatore diversi possono vedere aziende di cessione o ricezione liquami diverse durante la loro sessione giornaliera, il tutto <b>configurabile dalla sezione amministrativa</b> dell'applicazione: in questo modo è possibile ridurre al minimo il rumore visivo e permettere ad ogni operatore di concentrarsi sul suo lavoro e non vedere elementi che non gli interessano.
+        </p>
+
+    </div>
+</section>
+
+<section class="highlight-section">
+    <div class="section-content">
+
+        <h2>Senza fogli di carta, senza telefonate<br /> senza elementi di imprecisione</h2>
+        <h3>tipici di una gestione non digitale</h3>
+
+    </div>
+</section>
+
+
+<section class="alt-section">
+    <div class="section-content">
+
+        <h2><b>Amministratori</b></h2>
+        <div class="space-for-article-without-subtitle"></div>
+        <div class="header-separator"></div>
+
+        <p>
+            Un utente <b>amministratore</b> ha accesso ad un'area riservata nella quale gestisce i viaggi ed i relativi <b>report</b>. Sono infatti visibili tutti i viaggi, accessibili tramite un motore di ricerca interno, ma anche tutti gli operatori, le aziende coinvolte ed i veicoli. Un amministratore può configurare in toto gli attori presenti, bloccarli, aggiungerne di nuovi, consultare e scaricare i dati.
+        </p>
+
+        <p>
+            Con SpandiGest puoi scaricare tutte le ricevute dei viaggi in <b>PDF</b>, in <b>CSV</b> (per elaborare i dati con <i>Excel</i>) e - date le date di riferimento - generare un grande <b>report in HTML</b> che contiene tutte le ricevute di tutti i viaggi raggruppate per fondo di destinatazione.
+        </p>
+
+        <div class="image-paragraph image-paragraph-bigger show-on-scroll">
+            <a href="~/images/articles/spandigest-screenshot-2.png" rel="noopener" target="_blank">
+                <img src="~/images/articles/spandigest-screenshot-2.png" class="screenshot-with-border" alt="L'elenco dei viaggi in SpandiGest" asp-append-version="true" title="Guarda più in grande" />
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="grey-section">
+    <div class="section-content centered-section-content">
+        <h2 class="contact-title">Ti interessa<br /> approfondire<br />o pianificare una demo?</h2>
+        <a asp-controller="Home" asp-action="Contacts" class="action-button button-top-margin">Contattami!</a>
+    </div>
+</section>
+
+<section class="white-section">
+    <div class="section-content">
+
+        <h2>Use Case</h2>
+        <div class="space-for-article-without-subtitle"></div>
+        <div class="header-separator"></div>
+
+        <p>
+            Il primo cliente al quale abbiamo venduto la soluzione - <i>Serravalle Energia Società Agricola</i>, nel mantovano - ha all'attivo, dopo sei mesi di utilizzo, 6000 viaggi. Il suo <b>use case</b> prevede che ogni mese l'amministrazione scarichi le ricevute del mese, le archivi e le fornisca in sede di consuntivo regionale.
+        </p>
+
+        <p>
+            Grazie all'esperienza sul campo e ai suggerimenti dei clienti, <b>miglioriamo mensilmente il software</b> e forniamo versioni aggiornate che ne fortificano la stabilità, la velocità, la facilità d'utilizzo e aggiungiamo nuove features.
+        </p>
+
+    </div>
+</section>
+
+@*Pulsante di contatto per richiedere una demo o una call commerciale! Mi manda direttamente una mail senza tanti fronzoli.*@

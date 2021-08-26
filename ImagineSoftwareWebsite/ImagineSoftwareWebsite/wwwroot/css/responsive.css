@@ -26,6 +26,10 @@
         font-size: 15px;
     }
 
+    .vertical-image {
+        max-width: 100% !important;
+    }
+
     #overlay-menu-input:checked ~ #overlay-menu-button span:after {
         transform: rotate(-45deg) translate(5px, -5px);
     }
