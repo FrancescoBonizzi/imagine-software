@@ -25,7 +25,7 @@ jobs:
       - name: Build with dotnet
         run: dotnet build ImagineSoftwareWebsite\ImagineSoftwareWebsite.sln --configuration Release
 
-      - name: dotnet publish
+      - name: dotnet publish ImagineSoftwareWebsite\ImagineSoftwareWebsite.sln
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
