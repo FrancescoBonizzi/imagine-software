@@ -23,9 +23,9 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        run: dotnet build ImagineSoftwareWebsite\ImagineSoftwareWebsite.sln --configuration Release
+        run: dotnet build --configuration Release
 
-      - name: dotnet publish ImagineSoftwareWebsite\ImagineSoftwareWebsite.sln
+      - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
