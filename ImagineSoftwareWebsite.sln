@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImagineSoftwareWebsite", "ImagineSoftwareWebsite\ImagineSoftwareWebsite.csproj", "{13A0B20C-1D1C-4E14-889A-3E5DCD80BEBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImagineSoftwareWebsiteLibrary", "ImagineSoftwareWebsiteLibrary\ImagineSoftwareWebsiteLibrary.csproj", "{C4FE5843-C9C7-4CC1-A80D-5D6587E2FC17}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{13A0B20C-1D1C-4E14-889A-3E5DCD80BEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13A0B20C-1D1C-4E14-889A-3E5DCD80BEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13A0B20C-1D1C-4E14-889A-3E5DCD80BEBA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C4FE5843-C9C7-4CC1-A80D-5D6587E2FC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C4FE5843-C9C7-4CC1-A80D-5D6587E2FC17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C4FE5843-C9C7-4CC1-A80D-5D6587E2FC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C4FE5843-C9C7-4CC1-A80D-5D6587E2FC17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

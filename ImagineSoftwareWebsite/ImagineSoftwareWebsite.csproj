@@ -21,10 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ImagineSoftwareWebsiteLibrary\ImagineSoftwareWebsiteLibrary.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="wwwroot\images\favicons\" />
     <Folder Include="wwwroot\vectors\" />
   </ItemGroup>

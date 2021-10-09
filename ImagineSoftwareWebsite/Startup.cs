@@ -1,5 +1,4 @@
 using ImagineSoftwareWebsite.HttpLifecycle;
-using ImagineSoftwareWebsiteLibrary.Logs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -44,14 +43,13 @@ namespace ImagineSoftwareWebsite
                 .AddControllersWithViews()
                 .AddNewtonsoftJson();
 
-            services.AddSingleton<IMyLogger, ConsoleLogger>();
             services.AddSingleton<RoutesInspector>();
         }
 
         private const string _contentSecurityPolicyHeaderValue = 
             "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://github.githubassets.com/; font-src 'self'";
 
-        public void Configure(IApplicationBuilder app, IMyLogger myLogger)
+        public void Configure(IApplicationBuilder app)
         {
             app.Use(async (context, next) =>
             {
@@ -69,8 +67,6 @@ namespace ImagineSoftwareWebsite
                 context.Response.Headers.Add("X-WebKit-CSP", _contentSecurityPolicyHeaderValue);
                 await next();
             });
-
-            app.ConfigureExceptionHandler(myLogger);
 
             app.UseStatusCodePages(context =>
             {
