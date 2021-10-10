@@ -1,5 +1,5 @@
 ﻿# Imagine Software
-![Imagine Software logo](ImagineSoftwareWebsite/ImagineSoftwareWebsite/wwwroot/images/logos/logo-imagine-software.jpg)
+![Imagine Software logo](ImagineSoftwareWebsite/wwwroot/images/logos/logo-imagine-software.jpg)
 
 This is the source code of my little software development freelancing activity!
 
