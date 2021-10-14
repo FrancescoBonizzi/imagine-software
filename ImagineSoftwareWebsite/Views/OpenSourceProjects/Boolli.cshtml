@@ -138,7 +138,116 @@
     </div>
 </section>
 
+<section class="highlight-section">
+    <div class="section-content">
+
+        <h2>Scenario reale</h2>
+        <h3>Un semplice generatore di alert basato su regole</h3>
+
+    </div>
+</section>
+
+<section class="alt-section">
+    <div class="section-content">
+
+        <p>Ho sviluppato un <b>semplicissimo</b> scenario a scopo dimostrativo (se vuoi lo puoi migliorare tramite GitHub, fa sempre piacere!): un sistema di creazione di alert basato su regole configurabili interpretate da <b>Boolli</b></p>
+        <p>
+            <a class="outside-link" href="https://github.com/FrancescoBonizzi/Boolli/tree/master/SampleScenario" target="_blank" rel="noopener" title="Vai al codice open source del sistema di creazione di alert basato su regole">Qui su GitHub</a> puoi trovare il codice sorgente dell'esempio specifico che sto per approfondire.
+        </p>
+
+        <div class="image-paragraph image-paragraph-bigger show-on-scroll">
+            <a href="~/images/articles/boolli-sample-scenario-output.png" rel="noopener" target="_blank">
+                <img src="~/images/articles/boolli-sample-scenario-output.png" title="Guarda più in grande" alt="Uno screenshot dell'output dello scenario d'esempio" asp-append-version="true" />
+            </a>
+        </div>
+
+        <p>
+            L'idea è quella di generare degli <b>alert testuali basati su dati di monitoraggio hardware</b>, come ad esempio la percentuali di CPU utilizzata in un dato momento. Ogni alert è generato da una regola che può essere scritta come una stringa - e quindi configurabile anche da una GUI - come ad esempio: <em class="code-snippet">CPUPercentage and UsedRAMGigaBytes</em>.
+        </p>
+
+        <p>
+            In questo caso <em class="code-snippet">CPUPercentage</em> è una funzione booleana che valuta la percentuale di CPU di un dato record secondo una soglia. Ad esempio può ritornare <em class="code-snippet">true</em> se il valore supera il 90%.
+        </p>
+
+        <p>
+            Per completare l'esempio, ho cercato di immaginare uno scenario il più possibile reale. Abbiamo bisogno di questi elementi per far funzionare tutto:
+            <ul>
+                <li>Una lista di <b>regole</b> (<em class="code-snippet">Rules</em>)</li>
+                <li>Dei <b>dati</b> di monitoraggio (<em class="code-snippet">MonitoringData</em>) che in questo caso ho generato casualmente con <em class="code-snippet">FakeMonitoringDataRepository</em></li>
+                <li>Un generatore di <b>alert</b> che utilizzi un interprete di espressioni booleane (<b>Boolli</b>)</li>
+            </ul>
+        </p>
+
+    </div>
+</section>
+
 <section class="white-section">
+    <div class="section-content">
+
+        <h2>L'anatomia di una regola</h2>
+        <p>
+            <script src="https://gist.github.com/FrancescoBonizzi/fd2214c00782ea22274242c0455613d8.js"></script>
+        </p>
+
+        <p>
+            Le property salienti sono:
+            <ul>
+                <li><em class="code-snippet">BooleanExpression</em>: con questa property specifichi un'espressione booleana che deve essere parsata ed eseguita da <b>Boolli</b> utilizzando i nomi di funzione specificati in <em class="code-snippet">DataEvaluationFunctionDescription</em></li>
+                <li><em class="code-snippet">MessageFormat</em>: per comporre il messaggio testuale di alert utilizzando come parametri l'output delle funzioni di valutazione dei record</li>
+            </ul>
+
+            In questo esempio specifico ho definito la classe <em class="code-snippet">DataEvaluationFunctionDescription</em> con lo scopo di parametrizzare ogni tipo di metrica da valutare e la sua soglia specifica.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="alt-section">
+    <div class="section-content">
+
+        <h2>Il generatore di alert</h2>
+
+        <p>
+            Questa è la parte più complessa di questo esempio, perché qui si mette tutto insieme: le regole, <b>Boolli</b> e i dati di monitoraggio.
+        </p>
+
+        <p>
+            <script src="https://gist.github.com/FrancescoBonizzi/ccc010d7c091b089d55da417488b8ea3.js"></script>
+        </p>
+
+        <p>
+            In questo frangente c'è un ciclo che valuta ogni regola ed il punto di giunzione con <b>Boolli</b> è proprio qui: le <em class="code-snippet">DataEvaluationFunctionDescription</em> diventano <em class="code-snippet">NamedBooleanFunction</em> per poter essere utilizzate dalla libreria.
+        </p>
+
+        <p>
+            <script src="https://gist.github.com/FrancescoBonizzi/b8d6f4be246913608fcce53684143705.js"></script>
+        </p>
+
+    </div>
+</section>
+
+<section class="white-section">
+    <div class="section-content">
+
+        <h2>La funzione concreta dietro le quinte</h2>
+
+        <p>
+            Dopo aver letto tutto questo potrete pensare: ok, ma chi è che materialmente valuta quando i dati di monitoraggio devono generare un alert oppure no?
+        </p>
+
+        <p>
+            <script src="https://gist.github.com/FrancescoBonizzi/519a892d74862b11fc61591ebb33bcb7.js"></script>
+        </p>
+
+        <p>
+            Il codice sopra è l'<em class="code-snippet">If</em> sostanziale che sta alla base di tutto.
+        </p>
+
+    </div>
+</section>
+
+<section class="alt-section">
     <div class="section-content">
 
         <h2>Contribuire</h2>
