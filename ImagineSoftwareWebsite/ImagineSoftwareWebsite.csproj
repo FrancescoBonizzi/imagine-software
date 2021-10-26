@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\favicons\" />
+    <Folder Include="wwwroot\contents\" />
     <Folder Include="wwwroot\vectors\" />
   </ItemGroup>
 

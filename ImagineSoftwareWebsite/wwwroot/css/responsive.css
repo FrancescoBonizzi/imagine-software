@@ -12,8 +12,12 @@
         margin-top: 2rem;
     }
 
-    .bottom-menu-section div {
-        width: 210px;
+    .bottom-menu-section div, .bottom-menu-section img {
+        width: 250px;
+    }
+
+    .bottom-menu-section img {
+        height: auto;
     }
 
 }

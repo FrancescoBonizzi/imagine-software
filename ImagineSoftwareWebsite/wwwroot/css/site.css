@@ -366,6 +366,10 @@ footer {
         margin: 0px 2.6rem;
     }
 
+    .bottom-menu-section img {
+        height: 120px;
+    }
+
 .last-footer-section {
     background-color: #242e3f;
     font-weight: 300;
@@ -415,10 +419,6 @@ section {
     font-size: 1.1rem;
 }
 
-.section-content ul {
-    margin-left: 1rem;
-}
-
 .section-content li {
     list-style: disc;
 }
@@ -434,6 +434,10 @@ section {
     .colored-link:hover {
         color: var(--primary-color);
     }
+
+.download-my-vcard {
+    margin-top: 1rem !important;
+}
 
 .section-content h2,
 .section-content h3 {
@@ -1608,7 +1612,7 @@ footer span {
 }
 
 .menu-separator {
-    border: 3px solid white;
+    border: 1px solid white;
     border-radius: 50px;
     width: 70px;
 }
