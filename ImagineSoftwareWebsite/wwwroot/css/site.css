@@ -998,8 +998,9 @@ label {
 }
 
 .logo-gallery-name {
-    font-size: 0.8rem;
+    font-size: 1.5rem;
     display: block;
+    margin-top: 0.5rem;
     font-weight: 300;
     color: var(--background-dark-color);
 }
