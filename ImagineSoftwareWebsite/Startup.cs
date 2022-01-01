@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Squidex.ClientLibrary;
 using System;
 using System.Linq;
 using System.Net;
@@ -22,6 +24,11 @@ namespace ImagineSoftwareWebsite
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<SquidexOptions>(Configuration.GetSection("app"));
+
+            services.AddSingleton(c =>
+                new SquidexClientManager(c.GetRequiredService<IOptions<SquidexOptions>>().Value));
+
             services.AddResponseCompression(options =>
             {
                 options.EnableForHttps = true;
@@ -47,7 +54,7 @@ namespace ImagineSoftwareWebsite
         }
 
         private const string _contentSecurityPolicyHeaderValue = 
-            "default-src 'self'; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://github.githubassets.com/; font-src 'self'";
+            "default-src 'self'; img-src 'self' admin.imaginesoftware.it; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://github.githubassets.com/; font-src 'self'";
 
         public void Configure(IApplicationBuilder app)
         {

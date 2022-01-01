@@ -1,94 +1,30 @@
 ﻿@{
-    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
-    ViewData["Title"] = "Francesco Bonizzi";
-    ViewData["MetaDescription"] = "Francesco Bonizzi, proprietario di Imagine Software, professionista dello sviluppo software dello stack Microsoft e Android.";
+    @model ImagineSoftwareWebsite.ViewModels.CommonPageViewModel;
+    ViewData["Title"] = @Model.LocalizedTitle;
+    ViewData["MetaDescription"] = @Model.LocalizedMetaDescription;
 }
 
-@section StructuredData {
+@*@section StructuredData {
 
 <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "Person",
-        "email": "@Definitions.Email",
-        "image": "https://www.imaginesoftware.it/images/other/Francesco-Bonizzi.jpg",
-        "jobTitle": "@Definitions.JOB_TITLE",
-        "name": "Francesco Bonizzi",
-        "gender": "Male",
-        "nationality": "Italian",
-        "birthDate": "1990-08-05",
-        "sameAs": [
-            "https://github.com/FrancescoBonizzi",
-            "https://www.linkedin.com/in/fbonizzi/",
-            "https://stackoverflow.com/users/1090403/francesco-bonizzi"
-        ],
-        "worksFor": [ @Html.Raw(Definitions.JSON_LD_ORGANIZATION) ]
-    }
+    @Model.StructuredData;
 </script>
 
 }
-
+*@
 <div class="inner-header inner-header-francesco">
-    <h1>@routeName</h1>
+    <h1>@Model.LocalizedTitle</h1>
     <hr class="menu-separator" />
-    <h3>Professionista dello sviluppo software</h3>
+    <h3>@Model.LocalizedSubtitle</h3>
 </div>
 
-<partial name="_OnePageFromHomeBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
+<partial name="_OnePageFromHomeBreadcrumbs" model="new { ThisPageRouteName = Model.LocalizedTitle }" />
 
 <section class="white-section">
     <div class="section-content">
 
-        <p>
-            A tre anni scalciavo sulle ginocchia di mio papà mentre lo vedevo programmare in <em class="code-snippet">BASIC</em>. Quel che faceva m'affascinava a tal punto da non distinguerlo dalla magia. E quando vidi <a target="_blank" rel="noopener" class="outside-link link-matrix" href="https://it.wikipedia.org/wiki/Matrix" title="Informazioni sul film The Matrix su Wikipedia">The Matrix</a> per la prima volta, iniziai a sognare di diventare un hacker in grado riparare agli <i>errori dei software</i>.
-        </p>
-
-        <div class="image-paragraph show-on-scroll">
-            <img src="~/images/articles/Microsoft-BASIC.jpg" alt="Uno screenshot della riga di comando del Microsoft BASIC" title="Uno screenshot dell riga di comando del Microsoft BASIC" asp-append-version="true" class="microsoft-basic-photo" />
-            <p>Atari <a target="_blank" rel="noopener" class="outside-link link-basic" href="https://en.wikipedia.org/wiki/Microsoft_BASIC" title="Informazioni sul linguaggio Microsoft BASIC su Wikipedia">Microsoft BASIC</a></p>
-        </div>
-
-        <p>
-            A 13 anni mi regalarono un manuale di <i>Microsoft Visual Basic 6.0</i>. E a 10 dalla prima infatuazione per l'informatica, mi sono laureato in Computer Science all'<i>Università degli Studi di Parma</i>. Ora <a class="colored-link" asp-controller="Home" asp-action="Services" title="I miei servizi di sviluppo software">la programmazione è il mio lavoro</a> e ha plasmato come osservo il mondo. Sviluppo videogiochi, App Android, librerie open source e studio nuovi framework.
-        </p>
+        @Html.Raw(@Model.LocalizedBody)
+        
     </div>
 </section>
 
-<section class="alt-section">
-    <div class="section-content centered-section-content">
-
-        <div class="image-paragraph show-on-scroll">
-            <img src="~/images/articles/Francesco-Bonizzi.png" alt="Una foto di Francesco Bonizzi, sviluppatore software" asp-append-version="true" class="francesco-bonizzi-photo" />
-            <p><b>@Definitions.JOB_TITLE</b></p>
-            <div>
-                <a class="link-icon link-icon-github" target="_blank" rel="noopener" href="https://github.com/FrancescoBonizzi" title="Visita il mio profilo GitHub"><i class="icon-github"></i></a>
-                <a class="link-icon link-icon-linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/fbonizzi/" title="Visita il mio profilo LinkedIn"><i class="icon-linkedin"></i></a>
-                <a class="link-icon link-icon-stackoverflow" target="_blank" rel="noopener" href="https://stackoverflow.com/users/1090403/francesco-bonizzi" title="Visita il mio profilo su Stackoverflow"><i class="icon-stackoverflow"></i></a>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="white-section">
-    <div class="section-content">
-
-        <p>
-            Per questo <b>continuo a studiare</b> e a fare esperienza.
-        </p>
-
-        <p>
-            Il lavoro in <a class="outside-link" target="_blank" rel="noopener" href="https://www.isolutions.it/" title="Informazioni sull'azienda iSolutions">iSolutions</a>, software house nel mondo del betting, è stata l'esperienza migliore con cui potessi iniziare. Ho conosciuto l'ecosistema <em class="code-snippet">.NET</em>, ho imparato a programmare in <em class="code-snippet">C#</em>, <em class="code-snippet">VB</em>, a progettare database <em class="code-snippet">T-SQL</em> e a ragionare pensando alle performance, ai grandi numeri, alle farm gigantesche e agli accessi giornalieri densi e frequenti. Ho scritto enne alla enne test automatici con l'intento di giungere all'errore zero, per dormire meglio la notte dopo i rilasci. Ed ho davvero avuto la fortuna di lavorare con un team meraviglioso.
-        </p>
-
-        <p>
-            Successivamente, in <a class="outside-link" target="_blank" rel="noopener" href="https://www.gruppoinfor.it/" title="Informazioni sull'azienda Gruppo Infor">Gruppo Infor</a>, ho continuato il mio percorso verticalizzando l'esperienza sul cliente, sui requisiti, sul <b>rapporto umano uno ad uno</b>. Abbiamo migrato e progettato software di grandi aziende del territorio italiano in ottica <b>cloud-first</b>, principalmente <em class="code-snippet">Azure</em>.
-        </p>
-
-        <p>
-            Infine, è nata <a class="colored-link" title="L'homepage di Imagine Software" asp-controller="Home" asp-action="Services">Imagine Software</a>.
-        </p>
-
-    </div>
-</section>

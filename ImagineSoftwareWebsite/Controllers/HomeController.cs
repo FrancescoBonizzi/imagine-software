@@ -1,8 +1,11 @@
 ﻿using ImagineSoftwareWebsite.HttpLifecycle;
 using ImagineSoftwareWebsite.Models;
+using ImagineSoftwareWebsite.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using SimpleMvcSitemap;
+using Squidex.ClientLibrary;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ImagineSoftwareWebsite.Controllers
 {
@@ -10,10 +13,14 @@ namespace ImagineSoftwareWebsite.Controllers
     public class HomeController : Controller
     {
         private readonly RoutesInspector _routesInspector;
+        private readonly SquidexClientManager _squidexClientManager;
 
-        public HomeController(RoutesInspector routesInspector)
+        public HomeController(
+            RoutesInspector routesInspector,
+            SquidexClientManager squidexClientManager)
         {
             _routesInspector = routesInspector;
+            _squidexClientManager = squidexClientManager;
         }
 
         [Route(template: "/", Name = Definitions.HOME_PAGE_CONTROLLER_NAME)]
@@ -29,8 +36,16 @@ namespace ImagineSoftwareWebsite.Controllers
             => View();
 
         [Route(template: "francesco-bonizzi", Name = Definitions.FRANCESCO_PAGE_CONTROLLER_NAME)]
-        public IActionResult Francesco()
-            => View();
+        public async Task<IActionResult> Francesco()
+        {
+            var cms = _squidexClientManager.CreateContentsClient<CommonPageSquidex, CommonPageViewModel>("common-pages");
+
+            const string currentLocalizationCode = "it-IT";
+            var context = QueryContext.Default.WithLanguages(currentLocalizationCode);
+            var page = await cms.GetAsync("d2350924-54df-43c9-a009-df8c08a31899", context);
+            page.Data.CurrentLocalizationCode = currentLocalizationCode;
+            return View(page.Data);
+        }
 
         [Route(template: "privacy-policy", Name = Definitions.PRIVACY_PAGE_CONTROLLER_NAME)]
         public IActionResult PrivacyPolicy()
