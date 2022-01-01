@@ -4,14 +4,14 @@
     ViewData["MetaDescription"] = @Model.LocalizedMetaDescription;
 }
 
-@*@section StructuredData {
+@section StructuredData {
 
 <script type="application/ld+json">
-    @Model.StructuredData;
+    @Model.JsonStructuredData;
 </script>
 
 }
-*@
+
 <div class="inner-header inner-header-francesco">
     <h1>@Model.LocalizedTitle</h1>
     <hr class="menu-separator" />

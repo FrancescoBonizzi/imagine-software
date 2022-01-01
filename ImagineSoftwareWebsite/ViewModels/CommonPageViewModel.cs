@@ -1,4 +1,5 @@
-﻿using Squidex.ClientLibrary;
+﻿using Newtonsoft.Json;
+using Squidex.ClientLibrary;
 using System.Collections.Generic;
 
 namespace ImagineSoftwareWebsite.ViewModels
@@ -18,6 +19,8 @@ namespace ImagineSoftwareWebsite.ViewModels
         public Dictionary<string, string> Subtitle { get; set; }
         public Dictionary<string, string> MetaDescription { get; set; }
         public Dictionary<string, string> Body { get; set; }
-        //public string StructuredData { get; set; }
+
+        [JsonConverter(typeof(InvariantConverter))]
+        public string JsonStructuredData { get; set; }
     }
 }
