@@ -2,6 +2,8 @@
 {
     public static class Definitions
     {
+        public const string CURRENT_LOCALIZATION_CODE = "it-iT";
+
         public const string PARTITA_IVA = "02982280345";
         public const string JOB_TITLE = "Full stack .NET developer and Android developer";
 
