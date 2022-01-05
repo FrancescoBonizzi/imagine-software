@@ -8,7 +8,7 @@
 {
     @section StructuredData {
         <script type="application/ld+json">
-            @Model.JsonStructuredData;
+            @Html.Raw(Model.JsonStructuredData);
         </script>
     }
 }
