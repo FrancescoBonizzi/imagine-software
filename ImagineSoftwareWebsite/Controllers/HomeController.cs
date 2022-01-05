@@ -35,13 +35,13 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult Services()
             => View();
 
-        [Route(template: "francesco-bonizzi", Name = Definitions.FRANCESCO_PAGE_CONTROLLER_NAME)]
-        public async Task<IActionResult> Francesco()
+        [Route(template: "{squidexPageId}")]
+        public async Task<IActionResult> CommonPage(string squidexPageId)
         {
             var cms = _squidexClientManager.CreateContentsClient<CommonPageSquidex, CommonPageViewModel>("common-pages");
 
             var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
-            var page = await cms.GetAsync("d2350924-54df-43c9-a009-df8c08a31899", context);
+            var page = await cms.GetAsync(squidexPageId, context);
             page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
             return View(page.Data);
         }

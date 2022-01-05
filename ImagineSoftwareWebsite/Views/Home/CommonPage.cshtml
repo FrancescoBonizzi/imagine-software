@@ -4,15 +4,16 @@
     ViewData["MetaDescription"] = @Model.LocalizedMetaDescription;
 }
 
-@section StructuredData {
-
-<script type="application/ld+json">
-    @Model.JsonStructuredData;
-</script>
-
+@if (!string.IsNullOrWhiteSpace(@Model.JsonStructuredData))
+{
+    @section StructuredData {
+        <script type="application/ld+json">
+            @Model.JsonStructuredData;
+        </script>
+    }
 }
 
-<div class="inner-header inner-header-francesco">
+<div class="inner-header">
     <h1>@Model.LocalizedTitle</h1>
     <hr class="menu-separator" />
     <h3>@Model.LocalizedSubtitle</h3>
@@ -24,7 +25,7 @@
     <div class="section-content">
 
         @Html.Raw(@Model.LocalizedBody)
-        
+
     </div>
 </section>
 
