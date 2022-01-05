@@ -46,14 +46,6 @@ namespace ImagineSoftwareWebsite.Controllers
             return View(page.Data);
         }
 
-        [Route(template: "privacy-policy", Name = Definitions.PRIVACY_PAGE_CONTROLLER_NAME)]
-        public IActionResult PrivacyPolicy()
-            => View();
-
-        [Route(template: "mission", Name = Definitions.MISSION_PAGE_CONTROLLER_NAME)]
-        public IActionResult Mission()
-            => View();
-
         [Route(template: "sitemap", Name = Definitions.SITEMAP_PAGE_CONTROLLER_NAME)]
         public IActionResult Sitemap()
             => View(new SitemapViewModel()
