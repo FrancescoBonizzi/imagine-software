@@ -1,4 +1,5 @@
 ﻿@{
+    @model ImagineSoftwareWebsite.ViewModels.IndexPageViewModel;
     ViewData["Title"] = "Design, sviluppo, integrazione di software e App";
     ViewData["MetaDescription"] = "Imagine Software: design, sviluppo, integrazione di software e App. Rendo le tue idee realtà, accresco il valore del tuo team di sviluppo.";
 }
@@ -99,50 +100,17 @@
 
         <div class="logo-gallery opensource-logos">
 
-            <div class="logo-gallery-block">
-                <a title="Il sito ufficiale di Microsoft .NET" href="https://dotnet.microsoft.com/" target="_blank" rel="noopener">
-                    <div class="logo-outline">
-                        <img src="~/images/logos/logo-dot-net.png" asp-append-version="true" alt="Il logo di Microsoft .NET" />
-                    </div>
-                    <span class="logo-gallery-name">.NET</span>
-                </a>
-            </div>
-
-            <div class="logo-gallery-block">
-                <a title="Il sito ufficiale di Microsoft SQL Server" href="https://www.microsoft.com/it-it/sql-server/sql-server-downloads" rel="noopener" target="_blank">
-                    <div class="logo-outline">
-                        <img src="~/images/logos/logo-sql-server.png" asp-append-version="true" alt="Il logo di Microsoft SQL Server" />
-                    </div>
-                    <span class="logo-gallery-name">SQL Server</span>
-                </a>
-            </div>
-
-            <div class="logo-gallery-block">
-                <a title="Il sito ufficiale di Microsoft Azure (servizio cloud)" href="https://azure.microsoft.com/it-it/" target="_blank" rel="noopener">
-                    <div class="logo-outline">
-                        <img src="~/images/logos/logo-azure.png" asp-append-version="true" alt="Il logo di Microsoft Azure (servizio cloud)" />
-                    </div>
-                    <span class="logo-gallery-name">Azure</span>
-                </a>
-            </div>
-
-            <div class="logo-gallery-block">
-                <a title="Javascript presso la Mozilla foundation" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript?retiredLocale=it" target="_blank">
-                    <div class="logo-outline">
-                        <img src="~/images/logos/logo-javascript.png" asp-append-version="true" alt="Il logo non ufficiale di Javascript" />
-                    </div>
-                    <span class="logo-gallery-name">Javascript</span>
-                </a>
-            </div>
-
-            <div class="logo-gallery-block">
-                <a title="Il sito ufficiale di android" href="https://www.android.com/intl/it_it/" target="_blank" rel="noopener">
-                    <div class="logo-outline">
-                        <img src="~/images/logos/logo-android.png" asp-append-version="true" alt="Il logo di Android" />
-                    </div>
-                    <span class="logo-gallery-name">Android</span>
-                </a>
-            </div>
+            @foreach(var technology in Model.Technologies)
+            {
+                <div class="logo-gallery-block">
+                    <a title="@technology.LocalizedLinkTitle" href="@technology.Link" target="_blank" rel="noopener">
+                        <div>
+                            <img src="@technology.LogoImageLink" alt="@technology.LocalizedLogoAlt" />
+                        </div>
+                        <span class="logo-gallery-name">@technology.Name</span>
+                    </a>
+                </div>
+            }
 
         </div>
 

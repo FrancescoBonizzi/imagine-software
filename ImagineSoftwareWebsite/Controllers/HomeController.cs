@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using SimpleMvcSitemap;
 using Squidex.ClientLibrary;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ImagineSoftwareWebsite.Controllers
@@ -24,8 +25,22 @@ namespace ImagineSoftwareWebsite.Controllers
         }
 
         [Route(template: "/", Name = Definitions.HOME_PAGE_CONTROLLER_NAME)]
-        public IActionResult Index()
-            => View();
+        public async Task<IActionResult> Index()
+        {
+            var cms = _squidexClientManager.CreateContentsClient<TechnologySquidex, TechnologyViewModel>("technologies");
+
+            var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
+            var technologies = await cms.GetAsync(context: context);
+
+            foreach (var t in technologies.Items)
+            {
+                t.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+                t.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(t.Data.Logo);
+            }
+
+            return View(new IndexPageViewModel(
+                technologies.Items.Select(t => t.Data)));
+        }
 
         [Route(template: "contacts", Name = Definitions.CONTACT_PAGE_CONTROLLER_NAME)]
         public async Task<IActionResult> Contacts()
