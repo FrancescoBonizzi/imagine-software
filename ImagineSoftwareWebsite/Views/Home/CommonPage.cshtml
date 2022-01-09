@@ -19,20 +19,7 @@
     <h3>@Model.LocalizedSubtitle</h3>
 </div>
 
-<section class="breadcrumbs-section">
-
-    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" asp-controller="Home" asp-action="Index"><span itemprop="name">Home</span></a>
-            <meta itemprop="position" content="1" />
-        </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <span itemprop="name">@Model.LocalizedTitle</span>
-            <meta itemprop="position" content="2" />
-        </li>
-    </ol>
-
-</section>
+<partial name="_OpenSourceProjectsBreadcrumbs" model="new { ThisPageRouteName = Model.LocalizedTitle }" />
 
 <section class="white-section">
     <div class="section-content">

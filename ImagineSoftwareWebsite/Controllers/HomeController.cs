@@ -28,8 +28,15 @@ namespace ImagineSoftwareWebsite.Controllers
             => View();
 
         [Route(template: "contacts", Name = Definitions.CONTACT_PAGE_CONTROLLER_NAME)]
-        public IActionResult Contacts()
-            => View();
+        public async Task<IActionResult> Contacts()
+        {
+            var cms = _squidexClientManager.CreateContentsClient<CommonPageSquidex, CommonPageViewModel>("common-pages");
+
+            var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
+            var page = await cms.GetAsync("contacts", context);
+            page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+            return View(page.Data);
+        }
 
         [Route(template: "services", Name = Definitions.SERVICES_PAGE_CONTROLLER_NAME)]
         public IActionResult Services()

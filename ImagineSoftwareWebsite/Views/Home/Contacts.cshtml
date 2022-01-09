@@ -1,7 +1,7 @@
 ﻿@{
-    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
-    ViewData["Title"] = "Vuoi discutere di un progetto? Scrivimi!";
-    ViewData["MetaDescription"] = "Vuoi conoscere i miei servizi, parlarmi di un progetto o di una collaborazione? Scrivimi due righe senza impegno! Sono disponibile anche su Telegram!";
+    @model ImagineSoftwareWebsite.ViewModels.CommonPageViewModel;
+    ViewData["Title"] = @Model.LocalizedTitle;
+    ViewData["MetaDescription"] = @Model.LocalizedMetaDescription;
 }
 
 <noscript>
@@ -14,19 +14,18 @@
 </noscript>
 
 <div class="inner-header">
-    <h1>Vuoi discutere di un progetto<br />  o di una folle idea?</h1>
+    <h1>@Model.LocalizedTitle</h1>
     <hr class="menu-separator" />
-    <h3>Scrivimi due righe.</h3>
+    <h3>@Model.LocalizedSubtitle</h3>
 </div>
 
-<partial name="_OnePageFromHomeBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
+<partial name="_OpenSourceProjectsBreadcrumbs" model="new { ThisPageRouteName = Model.LocalizedTitle }" />
 
 <section class="white-section">
     <div class="section-content">
 
         <p>
-            Se vuoi discutere di un progetto, di un'idea, se vuoi capire quali sono le mie conoscenze ed esperienza per inserirmi nel tuo team di sviluppo, <b>puoi scrivermi quando vuoi.</b><br /><br />
-            Sarò molto felice di conoscerti e di parlare con te!
+            @Html.Raw(@Model.LocalizedBody)
         </p>
 
         <a href="~/contents/Francesco-Bonizzi-VCard.vcf" class="action-button download-my-vcard">Scarica il mio contatto sul telefono</a>
