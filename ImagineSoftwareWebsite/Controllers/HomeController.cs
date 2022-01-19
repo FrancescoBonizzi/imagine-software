@@ -27,10 +27,13 @@ namespace ImagineSoftwareWebsite.Controllers
         [Route(template: "/", Name = Definitions.HOME_PAGE_CONTROLLER_NAME)]
         public async Task<IActionResult> Index()
         {
-            var cms = _squidexClientManager.CreateContentsClient<TechnologySquidex, TechnologyViewModel>("technologies");
+            var cmsTechnologies = _squidexClientManager.CreateContentsClient<TechnologySquidex, TechnologyViewModel>("technologies");
+            var cmsCustomers = _squidexClientManager.CreateContentsClient<CustomersSquidex, CustomersViewModel>("customers");
 
             var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
-            var technologies = await cms.GetAsync(context: context);
+
+#warning Questi vanno fatti in parallelo!
+            var technologies = await cmsTechnologies.GetAsync(context: context);
 
             foreach (var t in technologies.Items)
             {
@@ -38,8 +41,17 @@ namespace ImagineSoftwareWebsite.Controllers
                 t.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(t.Data.Logo);
             }
 
+            var customers = await cmsCustomers.GetAsync(context: context);
+
+            foreach (var c in customers.Items)
+            {
+                c.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+                c.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(c.Data.Logo);
+            }
+
             return View(new IndexPageViewModel(
-                technologies.Items.Select(t => t.Data)));
+                technologies.Items.Select(t => t.Data),
+                customers.Items.Select(c => c.Data)));
         }
 
         [Route(template: "contacts", Name = Definitions.CONTACT_PAGE_CONTROLLER_NAME)]
