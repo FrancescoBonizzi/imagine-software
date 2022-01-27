@@ -14,9 +14,9 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult Boolli()
             => View();
 
-        [Route(template: "open-source-projects/infart-game", Name = "INFART")]
-        public IActionResult INFART()
-            => View();
+        //[Route(template: "open-source-projects/infart-game", Name = "INFART")]
+        //public IActionResult INFART()
+        //    => View();
 
         [Route(template: "open-source-projects/restart-on-crash", Name = "RestartOnCrash")]
         public IActionResult RestartOnCrash()

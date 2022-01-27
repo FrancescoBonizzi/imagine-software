@@ -1,0 +1,79 @@
+﻿@{
+    @model ImagineSoftwareWebsite.ViewModels.OpenSourceProjectViewModel;
+    ViewData["Title"] = @Model.LocalizedTitle;
+    ViewData["MetaDescription"] = @Model.LocalizedMetaDescription;
+}
+
+@if (!string.IsNullOrWhiteSpace(@Model.JsonStructuredData))
+{
+    @section StructuredData {
+<script type="application/ld+json">
+    @Html.Raw(Model.JsonStructuredData);
+</script>
+    }
+}
+
+<div class="inner-header inner-header-projects">
+    <h1>@Model.LocalizedTitle</h1>
+    <hr class="menu-separator" />
+    <h3>@Model.LocalizedSubtitle</h3>
+</div>
+
+<partial name="_OpenSourceProjectsBreadcrumbs" model="new { ThisPageRouteName = Model.LocalizedTitle }" />
+
+<section class="first-section-padding centered-section-content">
+    <div class="logo-outline">
+        <img class="project-logo image-with-outline-white" src="~/images/logos/logo-infart.png" alt="Il logo del videogioco INFART" asp-append-version="true" />
+    </div>
+</section>
+
+<div class="store-download-buttons-group">
+    @foreach (var downloadButton in Model.DownloadButtons[Model.CurrentLocalizationCode])
+    {
+        <a class="action-button"
+       target="_blank"
+       rel="noopener"
+       href="@downloadButton.DownloadLink"
+       title="@downloadButton.TextAlt">
+            <img src="@downloadButton.Logo" />@downloadButton.TextButton
+        </a>
+    }
+</div>
+
+@*TODO Dove piazzare la GIF?*@
+
+@for (int s = 0; s < Model.Sections[Model.CurrentLocalizationCode].Length; ++s)
+{
+    var currentSection = Model.Sections[Model.CurrentLocalizationCode][s];
+
+    @if (!currentSection.IsJustTitleSection)
+    {
+        string sectionClassName = s % 2 == 0 ? "white-section" : "alt-section";
+        <section class="@sectionClassName">
+            <div class="section-content">
+
+                @if (!string.IsNullOrWhiteSpace(currentSection.Title))
+                {
+                    <h2>@currentSection.Title</h2>
+                    <div class="space-for-article-without-subtitle"></div>
+                    <div class="header-separator"></div>
+                }
+
+                @currentSection.Body
+
+            </div>
+        </section>
+    }
+    else
+    {
+        <section class="highlight-section">
+            <div class="section-content">
+
+                <h2>@currentSection.Body</h2>
+                @*                <h3>e senza pubblicità</h3>*@
+
+            </div>
+        </section>
+    }
+}
+
