@@ -6,16 +6,9 @@ namespace ImagineSoftwareWebsite.ViewModels
 {
     public class DownloadButtonViewModel
     {
-        [JsonConverter(typeof(InvariantConverter))]
-        public string[] Logo { get; set; }
-
-        [JsonConverter(typeof(InvariantConverter))]
+        public string IconName { get; set; }
         public string DownloadLink { get; set; }
-
-        [JsonConverter(typeof(InvariantConverter))]
         public string TextButton { get; set; }
-
-        [JsonConverter(typeof(InvariantConverter))]
         public string TextAlt { get; set; }
     }
 }

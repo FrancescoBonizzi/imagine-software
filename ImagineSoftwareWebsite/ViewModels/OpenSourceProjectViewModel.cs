@@ -1,6 +1,6 @@
-﻿using Squidex.ClientLibrary;
+﻿using Newtonsoft.Json;
+using Squidex.ClientLibrary;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace ImagineSoftwareWebsite.ViewModels
 {
@@ -17,6 +17,7 @@ namespace ImagineSoftwareWebsite.ViewModels
         public Dictionary<string, string> LogoAlt { get; set; }
         public Dictionary<string, string> AnimatedGifAlt { get; set; }
 
+#warning sono brutti così, conviene pescare la culture direttamente dalla view
         public string LocalizedTitle => Title[CurrentLocalizationCode];
         public string LocalizedSubtitle => Subtitle[CurrentLocalizationCode];
         public string LocalizedMetaDescription => MetaDescription[CurrentLocalizationCode];
@@ -27,7 +28,6 @@ namespace ImagineSoftwareWebsite.ViewModels
 
         [JsonConverter(typeof(InvariantConverter))]
         public string JsonStructuredData { get; set; }
-
 
         [JsonConverter(typeof(InvariantConverter))]
         public string[] Logo { get; set; }

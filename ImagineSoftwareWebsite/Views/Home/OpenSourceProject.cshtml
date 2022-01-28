@@ -35,7 +35,7 @@
        rel="noopener"
        href="@downloadButton.DownloadLink"
        title="@downloadButton.TextAlt">
-            <img src="@downloadButton.Logo" />@downloadButton.TextButton
+            <i class="@downloadButton.IconName"></i> @downloadButton.TextButton
         </a>
     }
 </div>
@@ -46,34 +46,20 @@
 {
     var currentSection = Model.Sections[Model.CurrentLocalizationCode][s];
 
-    @if (!currentSection.IsJustTitleSection)
-    {
-        string sectionClassName = s % 2 == 0 ? "white-section" : "alt-section";
-        <section class="@sectionClassName">
-            <div class="section-content">
+    string sectionClassName = s % 2 == 0 ? "white-section" : "alt-section";
+    <section class="@sectionClassName">
+        <div class="section-content">
 
-                @if (!string.IsNullOrWhiteSpace(currentSection.Title))
-                {
-                    <h2>@currentSection.Title</h2>
-                    <div class="space-for-article-without-subtitle"></div>
-                    <div class="header-separator"></div>
-                }
+            @if (!string.IsNullOrWhiteSpace(currentSection.Title))
+            {
+                <h2>@Html.Raw(@currentSection.Title)</h2>
+                <div class="space-for-article-without-subtitle"></div>
+                <div class="header-separator"></div>
+            }
 
-                @currentSection.Body
+            @Html.Raw(@currentSection.Body)
 
-            </div>
-        </section>
-    }
-    else
-    {
-        <section class="highlight-section">
-            <div class="section-content">
-
-                <h2>@currentSection.Body</h2>
-                @*                <h3>e senza pubblicità</h3>*@
-
-            </div>
-        </section>
-    }
+        </div>
+    </section>
 }
 
