@@ -9,6 +9,7 @@ namespace ImagineSoftwareWebsite.ViewModels
     public class OpenSourceProjectViewModel
     {
         public string CurrentLocalizationCode { get; set; }
+        public string RouteName { get; set; }
 
         public Dictionary<string, string> Title { get; set; }
         public Dictionary<string, string> Subtitle { get; set; }

@@ -29,16 +29,15 @@ namespace ImagineSoftwareWebsite.Controllers
         {
             var cmsTechnologies = _squidexClientManager.CreateContentsClient<TechnologySquidex, TechnologyViewModel>("technologies");
             var cmsCustomers = _squidexClientManager.CreateContentsClient<CustomersSquidex, CustomersViewModel>("customers");
-
             var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
 
 #warning Questi vanno fatti in parallelo!
             var technologies = await cmsTechnologies.GetAsync(context: context);
 
-            foreach (var t in technologies.Items)
+            foreach (var technology in technologies.Items)
             {
-                t.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
-                t.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(t.Data.Logo);
+                technology.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+                technology.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(technology.Data.Logo);
             }
 
             var customers = await cmsCustomers.GetAsync(context: context);
@@ -69,7 +68,7 @@ namespace ImagineSoftwareWebsite.Controllers
         public IActionResult Services()
             => View();
 
-        [Route(template: "{squidexPageId}")]
+        [Route(template: "pages/{squidexPageId}")]
         public async Task<IActionResult> CommonPage(string squidexPageId)
         {
             var cms = _squidexClientManager.CreateContentsClient<CommonPageSquidex, CommonPageViewModel>("common-pages");
@@ -89,10 +88,28 @@ namespace ImagineSoftwareWebsite.Controllers
 
             page.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(page.Data.Logo);
             page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+            page.Data.RouteName = page.Id;
+
             return View(page.Data);
         }
 
+        [Route(template: "open-source-projects")]
+        public async Task<IActionResult> OpenSourceProjectsList()
+        {
+            var cms = _squidexClientManager.CreateContentsClient<OpenSourceProjectSquidex, OpenSourceProjectViewModel>("open-source-projects");
+            var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
+            var openSourceProjects = await cms.GetAsync(context: context);
 
+            foreach(var openSourceProject in openSourceProjects.Items)
+            {
+                openSourceProject.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+                openSourceProject.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(openSourceProject.Data.Logo);
+                openSourceProject.Data.RouteName = openSourceProject.Id;
+            }
+
+            return View(new OpenSourceProjectsListViewModel(
+                openSourceProjects.Items.Select(p => p.Data)));
+        }
 
 
 

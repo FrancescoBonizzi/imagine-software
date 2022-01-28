@@ -1,0 +1,35 @@
+﻿@{
+    @model ImagineSoftwareWebsite.ViewModels.OpenSourceProjectsListViewModel;
+    var title = "Open Source";
+    ViewData["Title"] = title;
+    ViewData["MetaDescription"] = "I progetti open source di Imagine Software, accessibili liberamente tramite GitHub: librerie, piccoli software, videogiochi.";
+}
+
+<div class="inner-header inner-header-projects">
+    <h1>Il lato migliore della programmazione</h1>
+    <hr class="menu-separator" />
+    <h3>@title</h3>
+</div>
+
+<partial name="_OneLevelBreadcrumbs" model="new { ThisPageRouteName = title }" />
+
+@for (int o = 0; o < Model.OpenSourceProjects.Length; ++o)
+{
+    var openSourceProject = Model.OpenSourceProjects[o];
+    var sectionName = o % 2 == 0 ? "white-section" : "alt-section";
+
+    <section class="@sectionName">
+
+        <h2>@openSourceProject.LocalizedTitle</h2>
+
+        <div class="header-with-image">
+            <div class="logo-outline">
+                <img class="project-logo" src="@openSourceProject.LogoImageLink" alt="@openSourceProject.LogoAlt" asp-append-version="true" />
+            </div>
+            <h3>@Html.Raw(@openSourceProject.LocalizedShortDescription)</h3>
+        </div>
+
+        <a href="/open-source-projects/@openSourceProject.RouteName" class="action-button">Approfondisci <i class="icon-right"></i></a>
+
+    </section>
+}
