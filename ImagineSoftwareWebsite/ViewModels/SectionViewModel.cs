@@ -1,8 +1,4 @@
-﻿using Newtonsoft.Json;
-using Squidex.ClientLibrary;
-using System.Collections.Generic;
-
-namespace ImagineSoftwareWebsite.ViewModels
+﻿namespace ImagineSoftwareWebsite.ViewModels
 {
     public class SectionViewModel
     {

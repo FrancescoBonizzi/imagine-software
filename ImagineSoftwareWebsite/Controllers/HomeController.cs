@@ -84,12 +84,10 @@ namespace ImagineSoftwareWebsite.Controllers
         public async Task<IActionResult> OpenSourceProject(string squidexPageId)
         {
             var cms = _squidexClientManager.CreateContentsClient<OpenSourceProjectSquidex, OpenSourceProjectViewModel>("open-source-projects");
-
             var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
-
-            // TODO non c'entra JSON structured data, c'è qualche nella struttura dell apagina che incasina il reader json
             var page = await cms.GetAsync(squidexPageId, context);
 
+            page.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(page.Data.Logo);
             page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
             return View(page.Data);
         }

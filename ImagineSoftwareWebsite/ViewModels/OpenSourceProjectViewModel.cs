@@ -15,7 +15,6 @@ namespace ImagineSoftwareWebsite.ViewModels
         public Dictionary<string, string> MetaDescription { get; set; }
         public Dictionary<string, string> ShortDescription { get; set; }
         public Dictionary<string, string> LogoAlt { get; set; }
-        public Dictionary<string, string> AnimatedGifAlt { get; set; }
 
 #warning sono brutti così, conviene pescare la culture direttamente dalla view
         public string LocalizedTitle => Title[CurrentLocalizationCode];
@@ -23,7 +22,6 @@ namespace ImagineSoftwareWebsite.ViewModels
         public string LocalizedMetaDescription => MetaDescription[CurrentLocalizationCode];
         public string LocalizedShortDescription => ShortDescription[CurrentLocalizationCode];
         public string LocalizedLogoAlt => LogoAlt[CurrentLocalizationCode];
-        public string LocalizedAnimatedGifAlt => AnimatedGifAlt[CurrentLocalizationCode];
 
 
         [JsonConverter(typeof(InvariantConverter))]
@@ -32,8 +30,7 @@ namespace ImagineSoftwareWebsite.ViewModels
         [JsonConverter(typeof(InvariantConverter))]
         public string[] Logo { get; set; }
 
-        [JsonConverter(typeof(InvariantConverter))]
-        public string[] AnimatedGif { get; set; }
+        public string LogoImageLink { get; set; }
 
         public Dictionary<string, DownloadButtonViewModel[]> DownloadButtons { get; set; }
         public Dictionary<string, SectionViewModel[]> Sections { get; set; }
