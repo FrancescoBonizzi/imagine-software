@@ -409,6 +409,7 @@ section {
 
     section img {
         max-width: 500px;
+        max-height: 400px;
         border-radius: 20px;
         margin: 1rem 0;
     }
@@ -1012,9 +1013,18 @@ label {
     font-weight: 400;
 }
 
+pre {
+    border-radius: 5px;
+    padding: 1rem;
+    font-family: Consolas, Liberation Mono, Menlo, monospace !important;
+    font-style: normal;
+    background-color: var(--code-snippet-background-color);
+    font-weight: 400;
+    overflow: scroll;
+    overflow-y: hidden;
+}
 
 /*#region Better styles for embedding GitHub Gists */
-
 .gist-data * {
     font-family: Consolas, Liberation Mono, Menlo, monospace !important;
 }
@@ -1534,13 +1544,6 @@ footer span {
     color: #f48024;
 }
 
-.icon-linkedin,
-.icon-github {
-    display: inline-block;
-    font-size: 1.8rem;
-    margin: 0.5rem;
-}
-
 .link-icon-stackoverflow {
     display: inline-block;
     font-size: 1.6rem;
@@ -1566,6 +1569,7 @@ footer span {
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
+    justify-content: center;
 }
 
     .store-download-buttons-group > * {

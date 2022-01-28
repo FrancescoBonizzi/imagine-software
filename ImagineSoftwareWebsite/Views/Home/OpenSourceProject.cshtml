@@ -27,18 +27,21 @@
          alt="@Model.LocalizedLogoAlt"
          asp-append-version="true" />
 
-    <div class="store-download-buttons-group">
-        @foreach (var downloadButton in Model.DownloadButtons[Model.CurrentLocalizationCode])
-        {
-            <a class="action-button"
-           target="_blank"
-           rel="noopener"
-           href="@downloadButton.DownloadLink"
-           title="@downloadButton.TextAlt">
-                <i class="@downloadButton.IconName"></i> @downloadButton.TextButton
-            </a>
-        }
-    </div>
+    @if (Model.DownloadButtons.Any())
+    {
+        <div class="store-download-buttons-group">
+            @foreach (var downloadButton in Model.DownloadButtons[Model.CurrentLocalizationCode])
+            {
+                <a class="action-button"
+                   target="_blank"
+                   rel="noopener"
+                   href="@downloadButton.DownloadLink"
+                   title="@downloadButton.TextAlt">
+                    <i class="@downloadButton.IconName"></i> @downloadButton.TextButton
+                </a>
+            }
+        </div>
+    }
 
 </section>
 
