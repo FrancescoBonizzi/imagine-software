@@ -82,9 +82,12 @@ namespace ImagineSoftwareWebsite.Controllers
         [Route(template: "open-source-projects/{squidexPageId}")]
         public async Task<IActionResult> OpenSourceProject(string squidexPageId)
         {
+#warning Ma questi IContentsClient si possono registrare singleton? "Do not create new clients frequently"
             var cms = _squidexClientManager.CreateContentsClient<OpenSourceProjectSquidex, OpenSourceProjectViewModel>("open-source-projects");
             var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
             var page = await cms.GetAsync(squidexPageId, context);
+
+#warning Forse dovrei wrappare tutto questo con caching di 5 minuti?
 
             page.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(page.Data.Logo);
             page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
@@ -107,8 +110,11 @@ namespace ImagineSoftwareWebsite.Controllers
                 openSourceProject.Data.RouteName = openSourceProject.Id;
             }
 
+#warning TODO scrivere in base al localization code
             return View(new OpenSourceProjectsListViewModel(
-                openSourceProjects.Items.Select(p => p.Data)));
+                openSourceProjects: openSourceProjects.Items.Select(p => p.Data),
+                localizedTitle: "I miei progetti open source",
+                localizedSubTitle: "Codice aperto alla collaborazione di tutti"));
         }
 
 

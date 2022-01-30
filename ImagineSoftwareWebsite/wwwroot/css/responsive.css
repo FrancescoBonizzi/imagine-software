@@ -61,7 +61,7 @@
         display: block;
     }
 
-    .inner-header, .section-content, .section-content-landing {
+    .coloured-header, .section-content, .section-content-landing {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
@@ -223,7 +223,7 @@
         line-height: 3rem;
     }
 
-    .inner-header > h3 {
+    .coloured-header > h3 {
         text-align: center;
     }
 
