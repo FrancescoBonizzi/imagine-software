@@ -559,19 +559,54 @@ label {
 }*/
 
 .card {
-    /*background-color: #c2c2c2;*/
-    padding: 2rem 0;
+    padding: 2rem;
+    box-shadow: 0 0 40px -15px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    transition: all 0.45s ease;
+    cursor: pointer;
 }
 
-    .card:hover .open-source-project-card-item-right-arrow {
-        transition: all .2s ease-out;
+    .card:hover {
+        transition: all 0.45s ease;
+        background-color: var(--gradient-second-color);
     }
 
+        .card:hover .open-source-project-card-item-content p {
+            color: black;
+        }
+
+
+        .card:hover .open-source-project-card-item-right-arrow {
+            font-size: 1rem;
+            transition: all 0.45s ease;
+            font-weight: 700;
+            color: black;
+        }
+
+            .card:hover .open-source-project-card-item-right-arrow i {
+                font-size: 1.1rem;
+                transition: all 0.45s ease;
+                font-weight: 700;
+                color: black;
+            }
+
+.open-source-project-card-item-content p {
+    color: var(--subtitle-color);
+}
+
+.open-source-project-card-item-right-arrow i {
+    transition: all 0.45s ease;
+    font-size: 1rem;
+}
+
 .open-source-project-card-item-right-arrow {
-    transition: all .2s ease-in;
-    font-size: 1.4rem;
-    background-image: linear-gradient(to right, var(--gradient-first-color) 0%, var(--gradient-second-color) 51%, var(--gradient-third-color) 100%);
-    color: white;
+    transition: all 0.45s ease;
+    font-size: 0.9rem;
+    align-self: flex-end;
+    color: var(--subtitle-color);
+    display: flex;
+    align-items: center;
 }
 
 .card a {
