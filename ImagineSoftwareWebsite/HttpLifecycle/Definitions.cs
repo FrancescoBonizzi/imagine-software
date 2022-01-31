@@ -8,21 +8,12 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
         public const string CURRENT_LOCALIZATION_CODE = "it-IT";
 
         public const string PARTITA_IVA = "02982280345";
-        public const string JOB_TITLE = "Full stack .NET developer and Android developer";
-
+        public const string JOB_TITLE = "Full stack .NET developer and App developer";
         public const string Email = "f.bonizzi@imaginesoftware.it";
 
-        public const string CONTROLLER_API_ROUTE_NAME = "api";
+#warning TODO Tradurre le voci nel menù!
 
-        public const string HOME_PAGE_CONTROLLER_NAME = "Home";
-        public const string CONTACT_PAGE_CONTROLLER_NAME = "Contatti";
-        public const string SERVICES_PAGE_CONTROLLER_NAME = "Servizi";
-        public const string FRANCESCO_PAGE_CONTROLLER_NAME = "Francesco Bonizzi";
-        public const string SITEMAP_PAGE_CONTROLLER_NAME = "Mappa del sito";
-        public const string OPEN_SOURCE_PROJECTS_PAGE_CONTROLLER_NAME = "Progetti open source";
-        public const string APPLICATIONS_PAGE_CONTROLLER_NAME = "Applicazioni";
-
-        public static string JSON_LD_ORGANIZATION_DETAILS = 
+        public const string JSON_LD_ORGANIZATION_DETAILS = 
             "\"name\": \"Imagine Software\", " +
             "\"legalName\": \"Imagine Software di Bonizzi Francesco\", " +
             "\"url\": \"https://www.imaginesoftware.it\", " +
@@ -45,7 +36,7 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
                 $"\"email\": \"{Email}\"" +
            " }";
 
-        public static string JSON_LD_ORGANIZATION = 
+        public const string JSON_LD_ORGANIZATION = 
             "{ " +
                 "\"@type\": \"Organization\", " +
                 JSON_LD_ORGANIZATION_DETAILS +
@@ -60,6 +51,6 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
                     "\"availability\":\"https://schema.org/InStock\"" +
             "}]";
 
-        public static string JSON_LD_AUTHOR = $"\"author\": {JSON_LD_ORGANIZATION}";
+        public const string JSON_LD_AUTHOR = $"\"author\": {JSON_LD_ORGANIZATION}";
     }
 }

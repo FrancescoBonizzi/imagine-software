@@ -1,18 +1,22 @@
 ﻿<div class="breadcrumbs-container">
 
     <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" asp-controller="Home" asp-action="Index"><span itemprop="name">Home</span></a>
+            <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
             <meta itemprop="position" content="1" />
         </li>
+
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" asp-controller="OpenSourceProjects" asp-action="Index"><span itemprop="name">@Definitions.OPEN_SOURCE_PROJECTS_PAGE_CONTROLLER_NAME</span></a>
+            <a itemprop="item" href="/open-source-projects"><span itemprop="name">Progetti open source</span></a>
             <meta itemprop="position" content="2" />
         </li>
+
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <span itemprop="name">@Model.ThisPageRouteName</span>
             <meta itemprop="position" content="3" />
         </li>
+
     </ol>
 
 </div>

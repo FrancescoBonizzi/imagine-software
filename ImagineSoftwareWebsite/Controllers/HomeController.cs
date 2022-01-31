@@ -24,7 +24,7 @@ namespace ImagineSoftwareWebsite.Controllers
             _squidexClientManager = squidexClientManager;
         }
 
-        [Route(template: "/", Name = Definitions.HOME_PAGE_CONTROLLER_NAME)]
+        [Route(template: "/")]
         public async Task<IActionResult> Index()
         {
             var cmsTechnologies = _squidexClientManager.CreateContentsClient<TechnologySquidex, TechnologyViewModel>("technologies");
@@ -53,7 +53,7 @@ namespace ImagineSoftwareWebsite.Controllers
                 customers.Items.Select(c => c.Data)));
         }
 
-        [Route(template: "contacts", Name = Definitions.CONTACT_PAGE_CONTROLLER_NAME)]
+        [Route(template: "contacts")]
         public async Task<IActionResult> Contacts()
         {
             var cms = _squidexClientManager.CreateContentsClient<CommonPageSquidex, CommonPageViewModel>("common-pages");
@@ -64,19 +64,27 @@ namespace ImagineSoftwareWebsite.Controllers
             return View(page.Data);
         }
 
-        [Route(template: "services", Name = Definitions.SERVICES_PAGE_CONTROLLER_NAME)]
+        [Route(template: "services")]
         public IActionResult Services()
             => View();
 
-        [Route(template: "pages/{squidexPageId}")]
+        [Route(template: "{squidexPageId}")]
         public async Task<IActionResult> CommonPage(string squidexPageId)
         {
             var cms = _squidexClientManager.CreateContentsClient<CommonPageSquidex, CommonPageViewModel>("common-pages");
 
             var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
-            var page = await cms.GetAsync(squidexPageId, context);
-            page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
-            return View(page.Data);
+
+            try
+            {
+                var page = await cms.GetAsync(squidexPageId, context);
+                page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+                return View(page.Data);
+            }
+            catch (SquidexException ex) when (ex.Message.Contains("does not exist"))
+            {
+                return NotFound();
+            }
         }
 
         [Route(template: "open-source-projects/{squidexPageId}")]
@@ -121,7 +129,7 @@ namespace ImagineSoftwareWebsite.Controllers
 
 
 
-        [Route(template: "sitemap", Name = Definitions.SITEMAP_PAGE_CONTROLLER_NAME)]
+        [Route(template: "sitemap")]
         public IActionResult Sitemap()
             => View(new SitemapViewModel()
             {

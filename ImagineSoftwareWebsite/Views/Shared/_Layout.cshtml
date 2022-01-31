@@ -65,12 +65,12 @@
         <label for="overlay-menu-input" id="overlay-menu-button"><em id="overlay-menu-text"></em><span></span></label>
         <div id="overlay-menu">
             <ul>
-                <li><a asp-controller="Home" asp-action="Index">@Definitions.HOME_PAGE_CONTROLLER_NAME</a></li>
-                <li><a asp-controller="Home" asp-action="Services">@Definitions.SERVICES_PAGE_CONTROLLER_NAME</a></li>
-                <li><a asp-controller="Applications" asp-action="Index">@Definitions.APPLICATIONS_PAGE_CONTROLLER_NAME</a></li>
-                <li><a asp-controller="OpenSourceProjects" asp-action="Index">@Definitions.OPEN_SOURCE_PROJECTS_PAGE_CONTROLLER_NAME</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Servizi</a></li>
+                <li><a href="/projects-apps">Applicazioni</a></li>
+                <li><a href="/open-source-projects">Progetti open source</a></li>
                 <li><a href="/francesco-bonizzi">Francesco Bonizzi</a></li>
-                <li><a asp-controller="Home" asp-action="Contacts">@Definitions.CONTACT_PAGE_CONTROLLER_NAME</a></li>
+                <li><a href="/contacts">Contatti</a></li>
             </ul>
         </div>
     </nav>
@@ -90,10 +90,10 @@
             <div>
                 <ul>
                     <li class="footer-section-title">Link</li>
-                    <li><a asp-controller="Home" asp-action="Index">@Definitions.HOME_PAGE_CONTROLLER_NAME</a></li>
-                    <li><a asp-controller="Home" asp-action="Services">@Definitions.SERVICES_PAGE_CONTROLLER_NAME</a></li>
-                    <li><a asp-controller="Applications" asp-action="Index">@Definitions.APPLICATIONS_PAGE_CONTROLLER_NAME</a></li>
-                    <li><a asp-controller="OpenSourceProjects" asp-action="Index">@Definitions.OPEN_SOURCE_PROJECTS_PAGE_CONTROLLER_NAME</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Servizi</a></li>
+                    <li><a href="/projects-apps">Applicazioni</a></li>
+                    <li><a href="/open-source-projects">Progetti open source</a></li>
                     <li><a href="/francesco-bonizzi">Francesco Bonizzi</a></li>
                 </ul>
             </div>
@@ -136,7 +136,7 @@
             <p>
                 <a href="/privacy-policy" title="Leggi l'informativa sulla privacy">Informativa sulla privacy</a>
                 <span class="pipe">|</span>
-                <a asp-controller="Home" asp-action="Sitemap" title="Visita la mappa del sito per avere maggior chiarezza dei contenuti">@Definitions.SITEMAP_PAGE_CONTROLLER_NAME</a>
+                <a href="/sitemap" title="Visita la mappa del sito per avere maggior chiarezza dei contenuti">Mappa del sito</a>
             </p>
             <p>&copy; 2021, Imagine Software di Bonizzi Francesco. Partita IVA: @Definitions.PARTITA_IVA</p>
         </div>
@@ -150,6 +150,7 @@
             initializeImagesAnimations();
         });
     </script>
+
     @RenderSection("Scripts", required: false)
 
 </body>

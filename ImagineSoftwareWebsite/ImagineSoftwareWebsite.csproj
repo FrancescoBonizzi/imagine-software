@@ -22,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\css\purged\" />
     <Folder Include="wwwroot\images\favicons\" />
-    <Folder Include="wwwroot\contents\" />
     <Folder Include="wwwroot\vectors\" />
   </ItemGroup>
 

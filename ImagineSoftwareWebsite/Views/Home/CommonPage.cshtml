@@ -13,10 +13,9 @@
     }
 }
 
-<div class="coloured-header">
+<div class="article-header">
     <h1>@Model.LocalizedTitle</h1>
-    <hr class="menu-separator" />
-    <h3>@Model.LocalizedSubtitle</h3>
+    <h2>@Model.LocalizedSubtitle</h2>
 </div>
 
 <partial name="_OneLevelBreadcrumbs" model="new { ThisPageRouteName = Model.LocalizedTitle }" />

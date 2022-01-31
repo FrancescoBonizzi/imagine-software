@@ -4,31 +4,19 @@
     ViewData["MetaDescription"] = @Model.LocalizedMetaDescription;
 }
 
-<noscript>
-    <style>
-        /* Se javascript è disabilitato non mostro la form */
-        #main-content {
-            display: none;
-        }
-    </style>
-</noscript>
-
-<div class="coloured-header">
+<div class="article-header">
     <h1>@Model.LocalizedTitle</h1>
-    <hr class="menu-separator" />
-    <h3>@Model.LocalizedSubtitle</h3>
+    <h2>@Model.LocalizedSubtitle</h2>
 </div>
 
-<partial name="_OpenSourceProjectsBreadcrumbs" model="new { ThisPageRouteName = Model.LocalizedTitle }" />
+<partial name="_OneLevelBreadcrumbs" model="new { ThisPageRouteName = Model.LocalizedTitle }" />
 
 <section class="white-section">
     <div class="section-content">
 
-        <p>
-            @Html.Raw(@Model.LocalizedBody)
-        </p>
+        @Html.Raw(@Model.LocalizedBody)
 
-        <a href="~/contents/Francesco-Bonizzi-VCard.vcf" class="action-button download-my-vcard">Scarica il mio contatto sul telefono</a>
+        <a href="https://admin.imaginesoftware.it/api/assets/imagine-software-website/b990375a-3129-44af-ae9a-24b908b61a7a/francesco-bonizzi-vcard.vcf" class="action-button download-my-vcard">Scarica il mio contatto sul telefono</a>
 
         <div class="quick-contacts">
             <ul>
