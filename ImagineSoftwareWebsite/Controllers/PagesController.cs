@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 namespace ImagineSoftwareWebsite.Controllers
 {
     [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
-    public class HomeController : Controller
+    public class PagesController : Controller
     {
         private readonly RoutesInspector _routesInspector;
         private readonly SquidexClientManager _squidexClientManager;
 
-        public HomeController(
+        public PagesController(
             RoutesInspector routesInspector,
             SquidexClientManager squidexClientManager)
         {
@@ -125,7 +125,43 @@ namespace ImagineSoftwareWebsite.Controllers
                 localizedSubTitle: "Codice aperto alla collaborazione di tutti"));
         }
 
+        [Route(template: "projects-apps/{squidexPageId}")]
+        public async Task<IActionResult> ProjectsApps(string squidexPageId)
+        {
+#warning Ma questi IContentsClient si possono registrare singleton? "Do not create new clients frequently"
+            var cms = _squidexClientManager.CreateContentsClient<ProjectsAppsSquidex, ProjectsAppsViewModel>("projects-applications");
+            var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
+            var page = await cms.GetAsync(squidexPageId, context);
 
+#warning Forse dovrei wrappare tutto questo con caching di 5 minuti?
+
+            page.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(page.Data.Logo);
+            page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+            page.Data.RouteName = page.Id;
+
+            return View(page.Data);
+        }
+
+        [Route(template: "projects-apps")]
+        public async Task<IActionResult> ProjectsAppsList()
+        {
+            var cms = _squidexClientManager.CreateContentsClient<ProjectsAppsSquidex, ProjectsAppsViewModel>("projects-applications");
+            var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
+            var projects = await cms.GetAsync(context: context);
+
+            foreach (var project in projects.Items)
+            {
+                project.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+                project.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(project.Data.Logo);
+                project.Data.RouteName = project.Id;
+            }
+
+#warning TODO scrivere in base al localization code
+            return View(new ProjectsAppsListViewModel(
+                projectsApps: projects.Items.Select(p => p.Data),
+                localizedTitle: "Applicazioni",
+                localizedSubTitle: "Imagine Software per il mondo enterprise"));
+        }
 
 
 
