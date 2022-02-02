@@ -7,9 +7,9 @@
 @if (!string.IsNullOrWhiteSpace(@Model.JsonStructuredData))
 {
     @section StructuredData {
-        <script type="application/ld+json">
-            @Html.Raw(Model.JsonStructuredData);
-        </script>
+<script type="application/ld+json">
+    @Html.Raw(Model.JsonStructuredData);
+</script>
     }
 }
 
@@ -20,11 +20,9 @@
 
 <partial name="_OneLevelBreadcrumbs" model="new { ThisPageRouteName = Model.LocalizedTitle }" />
 
-<section class="white-section">
-    <div class="section-content">
+<section>
 
-        @Html.Raw(@Model.LocalizedBody)
+    @Html.Raw(@Model.LocalizedBody)
 
-    </div>
 </section>
 

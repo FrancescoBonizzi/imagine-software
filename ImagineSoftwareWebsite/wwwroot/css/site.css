@@ -666,6 +666,18 @@ label {
     margin-bottom: 1rem;
 }
 
+.white-section, .alt-section {
+    max-width: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.white-section h3, .alt-section h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
 .white-section {
     background-color: white;
 }
@@ -712,9 +724,8 @@ label {
     max-height: 128px !important;
 }
 
-.section-content {
+.fullscreen-section-content {
     max-width: var(--page-width);
-    line-height: 1.7rem;
     width: 100%;
 }
 
@@ -758,6 +769,11 @@ label {
 
 .quick-contacts {
     margin: 2rem 0;
+}
+
+.quick-contacts ul {
+    padding: 0;
+    margin: 0;
 }
 
     .quick-contacts > h4 {

@@ -65,14 +65,21 @@ namespace ImagineSoftwareWebsite.Controllers
         }
 
         [Route(template: "services")]
-        public IActionResult Services()
-            => View();
+        public async Task<IActionResult> Services()
+        {
+            var cms = _squidexClientManager.CreateContentsClient<ServicesSquidex, ServicesViewModel>("services");
+            var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
+
+            // Il GUID è fisso e generato casualmente alla prima creazione della pagina su Squidex
+            var page = await cms.GetAsync("212927bc-279f-4da4-a6bf-3fbd0b44cad7", context);
+            page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+            return View(page.Data);
+        }
 
         [Route(template: "{squidexPageId}")]
         public async Task<IActionResult> CommonPage(string squidexPageId)
         {
             var cms = _squidexClientManager.CreateContentsClient<CommonPageSquidex, CommonPageViewModel>("common-pages");
-
             var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
 
             try
@@ -111,7 +118,7 @@ namespace ImagineSoftwareWebsite.Controllers
             var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
             var openSourceProjects = await cms.GetAsync(context: context);
 
-            foreach(var openSourceProject in openSourceProjects.Items)
+            foreach (var openSourceProject in openSourceProjects.Items)
             {
                 openSourceProject.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
                 openSourceProject.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(openSourceProject.Data.Logo);

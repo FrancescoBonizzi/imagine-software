@@ -1,109 +1,46 @@
 ﻿@{
-    var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
-    ViewData["Title"] = routeName;
-    ViewData["MetaDescription"] = "L'offerta esclusiva di Imagine Software: il miglior professionista dello sviluppo software al servizio delle tue idee.";
+    @model ImagineSoftwareWebsite.ViewModels.ServicesViewModel;
+    ViewData["Title"] = @Model.LocalizedTitle;
+    ViewData["MetaDescription"] = @Model.LocalizedMetaDescription;
 }
 
-<div class="coloured-header coloured-header-services">
-    <h1>@routeName</h1>
-    <hr class="menu-separator" />
-    <h3>L'offerta di Imagine Software</h3>
+<div class="article-header">
+    <h1>@Model.LocalizedTitle</h1>
+    <h2>@Model.LocalizedSubtitle</h2>
 </div>
 
-<partial name="_OneLevelBreadcrumbs" model="new { ThisPageRouteName = @routeName }" />
+<partial name="_OneLevelBreadcrumbs" model="new { ThisPageRouteName = Model.LocalizedTitle }" />
 
-<section class="white-section" id="section-full-stack">
-    <div class="section-content">
+<div class="section-separator-with-margin-from-header"></div>
 
-        <h2>Cerchi un full stack Developer per ampliare il tuo team?</h2>
-        <h3>Hai trovato il tuo acceleratore di progetti.</h3>
-        <div class="header-separator"></div>
+@for (int s = 0; s < Model.Sections[Model.CurrentLocalizationCode].Length; ++s)
+{
+    var currentSection = Model.Sections[Model.CurrentLocalizationCode][s];
+    string sectionClassName = "white-section";
 
-        <img class="intermediate-article-image vertical-image right-image show-on-scroll" src="~/images/articles/shane-rounce-team-work-photo-unsplash.jpg" alt="Foto di Shane Rounce su Unsplash" title="Foto di Shane Rounce su Unsplash" asp-append-version="true" />
+    @if (s % 2 == 0)
+    {
+        sectionClassName = "alt-section";
+    }
 
-        <p>
-            Come sviluppatore software <b>full stack</b> mi occupo sia di <i>front-end</i> che di <i>back-end</i>. Prediligo lo stack <b>Microsoft</b>: <em class="code-snippet">.NET Core</em>, <em class="code-snippet">ASP .NET Core</em>, ma anche <em class="code-snippet">WPF</em> per le applicazioni desktop, ed ho una particolare predilezione per il mondo <em class="code-snippet">SQL Server</em> ed <em class="code-snippet">Azure</em>.
-        </p>
+    <section class="@sectionClassName">
 
-        <p>
-            Vive in me l'ossessione per la chiarezza e l'<b>espressività del codice</b>, è un mio marchio di fabbrica. Il codice che scrivo è pulito, ordinato, facilmente comprensibile, coerente e lineare. Presto molta attenzione alle <b>performance</b> - vengo dal mondo del <i>betting</i> - e alla <i>debuggabilità</i> di ciò che sviluppo.
-        </p>
+        <div class="fullscreen-section-content">
 
-        <p>
-            Posso inserirmi nel tuo team anche con metodo <em class="code-snippet">Agile/Scrum</em>, <b>sviluppare parti di codice e interi progetti</b> per il quale al momento non hai abbastanza risorse, aiutarti nel <b>refactoring</b> o nella stesura di <em class="code-snippet">Unit Test</em> e <em class="code-snippet">Integration Test</em>. So integrarmi in modo significativo e costruttivo con i colleghi, ovunque essi siano.
-        </p>
+            @if (!string.IsNullOrWhiteSpace(currentSection.Title))
+            {
+                <h3>@Html.Raw(@currentSection.Title)</h3>
+                <div class="section-separator"></div>
+            }
 
-        <p>
-            Infine mi occupo di <em class="code-snippet">App Android</em> native in <em class="code-snippet">Kotlin</em> o <em class="code-snippet">Java</em> in ottica di collaborazione di un progetto esistente o per iniziarne uno nuovo.
-        </p>
+            @Html.Raw(@currentSection.Body)
 
-        <br />
+            @if (s % 2 == 0)
+            {
+                <a href="/contacts" class="action-button">Contattami</a>
+            }
 
-        <a asp-controller="Home" asp-action="Contacts" class="action-button">Contattami</a>
+        </div>
 
-    </div>
-</section>
-
-<section id="section-startup" class="alt-section">
-    <div class="section-content">
-        <h2>Hai un'idea rivoluzionaria?</h2>
-        <h3>Sei nel posto giusto!</h3>
-        <div class="header-separator"></div>
-
-        <p>
-            Sei una <b>start-up</b> o una piccola azienda? Hai bisogno di un <b>minimum viable product</b> da presentare agli investitori? Posso aiutarti a trasformare la tua idea in un <b>prototipo</b> funzionante, ma anche seguirti nelle fasi successive del progetto.
-        </p>
-
-        <p>
-            Sono un professionista dello sviluppo software in grado di far decollare il tuo progetto: posso sviluppare un'<b>App</b>, un <b>sito web</b>, un'<b>applicazione desktop</b> e aiutarti nella definizione dei requisiti e delle funzionalità di cui hai bisogno perché la tua idea diventi tangibile.
-        </p>
-
-        <p>
-            Insieme possiamo formare il <b>laboratorio digitale</b> di cui hai bisogno!
-        </p>
-    </div>
-</section>
-
-<section id="section-i-already-know" class="white-section">
-    <div class="section-content">
-
-        <h2>Hai un obiettivo specifico?</h2>
-        <h3>Ti aiuto a raggiungerlo.</h3>
-        <div class="header-separator"></div>
-
-        <p>
-            Hai un processo aziendale che richiede tanto tempo e risorse? Posso aiutarti a <b>digitalizzarlo</b> e automatizzarlo, garantendoti così una <b>soluzione</b> efficace per migliorare le tue performance nel lungo termine.
-        </p>
-
-        <p>
-            In fondo l'informatica nasce per questo!
-        </p>
-
-        <br />
-
-        <a asp-controller="Home" asp-action="Contacts" class="action-button">Contattami</a>
-
-    </div>
-</section>
-
-<section id="section-how-i-work" class="alt-section">
-    <div class="section-content">
-
-        <h2>Come lavoro</h2>
-        <h3>I miei standard.</h3>
-        <div class="header-separator"></div>
-
-        <p>
-            Sviluppo il software tenendo ben presenti gli standard di leggibilità, espressività, e sicurezza. Seguo alla lettera le linee guida sulla <i>security</i> del codice di <a class="outside-link" target="_blank" rel="noopener" href="https://owasp.org/" title="Fondazione OWASP per la security del codice">OWASP</a>: prima di rilasciare in produzione un sito web analizzo il codice sorgente con strumenti di <i>analisi statica</i> e lancio dei <i>penetration tests.</i>
-        </p>
-
-        <p>
-            Il mio servizio di versioning preferito è <a class="outside-link" href="https://github.com/FrancescoBonizzi" title="Visita il mio profilo su GitHub" target="_blank" rel="noopener">GitHub</a>, ed effettuo - in aggiunta ai backup dei provider di servizi - un backup locale ed un ulteriore backup nel cloud: mi preoccupo sempre di poter ridondare tutti i dati dei miei clienti in tre punti distribuiti geograficamente, nell'ottica di essere preparato in caso di <b>disaster recovery.</b>
-        </p>
-
-        <p>
-            Infine studio. <b>Studio tanto.</b> Il mondo dell'informatica evolve ogni giorno e quello che ho scritto qui potrebbe non essere più attuale tra un mese: tranquillo, so come funziona. E lo amo. Aspettati da me di essere sempre al passo con i tempi e le innovazioni.
-        </p>
-
-    </div>
-</section>
+    </section>
+}
