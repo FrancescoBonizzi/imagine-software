@@ -346,22 +346,28 @@ header {
 /*#endregion*/
 /*#region Footer */
 
+footer ul, footer li {
+    list-style: none;
+}
+
 footer {
     background: var(--background-dark-color);
-    font-size: 0.9rem;
     line-height: 2rem;
+    font-size: 0.9rem;
 }
 
     footer p:first-child {
         color: var(--text-over-background-dark);
         text-align: center;
         padding: 0.4rem 0 0 0;
+        font-size: 0.9rem;
     }
 
     footer p:nth-child(2) {
         color: var(--text-over-background-dark);
         text-align: center;
         padding: 0 0 0.4rem 0;
+        font-size: 0.9rem;
     }
 
 .footer-section-title {
@@ -389,6 +395,10 @@ footer {
 .last-footer-section {
     background-color: #242e3f;
     font-weight: 300;
+}
+
+.last-footer-section p {
+
 }
 
 .pipe {
