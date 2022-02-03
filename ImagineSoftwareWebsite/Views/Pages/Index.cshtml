@@ -1,27 +1,24 @@
 ﻿@{
-    @model ImagineSoftwareWebsite.ViewModels.IndexPageViewModel;
-    ViewData["Title"] = "Design, sviluppo, integrazione di software e App";
-    ViewData["MetaDescription"] = "Imagine Software: design, sviluppo, integrazione di software e App. Rendo le tue idee realtà, accresco il valore del tuo team di sviluppo.";
+    @model ImagineSoftwareWebsite.ViewModels.HomePageViewModel;
+    ViewData["Title"] = @Model.Title[Model.CurrentLocalizationCode];
+    ViewData["MetaDescription"] = @Model.MetaDescription[Model.CurrentLocalizationCode];
 }
 
-@section StructuredData {
-
-    <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "Organization",
-        @Html.Raw(Definitions.JSON_LD_ORGANIZATION_DETAILS)
+@if (!string.IsNullOrWhiteSpace(@Model.JsonStructuredData))
+{
+    @section StructuredData {
+<script type="application/ld+json">
+    @Html.Raw(Model.JsonStructuredData);
+</script>
     }
-    </script>
-
 }
 
 <section class="homepage-section">
 
     <div class="homepage-header">
-        <h1>Design, sviluppo, integrazione<br /> di software e App</h1>
+        <h1>@Model.Title[Model.CurrentLocalizationCode]</h1>
         <hr class="menu-separator" />
-        <h3>Una buona idea decolla con un'esecuzione perfetta</h3>
+        <h2>@Model.Subtitle[Model.CurrentLocalizationCode]</h2>
     </div>
 
     <div class="section-content-landing">
@@ -32,33 +29,30 @@
                     <div class="shortcuts-list-title-container">
                         <img src="~/vectors/team.jpg" asp-append-version="true" alt="L'immagine di mani che si stringono, ad indicare il lavoro di squadra" />
                     </div>
-                    <span>Cerchi un nuovo sviluppatore?</span>
-                    <p>
-                        Come sviluppatore software <b>full stack</b> mi occupo sia di front-end che di back-end. Sono esperto dello stack Microsoft: <b>.NET Core</b>, <b>ASP .NET Core</b>, ma anche <b>WPF</b> per le app desktop, ed ho una particolare predilezione per <b>SQL Server</b> ed <b>Azure</b>.
-                    </p>
-                    <a asp-controller="Home" asp-action="Services" class="action-button-secondary" asp-fragment="section-full-stack">Approfondisci</a>
+
+                    @Html.Raw(Model.Box1[Model.CurrentLocalizationCode])
+
+                    <a href="/services" class="action-button-secondary">Approfondisci</a>
                 </li>
 
                 <li>
                     <div class="shortcuts-list-title-container">
                         <img src="~/vectors/rocket.jpg" asp-append-version="true" alt="L'immagine di un razzo per rappresentare le startup" />
                     </div>
-                    <span>Hai un'idea rivoluzionaria?</span>
-                    <p>
-                        Sei una <b>start-up</b> o una piccola azienda? Hai bisogno di un <b>minimum viable product</b> da presentare agli investitori? Posso aiutarti a trasformare la tua idea in un <b>prototipo</b> funzionante, ma anche seguirti nelle fasi successive del progetto.
-                    </p>
-                    <a asp-controller="Home" asp-action="Services" class="action-button-secondary" asp-fragment="section-startup">Approfondisci</a>
+
+                    @Html.Raw(Model.Box2[Model.CurrentLocalizationCode])
+
+                    <a href="/services" class="action-button-secondary">Approfondisci</a>
                 </li>
 
                 <li>
                     <div class="shortcuts-list-title-container">
                         <img src="~/vectors/target.jpg" asp-append-version="true" alt="L'immagine di un bersaglio, per rappresentare gli obiettivi di un'azienda" />
                     </div>
-                    <span>Hai un obiettivo specifico?</span>
-                    <p>
-                        Hai un processo aziendale che richiede tanto tempo e risorse? Posso aiutarti a <b>digitalizzarlo</b> e automatizzarlo, garantendoti così una <b>soluzione</b> efficace per migliorare le tue performance nel lungo termine.
-                    </p>
-                    <a asp-controller="Home" asp-action="Services" class="action-button-secondary" asp-fragment="section-i-already-know">Approfondisci</a>
+
+                    @Html.Raw(Model.Box3[Model.CurrentLocalizationCode])
+
+                    <a href="/services" class="action-button-secondary">Approfondisci</a>
                 </li>
 
             </ul>
@@ -67,40 +61,32 @@
 </section>
 
 <section class="grey-section">
-    <div class="section-content centered-section-content">
-        <h2 class="contact-title">Vuoi parlare<br /> del tuo progetto con me?</h2>
-        <a asp-controller="Home" asp-action="Contacts" class="action-button button-top-margin">Contattami!</a>
+    <div class="fullscreen-section-content centered-section-content">
+        <h3 class="contact-title">@Model.ContactText[Model.CurrentLocalizationCode]</h3>
+        <a href="/contacts" class="action-button button-top-margin">@Model.ContactCallToAction[Model.CurrentLocalizationCode]</a>
     </div>
 </section>
 
-<section class="white-section">
-    <div class="section-content">
+@{
+    int currentSectionIndex = 0;
+    int currentSectionCount = 0;
+}
 
-        <h2>Sono uno sviluppatore full stack</h2>
-        <h3>.NET e App</h3>
-        <div class="header-separator"></div>
+<partial name="_HomepageSection"
+         model="new { SectionClassName = Model.GetSectionClassName(currentSectionCount), Section = Model.HomepageSection[Model.CurrentLocalizationCode][currentSectionIndex] }" />
 
-        <img class="intermediate-article-image francesco-bonizzi-photo-for-homepage vertical-image-medium left-image show-on-scroll" src="~/images/articles/Francesco-Bonizzi.png" alt="Una foto di Francesco Bonizzi, sviluppatore software" asp-append-version="true" />
+@{
+    currentSectionCount++;
+}
 
-        <p>
-            Mi chiamo <a class="outside-link" asp-controller="Home" asp-action="Francesco" title="Leggi la mia esperienza">Francesco Bonizzi</a> e ho fondato <b>Imagine Software</b>. Sono un coltellino svizzero dello sviluppo software: ho iniziato la mia formazione all'Università degli studi di Parma, ho concretizzato i miei primi passi nel mondo on-prem <i>business critical</i> del betting e ho chiuso la mia carriera da dipendente verticalizzandomi sui clienti e sui servizi <i>cloud first</i>.
-        </p>
+<section class="@Model.GetSectionClassName(currentSectionCount)">
+    <div class="fullscreen-section-content">
 
-        <br />
+        <h3>@Model.TechnlogiesTitle[Model.CurrentLocalizationCode]</h3>
 
-        <a asp-controller="Home" asp-action="Francesco" class="action-button">Leggi la mia esperienza</a>
+        <div class="logo-gallery technologies-logos">
 
-    </div>
-</section>
-
-<section class="alt-section">
-    <div class="centered-section-content section-content">
-
-        <h2>Le principali tecnologie<br /> con cui lavoro</h2>
-
-        <div class="logo-gallery opensource-logos">
-
-            @foreach(var technology in Model.Technologies)
+            @foreach (var technology in Model.Technologies)
             {
                 <div class="logo-gallery-block">
                     <a title="@technology.LocalizedLinkTitle" href="@technology.Link" target="_blank" rel="noopener">
@@ -117,134 +103,75 @@
     </div>
 </section>
 
-<section class="white-section">
-    <div class="section-content">
+@{
+    currentSectionCount++;
+}
+@{
+    currentSectionIndex++;
+}
+<partial name="_HomepageSection"
+         model="new { SectionClassName = @Model.GetSectionClassName(currentSectionCount), Section = Model.HomepageSection[Model.CurrentLocalizationCode][currentSectionIndex] }" />
 
-        <h2>Sviluppo App Android</h2>
-        <h3>come Invoice Maker - Quick & Easy</h3>
-        <div class="header-separator"></div>
+@{
+    currentSectionCount++;
+}
+<section class="@Model.GetSectionClassName(currentSectionCount)">
+    <div class="fullscreen-section-content">
 
-        <div class="logo-outline intermediate-article-image vertical-image-small left-image show-on-scroll">
-            <img class="image-with-outline-white" src="~/images/logos/logo-invoice-maker-quick-easy.png" alt="Il logo di Invoice Maker - Quick & Easy" title="Invoice Maker - Quick & Easy logo" asp-append-version="true" />
-        </div>
+        <h3>@Model.OpenSourceTitle[Model.CurrentLocalizationCode]</h3>
+        <div class="section-separator-with-margin-from-header"></div>
 
-        <p>
-            <b>Invoice Maker - Quick & Easy</b> è un'App Android sviluppata per creare <b>fatture, ricevute e preventivi</b> belli e professionali. È stata pensata per i freelance, in particolare per quelli del mondo anglosassone.
-        </p>
+        @foreach (var openSourceProject in Model.OpenSourceProjects.Take(4))
+        {
+            <div class="card small-card">
+                <a href="/open-source-projects/@openSourceProject.RouteName">
 
-        <p>
-            Nel progettarla e realizzarla ho seguito uno studio preciso della <i>User Experience</i> e della <i>User Interface</i> al fine di renderla il più possibile <b>intuitiva e gradevole</b>.
-        </p>
+                    <div class="open-source-project-small-card-item-content">
+
+                        <div class="open-source-project-card-item-title">
+                            <img src="@openSourceProject.LogoImageLink" alt="@openSourceProject.LogoAlt" />
+                            <h4>@openSourceProject.LocalizedTitle</h4>
+                        </div>
+
+                        <div class="open-source-project-card-item-right-arrow">
+                            <i class="icon-right-open"></i>
+                        </div>
+
+                    </div>
+
+                </a>
+            </div>
+        }
+
+        @Html.Raw(@Model.OpenSourceBody[Model.CurrentLocalizationCode])
 
         <br />
 
-        <a asp-controller="Applications" asp-action="InvoiceMaker" class="action-button">Scopri di più</a>
+        <a href="/open-source-projects" class="action-button">@Model.OpenSourceCallToAction[Model.CurrentLocalizationCode]</a>
 
     </div>
 </section>
 
-<section class="alt-section">
-    <div class="section-content">
+@{
+    currentSectionIndex++;
+}
+@{
+    currentSectionCount++;
+}
+<partial name="_HomepageSection"
+         model="new { SectionClassName = @Model.GetSectionClassName(currentSectionCount), Section = Model.HomepageSection[Model.CurrentLocalizationCode][currentSectionIndex] }" />
 
-        <h2 class="open-source-home-section">Partecipo attivamente<br /> al mondo dell'open source</h2>
+@{
+    currentSectionCount++;
+}
+<section class="@Model.GetSectionClassName(currentSectionCount)">
+    <div class="fullscreen-section-content">
 
-        <div class="logo-gallery opensource-logos">
+        <h3>@Model.CustomersTitle[Model.CurrentLocalizationCode]</h3>
 
-            <div class="logo-gallery-block">
-                <a asp-controller="OpenSourceProjects" asp-action="Boolli" title="Boolli: interprete di espressioni booleane">
-                    <div class="logo-outline">
-                        <img src="~/images/logos/logo-boolli.png" asp-append-version="true" alt="Il logo dell'applicazione open source Boolli" />
-                    </div>
-                    <span class="logo-gallery-name">Boolli</span>
-                </a>
-            </div>
+        <div class="logo-gallery technologies-logos">
 
-            <div class="logo-gallery-block">
-                <a asp-controller="OpenSourceProjects" asp-action="Infart" title="INFART è un gioco CORRI E SCOREGGIA!">
-                    <div class="logo-outline">
-                        <img src="~/images/logos/logo-infart.png" asp-append-version="true" alt="Il logo del videogioco open source INFART" />
-                    </div>
-                    <span class="logo-gallery-name">INFART</span>
-                </a>
-            </div>
-
-            <div class="logo-gallery-block">
-                <a asp-controller="OpenSourceProjects" asp-action="Rellow" title="Rellow è un gioco di concentrazione per tutta la famiglia!">
-                    <div class="logo-outline">
-                        <img src="~/images/logos/logo-rellow.png" asp-append-version="true" alt="Il logo del videogioco open source Rellow" />
-                    </div>
-                    <span class="logo-gallery-name"><span class="rellow-re">Re</span><span class="rellow-llow">llow</span></span>
-                </a>
-            </div>
-
-            <div class="logo-gallery-block">
-                <a asp-controller="OpenSourceProjects" asp-action="RestartOnCrash" title="L'App crasha? Tagliamo la testa al toro e riavviamola in automatico.">
-                    <div class="logo-outline">
-                        <img src="~/images/logos/logo-restart-on-crash.png" asp-append-version="true" alt="Il logo dell'applicazione open source RestartOnCrash" />
-                    </div>
-                    <span class="logo-gallery-name">RestartOnCrash</span>
-                </a>
-            </div>
-
-            <div class="logo-gallery-block">
-                <a asp-controller="OpenSourceProjects" asp-action="SmartScale3000" title="La bilancia intelligente che ha vinto l'Hackaton Hackfork 2020">
-                    <div class="logo-outline">
-                        <img src="~/images/logos/logo-smart-scale.png" asp-append-version="true" alt="Il logo dell'applicazione open source SmartScale300" />
-                    </div>
-                    <span class="logo-gallery-name">SmartScale3000</span>
-                </a>
-            </div>
-
-            <div class="logo-gallery-block">
-                <a asp-controller="OpenSourceProjects" asp-action="Starfall" title="Mi ritrovai per una selva oscura...">
-                    <div class="logo-outline">
-                        <img src="~/images/logos/logo-starfall.png" asp-append-version="true" alt="Il logo del videogioco open source Starfall" />
-                    </div>
-                    <span class="logo-gallery-name">Starfall</span>
-                </a>
-            </div>
-
-        </div>
-
-        <p>
-            Il mondo dell'open source è meraviglioso proprio perché <b>ognuno può dare il proprio contributo</b> ed aiutare chissà chi nel mondo! Inoltre, ognuno può leggere apertamente il codice delle applicazioni open source che si utilizzano quotidianamente, come <a class="outside-link" href="https://github.com/DrKLO/Telegram" title="Visualizza il codice sorgente del client Android di Telegram" target="_blank" rel="nofollow noopener">il client di Telegram</a> - e verificarne l'implementazione della crittografia <i>end-to-end</i> -, ma anche tutto lo stack <a class="outside-link" href="https://github.com/dotnet/aspnetcore" target="_blank" rel="noopener" title="Visita la pagina GitHub di ASP .NET Core">ASP .NET Core</a>, <a class="outside-link" target="_blank" rel="noopener" title="Guarda il codice sorgente del kernel di Linux" href="https://github.com/torvalds/linux">il kernel di Linux</a>, e tanto altro.
-        </p>
-
-        <br />
-
-        <a asp-controller="OpenSourceProjects" asp-action="Index" class="action-button">Guarda i progetti</a>
-
-    </div>
-</section>
-
-<section class="white-section">
-    <div class="section-content">
-
-        <h2>Scrivo articoli d'informatica</h2>
-        <h3>su Medium</h3>
-        <div class="header-separator"></div>
-
-        <img class="intermediate-article-image vertical-image left-image show-on-scroll" src="~/images/logos/logo-medium.png" alt="Il logo di Medium" title="Medium logo" asp-append-version="true" />
-
-        <p>
-            <a href="https://medium.com/" target="_blank" rel="noopener" class="outside-link" title="Visita Medium">Medium</a> è un'ottima piattaforma per pubblicare articoli rivolti ad una vasta platea. Scrivo al 99% di informatica e tecnologie e sono stato ammesso come <i>writer</i> sulle due pubblicazioni più quotate in ambito <i>tech</i>: <a class="outside-link" href="https://betterprogramming.pub/" target="_blank" rel="noopener" title="Visita la pubblicazione di Medium 'Better Programming'">Better Programming</a> e <a class="outside-link link-dev-genius" href="https://devgenius.io/" target="_blank" rel="noopener" title="Visita la pubblicazione di Medium 'DevGenius'">DevGenius</a>.
-        </p>
-
-        <br />
-
-        <a href="https://code.imaginesoftware.it" class="action-button" rel="noopener" target="_blank">Leggi i miei articoli</a>
-
-    </div>
-</section>
-
-<section class="alt-section">
-    <div class="section-content centered-section-content">
-
-        <h2 class="companies-title">Ho collaborato con</h2>
-
-        <div class="logo-gallery logo-gallery-collaborations">
-
-            @foreach(var customer in Model.Customers)
+            @foreach (var customer in Model.Customers)
             {
                 <div class="logo-gallery-block">
                     <a title="@customer.LocalizedLinkTitle" href="@customer.Link" target="_blank" rel="noopener">
@@ -261,24 +188,21 @@
     </div>
 </section>
 
-<section class="white-section">
-    <div class="section-content">
+@{
+    currentSectionIndex++;
+}
+@{
+    currentSectionCount++;
+}
+<partial name="_HomepageSection"
+         model="new { SectionClassName = @Model.GetSectionClassName(currentSectionCount), Section = Model.HomepageSection[Model.CurrentLocalizationCode][currentSectionIndex] }" />
 
-        <h2>I miei valori</h2>
-        <div class="space-for-article-without-subtitle"></div>
-        <div class="header-separator"></div>
+@for (int c = currentSectionIndex; c < Model.HomepageSection.Count; ++c)
+{
+    var currentSection = Model.HomepageSection[Model.CurrentLocalizationCode][c];
 
-        <p>
-            Come sviluppatore software ed essere umano <b>non posso esimermi dall'avere una direzione morale.</b>
-        </p>
+    <partial name="_HomepageSection"
+         model="new { SectionClassName = @Model.GetSectionClassName(c), Section = Model.HomepageSection[Model.CurrentLocalizationCode][currentSectionCount] }" />
 
-        <p>
-            Amo la terra, l'aria che respiro, l'idea che sta alla base della società e nutro un rispetto innato per tutti gli animali, esseri umani compresi. Cerco costantemente di migliorare la mia esistenza come uomo e quella della mia famiglia in relazione al circostante.
-        </p>
-
-        <br />
-
-        <a href="mission-valori" class="action-button">Conosci i miei valori</a>
-
-    </div>
-</section>
+    currentSectionCount++;
+}

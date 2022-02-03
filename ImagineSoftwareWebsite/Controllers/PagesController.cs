@@ -29,11 +29,12 @@ namespace ImagineSoftwareWebsite.Controllers
         {
             var cmsTechnologies = _squidexClientManager.CreateContentsClient<TechnologySquidex, TechnologyViewModel>("technologies");
             var cmsCustomers = _squidexClientManager.CreateContentsClient<CustomersSquidex, CustomersViewModel>("customers");
+            var cmsOpenSourceProjects = _squidexClientManager.CreateContentsClient<OpenSourceProjectSquidex, OpenSourceProjectViewModel>("open-source-projects");
+            var cmsHomePage = _squidexClientManager.CreateContentsClient<HomePageSquidex, HomePageViewModel>("homepage");
             var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
 
 #warning Questi vanno fatti in parallelo!
             var technologies = await cmsTechnologies.GetAsync(context: context);
-
             foreach (var technology in technologies.Items)
             {
                 technology.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
@@ -41,16 +42,28 @@ namespace ImagineSoftwareWebsite.Controllers
             }
 
             var customers = await cmsCustomers.GetAsync(context: context);
-
             foreach (var c in customers.Items)
             {
                 c.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
                 c.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(c.Data.Logo);
             }
 
-            return View(new IndexPageViewModel(
-                technologies.Items.Select(t => t.Data),
-                customers.Items.Select(c => c.Data)));
+            var openSourceProjects = await cmsOpenSourceProjects.GetAsync(context: context);
+            foreach (var o in openSourceProjects.Items)
+            {
+                o.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+                o.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(o.Data.Logo);
+            }
+
+            // Il GUID è fisso e generato casualmente alla prima creazione della pagina su Squidex
+            var page = await cmsHomePage.GetAsync("3b05830b-380e-43f0-b963-58a6931f3cf1", context);
+            page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
+
+            page.Data.Technologies = technologies.Items.Select(t => t.Data);
+            page.Data.Customers = customers.Items.Select(c => c.Data);
+            page.Data.OpenSourceProjects = openSourceProjects.Items.Select(c => c.Data);
+
+            return View(page.Data);
         }
 
         [Route(template: "contacts")]

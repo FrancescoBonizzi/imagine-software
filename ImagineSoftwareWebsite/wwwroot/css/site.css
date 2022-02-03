@@ -397,9 +397,8 @@ footer {
     font-weight: 300;
 }
 
-.last-footer-section p {
-
-}
+    .last-footer-section p {
+    }
 
 .pipe {
     margin: 0 0.4rem;
@@ -429,21 +428,6 @@ section {
     max-width: var(--page-width);
     line-height: 1.7rem;
     width: 100%;
-}
-
-.centered-section-content {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-}
-
-    .centered-section-content h2 {
-        text-align: center !important;
-    }
-
-.open-source-home-section h2 {
-    text-align: center;
 }
 
 .section-content-landing p {
@@ -529,10 +513,6 @@ h2 {
     font-weight: normal;
 }
 
-.contact-title {
-    font-size: 2rem;
-}
-
 h3 {
     text-align: left;
     font-size: 1.5rem;
@@ -542,8 +522,11 @@ h3 {
 h4 {
     text-align: left;
     font-size: 1.2rem;
-    padding: 1rem 0;
-    font-weight: 300;
+    font-weight: 500;
+}
+
+.contact-title {
+    font-size: 2rem;
 }
 
 label {
@@ -556,17 +539,25 @@ label {
 
     .grey-section * {
         color: white;
+        text-align: center;
     }
 
-.highlight-section, .homepage-section {
+.homepage-section {
     background-image: url(../images/other/pattern-1.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
+    max-width: none;
 }
 
 /*.coloured-header {
     background-image: linear-gradient(to right, var(--gradient-first-color) 0%, var(--gradient-second-color) 51%, var(--gradient-third-color) 100%);
 }*/
+
+.small-card {
+    margin-bottom: 0.5rem !important;
+    padding: 1rem 1rem !important;
+    background-color: white;
+}
 
 .card {
     padding: 2rem;
@@ -636,7 +627,22 @@ label {
     width: 100%;
 }
 
-    .open-source-project-card-item-content img {
+.open-source-project-small-card-item-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-content: center;
+}
+
+    .open-source-project-small-card-item-content .open-source-project-card-item-title {
+        flex: 1;
+    }
+
+    .open-source-project-small-card-item-content .open-source-project-card-item-right-arrow {
+        align-self: center;
+    }
+
+    .open-source-project-card-item-content img, .open-source-project-small-card-item-content img {
         max-width: 60px;
         border-radius: 50%;
     }
@@ -666,17 +672,18 @@ label {
     margin-bottom: 1rem;
 }
 
-.white-section, .alt-section {
+.white-section, .alt-section, .grey-section {
     max-width: none;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 4rem 0;
 }
 
-.white-section h3, .alt-section h3 {
-    text-transform: uppercase;
-    font-size: 2rem;
-}
+    .white-section h3, .alt-section h3 {
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
 
 .white-section {
     background-color: white;
@@ -724,16 +731,23 @@ label {
     max-height: 128px !important;
 }
 
+.rounded-logo {
+    border-radius: 50%;
+}
+
 .fullscreen-section-content {
     max-width: var(--page-width);
     width: 100%;
 }
 
-.section-content-landing {
-    max-width: 75rem;
-    line-height: 1.7rem;
+.shortcuts-list {
+    max-width: 80%;
     width: 100%;
-    padding: 1rem 0 2rem 0;
+}
+
+.section-content-landing {
+    display: flex;
+    justify-content: center;
 }
 
 .boolli-section > * {
@@ -771,10 +785,10 @@ label {
     margin: 2rem 0;
 }
 
-.quick-contacts ul {
-    padding: 0;
-    margin: 0;
-}
+    .quick-contacts ul {
+        padding: 0;
+        margin: 0;
+    }
 
     .quick-contacts > h4 {
         text-align: center;
@@ -823,6 +837,9 @@ label {
 
 
 /*#endregion*/
+
+.shortcusts-list {
+}
 
 .shortcuts-list ul {
     margin-left: 0;
@@ -874,10 +891,6 @@ label {
 }
 
 .shortcuts-list li p {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.2rem !important;
-    margin-bottom: 2rem;
 }
 
 .shortcut-link {
@@ -1043,7 +1056,7 @@ width: 100%;*/
         text-transform: uppercase;
     }
 
-    .coloured-header > h3, .homepage-header > h3 {
+    .coloured-header > h2, .homepage-header > h2 {
         color: white;
     }
 
@@ -1064,25 +1077,38 @@ width: 100%;*/
         height: auto;
         border-radius: 50%;
         transition: all 0.2s ease-in;
-        border: 9px solid var(--alt-color);
+        margin: 0;
     }
 
 .image-with-outline-white {
     border-color: white;
 }
 
-.opensource-logos img {
-    border-radius: 50%;
-    max-width: 120px;
-    max-height: 120px;
+.technologies-logos {
 }
 
+    .technologies-logos img {
+        border-radius: 50%;
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+.opensource-logos {
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+    .opensource-logos img {
+        border-radius: 50%;
+        max-width: 60px;
+        max-height: 60px;
+    }
+
 .logo-gallery-name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: block;
-    margin-top: 0.5rem;
-    font-weight: 300;
     color: var(--background-dark-color);
+    margin-top: 0.5rem;
 }
 
 .logo-gallery-block {
@@ -1704,6 +1730,7 @@ footer span {
     border: 1px solid white;
     border-radius: 50px;
     width: 70px;
+    margin: 1rem 0;
 }
 
 .header-separator {

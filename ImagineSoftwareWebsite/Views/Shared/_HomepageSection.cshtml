@@ -1,0 +1,22 @@
+﻿<section class="@Model.SectionClassName">
+    <div class="fullscreen-section-content">
+
+        <h3>@Model.Section.Title</h3>
+        <h4>@Model.Section.SubTitle</h4>
+        <div class="section-separator"></div>
+
+        @if (@Model.Section.ImageUrl != null)
+        {
+            <img class="intermediate-article-image vertical-image-medium left-image show-on-scroll rounded-logo"
+             src="@Model.Section.ImageUrl"
+             alt="@Model.Section.ImageAlt" />
+        }
+
+        @Html.Raw(Model.Section.Body)
+
+        <br />
+
+        <a href="@Model.Section.CallToActionUrl" class="action-button">@Model.Section.CallToActionButtonText</a>
+
+    </div>
+</section>
