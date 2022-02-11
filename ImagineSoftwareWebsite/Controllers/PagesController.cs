@@ -110,8 +110,6 @@ namespace ImagineSoftwareWebsite.Controllers
             var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
             var page = await cms.GetAsync(squidexPageId, context);
 
-#warning Forse dovrei wrappare tutto questo con caching di 5 minuti?
-
             page.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(page.Data.Logo);
             page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
             page.Data.RouteName = page.Id;
@@ -133,9 +131,8 @@ namespace ImagineSoftwareWebsite.Controllers
                 openSourceProject.Data.RouteName = openSourceProject.Id;
             }
 
-#warning TODO scrivere in base al localization code
             return View(new OpenSourceProjectsListViewModel(
-                openSourceProjects: openSourceProjects.Items.Select(p => p.Data),
+                openSourceProjects: openSourceProjects.Items.Select(p => p.Data).OrderBy(p => p.Title),
                 localizedTitle: "I miei progetti open source",
                 localizedSubTitle: "Codice aperto alla collaborazione di tutti"));
         }
@@ -147,8 +144,6 @@ namespace ImagineSoftwareWebsite.Controllers
             var cms = _squidexClientManager.CreateContentsClient<ProjectsAppsSquidex, ProjectsAppsViewModel>("projects-applications");
             var context = QueryContext.Default.WithLanguages(Definitions.CURRENT_LOCALIZATION_CODE);
             var page = await cms.GetAsync(squidexPageId, context);
-
-#warning Forse dovrei wrappare tutto questo con caching di 5 minuti?
 
             page.Data.LogoImageLink = _squidexClientManager.GenerateImageUrl(page.Data.Logo);
             page.Data.CurrentLocalizationCode = Definitions.CURRENT_LOCALIZATION_CODE;
@@ -171,9 +166,8 @@ namespace ImagineSoftwareWebsite.Controllers
                 project.Data.RouteName = project.Id;
             }
 
-#warning TODO scrivere in base al localization code
             return View(new ProjectsAppsListViewModel(
-                projectsApps: projects.Items.Select(p => p.Data),
+                projectsApps: projects.Items.Select(p => p.Data).OrderBy(p => p.Title),
                 localizedTitle: "Applicazioni",
                 localizedSubTitle: "Imagine Software per il mondo enterprise"));
         }

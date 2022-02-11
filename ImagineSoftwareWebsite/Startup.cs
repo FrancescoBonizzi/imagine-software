@@ -70,6 +70,7 @@ namespace ImagineSoftwareWebsite
                 context.Response.Headers.Add("Content-Security-Policy", _contentSecurityPolicyHeaderValue);
                 context.Response.Headers.Add("X-Content-Security-Policy", _contentSecurityPolicyHeaderValue);
                 context.Response.Headers.Add("X-WebKit-CSP", _contentSecurityPolicyHeaderValue);
+
                 await next();
             });
 
