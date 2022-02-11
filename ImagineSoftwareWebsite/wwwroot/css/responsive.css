@@ -138,7 +138,7 @@
         align-self: stretch;
     }
 
-    .open-source-project-card-item-title h4 {
+    .open-source-project-card-item-title h4, .open-source-project-card-item-title h3 {
         margin: 0;
         text-align: left;
     }
@@ -150,6 +150,10 @@
 
     .bottom-menu-section img {
         margin-bottom: 2rem;
+    }
+
+    .bottom-menu-section {
+        padding: 3rem 1rem;
     }
 
     footer li {
