@@ -49,12 +49,10 @@ namespace ImagineSoftwareWebsite
             services
                 .AddControllersWithViews()
                 .AddNewtonsoftJson();
-
-            services.AddSingleton<RoutesInspector>();
         }
 
         private const string _contentSecurityPolicyHeaderValue = 
-            "default-src 'self'; img-src 'self' admin.imaginesoftware.it; script-src 'self' 'unsafe-inline' https://gist.github.com; style-src 'self' 'unsafe-inline' https://github.githubassets.com/; font-src 'self'";
+            "default-src 'self'; img-src 'self' admin.imaginesoftware.it; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'";
 
         public void Configure(IApplicationBuilder app)
         {

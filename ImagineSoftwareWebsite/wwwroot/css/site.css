@@ -959,6 +959,7 @@ label {
 
 .status-code-error-title {
     color: white;
+    margin-top: 2rem;
 }
 
 #error-content,
@@ -1608,7 +1609,7 @@ footer span {
     border-radius: 40px;
     text-decoration: none;
     font-size: 1.2rem;
-    width: 12rem;
+    width: 18rem;
     text-align: center;
     margin-top: -132px;
 }
@@ -1785,3 +1786,26 @@ section a {
     text-decoration: underline;
     color: var(--text-color);
 }
+
+
+.morpheus-paragraph {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    clear: both;
+}
+
+    .morpheus-paragraph p {
+        display: inline-block;
+        padding-bottom: 0;
+    }
+
+    .morpheus-paragraph a {
+        border: none;
+    }
+
+    .morpheus-paragraph img {
+        max-width: 500px;
+        border-radius: 20px;
+    }

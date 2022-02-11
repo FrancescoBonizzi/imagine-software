@@ -42,6 +42,11 @@
         transform: scale(0.8);
     }
 
+    .morpheus-blue-pill,
+    .morpheus-red-pill {
+        width: 15rem;
+    }
+
     .sitemap-section {
         flex-wrap: wrap;
         justify-content: start;
@@ -298,5 +303,9 @@
 
     .shortcuts-list li p {
         margin-bottom: 0;
+    }
+
+    .status-code-error-title {
+        text-align: center;
     }
 }

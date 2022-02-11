@@ -13,44 +13,5 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
 
 #warning TODO Tradurre le voci nel menù!
 
-        public const string JSON_LD_ORGANIZATION_DETAILS = 
-            "\"name\": \"Imagine Software\", " +
-            "\"legalName\": \"Imagine Software di Bonizzi Francesco\", " +
-            "\"url\": \"https://www.imaginesoftware.it\", " +
-            "\"logo\": \"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg\", " +
-            $"\"vatID\": \"{PARTITA_IVA}\"," +
-            "\"location\": \"Italy\"," +
-            "\"sameAs\": [" +
-                "\"https://www.imaginesoftware.it\"" +
-            "]," +
-            "\"foundingDate\": \"2021\"," +
-            "\"founders\": [ " +
-                "{" +
-                "\"@type\": \"Person\"," +
-                "\"name\": \"Francesco Bonizzi\"" +
-                "}" +
-            "]," +
-            "\"contactPoint\": {" +
-                "\"@type\": \"ContactPoint\"," +
-                "\"contactType\": \"customer support\"," +
-                $"\"email\": \"{Email}\"" +
-           " }";
-
-        public const string JSON_LD_ORGANIZATION = 
-            "{ " +
-                "\"@type\": \"Organization\", " +
-                JSON_LD_ORGANIZATION_DETAILS +
-            "}";
-
-        public const string JSON_LD_FREE_APP = 
-            "\"offers\":[" +
-                "{" +
-                    "\"@type\":\"Offer\"," +
-                    "\"price\":\"0\"," +
-                    "\"priceCurrency\":\"XXX\"," +
-                    "\"availability\":\"https://schema.org/InStock\"" +
-            "}]";
-
-        public const string JSON_LD_AUTHOR = $"\"author\": {JSON_LD_ORGANIZATION}";
     }
 }
