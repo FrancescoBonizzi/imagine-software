@@ -27,7 +27,11 @@
     <meta property="og:locale" content="it_IT">
     <meta property="og:image" content="https://www.imaginesoftware.it/images/logos/logo-imagine-software-no-text.jpg">
     <meta name="author" content="Francesco Bonizzi" />
-    <link rel="canonical" href="https://www.imaginesoftware.it/@ViewContext.ActionDescriptor.AttributeRouteInfo.Template" />
+
+    @{
+        string canonical = "https://www.imaginesoftware.it" + @Url.RouteUrl(ViewContext.RouteData.Values);
+    }
+    <link rel="canonical" href="@canonical" />
 
     <!-- STRUCTURED DATA -->
     @RenderSection("StructuredData", required: false)
