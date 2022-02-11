@@ -741,7 +741,7 @@ label {
 }
 
 .shortcuts-list {
-    max-width: 80%;
+    padding: 0 5rem;
     width: 100%;
 }
 
@@ -864,6 +864,7 @@ label {
 
 .shortcuts-list-home {
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
 }
 
 .shortcuts-list li {
