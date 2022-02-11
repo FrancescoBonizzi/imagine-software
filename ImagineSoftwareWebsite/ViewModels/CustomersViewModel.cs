@@ -10,9 +10,6 @@ namespace ImagineSoftwareWebsite.ViewModels
     {
         public string CurrentLocalizationCode { get; set; }
 
-        public string LocalizedLinkTitle => LinkTitle[CurrentLocalizationCode];
-        public string LocalizedLogoAlt => LogoAlt[CurrentLocalizationCode];
-
         [JsonConverter(typeof(InvariantConverter))]
         public string Name { get; set; }
 

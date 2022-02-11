@@ -1,7 +1,7 @@
 ﻿@{
     @model ImagineSoftwareWebsite.ViewModels.ProjectsAppsListViewModel;
     ViewData["Title"] = @Model.LocalizedTitle;
-    ViewData["MetaDescription"] = "I prodotti ed i progetti di Imagine Software per il mondo enterprise, realizzati con cura e attenzione maniacale per i dettagli.";
+    ViewData["MetaDescription"] = @Model.LocalizedMetaDescription;
 }
 
 <div class="article-header">
@@ -25,10 +25,10 @@
 
                 <div class="open-source-project-card-item-title">
                     <img src="@project.LogoImageLink" alt="@project.LogoAlt" asp-append-version="true" />
-                    <h3>@project.LocalizedTitle</h3>
+                    <h3>@project.Title[project.CurrentLocalizationCode]</h3>
                 </div>
 
-                @Html.Raw(project.LocalizedShortDescription)
+                @Html.Raw(project.ShortDescription[project.CurrentLocalizationCode])
 
                 <div class="open-source-project-card-item-right-arrow">
                     Approfondisci <i class="icon-right-open"></i>

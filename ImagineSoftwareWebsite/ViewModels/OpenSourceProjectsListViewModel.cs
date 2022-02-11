@@ -8,15 +8,18 @@ namespace ImagineSoftwareWebsite.ViewModels
         public OpenSourceProjectViewModel[] OpenSourceProjects { get; }
         public string LocalizedTitle { get; }
         public string LocalizedSubTitle { get; }
+        public string LocalizedMetaDescription { get; }
 
         public OpenSourceProjectsListViewModel(
             IEnumerable<OpenSourceProjectViewModel> openSourceProjects,
             string localizedTitle,
-            string localizedSubTitle)
+            string localizedSubTitle,
+            string localizedMetaDescription)
         {
             OpenSourceProjects = openSourceProjects.ToArray();
             LocalizedTitle = localizedTitle;
             LocalizedSubTitle = localizedSubTitle;
+            LocalizedMetaDescription = localizedMetaDescription;
         }
     }
 }

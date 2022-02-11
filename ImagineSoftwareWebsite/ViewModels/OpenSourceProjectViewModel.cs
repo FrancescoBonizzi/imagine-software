@@ -10,19 +10,13 @@ namespace ImagineSoftwareWebsite.ViewModels
     {
         public string CurrentLocalizationCode { get; set; }
         public string RouteName { get; set; }
+        public string Id { get; set; }
 
         public Dictionary<string, string> Title { get; set; }
         public Dictionary<string, string> Subtitle { get; set; }
         public Dictionary<string, string> MetaDescription { get; set; }
         public Dictionary<string, string> ShortDescription { get; set; }
         public Dictionary<string, string> LogoAlt { get; set; }
-
-#warning sono brutti così, conviene pescare la culture direttamente dalla view
-        public string LocalizedTitle => Title[CurrentLocalizationCode];
-        public string LocalizedSubtitle => Subtitle[CurrentLocalizationCode];
-        public string LocalizedMetaDescription => MetaDescription[CurrentLocalizationCode];
-        public string LocalizedShortDescription => ShortDescription[CurrentLocalizationCode];
-        public string LocalizedLogoAlt => LogoAlt[CurrentLocalizationCode];
 
 
         [JsonConverter(typeof(InvariantConverter))]

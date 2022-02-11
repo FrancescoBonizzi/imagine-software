@@ -1,15 +1,15 @@
 ﻿@{
     @model ImagineSoftwareWebsite.ViewModels.ServicesViewModel;
-    ViewData["Title"] = @Model.LocalizedTitle;
-    ViewData["MetaDescription"] = @Model.LocalizedMetaDescription;
+    ViewData["Title"] = @Model.Title[Model.CurrentLocalizationCode];
+    ViewData["MetaDescription"] = @Model.MetaDescription[Model.CurrentLocalizationCode];
 }
 
 <div class="article-header">
-    <h1>@Model.LocalizedTitle</h1>
-    <h2>@Model.LocalizedSubtitle</h2>
+    <h1>@Model.Title[Model.CurrentLocalizationCode]</h1>
+    <h2>@Model.Subtitle[Model.CurrentLocalizationCode]</h2>
 </div>
 
-<partial name="_OneLevelBreadcrumbs" model="new { ThisPageRouteName = Model.LocalizedTitle }" />
+<partial name="_OneLevelBreadcrumbs" model="new { ThisPageRouteName = Model.Title[Model.CurrentLocalizationCode] }" />
 
 <div class="section-separator-with-margin-from-header"></div>
 

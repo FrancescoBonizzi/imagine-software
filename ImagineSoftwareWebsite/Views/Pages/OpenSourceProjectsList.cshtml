@@ -1,7 +1,7 @@
 ﻿@{
     @model ImagineSoftwareWebsite.ViewModels.OpenSourceProjectsListViewModel;
     ViewData["Title"] = @Model.LocalizedTitle;
-    ViewData["MetaDescription"] = "I progetti open source di Imagine Software, accessibili liberamente tramite GitHub: librerie, piccoli software, videogiochi.";
+    ViewData["MetaDescription"] = @Model.LocalizedMetaDescription;
 }
 
 <div class="article-header">
@@ -25,10 +25,10 @@
 
                 <div class="open-source-project-card-item-title">
                     <img src="@openSourceProject.LogoImageLink" alt="@openSourceProject.LogoAlt" />
-                    <h3>@openSourceProject.LocalizedTitle</h3>
+                    <h3>@openSourceProject.Title[openSourceProject.CurrentLocalizationCode]</h3>
                 </div>
 
-                @Html.Raw(@openSourceProject.LocalizedShortDescription)
+                @Html.Raw(@openSourceProject.ShortDescription[openSourceProject.CurrentLocalizationCode])
 
                 <div class="open-source-project-card-item-right-arrow">
                     Approfondisci <i class="icon-right-open"></i>

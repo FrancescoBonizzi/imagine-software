@@ -9,10 +9,6 @@ namespace ImagineSoftwareWebsite.ViewModels
     {
         public string CurrentLocalizationCode { get; set; }
 
-        public string LocalizedTitle => Title[CurrentLocalizationCode];
-        public string LocalizedSubtitle => Subtitle[CurrentLocalizationCode];
-        public string LocalizedMetaDescription => MetaDescription[CurrentLocalizationCode];
-
         public Dictionary<string, string> Title { get; set; }
         public Dictionary<string, string> Subtitle { get; set; }
         public Dictionary<string, string> MetaDescription { get; set; }

@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.StaticFiles;
-using System;
-using System.Net;
 
 namespace ImagineSoftwareWebsite.HttpLifecycle
 {
@@ -24,6 +20,11 @@ namespace ImagineSoftwareWebsite.HttpLifecycle
             provider.Mappings[".eot"] = "application/vnd.ms-fontobject";
 
             return provider;
+        }
+
+        public static string GetCurrentCultureCode(HttpContext httpContext)
+        {
+            return "it-IT";
         }
 
     }
