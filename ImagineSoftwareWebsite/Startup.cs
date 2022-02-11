@@ -1,4 +1,6 @@
 using ImagineSoftwareWebsite.HttpLifecycle;
+using ImagineSoftwareWebsite.Services;
+using ImagineSoftwareWebsite.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -26,8 +28,8 @@ namespace ImagineSoftwareWebsite
         {
             services.Configure<SquidexOptions>(Configuration.GetSection("app"));
 
-            services.AddSingleton(c =>
-                new SquidexClientManager(c.GetRequiredService<IOptions<SquidexOptions>>().Value));
+            services.AddSingleton(c => new SquidexClientManager(c.GetRequiredService<IOptions<SquidexOptions>>().Value));
+            services.AddSingleton<SquidexApiClient>();
 
             services.AddResponseCompression(options =>
             {
@@ -51,7 +53,7 @@ namespace ImagineSoftwareWebsite
                 .AddNewtonsoftJson();
         }
 
-        private const string _contentSecurityPolicyHeaderValue = 
+        private const string _contentSecurityPolicyHeaderValue =
             "default-src 'self'; img-src 'self' admin.imaginesoftware.it; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'";
 
         public void Configure(IApplicationBuilder app)
