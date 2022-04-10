@@ -1,0 +1,13 @@
+url: 'https://www.imaginesoftware.it'
+domain: imaginesoftware.it
+email: f.bonizzi@imaginesoftware.it
+telegram: '@fbonizzi'
+github: https://github.com/FrancescoBonizzi
+linkedin: https://www.linkedin.com/in/fbonizzi/
+plugins:
+    - jekyll-sitemap
+    - jekyll-compress-images
+sass:
+    sass_dir: ./_scss
+exclude:
+    - dev/

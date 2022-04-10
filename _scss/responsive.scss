@@ -1,0 +1,184 @@
+﻿@media only screen and (max-width: 1300px) {
+
+    html {
+        /* Per rem */
+        font-size: 15px;
+    }
+
+    .vertical-image {
+        max-width: 100% !important;
+    }
+
+    #overlay-menu-input:checked ~ #overlay-menu-button span:after {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .morpheus-buttons {
+        transform: scale(0.8);
+    }
+
+    .morpheus-blue-pill,
+    .morpheus-red-pill {
+        width: 15rem;
+    }
+
+    #overlay-menu ul li a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .shortcuts-list ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shortcuts-list li {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    .shortcuts-list-home a {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .section-content, .fullscreen-section-content {
+        padding: 2rem 1rem !important;
+    }
+
+    .shortcuts-list-title-container {
+        align-self: center;
+    }
+
+    #overlay-menu ul li {
+        text-align: center;
+    }
+
+    .breadcrumbs-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .header-with-image {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+        .header-with-image h3 {
+            margin-top: 2rem;
+            margin-bottom: 0 !important;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+
+    .header-content img {
+        margin-left: 0.5rem;
+        max-height: 70px;
+    }
+
+    #overlay-menu-button {
+        right: 0;
+        top: 1.2rem;
+        padding: 16px 11px;
+    }
+
+    #overlay-menu-text {
+        font-size: 0.8rem;
+    }
+
+    #overlay-menu-button span, #overlay-menu-button span:before,
+    #overlay-menu-button span:after {
+        height: 3px;
+    }
+
+        #overlay-menu-button span:before {
+            top: -8px;
+        }
+
+        #overlay-menu-button span:after {
+            top: 8px;
+        }
+
+    .logo-gallery-collaborations > div {
+        width: auto;
+    }
+
+    .logo-gallery {
+        justify-content: space-around;
+    }
+
+    .shortcuts-list {
+        padding: 0;
+    }
+
+    h1, h2, h3, h4, h5 {
+        text-align: center;
+    }
+
+    .fullscreen-section-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .fullscreen-section-content h4 {
+            margin-top: 1rem;
+        }
+
+        .section-separator {
+            margin: 2rem 0;
+        }
+
+    .card, .small-card {
+        align-self: stretch;
+    }
+
+    .open-source-project-card-item-title h4, .open-source-project-card-item-title h3 {
+        margin: 0;
+        text-align: left;
+    }
+
+    .bottom-menu-section div {
+        margin: 0;
+        width: 100%;
+    }
+
+    .bottom-menu-section img {
+        margin-bottom: 2rem;
+    }
+
+    .bottom-menu-section {
+        padding: 3rem 1rem;
+    }
+
+    footer li {
+        text-align: center;
+    }
+
+    .article-header h1 {
+        text-align: center;
+    }
+
+    .breadcrumbs-container {
+        padding: 0 1rem;
+    }
+
+    section {
+        max-width: none;
+        width: auto;
+        align-self: stretch;
+    }
+
+        section img {
+            max-width: 350px;
+        }
+
+        .card {
+            margin: 1rem;
+        }
+}

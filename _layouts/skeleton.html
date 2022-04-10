@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="it" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+
+        <!-- MAKE IT RESPONSIVE, YEAH! -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+        <!-- FAVICON -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/images/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/images/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/images/favicons/favicon-16x16.png" />
+        <link rel="mask-icon" href="{{ site.url }}/images/favicons/safari-pinned-tab.svg" color="#313d55" />
+        <link rel="shortcut icon" href="{{ site.url }}/images/favicons/favicon.ico" />
+        <meta name="theme-color" content="#313d55" />
+
+        <!-- SEO -->
+        <title>{{ page.metaTitle }} - Imagine Software</title>
+        <meta name="description" content="{{ page.metaDescription }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="{{ page.metaTitle }} - Imagine Software" />
+        <meta property="og:description" content="{{ page.metaDescription }}" />
+        <meta property="og:site_name" content="Imagine Software" />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:image" content="{{ site.url }}/images/logos/logo-imagine-software-no-text.jpg" />
+        <meta name="author" content="Francesco Bonizzi" />
+
+        <link rel="canonical" href="{{ site.url }}{{ page.permalink }}" />
+
+        <!-- STRUCTURED DATA -->
+        @RenderSection("StructuredData", required: false)
+
+        <!-- STYLESHEETS -->
+        <link href="{{ site.url }}/css/icons-generated.css" asp-append-version="true" rel="stylesheet" />
+        <link href="{{ site.url }}/css/site.css" asp-append-version="true" rel="stylesheet" />
+        <link href="{{ site.url }}/css/responsive.css" asp-append-version="true" rel="stylesheet" />
+    </head>
+
+    <body>
+        <header>
+            <div class="header-content">
+                <a asp-controller="Home" asp-action="Index">
+                    <img
+                        height="78"
+                        src="{{ site.url }}/images/logos/logo-imagine-software.png"
+                        alt="Il logo di Imagine Software"
+                        title="Imagine Software"
+                    />
+                </a>
+            </div>
+        </header>
+
+        <nav>
+            <input type="checkbox" id="overlay-menu-input" />
+            <label for="overlay-menu-input" id="overlay-menu-button"><em id="overlay-menu-text"></em><span></span></label>
+            <div id="overlay-menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Servizi</a></li>
+                    <li><a href="/projects-apps">Applicazioni</a></li>
+                    <li><a href="/open-source-projects">Progetti open source</a></li>
+                    <li><a href="/francesco-bonizzi">Francesco Bonizzi</a></li>
+                    <li><a href="/contacts">Contatti</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <button class="back-to-top-button" onclick="backToTop();" id="btnBackToTop" title="Torna in alto">
+            <i class="icon-up"></i>
+        </button>
+
+        <main>{{ content }}</main>
+
+        <footer>
+            <div class="bottom-menu-section">
+                <img
+                    src="{{ site.url }}/images/logos/logo-imagine-software-footer.png"
+                    asp-append-version="true"
+                    alt="Il logo di Imagine Software"
+                    title="Imagine Software"
+                />
+
+                <div>
+                    <ul>
+                        <li class="footer-section-title">Link</li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services">Servizi</a></li>
+                        <li><a href="/projects-apps">Applicazioni</a></li>
+                        <li><a href="/open-source-projects">Progetti open source</a></li>
+                        <li><a href="/francesco-bonizzi">Francesco Bonizzi</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li class="footer-section-title">Contatti</li>
+                        <li>
+                            <i class="icon-email"></i>
+                            <span title="Scrivimi due righe per email!"
+                                ><a href="mailto:{{ site.email }}">{{ site.email }}</a></span
+                            >
+                        </li>
+
+                        <li>
+                            <i class="icon-telegram" title="L'icona dell'App di messaggistica Telegram"></i>
+                            <a href="https://telegram.me/fbonizzi" title="Scrivimi due righe tramite Telegram"
+                                >{{ site.telegram }}</a
+                            >
+                        </li>
+
+                        <li>
+                            <i class="icon-linkedin icon-small-for-footer" title="L'icona del social network LinkedIn"></i>
+                            <a
+                                target="_blank"
+                                rel="noopener"
+                                href="{{ site.linkedin }}"
+                                title="Visita il mio profilo LinkedIn"
+                                >LinkedIn</a
+                            >
+                        </li>
+
+                        <li>
+                            <i class="icon-github icon-small-for-footer" title="L'icona di GitHub"></i>
+                            <a target="_blank" rel="noopener" href="{{ site.github }}" title="Visita il mio profilo GitHub"
+                                >GitHub</a
+                            >
+                        </li>
+
+                        <li class="footer-link-contact">
+                            <i class="icon-email"></i>
+                            <a href="/contacts" title="Scrivimi direttamente dal sito!">Modulo di contatto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="last-footer-section">
+                <p>
+                    <a href="/privacy-policy" title="Leggi l'informativa sulla privacy">Informativa sulla privacy</a>
+                </p>
+                <p>&copy; 2021, Imagine Software di Bonizzi Francesco. Partita IVA: @Definitions.PARTITA_IVA</p>
+            </div>
+        </footer>
+
+        <script src="{{ site.url }}/js/site.js" asp-append-version="true"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                initializeBackToTopButton();
+                initializeImagesAnimations();
+            });
+        </script>
+
+        {{ page.scripts }}
+    </body>
+</html>
