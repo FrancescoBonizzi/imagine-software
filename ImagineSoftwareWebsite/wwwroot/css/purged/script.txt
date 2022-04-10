@@ -1,1 +1,0 @@
-purgecss --css "C:\Users\fboni\source\repos\FrancescoBonizzi\imagine-software\ImagineSoftwareWebsite\wwwroot\css/*.css" --content "C:\Users\fboni\source\repos\FrancescoBonizzi\imagine-software\ImagineSoftwareWebsite\Views/*.cshtml" -o "C:\Users\fboni\source\repos\FrancescoBonizzi\imagine-software\ImagineSoftwareWebsite\wwwroot\css\purged"
