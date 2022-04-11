@@ -6,4 +6,4 @@ source "https://rubygems.org"
 gem "jekyll"
 gem "webrick", "~> 1.7"
 gem 'jekyll-sitemap'
-gem 'jekyll-compress-images'
+gem 'jekyll-compress-images', :git => 'https://github.com/valerijaspasojevic/jekyll-compress-images.git'

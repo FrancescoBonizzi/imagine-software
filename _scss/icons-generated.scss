@@ -1,7 +1,11 @@
 ﻿@font-face {
     font-family: 'imagine-software-icons';
     src: url('../fonts/imagine-software-icons.eot?28432538');
-    src: url('../fonts/imagine-software-icons.eot?28432538#iefix') format('embedded-opentype'), url('../fonts/imagine-software-icons.woff2?28432538') format('woff2'), url('../fonts/imagine-software-icons.woff?28432538') format('woff'), url('../fonts/imagine-software-icons.ttf?28432538') format('truetype'), url('../fonts/imagine-software-icons.svg?28432538#imagine-software-icons') format('svg');
+    src: url('../fonts/imagine-software-icons.eot?28432538#iefix') format('embedded-opentype'),
+        url('../fonts/imagine-software-icons.woff2?28432538') format('woff2'),
+        url('../fonts/imagine-software-icons.woff?28432538') format('woff'),
+        url('../fonts/imagine-software-icons.ttf?28432538') format('truetype'),
+        url('../fonts/imagine-software-icons.svg?28432538#imagine-software-icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -17,7 +21,8 @@
 }
 */
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^='icon-']:before,
+[class*=' icon-']:before {
     font-family: 'imagine-software-icons' !important;
     font-style: normal;
     font-weight: normal;
@@ -25,7 +30,7 @@
     display: inline-block;
     text-decoration: inherit;
     width: 1em;
-    margin-right: .2em;
+    margin-right: 0.2em;
     text-align: center;
     /* opacity: .8; */
     /* For safety - reset parent styles, that can break glyph codes*/
@@ -35,7 +40,7 @@
     line-height: 1em;
     /* Animation center compensation - margins should be symmetric */
     /* remove if not needed */
-    margin-left: .2em;
+    margin-left: 0.2em;
     /* you can be more comfortable with increased icons size */
     /* font-size: 120%; */
     /* Font smoothing. That was taken from TWBS */

@@ -11,3 +11,6 @@ sass:
     sass_dir: ./_scss
 exclude:
     - dev/
+    - _compress_images_cache.yml
+imageoptim:
+    svgo: false
