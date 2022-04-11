@@ -14,3 +14,6 @@ exclude:
     - _compress_images_cache.yml
 imageoptim:
     svgo: false
+collections:
+    - homePageHeaderBoxes
+    - homePageSections
