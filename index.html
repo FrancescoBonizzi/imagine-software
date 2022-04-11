@@ -115,102 +115,16 @@ subtitle: Una buona idea decolla con un'esecuzione perfetta
         <h3>LE PRINCIPALI TECNOLOGIE CON CUI LAVORO</h3>
 
         <div class="logo-gallery technologies-logos">
+            {% for item in site.data.technologies %}
             <div class="logo-gallery-block">
-                <a
-                    title="Il sito ufficiale di Microsoft .NET"
-                    href="https://dotnet.microsoft.com/"
-                    target="_blank"
-                    rel="noopener"
-                >
+                <a title="{{ item.linkTitle }}" href="{{ item.link }}" target="_blank" rel="noopener">
                     <div>
-                        <img
-                            src="https://admin.imaginesoftware.it/api/assets/ee457b0b-c2e6-4526-8b60-26d9049c5f78"
-                            alt="Il logo di Microsoft .NET"
-                        />
+                        <img src="{{ site.url }}/assets/images/logos/{{ item.logoName }}" alt="{{ item.logoAlt}}" />
                     </div>
-                    <span class="logo-gallery-name">.NET</span>
+                    <span class="logo-gallery-name">{{ item.name }}</span>
                 </a>
             </div>
-            <div class="logo-gallery-block">
-                <a
-                    title="Il sito ufficiale del sistema operativo Android"
-                    href="https://www.android.com"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <div>
-                        <img
-                            src="https://admin.imaginesoftware.it/api/assets/0d02f778-54db-49f5-b236-c56cee586923"
-                            alt="Il logo di Android"
-                        />
-                    </div>
-                    <span class="logo-gallery-name">Android</span>
-                </a>
-            </div>
-            <div class="logo-gallery-block">
-                <a
-                    title="Il sito ufficiale di Microsoft Azure (cloud provider)"
-                    href="https://azure.microsoft.com/it-it/"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <div>
-                        <img
-                            src="https://admin.imaginesoftware.it/api/assets/623d6ee9-7ff0-4218-88d3-a853c2d5083a"
-                            alt="Il logo di Microsoft Azure (cloud provider)"
-                        />
-                    </div>
-                    <span class="logo-gallery-name">Azure</span>
-                </a>
-            </div>
-            <div class="logo-gallery-block">
-                <a
-                    title="Javascript presso la Mozilla foundation"
-                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <div>
-                        <img
-                            src="https://admin.imaginesoftware.it/api/assets/f7f5e5b1-fb92-4c61-b328-43f71c5f6844"
-                            alt="Il logo non ufficiale di JavaScript"
-                        />
-                    </div>
-                    <span class="logo-gallery-name">JavaScript</span>
-                </a>
-            </div>
-            <div class="logo-gallery-block">
-                <a
-                    title="Il sito ufficiale del framework React Native"
-                    href="https://reactnative.dev/"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <div>
-                        <img
-                            src="https://admin.imaginesoftware.it/api/assets/81594666-9fc6-4ddd-8cd7-d90bedc1b228"
-                            alt="Il logo del framework React Native"
-                        />
-                    </div>
-                    <span class="logo-gallery-name">React Native</span>
-                </a>
-            </div>
-            <div class="logo-gallery-block">
-                <a
-                    title="Il sito ufficiale di Microsoft SQL Server"
-                    href="https://www.microsoft.com/it-it/sql-server/sql-server-downloads"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <div>
-                        <img
-                            src="https://admin.imaginesoftware.it/api/assets/c3384890-4431-47f8-9cae-2860d51bc786"
-                            alt="Il logo di Microsoft SQL Server"
-                        />
-                    </div>
-                    <span class="logo-gallery-name">SQL Server</span>
-                </a>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
