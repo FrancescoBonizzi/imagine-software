@@ -16,5 +16,11 @@ exclude:
 imageoptim:
     svgo: false
 collections:
-    - homePageHeaderBoxes
-    - homePageSections
+    homePageHeaderBoxes:
+        output: false
+    homePageSections:
+        output: false
+    open-source-projects:
+        output: true
+    projects-apps:
+        output: true

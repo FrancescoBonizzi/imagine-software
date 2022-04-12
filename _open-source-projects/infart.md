@@ -1,0 +1,5 @@
+---
+title: INFART
+---
+
+# {{ title }}
