@@ -12,6 +12,7 @@ sass:
 exclude:
     - dev/
     - _compress_images_cache.yml
+    - .prettierignore
 imageoptim:
     svgo: false
 collections:

@@ -2,7 +2,8 @@
 layout: skeleton
 permalink: /
 metaTitle: Design, sviluppo, integrazione di software e App
-metaDescription: 'Imagine Software: design, sviluppo, integrazione di software e App. Rendo le tue idee realtà, accresco il valore del tuo team di sviluppo.'
+metaDescription: 'Imagine Software: design, sviluppo, integrazione di software e App. Rendo le tue idee realtà, accresco
+il valore del tuo team di sviluppo.'
 subtitle: "Una buona idea decolla con un'esecuzione perfetta"
 ---
 
@@ -16,6 +17,7 @@ subtitle: "Una buona idea decolla con un'esecuzione perfetta"
     <div class="section-content-landing">
         <div class="shortcuts-list">
             <ul class="shortcuts-list-home">
+
                 {% for headerBox in site.homePageHeaderBoxes %}
                 <li>
                     <div class="shortcuts-list-title-container">
@@ -26,9 +28,11 @@ subtitle: "Una buona idea decolla con un'esecuzione perfetta"
                     </div>
 
                     {{ headerBox.content | markdownify }}
+
                     <a href="{{ headerBox.link }}" class="action-button-secondary">Approfondisci</a>
                 </li>
                 {% endfor %}
+
             </ul>
         </div>
     </div>
@@ -43,9 +47,10 @@ subtitle: "Una buona idea decolla con un'esecuzione perfetta"
 
 <section class="alt-section">
     <div class="fullscreen-section-content">
-        <h3>LE PRINCIPALI TECNOLOGIE CON CUI LAVORO</h3>
+        <h3>LE TECNOLOGIE CON CUI LAVORO</h3>
 
         <div class="logo-gallery technologies-logos">
+
             {% for item in site.data.technologies %}
             <div class="logo-gallery-block">
                 <a title="{{ item.linkTitle }}" href="{{ item.link }}" target="_blank" rel="noopener">
@@ -56,33 +61,50 @@ subtitle: "Una buona idea decolla con un'esecuzione perfetta"
                 </a>
             </div>
             {% endfor %}
+
         </div>
     </div>
 </section>
 
 {% for homePageSection in site.homePageSections %}
 
-<section class="{{ homePageSection.sectionClassName }}">
+{% assign sectionClassName = 'white-section' %} 
+{% assign restoDivisione = forloop.index | modulo:2 %}
+{% if restoDivisione == 0 %}
+{% assign sectionClassName = 'alt-section' %}
+{% endif %}
+
+<section class="{{ sectionClassName }}">
     <div class="fullscreen-section-content">
         <h3>{{ homePageSection.title }}</h3>
         <h4>{{ homePageSection.subtitle }}</h4>
         <div class="section-separator"></div>
 
-        {% if homePageSection.imageName and homePageSection.imageName != '' %}
+        {% if homePageSection.imagePath and homePageSection.imagePath != '' %}
         <img
             class="intermediate-article-image vertical-image-medium left-image show-on-scroll rounded-logo"
-            src="{{ site.url }}/assets/images/other/{{ homePageSection.imageName }}"
+            src="{{ site.url }}/{{ homePageSection.imagePath }}"
             alt="{{ homePageSection.imageAlt }}"
         />
-        {% endif %} {{ homePageSection.content | markdownify }}
+        {% endif %} 
+        
+        {{ homePageSection.content | markdownify }}
 
         <br />
 
-        <a href="{{ site.url }}/{{ homePageSection.callToActionDestinationPageName }}" class="action-button"
-            >{{ homePageSection.callToActionText }}</a
-        >
+        {% assign link = homePageSection.callToActionLink %} 
+        {% assign isRelativeLink = false %} 
+        {% if link contains '://' %}
+        {% assign isRelativeLink = true %} 
+        {% endif %} 
+        {% if isRelativeLink == true %} 
+        {% assign link = site.url | append: "/" | append: link %} 
+        {% endif %}
+
+        <a href="{{ link }}" class="action-button">{{ homePageSection.callToActionText }}</a>
     </div>
 </section>
+
 {% endfor %}
 
 <section class="alt-section">
@@ -90,6 +112,7 @@ subtitle: "Una buona idea decolla con un'esecuzione perfetta"
         <h3>HO COLLABORATO CON</h3>
 
         <div class="logo-gallery technologies-logos">
+
             {% for item in site.data.customers %}
             <div class="logo-gallery-block">
                 <a title="{{ item.linkTitle }}" href="{{ item.link }}" target="_blank" rel="noopener">
@@ -100,6 +123,7 @@ subtitle: "Una buona idea decolla con un'esecuzione perfetta"
                 </a>
             </div>
             {% endfor %}
+
         </div>
     </div>
 </section>
