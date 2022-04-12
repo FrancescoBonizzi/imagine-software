@@ -1,0 +1,53 @@
+---
+title: PARTECIPO ATTIVAMENTE AL MONDO DELL'OPEN SOURCE
+subtitle:
+callToActionText: GUARDA I MIEI MIGLIORI PROGETTI OPEN SOURCE
+callToActionLink: open-source-projects
+imagePath:
+imageAlt:
+---
+
+<div class="section-separator-with-margin-from-header"></div>
+
+{% for item in site.open-source-projects limit: 4 %}
+<div class="card small-card">
+    <a href="{{ item.url }}">
+        <div class="open-source-project-small-card-item-content">
+            <div class="open-source-project-card-item-title">
+                <img src="{{ site.url }}/assets/images/logos/{{ item.logoName }}" alt="{{ item.logoAlt }}" />
+                <h4>{{ item.metaTitle }}</h4>
+            </div>
+
+            <div class="open-source-project-card-item-right-arrow">
+                <i class="icon-right-open"></i>
+            </div>
+        </div>
+    </a>
+</div>
+{% endfor %}
+
+<p>
+    Il mondo dell'open source &egrave; meraviglioso proprio perch&eacute;<strong
+        >&nbsp;ognuno pu&ograve; dare il proprio contributo</strong
+    >&nbsp;ed aiutare chiss&agrave; chi nel mondo! Inoltre, ognuno pu&ograve; leggere apertamente il codice delle
+    applicazioni open source che si utilizzano quotidianamente, come&nbsp;<a
+        title="Visualizza il codice sorgente del client Android di Telegram"
+        href="https://github.com/DrKLO/Telegram"
+        target="_blank"
+        rel="nofollow noopener"
+        >il client di Telegram</a
+    >&nbsp;- e verificarne l'implementazione della crittografia&nbsp;<em>end-to-end</em>&nbsp;-, ma anche tutto lo
+    stack&nbsp;<a
+        title="Visita la pagina GitHub di ASP .NET Core"
+        href="https://github.com/dotnet/aspnetcore"
+        target="_blank"
+        rel="noopener"
+        >ASP .NET Core</a
+    >,&nbsp;<a
+        title="Guarda il codice sorgente del kernel di Linux"
+        href="https://github.com/torvalds/linux"
+        target="_blank"
+        rel="noopener"
+        >il kernel di Linux</a
+    >, e tanto altro.
+</p>

@@ -1,5 +1,5 @@
 ---
-title: Invoice Maker - Quick & Easy
+metaTitle: Invoice Maker - Quick & Easy
 ---
 
 # {{ title }}

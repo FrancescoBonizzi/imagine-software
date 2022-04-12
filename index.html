@@ -45,85 +45,50 @@ subtitle: "Una buona idea decolla con un'esecuzione perfetta"
     </div>
 </section>
 
-<section class="alt-section">
-    <div class="fullscreen-section-content">
-        <h3>LE TECNOLOGIE CON CUI LAVORO</h3>
-
-        <div class="logo-gallery technologies-logos">
-
-            {% for item in site.data.technologies %}
-            <div class="logo-gallery-block">
-                <a title="{{ item.linkTitle }}" href="{{ item.link }}" target="_blank" rel="noopener">
-                    <div>
-                        <img src="{{ site.url }}/assets/images/logos/{{ item.logoName }}" alt="{{ item.logoAlt}}" />
-                    </div>
-                    <span class="logo-gallery-name">{{ item.name }}</span>
-                </a>
-            </div>
-            {% endfor %}
-
-        </div>
-    </div>
-</section>
-
 {% for homePageSection in site.homePageSections %}
 
-{% assign sectionClassName = 'white-section' %} 
-{% assign restoDivisione = forloop.index | modulo:2 %}
-{% if restoDivisione == 0 %}
-{% assign sectionClassName = 'alt-section' %}
-{% endif %}
+    {% assign sectionClassName = 'white-section' %} 
+    {% assign restoDivisione = forloop.index | modulo:2 %}
+    {% if restoDivisione == 0 %}
+    {% assign sectionClassName = 'alt-section' %}
+    {% endif %}
 
-<section class="{{ sectionClassName }}">
-    <div class="fullscreen-section-content">
-        <h3>{{ homePageSection.title }}</h3>
-        <h4>{{ homePageSection.subtitle }}</h4>
-        <div class="section-separator"></div>
+    <section class="{{ sectionClassName }}">
+        <div class="fullscreen-section-content">
+            <h3>{{ homePageSection.title }}</h3>
+            <h4>{{ homePageSection.subtitle }}</h4>
 
-        {% if homePageSection.imagePath and homePageSection.imagePath != '' %}
-        <img
-            class="intermediate-article-image vertical-image-medium left-image show-on-scroll rounded-logo"
-            src="{{ site.url }}/{{ homePageSection.imagePath }}"
-            alt="{{ homePageSection.imageAlt }}"
-        />
-        {% endif %} 
-        
-        {{ homePageSection.content | markdownify }}
+            {% if homePageSection.subtitle and homePageSection.subtitle != '' %}
+                <div class="section-separator"></div>
+            {% endif %} 
 
-        <br />
+            {% if homePageSection.imagePath and homePageSection.imagePath != '' %}
+                <img
+                    class="intermediate-article-image vertical-image-medium left-image show-on-scroll rounded-logo"
+                    src="{{ site.url }}/{{ homePageSection.imagePath }}"
+                    alt="{{ homePageSection.imageAlt }}"
+                />
+            {% endif %} 
+            
+            {{ homePageSection.content | markdownify }}
 
-        {% assign link = homePageSection.callToActionLink %} 
-        {% assign isRelativeLink = false %} 
-        {% if link contains '://' %}
-        {% assign isRelativeLink = true %} 
-        {% endif %} 
-        {% if isRelativeLink == true %} 
-        {% assign link = site.url | append: "/" | append: link %} 
-        {% endif %}
+            <br />
 
-        <a href="{{ link }}" class="action-button">{{ homePageSection.callToActionText }}</a>
-    </div>
-</section>
+            {% if homePageSection.callToActionText and homePageSection.callToActionText != '' %}
+
+                {% assign link = homePageSection.callToActionLink %} 
+                {% assign isRelativeLink = false %} 
+                {% if link contains '://' %}
+                {% assign isRelativeLink = true %} 
+                {% endif %} 
+                {% if isRelativeLink == true %} 
+                {% assign link = site.url | append: "/" | append: link %} 
+                {% endif %}
+
+                <a href="{{ link }}" class="action-button">{{ homePageSection.callToActionText }}</a>
+
+            {% endif %}
+        </div>
+    </section>
 
 {% endfor %}
-
-<section class="alt-section">
-    <div class="fullscreen-section-content">
-        <h3>HO COLLABORATO CON</h3>
-
-        <div class="logo-gallery technologies-logos">
-
-            {% for item in site.data.customers %}
-            <div class="logo-gallery-block">
-                <a title="{{ item.linkTitle }}" href="{{ item.link }}" target="_blank" rel="noopener">
-                    <div>
-                        <img src="{{ site.url }}/assets/images/logos/{{ item.logoName }}" alt="{{ item.logoAlt }}" />
-                    </div>
-                    <span class="logo-gallery-name">{{ item.name }}</span>
-                </a>
-            </div>
-            {% endfor %}
-
-        </div>
-    </div>
-</section>
