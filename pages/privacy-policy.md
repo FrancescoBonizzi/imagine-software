@@ -4,6 +4,7 @@ permalink: privacy-policy
 metaTitle: Informativa sulla privacy
 metaDescription: L'informativa sulla privacy di Imagine Software in relazione ai dati personali trattati su questo sito e l'utilizzo dei cookie.
 subtitle: Informativa ai sensi dell'art. 13 del Regolamento (UE) n. 679/2016 ("GDPR")
+jsonLd:
 ---
 
 I Suoi dati personali in nostro possesso verranno trattati, nel pieno rispetto delle norme in vigore, per rispondere alle mail di contatto tramite l'[apposito modulo interno al sito]({{ site.url }}/contacts "Modulo di contatto") o in seguito a contatti diretti alla nostra email ([{{ site.email }}](mailto:{{ site.email }})), o, in caso di clienti per le quali è già stato firmato un contratto di collaborazione, per la fatturazione fiscale.

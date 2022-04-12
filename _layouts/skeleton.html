@@ -29,7 +29,11 @@
         <link rel="canonical" href="{{ site.url }}{{ page.permalink }}" />
 
         <!-- STRUCTURED DATA -->
-        <!-- @RenderSection("StructuredData", required: false) -->
+        {% if page.jsonLd and page.jsonLd != '' %}
+        <script type="application/ld+json">
+            {{ page.jsonLd }}
+        </script>
+        {% endif %}
 
         <!-- STYLESHEETS -->
         <link href="{{ site.url }}/assets/css/style.css" rel="stylesheet" />
