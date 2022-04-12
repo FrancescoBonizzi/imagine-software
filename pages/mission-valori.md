@@ -10,7 +10,7 @@ Come sviluppatore software ed essere umano **non posso esimermi dall'avere una 
 
 Amo la terra, l'aria che respiro, l'idea che sta alla base della società e nutro un rispetto innato per tutti gli animali, esseri umani compresi. Cerco costantemente di migliorare la mia esistenza come uomo e quella della mia famiglia in relazione al circostante.
 
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="{{ site.url }}/assets/images/other/i-love-the-earth.jpg" alt="i-love-the-earth" /></p>
+<p><img class="section-centered-image" src="{{ site.url }}/assets/images/other/i-love-the-earth.jpg" alt="i-love-the-earth" /></p>
 
 In tal senso, **rifiuto senza indugio** ogni tipo di lavoro che comporti una qualche forma di discriminazione verso l'ambiente, gli animali, gli esseri umani, le religioni, le etnie, le identità sessuali, ed in generale ogni lavoro in cui ho il sentore di elementi discriminanti.
 

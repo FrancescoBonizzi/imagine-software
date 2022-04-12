@@ -961,6 +961,7 @@ textarea {
 
 .francesco-bonizzi-photo {
     max-width: 300px !important;
+    border-radius: 50% !important;
 }
 
 .francesco-bonizzi-photo-for-homepage {
@@ -1834,4 +1835,15 @@ section a {
 .morpheus-paragraph img {
     max-width: 500px;
     border-radius: 20px;
+}
+
+.section-centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.francesco-bonizzi-photo-caption {
+    font-weight: bold;
+    text-align: center;
 }

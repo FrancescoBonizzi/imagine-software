@@ -8,8 +8,8 @@ subtitle: Professionista dello sviluppo software
 
 A tre anni scalciavo sulle ginocchia di mio papà mentre lo vedevo programmare in `BASIC`. Quel che faceva m'affascinava a tal punto da non distinguerlo dalla magia. E quando vidi [The Matrix](https://it.wikipedia.org/wiki/Matrix 'Informazioni sul film The Matrix su Wikipedia') per la prima volta, iniziai a sognare di diventare un hacker in grado riparare agli *errori dei software*.
 
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="{{ site.url }}/assets/images/other/Francesco-Bonizzi.jpg" alt="Francesco-Bonizzi" /></p>
-<p style="text-align: center;"><strong>Full stack .NET developer and App developer</strong></p>
+<p><img class="section-centered-image francesco-bonizzi-photo" src="{{ site.url }}/assets/images/other/Francesco-Bonizzi.jpg" alt="Francesco-Bonizzi" /></p>
+<p class="francesco-bonizzi-photo-caption"><strong>Full stack .NET developer and App developer</strong></p>
 
 A 13 anni mi regalarono un manuale di _Microsoft Visual Basic 6.0_. E a 10 dalla prima infatuazione per l'informatica, mi sono laureato in _Computer Science all'Università degli Studi di Parma_. Ora [la programmazione è il mio lavoro]({{ site.url }}/services 'I miei servizi di sviluppo software') e ha plasmato come osservo il mondo. Sviluppo videogiochi, App Android e iOS, librerie open source e studio nuovi framework.
 
