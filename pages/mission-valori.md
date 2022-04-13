@@ -1,9 +1,11 @@
 ---
 layout: common-page
 permalink: mission-valori
+
 metaTitle: I miei valori
 metaDescription: I valori di Imagine Software, riflessi sul lavoro e sulle scelte dei clienti.
 subtitle: Sviluppo sostenibile, inclusione, uguaglianza
+
 jsonLd:
 ---
 

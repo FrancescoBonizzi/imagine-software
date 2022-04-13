@@ -1,0 +1,60 @@
+---
+layout: skeleton
+permalink: services
+
+metaTitle: Servizi
+metaDescription: "L'offerta esclusiva di Imagine Software: il miglior professionista dello sviluppo software al servizio delle tue idee."
+subtitle: Cosa Imagine Software può fare per te
+
+jsonLd: 
+---
+
+<div class="article-header">
+    <h1>{{ page.metaTitle }}</h1>
+    <h2>{{ page.subtitle }}</h2>
+</div>
+
+<div class="breadcrumbs-container">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+        </li>
+
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">{{ page.metaTitle }}</span>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+</div>
+
+<div class="section-separator-with-margin-from-header"></div>
+
+{% for serviceSection in site.servicesSections %} 
+
+    {% assign sectionClassName = 'alt-section' %} 
+    {% assign restoDivisione = forloop.index | modulo:2 %} 
+    {% if restoDivisione == 0 %} 
+        {% assign sectionClassName = 'white-section' %} 
+    {% endif %}
+
+    <section class="{{ sectionClassName }}">
+        <div class="fullscreen-section-content">
+            <h3>{{ serviceSection.title }}</h3>
+            <div class="section-separator"></div>
+
+            {% if serviceSection.subtitle and serviceSection.subtitle != '' %}
+                <div class="section-separator"></div>
+            {% endif %} 
+            
+            {{ serviceSection.content | markdownify }}
+
+            <br />
+
+            {% if restoDivisione == 0 %} 
+                <a href="{{ site.url }}/contacts" class="action-button">CONTATTAMI</a>
+            {% endif %}
+        </div>
+    </section>
+
+{% endfor %}

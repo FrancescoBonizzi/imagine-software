@@ -1,9 +1,11 @@
 ---
 layout: common-page
 permalink: privacy-policy
+
 metaTitle: Informativa sulla privacy
 metaDescription: L'informativa sulla privacy di Imagine Software in relazione ai dati personali trattati su questo sito e l'utilizzo dei cookie.
 subtitle: Informativa ai sensi dell'art. 13 del Regolamento (UE) n. 679/2016 ("GDPR")
+
 jsonLd:
 ---
 

@@ -1,9 +1,11 @@
 ---
 layout: common-page
 permalink: francesco-bonizzi
+
 metaTitle: Francesco Bonizzi
 metaDescription: Francesco Bonizzi, proprietario di Imagine Software, professionista dello sviluppo software dello stack Microsoft e sviluppatore di App.
 subtitle: Professionista dello sviluppo software
+
 jsonLd: '{"@context":"https://schema.org","@type":"Person","email":"f.bonizzi@imaginesoftware.it","image":"https://www.imaginesoftware.it/assets/images/other/Francesco-Bonizzi.jpg","jobTitle":"Full stack .NET developer and App developer","name":"Francesco Bonizzi","gender":"Male","nationality":"Italian","birthDate":"1990-08-05","sameAs":["https://github.com/FrancescoBonizzi","https://www.linkedin.com/in/fbonizzi/","https://stackoverflow.com/users/1090403/francesco-bonizzi"],"worksFor":[{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/assets/logos/logo-imagine-software.jpg","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}}]}'
 ---
 

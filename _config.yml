@@ -20,6 +20,8 @@ collections:
         output: false
     homePageSections:
         output: false
+    servicesSections:
+        output: false
     open-source-projects:
         output: true
     projects-apps:
