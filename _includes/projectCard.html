@@ -1,0 +1,16 @@
+<section class="card">
+    <a href="{{ item.url }}">
+        <div class="open-source-project-card-item-content">
+
+            <div class="open-source-project-card-item-title">
+                <img src="{{ site.url }}/assets/images/logos/{{ item.logoName }}" alt="{{ item.logoAlt }}" />
+                <h3>{{ item.metaTitle }}</h3>
+            </div>
+
+            {{ item.shortDescription | markdownify }}
+
+            <div class="open-source-project-card-item-right-arrow">Approfondisci <i class="icon-right-open"></i></div>
+            
+        </div>
+    </a>
+</section>

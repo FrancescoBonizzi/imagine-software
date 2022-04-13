@@ -1,0 +1,23 @@
+---
+layout: skeleton
+permalink: projects-apps
+
+metaTitle: Applicazioni
+metaDescription: 'I prodotti ed i progetti di Imagine Software per il mondo enterprise, realizzati con cura e attenzione maniacale per i dettagli.'
+subtitle: Imagine Software per il mondo enterprise
+
+jsonLd:
+---
+
+<div class="article-header">
+    <h1>{{ page.metaTitle }}</h1>
+    <h2>{{ page.subtitle }}</h2>
+</div>
+
+{% include oneLevelBreadcrumbs.html %}
+
+<div class="section-separator-with-margin-from-header"></div>
+
+{% for item in site.projects-apps %} 
+    {% include projectCard.html item=item %} 
+{% endfor %}

@@ -1,2 +1,5 @@
 index.html
-services.html
+pages/services.html
+pages/open-source-projects-list.html
+pages/projects-apps.html
+_includes/projectCard.html
