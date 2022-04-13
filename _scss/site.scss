@@ -1780,6 +1780,22 @@ footer span {
     margin-top: 1rem;
 }
 
+.section-separator-inside-section {
+    background-image: linear-gradient(
+        to right,
+        var(--gradient-first-color) 0%,
+        var(--gradient-second-color) 51%,
+        var(--gradient-third-color) 100%
+    );
+    border-radius: 50px;
+    width: 100px;
+    height: 3px;
+    margin-bottom: 3rem !important;
+    margin-top: 3rem !important;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .section-separator-with-margin-from-header {
     margin-top: 3rem;
 }

@@ -1,0 +1,32 @@
+---
+layout: skeleton
+---
+
+<div class="article-header">
+    <h1>{{ page.metaTitle }}</h1>
+    <h2>{{ page.subtitle }}</h2>
+</div>
+
+{% include projectsAppsBreadcrumbs.html %}
+
+<section class="logo-download-buttons-container">
+    <img class="project-logo" src="{{ site.url }}/assets/images/logos/{{ page.logoName }}" alt="{{ page.logoAlt }}" />
+
+    <div class="store-download-buttons-group">
+        {% for downloadButton in page.buttons %}
+        <a
+            class="action-button"
+            target="_blank"
+            rel="noopener"
+            href="{{ downloadButton.url }}"
+            title="{{ downloadButton.titleText }}"
+        >
+            <i class="{{ downloadButton.icon }}"></i> {{ downloadButton.text }}
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<div class="section-separator"></div>
+
+<section>{{ content }}</section>
