@@ -7,7 +7,7 @@ shortDescription: "L'App pensata per i freelance e per chi deve **generare rice
 subtitle: Fatture e ricevute belle e professionali
 
 logoName: logo-invoice-maker-quick-easy.png
-logoAlt: Il logo dell'App Invoice Maker - Quick & Easy
+logoAlt: "Il logo dell'App Invoice Maker - Quick & Easy"
 
 buttons:
     - text: Scarica per Android
