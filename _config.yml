@@ -1,20 +1,27 @@
 url: 'https://www.imaginesoftware.it'
 domain: imaginesoftware.it
+
 email: f.bonizzi@imaginesoftware.it
 telegram: fbonizzi
 github: https://github.com/FrancescoBonizzi
 linkedin: https://www.linkedin.com/in/fbonizzi/
+
+piva: 02982280345
+
 plugins:
     - jekyll-sitemap
     - jekyll-compress-images
 sass:
     sass_dir: ./_scss
+
 exclude:
     - dev/
     - _compress_images_cache.yml
     - .prettierignore
+
 imageoptim:
     svgo: false
+
 collections:
     homePageHeaderBoxes:
         output: false
