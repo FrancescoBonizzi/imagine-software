@@ -30,7 +30,7 @@ L'App si scarica in un minuto dai principali Store per smartphone e dopo un brev
 
 <div class="section-separator-inside-section"></div>
 
-<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/invoice-maker-quick-easy-screenshot-1.png" alt="Uno screenshot di Invoice Maker - Quick & Easy" width="500" height="308" /></p>
+<p><a title="Visualizza più in grande" target="_blank"  href="{{ site.url }}/assets/images/screenshots/invoice-maker-quick-easy-screenshot-1.png"><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/invoice-maker-quick-easy-screenshot-1.png" alt="Uno screenshot di Invoice Maker - Quick & Easy" width="500" height="308" /></a></p>
 
 <div class="section-separator-inside-section"></div>
 
@@ -65,7 +65,7 @@ Con la versione **Pro** hai l'App completa senza limiti, per sempre. Inclusi t
 
 ### L'App di cui hai bisogno per creare fatture, ricevute e preventivi senza perdere tempo
 
-<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/invoice-maker-quick-easy-screenshot-2.png" alt="Uno screenshot di Invoice Maker - Quick & Easy" width="500" height="405" /></p>
+<p><a title="Visualizza più in grande" target="_blank"  href="{{ site.url }}/assets/images/screenshots/invoice-maker-quick-easy-screenshot-2.png"><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/invoice-maker-quick-easy-screenshot-2.png" alt="Uno screenshot di Invoice Maker - Quick & Easy" width="500" height="405" /></a></p>
 
 <div class="section-separator-inside-section"></div>
 
