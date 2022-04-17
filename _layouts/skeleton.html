@@ -51,16 +51,17 @@
                     />
                 </a>
 
-                <ul id="top-nav">
+                <div id="top-nav">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/services">Servizi</a></li>
-                        <li><a href="/projects-apps">Applicazioni</a></li>
-                        <li><a href="/open-source-projects">Progetti open source</a></li>
-                        <li><a href="/francesco-bonizzi">Chi sono</a></li>
-                        <li><a href="/contacts">Contatti</a></li>
+                        {% for item in site.data.nav %}
+                        <li>
+                            <a href="{{ item.link }}" {% if page.url == item.link %}class="current-page"{% endif %}>
+                                {{ item.name }}
+                            </a>
+                        </li>
+                        {% endfor %}
                     </ul>
-                </ul>
+                </div>
             </div>
         </header>
 
@@ -69,12 +70,13 @@
             <label for="overlay-menu-input" id="overlay-menu-button"><em id="overlay-menu-text"></em><span></span></label>
             <div id="overlay-menu">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/services">Servizi</a></li>
-                    <li><a href="/projects-apps">Applicazioni</a></li>
-                    <li><a href="/open-source-projects">Progetti open source</a></li>
-                    <li><a href="/francesco-bonizzi">Chi sono</a></li>
-                    <li><a href="/contacts">Contatti</a></li>
+                    {% for item in site.data.nav %}
+                    <li>
+                        <a href="{{ item.link }}" {% if page.url == item.link %}class="current-page"{% endif %}>
+                            {{ item.name }}
+                        </a>
+                    </li>
+                  {% endfor %}
                 </ul>
             </div>
         </nav>

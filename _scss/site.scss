@@ -180,8 +180,9 @@ header {
     transition: all 0.1s ease-out;
 }
 
-#top-nav ul li a:hover {
-    color: white;
+#top-nav ul li a:hover,
+.current-page {
+    color: white !important;
     transition: color 0.1s ease-in;
     padding-bottom: 4px;
     background: linear-gradient(
