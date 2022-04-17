@@ -160,10 +160,15 @@ header {
 
 /*#endregion*/
 
+#top-nav {
+    flex: 1;
+}
+
 #top-nav ul {
     list-style: none;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 #top-nav ul li a {
@@ -173,17 +178,6 @@ header {
     font-weight: 900;
     font-size: 1rem;
     transition: all 0.1s ease-out;
-    margin-right: 0.8rem;
-}
-
-#top-nav ul li a {
-    color: var(--deactivated-color);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 1rem;
-    transition: all 0.1s ease-out;
-    margin-right: 0.8rem;
 }
 
 #top-nav ul li a:hover {
@@ -1911,4 +1905,12 @@ section a {
 .francesco-bonizzi-photo-caption {
     font-weight: bold;
     text-align: center;
+}
+
+#home-button-link {
+    display: flex;
+}
+
+.homepage-article-image {
+    max-width: 180px;
 }

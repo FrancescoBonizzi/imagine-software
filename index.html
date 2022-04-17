@@ -67,7 +67,9 @@ jsonLd: '{"@context":"https://schema.org","@type":"Organization","name":"Imagine
 
             {% if homePageSection.imagePath and homePageSection.imagePath != '' %}
                 <img
-                    class="intermediate-article-image vertical-image-medium left-image show-on-scroll rounded-logo"
+                    class="intermediate-article-image homepage-article-image left-image show-on-scroll rounded-logo"
+                    width="180"
+                    height="180"
                     src="{{ site.url }}/{{ homePageSection.imagePath }}"
                     alt="{{ homePageSection.imageAlt }}"
                 />
