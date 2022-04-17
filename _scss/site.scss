@@ -160,6 +160,55 @@ header {
 
 /*#endregion*/
 
+#top-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+#top-nav ul li a {
+    color: var(--deactivated-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1rem;
+    transition: all 0.1s ease-out;
+    margin-right: 0.8rem;
+}
+
+#top-nav ul li a {
+    color: var(--deactivated-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1rem;
+    transition: all 0.1s ease-out;
+    margin-right: 0.8rem;
+}
+
+#top-nav ul li a:hover {
+    color: white;
+    transition: color 0.1s ease-in;
+    padding-bottom: 4px;
+    background: linear-gradient(
+        to right,
+        var(--gradient-first-color) 0%,
+        var(--gradient-second-color) 51%,
+        var(--gradient-third-color) 100%
+    );
+    background-size: 100% 4px;
+    background-position: bottom 0 left 0, bottom 4px left 0;
+    background-repeat: no-repeat;
+}
+
+#hamburger-menu-button {
+    display: none;
+}
+
+#top-nav {
+    display: block;
+}
+
 /*#region Hamburger Menu */
 
 #overlay-menu-button {

@@ -1,8 +1,15 @@
 ﻿@media only screen and (max-width: 1300px) {
-
     html {
         /* Per rem */
         font-size: 15px;
+    }
+
+    #hamburger-menu-button {
+        display: block;
+    }
+
+    #top-nav {
+        display: none;
     }
 
     .vertical-image {
@@ -47,7 +54,8 @@
         text-align: center;
     }
 
-    .section-content, .fullscreen-section-content {
+    .section-content,
+    .fullscreen-section-content {
         padding: 2rem 1rem !important;
     }
 
@@ -69,12 +77,12 @@
         padding-bottom: 0;
     }
 
-        .header-with-image h3 {
-            margin-top: 2rem;
-            margin-bottom: 0 !important;
-            margin-right: 1rem;
-            margin-left: 1rem;
-        }
+    .header-with-image h3 {
+        margin-top: 2rem;
+        margin-bottom: 0 !important;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
 
     .header-content img {
         margin-left: 0.5rem;
@@ -91,18 +99,19 @@
         font-size: 0.8rem;
     }
 
-    #overlay-menu-button span, #overlay-menu-button span:before,
+    #overlay-menu-button span,
+    #overlay-menu-button span:before,
     #overlay-menu-button span:after {
         height: 3px;
     }
 
-        #overlay-menu-button span:before {
-            top: -8px;
-        }
+    #overlay-menu-button span:before {
+        top: -8px;
+    }
 
-        #overlay-menu-button span:after {
-            top: 8px;
-        }
+    #overlay-menu-button span:after {
+        top: 8px;
+    }
 
     .logo-gallery-collaborations > div {
         width: auto;
@@ -116,7 +125,11 @@
         padding: 0;
     }
 
-    h1, h2, h3, h4, h5 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
         text-align: center;
     }
 
@@ -126,19 +139,21 @@
         align-items: center;
     }
 
-        .fullscreen-section-content h4 {
-            margin-top: 1rem;
-        }
+    .fullscreen-section-content h4 {
+        margin-top: 1rem;
+    }
 
-        .section-separator {
-            margin: 2rem 0;
-        }
+    .section-separator {
+        margin: 2rem 0;
+    }
 
-    .card, .small-card {
+    .card,
+    .small-card {
         align-self: stretch;
     }
 
-    .open-source-project-card-item-title h4, .open-source-project-card-item-title h3 {
+    .open-source-project-card-item-title h4,
+    .open-source-project-card-item-title h3 {
         margin: 0;
         text-align: left;
     }
@@ -174,11 +189,11 @@
         align-self: stretch;
     }
 
-        section img {
-            max-width: 350px;
-        }
+    section img {
+        max-width: 350px;
+    }
 
-        .card {
-            margin: 1rem;
-        }
+    .card {
+        margin: 1rem;
+    }
 }
