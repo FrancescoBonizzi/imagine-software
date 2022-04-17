@@ -7,7 +7,26 @@ layout: skeleton
     <h2>{{ page.subtitle }}</h2>
 </div>
 
-{% include projectsAppsBreadcrumbs.html %}
+<div class="breadcrumbs-container">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+        </li>
+
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/{{ page.previousPageRoute }}"
+                ><span itemprop="name">{{ page.previousPageTitle }}</span></a
+            >
+            <meta itemprop="position" content="2" />
+        </li>
+
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">{{ page.metaTitle }}</span>
+            <meta itemprop="position" content="3" />
+        </li>
+    </ol>
+</div>
 
 <section class="logo-download-buttons-container">
     <img class="project-logo" src="{{ site.url }}/assets/images/logos/{{ page.logoName }}" alt="{{ page.logoAlt }}" />

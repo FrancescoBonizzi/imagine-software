@@ -6,6 +6,9 @@ metaDescription: "Invoice Maker - Quick & Easy è l'App più semplice che puoi t
 shortDescription: "L'App pensata per i freelance e per chi deve **generare ricevute** al volo senza perdere tempo!"
 subtitle: Fatture e ricevute belle e professionali
 
+previousPageRoute: projects-apps
+previousPageTitle: Applicazioni
+
 logoName: logo-invoice-maker-quick-easy.png
 logoAlt: "Il logo dell'App Invoice Maker - Quick & Easy"
 

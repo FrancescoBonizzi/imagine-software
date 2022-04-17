@@ -6,6 +6,9 @@ metaDescription: SpandiGest è il gestionale che permette alle aziende agricole 
 shortDescription: 'Il gestionale agricolo per il **controllo centralizzato** degli spandimenti'
 subtitle: Fatture e ricevute belle e professionali
 
+previousPageRoute: projects-apps
+previousPageTitle: Applicazioni
+
 logoName: logo-spandigest.png
 logoAlt: Il logo del software gestionale agricolo SpandiGest
 
