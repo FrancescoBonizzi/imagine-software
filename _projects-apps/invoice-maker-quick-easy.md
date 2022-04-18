@@ -1,6 +1,8 @@
 ---
 layout: projects-apps-layout
 
+permalink: projects-apps/invoice-maker-quick-easy
+
 metaTitle: Invoice Maker - Quick & Easy
 metaDescription: "Invoice Maker - Quick & Easy è l'App più semplice che puoi trovare sullo Store per creare fatture, ricevute e preventivi belli e professionali"
 shortDescription: "L'App pensata per i freelance e per chi deve **generare ricevute** al volo senza perdere tempo!"

@@ -1,6 +1,8 @@
 ---
 layout: projects-apps-layout
 
+permalink: open-source-projects/infart
+
 metaTitle: 'INFART'
 metaDescription: 'Ambientato in una città astratta, in continuo cambiamento, INFART è un gioco CORRI E SCOREGGIA in cui dovrete mangiare il più possibile verdure!'
 shortDescription: "Una lotta contro il tempo per salvare la vivibilità della Terra tramite l'alimentazione. **Ognuno di noi può farlo!**"

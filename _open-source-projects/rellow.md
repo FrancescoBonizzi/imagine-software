@@ -1,6 +1,8 @@
 ---
 layout: projects-apps-layout
 
+permalink: open-source-projects/rellow
+
 metaTitle: 'Rellow'
 metaDescription: 'Rellow è un gioco di concentrazione: premi il pulsante giusto!! Attenzione, i colori danno assuefazione, tipo il rosso, il giallo, il rallo, il glu.'
 shortDescription: "Concentrati o ti perderai in un bicchier d'acqua **colorata**!"

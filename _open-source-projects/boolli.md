@@ -1,6 +1,8 @@
 ---
 layout: projects-apps-layout
 
+permalink: open-source-projects/boolli
+
 metaTitle: 'Boolli'
 metaDescription: 'Boolli è un interprete di espressioni booleane disponibile come libreria su NuGet, creato per implementare sistemi di regole avanzati.'
 shortDescription: "L'interprete di espressioni booleane in `C#` che ti permette di implementare **sistemi di regole avanzati**"

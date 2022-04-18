@@ -1,6 +1,8 @@
 ---
 layout: projects-apps-layout
 
+permalink: projects-apps/spandigest
+
 metaTitle: SpandiGest
 metaDescription: SpandiGest è il gestionale che permette alle aziende agricole di tenere traccia dei viaggi dei propri operatori per lo spandimenti di liquami
 shortDescription: 'Il gestionale agricolo per il **controllo centralizzato** degli spandimenti'
