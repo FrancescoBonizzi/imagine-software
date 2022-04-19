@@ -1,0 +1,8 @@
+// To start the server, run:
+bundle exec jekyll serve --livereload
+
+// To build the site, run:
+bundle exec jekyll build
+
+// To install plugins when added to Gemfile
+bundle install

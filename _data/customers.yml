@@ -1,0 +1,45 @@
+- name: Esaedro S.r.l.
+  link: https://www.esaedro.com/
+  linkTitle: "Visita il sito dell'azienda Esaedro S.r.l."
+  logoAlt: "Il logo dell'azienda per cui ho lavorato Esaedro"
+  logoName: logo-esaedro.jpg
+- name: FST S.r.l.
+  link: https://www.fomsoftware.com
+  linkTitle: "Visita il sito dell'azienda FST S.r.l."
+  logoAlt: "Il logo dell'azienda per cui ho lavorato FST"
+  logoName: logo-fst.jpg
+- name: Infor S.r.l.
+  link: https://www.gruppoinfor.it/
+  linkTitle: "Visita il sito dell'azienda Infor S.r.l."
+  logoAlt: "Il logo dell'azienda per cui ho lavorato Infor Srl"
+  logoName: logo-infor.jpg
+- name: iSolutions S.r.l.
+  link: https://www.isolutions.it/
+  linkTitle: "Visita il sito dell'azienda iSolutions S.r.l."
+  logoAlt: "Il logo dell'azienda per cui ho lavorato iSolutions"
+  logoName: logo-isolutions.jpg
+- name: Serravalle Energia S.r.l.
+  link: https://www.isolutions.it/
+  linkTitle:
+  logoAlt: "Il logo dell'azienda per cui ho lavorato Serravalle Energia"
+  logoName: logo-serravalle-energia.jpg
+- name: ShopPaid
+  link: https://shoppaid.it/
+  linkTitle: 'Visita il sito di ShopPaid: la spesa col tuo smartphone!'
+  logoAlt: 'Logo di ShopPaid'
+  logoName: logo-shoppaid.jpg
+- name: TNCR Editori@l Engineering
+  link: https://www.isolutions.it/
+  linkTitle:
+  logoAlt: "Il logo dell'azienda per cui ho lavorato TNCR Editorial Engineering"
+  logoName: logo-tncr-editorial-engineering.jpg
+- name: Reggiani Spurghi
+  link: https://reggianispurghi.com/
+  linkTitle: "Visita il sito dell'azienda Reggiani Spurghi"
+  logoAlt: "Il logo dell'azienda per cui ho lavorato Reggiani Spurghi"
+  logoName: logo-reggiani-spurghi.jpg
+- name: Consorzio Idraulico del Tombone
+  link: http://www.consorzioidraulicodeltombone.it/
+  linkTitle: 'Visita il sito del consorzio idraulico del Tombone'
+  logoAlt: "Il logo dell'azienda per cui ho lavorato Consorzio Idraulico del Tombone"
+  logoName: logo-consorzio-idraulico-tombone.jpg

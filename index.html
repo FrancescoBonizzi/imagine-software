@@ -1,0 +1,101 @@
+---
+layout: skeleton
+permalink: /
+
+metaTitle: Design, sviluppo, integrazione di software e App
+metaDescription: 'Imagine Software: design, sviluppo, integrazione di software e App. Rendo le tue idee realtà, accresco il valore del tuo team di sviluppo.'
+subtitle: "Una buona idea decolla con un'esecuzione perfetta"
+
+ogImage: 'logos/logo-imagine-software-no-text.jpg'
+
+jsonLd: '{"@context":"https://schema.org","@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/assets/images/logos/logo-imagine-software.jpg","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}};'
+---
+
+<section class="homepage-section">
+    
+    <div class="homepage-header">
+        <h1>{{ page.metaTitle }}</h1>
+        <hr class="menu-separator" />
+        <h2>{{ page.subtitle }}</h2>
+    </div>
+
+    <div class="section-content-landing">
+        <div class="shortcuts-list">
+            <ul class="shortcuts-list-home">
+
+                {% for headerBox in site.homePageHeaderBoxes %}
+                <li>
+                    <div class="shortcuts-list-title-container">
+                        <img
+                            src="{{ site.url }}/assets/images/other/{{ headerBox.imageName }}"
+                            alt="{{ headerBox.imageAlt }}"
+                        />
+                    </div>
+
+                    {{ headerBox.content | markdownify }}
+
+                    <a href="{{ headerBox.link }}" class="action-button-secondary">Approfondisci</a>
+                </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="grey-section">
+    <div class="fullscreen-section-content centered-section-content">
+        <h3 class="contact-title">VUOI PARLARE DEL TUO PROGETTO CON ME?</h3>
+        <a href="/contacts" class="action-button button-top-margin">CONTATTAMI</a>
+    </div>
+</section>
+
+{% for homePageSection in site.homePageSections %}
+
+    {% assign sectionClassName = 'white-section' %} 
+    {% assign restoDivisione = forloop.index | modulo:2 %}
+    {% if restoDivisione == 0 %}
+    {% assign sectionClassName = 'alt-section' %}
+    {% endif %}
+
+    <section class="{{ sectionClassName }}">
+        <div class="fullscreen-section-content">
+            <h3>{{ homePageSection.title }}</h3>
+            <h4>{{ homePageSection.subtitle }}</h4>
+
+            {% if homePageSection.subtitle and homePageSection.subtitle != '' %}
+                <div class="section-separator"></div>
+            {% endif %} 
+
+            {% if homePageSection.imagePath and homePageSection.imagePath != '' %}
+                <img
+                    class="intermediate-article-image homepage-article-image left-image show-on-scroll rounded-logo"
+                    width="180"
+                    height="180"
+                    src="{{ site.url }}/{{ homePageSection.imagePath }}"
+                    alt="{{ homePageSection.imageAlt }}"
+                />
+            {% endif %} 
+            
+            {{ homePageSection.content | markdownify }}
+
+            <br />
+
+            {% if homePageSection.callToActionText and homePageSection.callToActionText != '' %}
+
+                {% assign link = homePageSection.callToActionLink %} 
+                {% assign isRelativeLink = false %} 
+                {% if link contains '://' %}
+                {% assign isRelativeLink = true %} 
+                {% endif %} 
+                {% if isRelativeLink == true %} 
+                {% assign link = site.url | append: "/" | append: link %} 
+                {% endif %}
+
+                <a href="{{ link }}" class="action-button">{{ homePageSection.callToActionText }}</a>
+
+            {% endif %}
+        </div>
+    </section>
+
+{% endfor %}

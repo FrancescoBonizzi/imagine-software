@@ -1,0 +1,47 @@
+---
+layout: common-page
+permalink: contacts
+
+metaTitle: Vuoi discutere di un progetto o di una folle idea?
+metaDescription: 'Vuoi conoscere i miei servizi, parlarmi di un progetto o di una collaborazione? Scrivimi due righe senza impegno! Sono disponibile anche su Telegram!'
+subtitle: 'Scrivimi due righe.'
+
+jsonLd: '{"@context":"http://schema.org","@type":"ContactPage","description":"Vuoi conoscere i miei servizi, parlarmi di un progetto o di una collaborazione? Scrivimi due righe senza impegno! Sono disponibile anche su Telegram!","name":"Contatti","url":"https://www.imaginesoftware.it/contacts"}'
+---
+
+<p>
+    Se vuoi discutere di un progetto, di un'idea, se vuoi capire quali sono le mie conoscenze ed esperienza per inserirmi nel
+    tuo team di sviluppo, <strong>puoi scrivermi quando vuoi</strong>.
+
+    <br /><br />
+
+    Sarò molto felice di conoscerti e di parlare con te!
+</p>
+
+<a href="{{ site.url }}/assets/things/francesco-bonizzi-vcard.vcf" class="action-button download-my-vcard"
+    >Scarica il mio contatto sul telefono</a
+>
+
+<div class="quick-contacts">
+    <ul>
+        <li>
+            <span class="quick-contact-label"><i class="icon-email"></i>Email:</span>
+            <span title="Scrivimi due righe per email!"
+                ><a class="outside-link" href="mailto:{{ site.email }}">{{ site.email }}</a></span
+            >
+        </li>
+        <li>
+            <span class="quick-contact-label"><i class="icon-telegram"></i>Telegram:</span>
+            <a
+                class="outside-link link-telegram"
+                href="https://telegram.me/{{ site.telegram }}"
+                title="Scrivimi due righe tramite Telegram"
+                >@{{ site.telegram }}</a
+            >
+        </li>
+        <li>
+            <span class="quick-contact-label"><i class="icon-linkedin"></i>LinkedIn:</span>
+            <a class="outside-link" href="{{ site.linkedin }}" title="Scrivimi due righe tramite LinkedIn">/fbonizzi</a>
+        </li>
+    </ul>
+</div>

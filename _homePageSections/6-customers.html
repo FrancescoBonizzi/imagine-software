@@ -1,0 +1,21 @@
+---
+title: HO COLLABORATO CON
+subtitle:
+callToActionText:
+callToActionLink:
+imagePath:
+imageAlt:
+---
+
+<div class="logo-gallery technologies-logos">
+    {% for item in site.data.customers %}
+    <div class="logo-gallery-block">
+        <a title="{{ item.linkTitle }}" href="{{ item.link }}" target="_blank" rel="noopener">
+            <div>
+                <img src="{{ site.url }}/assets/images/logos/{{ item.logoName }}" alt="{{ item.logoAlt }}" />
+            </div>
+            <span class="logo-gallery-name">{{ item.name }}</span>
+        </a>
+    </div>
+    {% endfor %}
+</div>

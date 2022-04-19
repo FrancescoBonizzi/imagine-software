@@ -1,0 +1,23 @@
+---
+layout: skeleton
+permalink: open-source-projects
+
+metaTitle: Progetti open source
+metaDescription: 'I progetti open source di Imagine Software, accessibili liberamente tramite GitHub: librerie, piccoli software, videogiochi.'
+subtitle: Codice aperto alla collaborazione di tutti
+
+jsonLd:
+---
+
+<div class="article-header">
+    <h1>{{ page.metaTitle }}</h1>
+    <h2>{{ page.subtitle }}</h2>
+</div>
+
+{% include oneLevelBreadcrumbs.html %}
+
+<div class="section-separator-with-margin-from-header"></div>
+
+{% for item in site.open-source-projects %} 
+    {% include projectCard.html item=item %} 
+{% endfor %}

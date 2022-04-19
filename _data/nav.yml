@@ -1,0 +1,12 @@
+- name: Home
+  link: /
+- name: Servizi
+  link: /services
+- name: Applicazioni
+  link: /projects-apps
+- name: Progetti open source
+  link: /open-source-projects
+- name: Chi sono
+  link: /francesco-bonizzi
+- name: Contatti
+  link: /contacts

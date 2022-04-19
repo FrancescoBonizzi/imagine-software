@@ -1,0 +1,30 @@
+- name: .NET
+  link: https://dotnet.microsoft.com/
+  linkTitle: 'Il sito ufficiale di Microsoft .NET'
+  logoAlt: 'Il logo di Microsoft .NET'
+  logoName: logo-dot-net.png
+- name: React Native
+  link: https://reactnative.dev/
+  linkTitle: 'Il sito ufficiale del framework React Native'
+  logoAlt: 'Il logo del framework React Native'
+  logoName: logo-react-native.jpg
+- name: SQL Server
+  link: https://www.microsoft.com/it-it/sql-server/sql-server-downloads
+  linkTitle: 'Il sito ufficiale di Microsoft SQL Server'
+  logoAlt: 'Il logo di Microsoft SQL Server'
+  logoName: logo-sql-server.png
+- name: JavaScript
+  link: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  linkTitle: 'Javascript presso la Mozilla foundation'
+  logoAlt: 'Il logo non ufficiale di JavaScript'
+  logoName: logo-javascript.png
+- name: Android
+  link: https://www.android.com
+  linkTitle: 'Il sito ufficiale del sistema operativo Android'
+  logoAlt: 'Il logo di Android'
+  logoName: logo-android.png
+- name: Azure
+  link: https://azure.microsoft.com/it-it/
+  linkTitle: 'Il sito ufficiale di Microsoft Azure (cloud provider)'
+  logoAlt: 'Il logo di Microsoft Azure (cloud provider)'
+  logoName: logo-azure.png
