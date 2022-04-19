@@ -1224,7 +1224,6 @@ width: 100%;*/
 .code-snippet,
 code {
     border-radius: 5px;
-    padding: 1px 6px;
     font-family: Consolas, Liberation Mono, Menlo, monospace !important;
     font-style: normal;
     background-color: var(--code-snippet-background-color);
@@ -1241,38 +1240,6 @@ pre {
     overflow: scroll;
     overflow-y: hidden;
 }
-
-/*#region Better styles for embedding GitHub Gists */
-.gist-data * {
-    font-family: Consolas, Liberation Mono, Menlo, monospace !important;
-}
-
-.gist,
-.gist-data,
-.gist-file {
-    border: none !important;
-}
-
-.gist-data {
-    padding: 1rem !important;
-    border-radius: 6px !important;
-}
-
-.gist-data,
-.gist-data * {
-    background-color: white !important;
-}
-
-.gist-meta {
-    display: none;
-}
-
-.js-file-line-container tr > * {
-    font-size: 0.9rem !important;
-    line-height: 1.5rem !important;
-}
-
-/*#endregion*/
 
 /*#region BreadCrumbs */
 
