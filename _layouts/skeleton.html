@@ -85,7 +85,7 @@
             <i class="icon-up"></i>
         </button>
 
-        <main>{{ content }}</main>
+        <main {% if page.customMainClass and page.customMainClass != '' %}class="{{ page.customMainClass }}"{% endif %}>{{ content }}</main>
 
         <footer>
             <div class="bottom-menu-section">
