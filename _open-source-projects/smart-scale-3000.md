@@ -8,6 +8,8 @@ metaDescription: "SmartScale3000 è la bilancia intelligente che manca nei super
 shortDescription: "La bilancia intelligente, powered by AI e **vincitrice** dell'**iSolutions Hackaton 2020**"
 subtitle: 'La bilancia intelligente powered by AI'
 
+ogImage: 'logos/logo-smart-scale.png'
+
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 

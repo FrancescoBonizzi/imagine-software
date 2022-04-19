@@ -8,6 +8,8 @@ metaDescription: 'Boolli è un interprete di espressioni booleane disponibile co
 shortDescription: "L'interprete di espressioni booleane in `C#` che ti permette di implementare **sistemi di regole avanzati**"
 subtitle: "L'interprete di espressioni booleane"
 
+ogImage: 'logos/logo-boolli.png'
+
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 

@@ -8,6 +8,8 @@ metaDescription: 'Sei una stella caduta sulla Terra. Ti ritrovi in una selva osc
 shortDescription: 'Sei una stella caduta sulla Terra. Ti ritrovi in una selva oscura, in cerca della luce per tornare a casa...'
 subtitle: 'Mi ritrovai per una selva oscura...'
 
+ogImage: 'logos/logo-starfall.png'
+
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 

@@ -8,6 +8,8 @@ metaDescription: 'Rellow è un gioco di concentrazione: premi il pulsante giusto
 shortDescription: "Concentrati o ti perderai in un bicchier d'acqua **colorata**!"
 subtitle: 'Rosso, giallo, rallo, glu'
 
+ogImage: 'logos/logo-rellow.png'
+
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 

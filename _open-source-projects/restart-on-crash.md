@@ -8,6 +8,8 @@ metaDescription: 'RestartOnCrash è una semplice applicazione .NET Core scritta 
 shortDescription: 'La tua applicazione crasha ed hai bisogno di una _remediation_ alla velocità della luce. **Riavviala in automatico!**'
 subtitle: 'Riavvia le applicazioni che crashano!'
 
+ogImage: 'logos/logo-restart-on-crash.png'
+
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 

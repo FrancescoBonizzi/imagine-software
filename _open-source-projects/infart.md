@@ -8,6 +8,8 @@ metaDescription: 'Ambientato in una città astratta, in continuo cambiamento, IN
 shortDescription: "Una lotta contro il tempo per salvare la vivibilità della Terra tramite l'alimentazione. **Ognuno di noi può farlo!**"
 subtitle: 'Esploderai dalle risate!'
 
+ogImage: 'logos/logo-infart.png'
+
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 
