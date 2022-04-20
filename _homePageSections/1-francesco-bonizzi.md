@@ -3,7 +3,7 @@ title: SONO UNO SVILUPPATORE FULL STACK
 subtitle: .NET e App
 callToActionText: LEGGI LA MIA ESPERIENZA
 callToActionLink: francesco-bonizzi
-imagePath: assets/images/other/francesco-bonizzi.jpg
+imagePath: assets/images/other/Francesco-Bonizzi.jpg
 imageAlt: Una foto di Francesco Bonizzi
 ---
 
