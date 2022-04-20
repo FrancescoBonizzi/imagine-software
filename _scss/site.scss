@@ -1148,7 +1148,42 @@ width: 100%;*/
     border-color: white;
 }
 
-.technologies-logos {
+.customers-logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+}
+
+.customers-logos img {
+    border-radius: 1rem;
+    max-width: 80px;
+    max-height: 80px;
+    margin: 0;
+}
+
+.customer-logo-gallery-block {
+    transform: scale(0.8);
+    transition: all 0.2s ease-out;
+}
+
+.customer-logo-gallery-block:hover {
+    height: 100%;
+    transform: scale(1);
+    transition: all 0.2s ease-in;
+}
+
+.customer-logo-gallery-block a {
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.customer-logo-gallery-name {
+    font-size: 1.2rem;
+    display: block;
+    color: var(--background-dark-color);
+    margin-left: 1rem;
 }
 
 .technologies-logos img {
@@ -1186,10 +1221,6 @@ width: 100%;*/
     opacity: 1;
 }
 
-.logo-gallery-collaborations > div {
-    width: 210px;
-}
-
 .logo-gallery-block:hover {
     height: 100%;
     transform: scale(1);
@@ -1201,6 +1232,10 @@ width: 100%;*/
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.logo-gallery-collaborations > div {
+    width: 210px;
 }
 
 .companies-title {

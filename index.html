@@ -86,10 +86,10 @@ jsonLd: '{"@context":"https://schema.org","@type":"Organization","name":"Imagine
                 {% assign link = homePageSection.callToActionLink %} 
                 {% assign isRelativeLink = false %} 
                 {% if link contains '://' %}
-                {% assign isRelativeLink = true %} 
+                    {% assign isRelativeLink = true %} 
                 {% endif %} 
                 {% if isRelativeLink == true %} 
-                {% assign link = site.url | append: "/" | append: link %} 
+                    {% assign link = site.url | append: "/" | append: link %} 
                 {% endif %}
 
                 <a href="{{ link }}" class="action-button">{{ homePageSection.callToActionText }}</a>
