@@ -1,5 +1,5 @@
 ---
-imageName: target.jpg
+imageName: target.jpg?v=EAOUX2E2fO6Xov+gql+Fzyra1wGa0/0GWOAEbJrqYnQ
 imageAlt: "L'immagine di un bersaglio, per rappresentare gli obiettivi di un'azienda"
 link: '/services'
 ---

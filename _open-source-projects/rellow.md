@@ -8,12 +8,12 @@ metaDescription: 'Rellow è un gioco di concentrazione: premi il pulsante giusto
 shortDescription: "Concentrati o ti perderai in un bicchier d'acqua **colorata**!"
 subtitle: 'Rosso, giallo, rallo, glu'
 
-ogImage: 'logos/logo-rellow.png'
+ogImage: 'logos/logo-rellow.png?v=59vRNVlWSAhxDX3WNFDIP+rpBcCm2aduUGzyr628hSg'
 
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 
-logoName: logo-rellow.png
+logoName: logo-rellow.png?v=59vRNVlWSAhxDX3WNFDIP+rpBcCm2aduUGzyr628hSg
 logoAlt: 'Il logo del videogioco RELLOW'
 
 buttons:
@@ -26,14 +26,14 @@ buttons:
       icon: icon-windows
       title-text: Scarica INFART per Windows
 
-jsonLd: '{"@context":"https://schema.org","@type":"GameApplication","name":"Rellow","url":"https://play.google.com/store/apps/details?id=com.francescobonizzi.rellow","description":"Rellow &#xE8; un gioco di concentrazione: premi il pulsante giusto!! Attenzione, i colori danno assuefazione, tipo il rosso, il giallo, il rallo, il glu.","operatingSystem":"ANDROID","applicationCategory":"GAME_PUZZLE","image":"https://www.imaginesoftware.it/images/logos/logo-rellow.png","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
+jsonLd: '{"@context":"https://schema.org","@type":"GameApplication","name":"Rellow","url":"https://play.google.com/store/apps/details?id=com.francescobonizzi.rellow","description":"Rellow &#xE8; un gioco di concentrazione: premi il pulsante giusto!! Attenzione, i colori danno assuefazione, tipo il rosso, il giallo, il rallo, il glu.","operatingSystem":"ANDROID","applicationCategory":"GAME_PUZZLE","image":"https://www.imaginesoftware.it/images/logos/logo-rellow.png?v=59vRNVlWSAhxDX3WNFDIP+rpBcCm2aduUGzyr628hSg","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ+cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs+TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
 ---
 
 **Rellow** è un gioco di **concentrazione**: ti troverai di fronte ad una serie di pulsanti colorati dove lo scopo è premere quello giusto! In alto vedrai una scritta che indicherà un colore, e tu dovrai proprio premere il pulsante del colore che la scritta descrive. La difficoltà sta nel fatto che la scritta è colorata di un colore diverso da quello che denota!
 
 All'inizio il gioco è molto semplice, ci sono solo tre pulsanti, ma continuando a vincere la **difficoltà** aumenta, fino a nove pulsanti diversi contemporaneamente; inoltre il tempo a disposizione per pensare si riduce sempre più!
 
-<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/rellow-game-screenshot-1.png" alt="rellow-game-screenshot-1" /></p>
+<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/rellow-game-screenshot-1.png?v=PU8Tjn+9ZHSqhTo9c6podGRlZibvuXVjM7D/Mou5C9A" alt="rellow-game-screenshot-1" /></p>
 
 <div class="section-separator-inside-section"></div>
 
@@ -43,7 +43,7 @@ Ne è stata sviluppata una versione espressamente *NOT game*, in seguito all'in
 
 In tale versione di **Rellow** vennero apportate significative modifiche alla grafica ed alla velocità di autoapprendimento, affinché anche un impiego temporalmente importante del coach stesso consentisse di aumentare la coordinazione tra il visus e le falangi motili.
 
-<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/rellow-game-screenshot-2.png" alt="rellow-game-screenshot-2" /></p>
+<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/rellow-game-screenshot-2.png?v=6L37uY06QhSi/ffD8jy50dydItNmhcFS7gcIYCtgUF8" alt="rellow-game-screenshot-2" /></p>
 
 <div class="section-separator-inside-section"></div>
 

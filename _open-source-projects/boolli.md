@@ -8,12 +8,12 @@ metaDescription: 'Boolli è un interprete di espressioni booleane disponibile co
 shortDescription: "L'interprete di espressioni booleane in `C#` che ti permette di implementare **sistemi di regole avanzati**"
 subtitle: "L'interprete di espressioni booleane"
 
-ogImage: 'logos/logo-boolli.png'
+ogImage: 'logos/logo-boolli.png?v=ivGI+PPCC06l40u8S4Fg4DoRnPqvvGhI6bDUsvE475A'
 
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 
-logoName: logo-boolli.png
+logoName: logo-boolli.png?v=ivGI+PPCC06l40u8S4Fg4DoRnPqvvGhI6bDUsvE475A
 logoAlt: "Il logo dell'interprete di espressioni booleane boolli"
 
 buttons:
@@ -22,7 +22,7 @@ buttons:
       icon: icon-github
       title-text: Apri il repository GitHub di Boolli
 
-jsonLd: '{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Boolli","description":"Boolli &#xE8; un interprete di espressioni booleane disponibile come libreria su Nuget, creato per implementare sistemi di regole avanzati.","operatingSystem":"Windows","applicationCategory":"Software","image":"https://www.imaginesoftware.it/images/logos/logo-boolli.png","url":"https://github.com/FrancescoBonizzi/Boolli","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
+jsonLd: '{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Boolli","description":"Boolli &#xE8; un interprete di espressioni booleane disponibile come libreria su Nuget, creato per implementare sistemi di regole avanzati.","operatingSystem":"Windows","applicationCategory":"Software","image":"https://www.imaginesoftware.it/images/logos/logo-boolli.png?v=ivGI+PPCC06l40u8S4Fg4DoRnPqvvGhI6bDUsvE475A","url":"https://github.com/FrancescoBonizzi/Boolli","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ+cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs+TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
 ---
 
 **Boolli** è un **interprete di espressioni booleane** [open-source](https://github.com/FrancescoBonizzi/Boolli 'Vai alla pagina GitHub di Boolli') scritto in `C#` e disponibile come [libreria su NuGet](https://www.nuget.org/packages/Boolli/ 'Vai alla pagina specifica su NuGet').
@@ -112,7 +112,7 @@ Ho sviluppato un **semplicissimo** scenario a scopo dimostrativo (se vuoi lo p
 
 [Qui su GitHub](https://github.com/FrancescoBonizzi/Boolli/tree/master/SampleScenario 'Vai al codice open source del sistema di creazione di alert basato su regole') puoi trovare il codice sorgente dell'esempio specifico che sto per approfondire.
 
-<p><a title="Apri l'immagine più in grande" href="{{ site.url }}/assets/images/screenshots/boolli-sample-scenario-output.png" target="_blank" rel="noopener"><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/boolli-sample-scenario-output.png" alt="boolli-sample-scenario-output" /></a></p>
+<p><a title="Apri l'immagine più in grande" href="{{ site.url }}/assets/images/screenshots/boolli-sample-scenario-output.png?v=xr+eIPyqoX3rnnksVSkrakm55KujZqfveOysPtPnXjc" target="_blank" rel="noopener"><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/boolli-sample-scenario-output.png?v=xr+eIPyqoX3rnnksVSkrakm55KujZqfveOysPtPnXjc" alt="boolli-sample-scenario-output" /></a></p>
 
 L'idea è quella di generare degli **alert testuali basati su dati di monitoraggio hardware**, come ad esempio la percentuali di CPU utilizzata in un dato momento. Ogni alert è generato da una regola che può essere scritta come una stringa - e quindi configurabile anche da una GUI - come ad esempio: `CPUPercentage and UsedRAMGigaBytes`.
 

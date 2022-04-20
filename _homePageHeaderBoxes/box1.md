@@ -1,5 +1,5 @@
 ---
-imageName: team.jpg
+imageName: team.jpg?v=c1P856M43qo8eepnyyWMdM2PmIhk9QDYOQyHoliEE3o
 imageAlt: "L'immagine di un gruppo di persone che lavorano in squadra"
 link: '/services'
 ---

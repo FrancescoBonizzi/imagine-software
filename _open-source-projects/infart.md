@@ -8,12 +8,12 @@ metaDescription: 'Ambientato in una città astratta, in continuo cambiamento, IN
 shortDescription: "Una lotta contro il tempo per salvare la vivibilità della Terra tramite l'alimentazione. **Ognuno di noi può farlo!**"
 subtitle: 'Esploderai dalle risate!'
 
-ogImage: 'logos/logo-infart.png'
+ogImage: 'logos/logo-infart.png?v=m+WpIoF5rG6FDiXVxlkkPaKV4gbsoY/p9KGzIpQaZWk'
 
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 
-logoName: logo-infart.png
+logoName: logo-infart.png?v=m+WpIoF5rG6FDiXVxlkkPaKV4gbsoY/p9KGzIpQaZWk
 logoAlt: 'Il logo del videogioco INFART'
 
 buttons:
@@ -26,14 +26,14 @@ buttons:
       icon: icon-windows
       title-text: Scarica INFART per Windows
 
-jsonLd: '{"@context":"https://schema.org","@type":"GameApplication","name":"INFART","url":"https://play.google.com/store/apps/details?id=com.francescobonizzi.infart","description":"Ambientato in una città; astratta, in continuo cambiamento, INFART è un gioco CORRI E SCOREGGIA in cui dovrete mangiare il più possibile verdure!","operatingSystem":"ANDROID","applicationCategory":"GAME_ACTION","image":"https://www.imaginesoftware.it/images/logos/logo-infart.png","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
+jsonLd: '{"@context":"https://schema.org","@type":"GameApplication","name":"INFART","url":"https://play.google.com/store/apps/details?id=com.francescobonizzi.infart","description":"Ambientato in una città; astratta, in continuo cambiamento, INFART è un gioco CORRI E SCOREGGIA in cui dovrete mangiare il più possibile verdure!","operatingSystem":"ANDROID","applicationCategory":"GAME_ACTION","image":"https://www.imaginesoftware.it/images/logos/logo-infart.png?v=m+WpIoF5rG6FDiXVxlkkPaKV4gbsoY/p9KGzIpQaZWk","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ+cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs+TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
 ---
 
 L'uomo non ha trattato bene la Terra e **l'atmosfera è al collasso!**
 
 Ambientato in una città astratta, in continuo cambiamento, **INFART** è un gioco *CORRI E SCOREGGIA* in cui dovrete mangiare il più possibile verdure, evitare gli hamburger ed i buchi nella strada che si sono creati in seguito ai cataclismi.
 
-<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/infart-game-screenshot-1.png" alt="infart-game-screenshot-1" /></p>
+<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/infart-game-screenshot-1.png?v=LC5MGYg3jM5Vf2xAZ+qX67r61+X1fS1BNJ0IdQSOx/o" alt="infart-game-screenshot-1" /></p>
 
 **INFART** è un videogioco a scorrimento orizzontale - un'*infinite scroll* - **il cui mondo evolve nel tempo**: salta i buchi, evita gli hamburger più che puoi, altrimenti **ESPLODI**!
 
@@ -43,7 +43,7 @@ Ambientato in una città astratta, in continuo cambiamento, **INFART** è un g
 
 Il gioco ironizza volutamente sulla **correlazione tra cibo, cambiamenti climatici e diritti dell'uomo**. Si vuole sensibilizzare in merito ad un mondo (il 2020) in cui una parte degli esseri umani soffre di patologie legate al sovrappeso mentre *l'altra parte* è malnutrita.
 
-<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/infart-game-screenshot-2.png" alt="infart-game-screenshot-2" /></p>
+<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/infart-game-screenshot-2.png?v=acf7SbK8hR52SEkHV1BGtGtRF1uJArXeN+nETN6ZxsU" alt="infart-game-screenshot-2" /></p>
 
 Non solo: la *supply chain* del cibo, in particolare della carne - qui rappresentata dagli *hamburger* \- è correlata direttamente con [la perdita della biodiversità](https://www.theguardian.com/environment/2018/may/31/avoiding-meat-and-dairy-is-single-biggest-way-to-reduce-your-impact-on-earth "Un articolo del Guardian che parla della perdità di biodiversità in relazione all'alimentazione dell'uomo"), [l'inquinamento dell'aria](https://www.nature.com/articles/s41893-020-00603-4 'Nature: The carbon opportunity cost of animal-sourced food production on land'), la scarsità di acqua in alcuni paesi e lo sviluppo di batteri resistenti agli antibiotici.
 

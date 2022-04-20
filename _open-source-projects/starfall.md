@@ -8,12 +8,12 @@ metaDescription: 'Sei una stella caduta sulla Terra. Ti ritrovi in una selva osc
 shortDescription: 'Sei una stella caduta sulla Terra. Ti ritrovi in una selva oscura, in cerca della luce per tornare a casa...'
 subtitle: 'Mi ritrovai per una selva oscura...'
 
-ogImage: 'logos/logo-starfall.png'
+ogImage: 'logos/logo-starfall.png?v=yb+/nmV6rZQVhGnkWX8qKaJMFUCJIeJEvgOdEbbjsE4'
 
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 
-logoName: logo-starfall.png
+logoName: logo-starfall.png?v=yb+/nmV6rZQVhGnkWX8qKaJMFUCJIeJEvgOdEbbjsE4
 logoAlt: Il logo del videogioco open source Starfall
 
 buttons:
@@ -26,7 +26,7 @@ buttons:
       icon: icon-windows
       title-text: Scarica INFART per Windows
 
-jsonLd: '{"@context":"https://schema.org","@type":"GameApplication","name":"Starfall","url":"https://play.google.com/store/apps/details?id=com.francescobonizzi.starfall","description":"Sei una stella caduta sulla Terra. Ti ritrovi in una selva oscura in cerca della via per risalire verso casa...","operatingSystem":"ANDROID","applicationCategory":"GAME_ACTION","image":"https://www.imaginesoftware.it/images/logos/logo-starfall.png","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
+jsonLd: '{"@context":"https://schema.org","@type":"GameApplication","name":"Starfall","url":"https://play.google.com/store/apps/details?id=com.francescobonizzi.starfall","description":"Sei una stella caduta sulla Terra. Ti ritrovi in una selva oscura in cerca della via per risalire verso casa...","operatingSystem":"ANDROID","applicationCategory":"GAME_ACTION","image":"https://www.imaginesoftware.it/images/logos/logo-starfall.png?v=yb+/nmV6rZQVhGnkWX8qKaJMFUCJIeJEvgOdEbbjsE4","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ+cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs+TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
 ---
 
 **Sei una stella caduta sulla Terra**. Ti ritrovi in una selva oscura in cerca della via per risalire verso casa. Sei priva di energie e ti servono le luci per recuperare le forze e riuscire a volare.
@@ -35,7 +35,7 @@ Attenzione, però, durante il cammino i buchi neri cercheranno di assorbirti!
 
 **Starfall** è un videogioco a scorrimento orizzontale - un'*infinite scroll* - **il cui mondo evolve nel tempo**. La tua capacità di volare dipende dalla luce che interiorizzi e si può ridurre se inglobi troppo **buio**...
 
-<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/starfall-game-screenshot-1.png" alt="starfall-game-screenshot-1" /></p>
+<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/starfall-game-screenshot-1.png?v=+jFnKdApBfjyP8Mz6A0vGWlLqz+pNSMBueaKgsmU+TI" alt="starfall-game-screenshot-1" /></p>
 
 <div class="section-separator-inside-section"></div>
 
@@ -49,7 +49,7 @@ Un giorno Marco è venuto a trovarmi, abbiamo fatto una passeggiata, mi ha mostr
 
 Marco è un mago di strumenti di fotoritocco, ha un occhio clinico che io ancora non ho, ed intanto che scrivevo tutto il codice, lui mi preparava gli sfondi in parallasse, disegnava la stella protagonista del gioco e la animava con [Spriter](https://brashmonkey.com/spriter-pro/ "L'applicazione di animazione Spriter").
 
-<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/starfall-game-screenshot-menu.png" alt="starfall-game-screenshot-menu" /></p>
+<p><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/starfall-game-screenshot-menu.png?v=xpRbPlXMD53gwZl3HcrQC4xXOqIdrf5+ihNX3T3X34E" alt="starfall-game-screenshot-menu" /></p>
 
 <div class="section-separator-inside-section"></div>
 

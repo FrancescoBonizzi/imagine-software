@@ -1,5 +1,5 @@
 ---
-imageName: rocket.jpg
+imageName: rocket.jpg?v=sIJ3Esx93p451iomKzSFH4b1AOLMtNYsBc94WjSAhTk
 imageAlt: "L'immagine di un razzo per rappresentare le startup"
 link: '/services'
 ---

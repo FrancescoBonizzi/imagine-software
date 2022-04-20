@@ -8,12 +8,12 @@ metaDescription: 'RestartOnCrash è una semplice applicazione .NET Core scritta 
 shortDescription: 'La tua applicazione crasha ed hai bisogno di una _remediation_ alla velocità della luce. **Riavviala in automatico!**'
 subtitle: 'Riavvia le applicazioni che crashano!'
 
-ogImage: 'logos/logo-restart-on-crash.png'
+ogImage: 'logos/logo-restart-on-crash.png?v=MrywDch5J6DojRJnulkT+U01P1TCLlDrdSnIsj1qV2Q'
 
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 
-logoName: logo-restart-on-crash.png
+logoName: logo-restart-on-crash.png?v=MrywDch5J6DojRJnulkT+U01P1TCLlDrdSnIsj1qV2Q
 logoAlt: 'Il logo del software RestartOnCrash'
 
 buttons:
@@ -22,7 +22,7 @@ buttons:
       icon: icon-github
       title-text: Apri il repository di RestartOnCrash su GitHub
 
-jsonLd: '{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RestartOnCrash","description":"RestartOnCrash &#xE8; una semplice applicazione .NET Core scritta in C#, open source, che riavvia in automatico le applicazioni che crashano.","operatingSystem":"Windows","applicationCategory":"Software","url":"https://github.com/FrancescoBonizzi/RestartOnCrash","image":"https://www.imaginesoftware.it/images/logos/logo-restart-on-crash.png","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
+jsonLd: '{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RestartOnCrash","description":"RestartOnCrash &#xE8; una semplice applicazione .NET Core scritta in C#, open source, che riavvia in automatico le applicazioni che crashano.","operatingSystem":"Windows","applicationCategory":"Software","url":"https://github.com/FrancescoBonizzi/RestartOnCrash","image":"https://www.imaginesoftware.it/images/logos/logo-restart-on-crash.png?v=MrywDch5J6DojRJnulkT+U01P1TCLlDrdSnIsj1qV2Q","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ+cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs+TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
 ---
 
 **RestartOnCrash** è una semplice applicazione `.NET Core`, [open source](https://github.com/FrancescoBonizzi/RestartOnCrash 'Vai alla pagina GitHub di RestartOnCrash') e scritta in `C#` che mira a risolvere il problema di un'*applicazione per Windows* che cessa di funzionare per problemi che non puoi gestire dall'interno. Semplicemente **riavvia l'applicazione crashata**.
@@ -38,8 +38,8 @@ Non avendo accesso al codice sorgente in questione, ho dovuto arrangiarmi con un
 Ogni volta che esegue un'operazione, scrive un evento nell'[EventViewer](https://en.wikipedia.org/wiki/Event_Viewer "Vai alla pagina di Wikipedia inglese per maggior informazioni sull'EventViewer") di Windows con i log del monitoraggio, per *tracciare* con precisione ogni crash e riavvio.
 
 <p>
-    <a title="Guarda più in grande" href="{{ site.url }}/assets/images/screenshots/restart-on-crash-event-viewer.png" target="_blank" rel="noopener">
-        <img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/restart-on-crash-event-viewer.png" alt="restart-on-crash-event-viewer" />
+    <a title="Guarda più in grande" href="{{ site.url }}/assets/images/screenshots/restart-on-crash-event-viewer.png?v=/uyh4PXs8vI/5zVFO/eFbbumH/hLxtNsFNg3ibAA0hw" target="_blank" rel="noopener">
+        <img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/restart-on-crash-event-viewer.png?v=/uyh4PXs8vI/5zVFO/eFbbumH/hLxtNsFNg3ibAA0hw" alt="restart-on-crash-event-viewer" />
     </a>
 </p>
 
@@ -64,8 +64,8 @@ Tutto quello che serve è configurare il file `configuration.json`
 -   `StartApplicationOnlyAfterFirstExecution`: se `false`, quando RestartOnCrash si avvia per la prima volta, avvia anche l'applicazione monitorata; se true attende che l'applicazione monitorata sia in esecuzione per agganciarsi al suo processo
 
 <p>
-    <a title="RestartOnCrash video" href="{{ site.url }}/assets/images/screenshots/restart-on-crash-video.gif" target="_blank" rel="noopener">
-        <img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/restart-on-crash-video.gif" alt="restart-on-crash-video" />
+    <a title="RestartOnCrash video" href="{{ site.url }}/assets/images/screenshots/restart-on-crash-video.gif?v=xCgeAESi4O+PQI5QvJGGrDBUYxB8JB+4KK+jnA3/8N0" target="_blank" rel="noopener">
+        <img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/restart-on-crash-video.gif?v=xCgeAESi4O+PQI5QvJGGrDBUYxB8JB+4KK+jnA3/8N0" alt="restart-on-crash-video" />
     </a>
 </p>
 
