@@ -55,7 +55,13 @@
                     <ul>
                         {% for item in site.data.nav %}
                         <li>
-                            <a href="{{ item.link }}" {% if page.url == item.link %}class="current-page"{% endif %}>
+                            {% assign shouldHightlight = false %}
+                            {% if page.url contains item.link and item.link != '/' %}
+                                {% assign shouldHightlight = true %}
+                            {% elsif item.link == page.url %}
+                                {% assign shouldHightlight = true %}
+                            {% endif %}
+                            <a href="{{ item.link }}" {% if shouldHightlight == true %}class="current-page"{% endif %}>
                                 {{ item.name }}
                             </a>
                         </li>
@@ -72,7 +78,13 @@
                 <ul>
                     {% for item in site.data.nav %}
                     <li>
-                        <a href="{{ item.link }}" {% if page.url == item.link %}class="current-page"{% endif %}>
+                        {% assign shouldHightlight = false %}
+                        {% if page.url contains item.link and item.link != '/' %}
+                            {% assign shouldHightlight = true %}
+                        {% elsif item.link == page.url %}
+                            {% assign shouldHightlight = true %}
+                        {% endif %}
+                        <a href="{{ item.link }}" {% if shouldHightlight == true %}class="current-page"{% endif %}>
                             {{ item.name }}
                         </a>
                     </li>
