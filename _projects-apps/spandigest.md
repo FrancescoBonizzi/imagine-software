@@ -8,12 +8,12 @@ metaDescription: SpandiGest è il gestionale che permette alle aziende agricole 
 shortDescription: 'Il gestionale agricolo per il **controllo centralizzato** degli spandimenti'
 subtitle: Fatture e ricevute belle e professionali
 
-ogImage: 'logos/logo-spandigest.png?v=AQEMyVjIohcHjNBZaxNinUeNS/Oe6lR/7jAMYAT0oLQ'
+ogImage: 'logos/logo-spandigest.png?v=AQEMyVjIohcHjNBZaxNinUeNS_Oe6lR_7jAMYAT0oLQ'
 
 previousPageRoute: projects-apps
 previousPageTitle: Applicazioni
 
-logoName: logo-spandigest.png?v=AQEMyVjIohcHjNBZaxNinUeNS/Oe6lR/7jAMYAT0oLQ
+logoName: logo-spandigest.png?v=AQEMyVjIohcHjNBZaxNinUeNS_Oe6lR_7jAMYAT0oLQ
 logoAlt: Il logo del software gestionale agricolo SpandiGest
 
 buttons:
@@ -22,7 +22,7 @@ buttons:
       icon: icon-right-open
       title-text: Pianifica una demo per vedere SpandiGest in azione
 
-jsonLd: '{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SpandiGest","url":"https://www.imaginesoftware.it/projects-apps/spandigest","description":"SpandiGest è il gestionale che permette alle aziende agricole di tenere traccia dei viaggi dei propri operatori per lo spandimenti di liquami","applicationCategory":"BUSINESS","image":"https://www.imaginesoftware.it/images/logos/logo-spandigest.png?v=AQEMyVjIohcHjNBZaxNinUeNS/Oe6lR/7jAMYAT0oLQ","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ+cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs+TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}}}'
+jsonLd: '{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SpandiGest","url":"https://www.imaginesoftware.it/projects-apps/spandigest","description":"SpandiGest è il gestionale che permette alle aziende agricole di tenere traccia dei viaggi dei propri operatori per lo spandimenti di liquami","applicationCategory":"BUSINESS","image":"https://www.imaginesoftware.it/images/logos/logo-spandigest.png?v=AQEMyVjIohcHjNBZaxNinUeNS_Oe6lR_7jAMYAT0oLQ","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ-cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs-TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}}}'
 ---
 
 **SpandiGest** nasce dalla necessità di un'azienda agricola di tenere traccia dei viaggi dei propri operatori per lo spandimenti di liquami.
@@ -37,7 +37,7 @@ Lo spandimento di liquami è una necessità del mondo agricolo, ma è rigidament
 
 Nella dashboard di amministrazione di SpandiGest è possibile vedere grafici e statistiche degli spandimenti giornalieri.
 
-<p><a title="Visualizza più in grande" href="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-3.png?v=pEH+oS0U9BuomJ/qFa732ARqMzObFhR+jt+ktXJ2K+M" target="_blank" rel="noopener"><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-3.png?v=pEH+oS0U9BuomJ/qFa732ARqMzObFhR+jt+ktXJ2K+M" alt="spandigest-screenshot-3" /></a></p>
+<p><a title="Visualizza più in grande" href="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-3.png?v=pEH-oS0U9BuomJ_qFa732ARqMzObFhR-jt-ktXJ2K-M" target="_blank" rel="noopener"><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-3.png?v=pEH-oS0U9BuomJ_qFa732ARqMzObFhR-jt-ktXJ2K-M" alt="spandigest-screenshot-3" /></a></p>
 
 Questi stessi dati sono esportabili in PDF, CSV ed altri formati fruibili per l'eleborazione successiva.
 
@@ -59,7 +59,7 @@ Questi stessi dati sono esportabili in PDF, CSV ed altri formati fruibili per l'
 
 In SpandiGest è possibile creare **credenziali di accesso** per più tipologie di utenti con permessi diversi: amministratori, trasportatori, operatori semplici, in modo poter isolare le parti e le informazioni dell'applicazione.
 
-<p><a title="Visualizza più in grande" target="_blank"  href="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-1.jpg?v=uY02AJoSmrL//j5YyxwjJhu1XV0yON5nzp6A8a8Uu2Y"><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-1.jpg?v=uY02AJoSmrL//j5YyxwjJhu1XV0yON5nzp6A8a8Uu2Y" alt="spandigest-screenshot-1" /></a></p>
+<p><a title="Visualizza più in grande" target="_blank"  href="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-1.jpg?v=uY02AJoSmrL__j5YyxwjJhu1XV0yON5nzp6A8a8Uu2Y"><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-1.jpg?v=uY02AJoSmrL__j5YyxwjJhu1XV0yON5nzp6A8a8Uu2Y" alt="spandigest-screenshot-1" /></a></p>
 
 <div class="section-separator-inside-section"></div>
 
@@ -71,7 +71,7 @@ L'operatore ha con sé uno **smartphone**, delle credenziali per il portale Span
 
 Infine preme *invia* ed il viaggio è registrato con data, ora, nome operatore: **è a tutti gli effetti una ricevuta**.
 
-<p><a title="Visualizza più grande" href="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-5.png?v=YEI1da3RPSvKkqkCcO9Uhb9yJZs/DeBXgSlegIktaXc" target="_blank" rel="noopener"><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-5.png?v=YEI1da3RPSvKkqkCcO9Uhb9yJZs/DeBXgSlegIktaXc" alt="spandigest-screenshot-5" /></a></p>
+<p><a title="Visualizza più grande" href="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-5.png?v=YEI1da3RPSvKkqkCcO9Uhb9yJZs_DeBXgSlegIktaXc" target="_blank" rel="noopener"><img class="section-centered-image" src="{{ site.url }}/assets/images/screenshots/spandigest-screenshot-5.png?v=YEI1da3RPSvKkqkCcO9Uhb9yJZs_DeBXgSlegIktaXc" alt="spandigest-screenshot-5" /></a></p>
 
 In SpandiGest si possono creare più tipi di operatore, dagli operatori semplici ai trasportatori. In generale tipi di operatore diversi possono vedere aziende di cessione o ricezione liquami diverse durante la loro sessione giornaliera, il tutto **configurabile dalla sezione amministrativa** dell'applicazione: in questo modo è possibile ridurre al minimo il rumore visivo e permettere ad ogni operatore di concentrarsi sul suo lavoro e non vedere elementi che non gli interessano.
 
