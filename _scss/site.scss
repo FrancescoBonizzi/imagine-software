@@ -172,18 +172,15 @@ header {
 }
 
 #top-nav ul li a {
-    color: var(--deactivated-color);
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 1rem;
-    transition: all 0.1s ease-out;
 }
 
 #top-nav ul li a:hover,
 .current-page {
-    color: white !important;
-    transition: color 0.1s ease-in;
     padding-bottom: 4px;
     background: linear-gradient(
         to right,

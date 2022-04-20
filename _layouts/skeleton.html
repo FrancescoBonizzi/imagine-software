@@ -81,10 +81,6 @@
             </div>
         </nav>
 
-        <button class="back-to-top-button" onclick="backToTop();" id="btnBackToTop" title="Torna in alto">
-            <i class="icon-up"></i>
-        </button>
-
         <main {% if page.customMainClass and page.customMainClass != '' %}class="{{ page.customMainClass }}"{% endif %}>{{ content }}</main>
 
         <footer>
@@ -119,7 +115,7 @@
                         <li>
                             <i class="icon-telegram" title="L'icona dell'App di messaggistica Telegram"></i>
                             <a href="https://telegram.me/fbonizzi" title="Scrivimi due righe tramite Telegram"
-                                >@{{ site.telegram }}</a
+                                >{{ site.telegram }}</a
                             >
                         </li>
 
@@ -160,7 +156,6 @@
         <script src="{{ site.url }}/assets/js/site.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                initializeBackToTopButton();
                 initializeImagesAnimations();
             });
         </script>
