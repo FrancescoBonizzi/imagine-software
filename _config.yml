@@ -18,6 +18,7 @@ exclude:
     - dev/
     - _compress_images_cache.yml
     - .prettierignore
+    - README.md
 
 imageoptim:
     svgo: false
