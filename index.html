@@ -84,9 +84,9 @@ jsonLd: '{"@context":"https://schema.org","@type":"Organization","name":"Imagine
             {% if homePageSection.callToActionText and homePageSection.callToActionText != '' %}
 
                 {% assign link = homePageSection.callToActionLink %} 
-                {% assign isRelativeLink = false %} 
+                {% assign isRelativeLink = true %} 
                 {% if link contains '://' %}
-                    {% assign isRelativeLink = true %} 
+                    {% assign isRelativeLink = false %} 
                 {% endif %} 
                 {% if isRelativeLink == true %} 
                     {% assign link = site.url | append: "/" | append: link %} 
