@@ -76,6 +76,16 @@ jsonLd: '{"@context":"https://schema.org","@type":"Organization","name":"Imagine
                     alt="{{ homePageSection.imageAlt }}"
                 />
             {% endif %} 
+
+            {% if homePageSection.imageAbsoluteLink and homePageSection.imageAbsoluteLink != '' %}
+                <img
+                    class="intermediate-article-image homepage-article-image left-image show-on-scroll rounded-logo"
+                    width="180"
+                    height="180"
+                    src="{{ homePageSection.imageAbsoluteLink }}"
+                    alt="{{ homePageSection.imageAlt }}"
+                />
+            {% endif %} 
             
             {{ homePageSection.content | markdownify }}
 
