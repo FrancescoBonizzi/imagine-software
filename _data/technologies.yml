@@ -28,3 +28,23 @@
   linkTitle: 'Il sito ufficiale di Microsoft Azure (cloud provider)'
   logoAlt: 'Il logo di Microsoft Azure (cloud provider)'
   logoName: logo-azure.png
+- name: Apple iOS
+  link: https://www.apple.com/
+  linkTitle: 'Il sito ufficiale di Apple'
+  logoAlt: 'Il logo di Apple'
+  logoName: logo-ios.jpg
+- name: NEXT.js
+  link: https://nextjs.org/
+  linkTitle: 'Il sito ufficiale del framework NEXT.js'
+  logoAlt: 'Il logo del framework NEXT.js'
+  logoName: logo-nextjs.png
+- name: RabbitMQ
+  link: https://www.rabbitmq.com/
+  linkTitle: 'Il sito ufficiale di RabbitMQ'
+  logoAlt: 'Il logo di RabbitMQ'
+  logoName: logo-rabbitmq.png
+- name: Jekyll
+  link: https://jekyllrb.com/
+  linkTitle: 'Il sito ufficiale di Jekyll'
+  logoAlt: 'Il logo di Jekyll'
+  logoName: logo-jekyll.png
