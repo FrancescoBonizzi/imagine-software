@@ -20,6 +20,7 @@
     --alt-color: #f3f4f7;
     --logo-and-hamburger-horizontal-margin: 3rem;
     --code-snippet-background-color: #f2f2f2;
+    --i-am-busy-badge-height: 40px;
 }
 
 html {
@@ -549,7 +550,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: var(--nav-height);
+    margin-top: calc(var(--nav-height) + var(--i-am-busy-badge-height));
 }
 
 h1 {
@@ -1869,7 +1870,8 @@ h2 {
     margin: 0;
 }
 
-section a {
+section a, 
+.full-width-text a {
     text-decoration: underline;
     color: var(--text-color);
 }
@@ -1913,4 +1915,21 @@ section a {
 
 .homepage-article-image {
     max-width: 180px;
+}
+
+.full-width-text {
+    width: 100%;
+    background-color: var(--gradient-first-color);
+    height: var(--i-am-busy-badge-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-width-text p {
+    margin: 0;
+    padding: 0.2rem;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1rem !important;
 }
