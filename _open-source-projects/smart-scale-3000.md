@@ -17,7 +17,7 @@ logoName: logo-smart-scale.png?v=qlQrZW_fjB6oB2UwUPeHmJMvv91EhxgBameW-7Yu-V0
 logoAlt: Il logo del progetto open source Smart Scale 3000
 
 buttons:
-    - text: GitHub
+    - text: Guarda su GitHub
       url: https://github.com/FrancescoBonizzi/SmartScale3000
       icon: icon-github
       title-text: Apri il repository GitHub di Smart Scale 3000

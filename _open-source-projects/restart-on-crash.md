@@ -17,7 +17,7 @@ logoName: logo-restart-on-crash.png?v=MrywDch5J6DojRJnulkT-U01P1TCLlDrdSnIsj1qV2
 logoAlt: 'Il logo del software RestartOnCrash'
 
 buttons:
-    - text: GitHub
+    - text: Guarda su GitHub
       url: https://github.com/FrancescoBonizzi/RestartOnCrash
       icon: icon-github
       title-text: Apri il repository di RestartOnCrash su GitHub

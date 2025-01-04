@@ -17,7 +17,7 @@ logoName: logo-boolli.png?v=ivGI-PPCC06l40u8S4Fg4DoRnPqvvGhI6bDUsvE475A
 logoAlt: "Il logo dell'interprete di espressioni booleane boolli"
 
 buttons:
-    - text: GitHub
+    - text: Guarda su GitHub
       url: https://github.com/FrancescoBonizzi/boolli
       icon: icon-github
       title-text: Apri il repository GitHub di Boolli

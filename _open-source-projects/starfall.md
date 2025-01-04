@@ -20,7 +20,11 @@ buttons:
     - text: Scarica per Windows
       url: https://www.microsoft.com/it-it/p/starfall-free/9mw4t75wzr28
       icon: icon-windows
-      title-text: Scarica INFART per Windows
+      title-text: Scarica Starfall per Windows
+    - text: 'Guarda su GitHub'
+      url: 'https://github.com/FrancescoBonizzi/StarfallGame'
+      icon: icon-github
+      title-text: 'Guarda il codice sorgente di Starfall!'
 
 jsonLd: '{"@context":"https://schema.org","@type":"GameApplication","name":"Starfall","url":"https://play.google.com/store/apps/details?id=com.francescobonizzi.starfall","description":"Sei una stella caduta sulla Terra. Ti ritrovi in una selva oscura in cerca della via per risalire verso casa...","operatingSystem":"ANDROID","applicationCategory":"GAME_ACTION","image":"https://www.imaginesoftware.it/images/logos/logo-starfall.png?v=yb-_nmV6rZQVhGnkWX8qKaJMFUCJIeJEvgOdEbbjsE4","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ-cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs-TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
 ---

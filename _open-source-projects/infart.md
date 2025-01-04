@@ -21,6 +21,10 @@ buttons:
       url: https://www.microsoft.com/store/apps/9WZDNCRDHRJH
       icon: icon-windows
       title-text: Scarica INFART per Windows
+    - text: 'Guarda su GitHub'
+      url: 'https://github.com/FrancescoBonizzi/InfartGame'
+      icon: icon-github
+      title-text: 'Guarda il codice sorgente di INFART!'
 
 jsonLd: '{"@context":"https://schema.org","@type":"GameApplication","name":"INFART","url":"https://play.google.com/store/apps/details?id=com.francescobonizzi.infart","description":"Ambientato in una città; astratta, in continuo cambiamento, INFART è un gioco CORRI E SCOREGGIA in cui dovrete mangiare il più possibile verdure!","operatingSystem":"ANDROID","applicationCategory":"GAME_ACTION","image":"https://www.imaginesoftware.it/images/logos/logo-infart.png?v=m-WpIoF5rG6FDiXVxlkkPaKV4gbsoY_p9KGzIpQaZWk","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ-cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs-TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
 ---

@@ -17,14 +17,10 @@ logoName: logo-invoice-maker-quick-easy.png?v=RVkS4V3eG1HbzqmEKkJRz-MhjscmZ__8Ky
 logoAlt: "Il logo dell'App Invoice Maker - Quick & Easy"
 
 buttons:
-    - text: Scarica per Android
-      url: https://play.google.com/store/apps/details?id=com.francescobonizzi.invoiceEstimateReceiptMaker
-      icon: icon-android
-      title-text: Scarica Invoice Maker - Quick & Easy per Android
-    - text: Scarica per iPhone
-      url: https://apps.apple.com/it/app/invoice-maker-quick-easy/id1534299120
-      icon: icon-apple
-      title-text: Scarica Invoice Maker - Quick & Easy per iPhone
+    - text: 'Guarda su GitHub'
+      url: 'https://github.com/FrancescoBonizzi/bigmoney-invoice-app'
+      icon: icon-github
+      title-text: 'Guarda il codice sorgente di Invoice Maker - Quick & Easy'
 
 jsonLd: '{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Invoice Maker - Quick & Easy","url":"https://play.google.com/store/apps/details?id=com.francescobonizzi.invoiceEstimateReceiptMaker","description":"Invoice Maker is the fastest and easiest invoice and bill generator tailored for freelancers, contractors and business owners, to create invoices on the go!","operatingSystem":"ANDROID","applicationCategory":"BUSINESS","image":"https://www.imaginesoftware.it/images/logos/logo-invoice-maker-quick-easy.png?v=RVkS4V3eG1HbzqmEKkJRz-MhjscmZ__8KyF5NDFnv9Q","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ-cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs-TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
 ---
