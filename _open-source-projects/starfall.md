@@ -17,10 +17,6 @@ logoName: logo-starfall.png?v=yb-_nmV6rZQVhGnkWX8qKaJMFUCJIeJEvgOdEbbjsE4
 logoAlt: Il logo del videogioco open source Starfall
 
 buttons:
-    - text: Scarica per Android
-      url: https://play.google.com/store/apps/details?id=com.francescobonizzi.starfall
-      icon: icon-android
-      title-text: Scarica RELLOW per Android
     - text: Scarica per Windows
       url: https://www.microsoft.com/it-it/p/starfall-free/9mw4t75wzr28
       icon: icon-windows

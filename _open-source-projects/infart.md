@@ -17,10 +17,6 @@ logoName: logo-infart.png?v=m-WpIoF5rG6FDiXVxlkkPaKV4gbsoY_p9KGzIpQaZWk
 logoAlt: 'Il logo del videogioco INFART'
 
 buttons:
-    - text: Scarica per Android
-      url: https://play.google.com/store/apps/details?id=com.francescobonizzi.infart
-      icon: icon-android
-      title-text: Scarica INFART per Android
     - text: Scarica per Windows
       url: https://www.microsoft.com/store/apps/9WZDNCRDHRJH
       icon: icon-windows

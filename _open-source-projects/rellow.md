@@ -17,10 +17,6 @@ logoName: logo-rellow.png?v=59vRNVlWSAhxDX3WNFDIP-rpBcCm2aduUGzyr628hSg
 logoAlt: 'Il logo del videogioco RELLOW'
 
 buttons:
-    - text: Scarica per Android
-      url: https://play.google.com/store/apps/details?id=com.francescobonizzi.rellow
-      icon: icon-android
-      title-text: Scarica RELLOW per Android
     - text: Scarica per Windows
       url: https://www.microsoft.com/store/apps/9N5JJ68QFBPB
       icon: icon-windows
