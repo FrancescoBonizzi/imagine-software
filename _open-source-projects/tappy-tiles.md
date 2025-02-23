@@ -8,12 +8,12 @@ metaDescription: 'TappyTiles è un gioco open source divertente e interattivo, s
 shortDescription: "Un gioco di memoria e reattività con animazioni divertenti. **Sfida te stesso e completa il livello!**"
 subtitle: 'Scopri i personaggi nascosti!'
 
-ogImage: 'logos/logo-tappy-tiles.png'
+ogImage: 'logos/logo-tappy-tiles.jpg'
 
 previousPageRoute: open-source-projects
 previousPageTitle: Progetti open source
 
-logoName: logo-tappy-tiles.png
+logoName: logo-tappy-tiles.jpg
 logoAlt: 'Il logo del gioco TappyTiles'
 
 buttons:
@@ -26,7 +26,7 @@ buttons:
       icon: icon-github
       title-text: 'Guarda il codice sorgente di TappyTiles!'
 
-jsonLd: '{"@context":"https://schema.org","@type":"Game","name":"TappyTiles","url":"https://github.com/FrancescoBonizzi/tappy-tiles","description":"Un gioco open source di memoria e reattività sviluppato con React e Vite!","applicationCategory":"Game","image":"https://www.imaginesoftware.it/assets/logo/logo-tappy-tiles.png","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","url":"https://www.imaginesoftware.it"},"offers":{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}}'
+jsonLd: '{"@context":"https://schema.org","@type":"Game","name":"TappyTiles","url":"https://github.com/FrancescoBonizzi/tappy-tiles","description":"Un gioco open source di memoria e reattività sviluppato con React e Vite!","applicationCategory":"Game","image":"https://www.imaginesoftware.it/assets/logo/logo-tappy-tiles.jpg","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","url":"https://www.imaginesoftware.it"},"offers":{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}}'
 ---
 
 Un semplice gioco in *React + Vite* con animazioni divertenti! 🎨✨
