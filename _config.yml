@@ -39,3 +39,6 @@ collections:
 webrick:
     headers:
         Access-Control-Allow-Origin: "*"
+
+include:
+    - "tappy-tiles/assets/"
