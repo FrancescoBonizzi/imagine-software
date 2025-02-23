@@ -35,3 +35,7 @@ collections:
         output: true
     projects-apps:
         output: true
+
+webrick:
+    headers:
+        Access-Control-Allow-Origin: "*"
