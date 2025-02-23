@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/tappy-tiles/**", "destination": "/tappy-tiles" }
+    {
+      "source": "/tappy-tiles/:path*",
+      "destination": "/tappy-tiles"
+    }
   ]
 }
