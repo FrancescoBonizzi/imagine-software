@@ -1,5 +1,5 @@
 // To start the server, run:
-bundle exec jekyll serve --livereload
+bundle exec jekyll serve --host 127.0.0.1 --port 4000
 
 // To build the site, run:
 bundle exec jekyll build
