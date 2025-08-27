@@ -17,16 +17,16 @@ logoName: logo-infart.png?v=m-WpIoF5rG6FDiXVxlkkPaKV4gbsoY_p9KGzIpQaZWk
 logoAlt: 'Il logo del videogioco INFART'
 
 buttons:
-    - text: Scarica per Windows
-      url: https://www.microsoft.com/store/apps/9WZDNCRDHRJH
-      icon: icon-windows
-      title-text: Scarica INFART per Windows
+    - text: Gioca subito!
+      url: https://imaginesoftware.it/infart-play/#/menu
+      icon: icon-play
+      title-text: Gioca subito gratuitamente!
     - text: 'Guarda su GitHub'
       url: 'https://github.com/FrancescoBonizzi/InfartGame'
       icon: icon-github
       title-text: 'Guarda il codice sorgente di INFART!'
 
-jsonLd: '{"@context":"https://schema.org","@type":"GameApplication","name":"INFART","url":"https://github.com/FrancescoBonizzi/InfartGame","description":"Ambientato in una città; astratta, in continuo cambiamento, INFART è un gioco CORRI E SCOREGGIA in cui dovrete mangiare il più possibile verdure!","operatingSystem":"ANDROID","applicationCategory":"GAME_ACTION","image":"https://www.imaginesoftware.it/images/logos/logo-infart.png?v=m-WpIoF5rG6FDiXVxlkkPaKV4gbsoY_p9KGzIpQaZWk","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ-cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs-TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
+jsonLd: '{"@context":"https://schema.org","@type":"GameApplication","name":"INFART","url":"https://github.com/FrancescoBonizzi/InfartGame","description":"Ambientato in una città; astratta, in continuo cambiamento, INFART è un gioco CORRI E SCOREGGIA in cui dovrete mangiare il più possibile verdure!","operatingSystem":"Web","applicationCategory":"GAME_ACTION","image":"https://www.imaginesoftware.it/images/logos/logo-infart.png?v=m-WpIoF5rG6FDiXVxlkkPaKV4gbsoY_p9KGzIpQaZWk","contentRating":"Everyone","author":{"@type":"Organization","name":"Imagine Software","legalName":"Imagine Software di Bonizzi Francesco","url":"https://www.imaginesoftware.it","logo":"https://www.imaginesoftware.it/images/logos/logo-imagine-software.jpg?v=IZ-cRR2fLms0GurmGkxsLFjfoPJsUcwwoevs-TsCoF8","vatID":"02982280345","location":"Italy","sameAs":["https://www.imaginesoftware.it"],"foundingDate":"2021","founders":[{"@type":"Person","name":"Francesco Bonizzi"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"f.bonizzi@imaginesoftware.it"}},"offers":[{"@type":"Offer","price":"0","priceCurrency":"XXX","availability":"https://schema.org/InStock"}]}'
 ---
 
 L'uomo non ha trattato bene la Terra e **l'atmosfera è al collasso!**
@@ -66,11 +66,11 @@ Molte associazioni internazionali di rilievo, tra cui OMS, FAO, Academy of Nutri
 
 ### Un videogioco interamente gratis, open source, e senza pubblicità
 
-Questo gioco è interamente **gratis** ed **open source**: non utilizza alcuna libreria tracciante, nessun log per monitorare l'utilizzo da parte degli utenti, **nessuna pubblicità**. Ed è **multipiattaforma**: potete provarlo sia su Android che su Windows, ma per Mac non l'ho ancora compilato! 😁
+Questo gioco è interamente **gratis** ed **open source**: non utilizza alcuna libreria tracciante, nessun log per monitorare l'utilizzo da parte degli utenti, **nessuna pubblicità**. Ed è **multipiattaforma**: potete provarlo su qualunque browser moderno, sia da desktop che da mobile.
 
-Ho sviluppato il gioco in `C#`, utilizzando due librerie anch'esse open source:
+Ho sviluppato il gioco in `typescript`, utilizzando le librerie:
 
--   [MonoGame](https://github.com/MonoGame 'Visita la pagina Github di MonoGame'), il nuovo *XNA framework*
--   [FbonizziMonoGame](https://github.com/FrancescoBonizzi/FbonizziMonoGame 'Visita la pagina Github di FbonizziMonoGame'), una libreria che ho sviluppato io per semplificarmi gli sviluppi
+-   [PixiJs]([https://pixijs.com](Vai al sito ufficiale di PixiJs)), il nuovo *XNA framework*
+-   [HowlerJs]([https://howlerjs.com](Vai al sito ufficiale di HowlerJs)), per la gestione dell'audio
 
 Il codice di **INFART** è [accessibile su GitHub](https://github.com/FrancescoBonizzi/InfartGame 'Vai alla pagina GitHub di INFART') ed è aperto alla collaborazione da parte di tutti!
