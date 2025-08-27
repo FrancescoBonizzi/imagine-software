@@ -70,7 +70,7 @@ Questo gioco è interamente **gratis** ed **open source**: non utilizza alcun
 
 Ho sviluppato il gioco in `typescript`, utilizzando le librerie:
 
--   [PixiJs]([https://pixijs.com](Vai al sito ufficiale di PixiJs)), il nuovo *XNA framework*
--   [HowlerJs]([https://howlerjs.com](Vai al sito ufficiale di HowlerJs)), per la gestione dell'audio
+-   [PixiJs](https://pixijs.com 'Vai al sito ufficiale di PixiJs'), il nuovo *XNA framework*
+-   [HowlerJs](https://howlerjs.com 'Vai al sito ufficiale di HowlerJs'), per la gestione dell'audio
 
 Il codice di **INFART** è [accessibile su GitHub](https://github.com/FrancescoBonizzi/InfartGame 'Vai alla pagina GitHub di INFART') ed è aperto alla collaborazione da parte di tutti!
